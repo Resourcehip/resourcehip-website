@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!--
+    Resourcehip favicon
+    Forest green circle (#6B8E23) with white "R" — clean, legible at all sizes.
+    The circular shape echoes the circular economy / material resilience theme.
+  -->
+  <circle cx="16" cy="16" r="16" fill="#6B8E23"/>
+  <text
+    x="16" y="22"
+    font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
+    font-size="19"
+    font-weight="900"
+    fill="#ffffff"
+    text-anchor="middle"
+  >R</text>
+</svg>

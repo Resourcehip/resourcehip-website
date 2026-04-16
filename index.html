@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resourcehip — Human Impact Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --forest-green: #6B8E23;
+      --eco-teal: #4FA9A5;
+      --atmosphere-blue: #A8DADC;
+      --soft-stone: #F1F1F1;
+      --impact-grey: #4A4A4A;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+      overflow: hidden;
+    }
+
+    .bg {
+      position: fixed;
+      inset: 0;
+      background: url('background.jpg') center center / cover no-repeat;
+      background-color: #A8DADC;
+      z-index: 0;
+    }
+
+    /* ── Smooth fog base — single gradient, no banding ── */
+    .fog-base {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 72vh;
+      background: linear-gradient(to top,
+        rgba(255,255,255,0.82) 0%,
+        rgba(245,252,253,0.55) 22%,
+        rgba(235,248,250,0.28) 50%,
+        rgba(220,242,246,0.10) 75%,
+        transparent 100%
+      );
+      z-index: 1;
+    }
+
+    /* ── Subtle animated wisps on top of the base ── */
+    .fog-wrap {
+      position: fixed;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .fog-layer {
+      position: absolute;
+      bottom: -10%;
+      left: -40%;
+      width: 180%;
+      border-radius: 50%;
+      background: radial-gradient(ellipse at center bottom,
+        rgba(255,255,255,0.28) 0%,
+        rgba(240,250,252,0.12) 45%,
+        transparent 70%
+      );
+      animation: driftFog linear infinite;
+    }
+
+    .fog-layer:nth-child(1) { height: 65vh; animation-duration: 30s; animation-delay: 0s; }
+    .fog-layer:nth-child(2) { height: 55vh; animation-duration: 40s; animation-delay: -15s; }
+    .fog-layer:nth-child(3) { height: 48vh; animation-duration: 24s; animation-delay: -8s; }
+
+    @keyframes driftFog {
+      0%   { transform: translateX(0)   scaleY(1); }
+      25%  { transform: translateX(5%)  scaleY(1.03); }
+      50%  { transform: translateX(-4%) scaleY(0.98); }
+      75%  { transform: translateX(3%)  scaleY(1.02); }
+      100% { transform: translateX(0)   scaleY(1); }
+    }
+
+    .scene {
+      position: relative;
+      z-index: 10;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.4rem;
+      animation: riseFromFog 6s ease-out both;
+    }
+
+    @keyframes riseFromFog {
+      from { opacity: 0; transform: translateY(40px); filter: blur(8px); }
+      to   { opacity: 1; transform: translateY(0);    filter: blur(0); }
+    }
+
+    .logo-img {
+      width: clamp(240px, 55vw, 480px);
+      filter: drop-shadow(0 4px 24px rgba(0,0,0,0.25));
+      animation: riseFromFog 6.6s ease-out 1s both;
+    }
+
+    .tagline {
+      font-size: clamp(0.85rem, 2vw, 1.1rem);
+      font-weight: 400;
+      color: var(--soft-stone);
+      text-align: center;
+      max-width: 520px;
+      line-height: 1.65;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.55);
+      animation: riseFromFog 6.6s ease-out 1.5s both;
+      letter-spacing: 0.02em;
+    }
+
+    .divider {
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(to right, var(--forest-green), var(--eco-teal));
+      border-radius: 2px;
+      animation: riseFromFog 6.6s ease-out 2.1s both;
+    }
+
+    .badge {
+      font-size: clamp(0.7rem, 1.5vw, 0.82rem);
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--soft-stone);
+      background: linear-gradient(135deg, var(--forest-green), var(--eco-teal));
+      padding: 0.5rem 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(79,169,165,0.4);
+      animation: riseFromFog 6.6s ease-out 2.1s both;
+    }
+
+    .sub {
+      font-size: clamp(0.72rem, 1.4vw, 0.82rem);
+      color: rgba(255,255,255,0.75);
+      text-align: center;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+      letter-spacing: 0.04em;
+      animation: riseFromFog 6.6s ease-out 3.3s both;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 0; right: 0;
+      text-align: center;
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.06em;
+      z-index: 20;
+      animation: riseFromFog 2s ease-out 4.5s both;
+    }
+
+    .footer a { color: var(--atmosphere-blue); text-decoration: none; }
+
+    @media (max-width: 480px) {
+      .tagline { font-size: 0.82rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg"></div>
+  <div class="fog-base"></div>
+
+  <div class="fog-wrap">
+    <div class="fog-layer"></div>
+    <div class="fog-layer"></div>
+    <div class="fog-layer"></div>
+  </div>
+
+  <div class="scene">
+    <div class="card">
+      <img class="logo-img" src="logo.png" alt="Resourcehip — Human Impact Profile" />
+      <div class="divider"></div>
+      <p class="tagline">
+        Making the long-term material future of everyday products visible —
+        to consumers, manufacturers, and the researchers who can change it.
+      </p>
+      <div class="badge">Coming Soon</div>
+      <p class="sub">Something is emerging from the fog.</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2026 Resourcehip &nbsp;|&nbsp; <a href="mailto:hello@resourcehip.com">hello@resourcehip.com</a>
+  </div>
+
+</body>
+</html>
