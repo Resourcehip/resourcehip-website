@@ -193,6 +193,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://resourcehip.com/submit</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://resourcehip.com/verified-ratings</loc>
     <lastmod>2026-04-26</lastmod>
     <changefreq>yearly</changefreq>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suggest a Product — Resourcehip</title>
+  <meta name="description" content="Suggest a product category for Resourcehip to rate next. We publish independent HIP Score ratings for everyday consumer products." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <!-- Self-hosted Montserrat — no Google Fonts CDN (GDPR: no IP sent to Google) -->
+  <!-- Run fonts/download_fonts.py once to fetch the .woff2 files -->
+  <link rel="stylesheet" href="/fonts/montserrat.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --forest-green:    #6B8E23;
+      --eco-teal:        #4FA9A5;
+      --atmosphere-blue: #A8DADC;
+      --soft-stone:      #F1F1F1;
+      --impact-grey:     #4A4A4A;
+      --page-bg:         #F7F8F6;
+      --card-bg:         #FFFFFF;
+      --border:          #E2E6E0;
+      /* HIP Mark tier colours */
+      --tier-emerald:    #3a9e62;
+      --tier-slate:      #7a9ab8;
+      --tier-amber:      #c8920a;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--page-bg);
+      color: var(--impact-grey);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Header ─────────────────────────────────────────────────────────── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+    }
+
+    .site-header .logo-link img {
+      height: 48px;
+      width: auto;
+      display: block;
+    }
+
+    .site-nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .site-nav a {
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--impact-grey);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .site-nav a:hover,
+    .site-nav a.active { color: var(--forest-green); }
+
+    .site-nav a.nav-cta {
+      background: linear-gradient(135deg, var(--forest-green), var(--eco-teal));
+      color: #fff;
+      padding: 0.45rem 1.1rem;
+      border-radius: 6px;
+      letter-spacing: 0.06em;
+    }
+
+    .site-nav a.nav-cta:hover { opacity: 0.9; color: #fff; }
+
+    /* ── Main content area ──────────────────────────────────────────────── */
+    .site-main {
+      flex: 1;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    .site-main.wide {
+      max-width: 1100px;
+    }
+
+    /* ── Shared card ────────────────────────────────────────────────────── */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ── Shared typography ──────────────────────────────────────────────── */
+    h1 { font-size: 1.75rem; font-weight: 700; color: var(--forest-green); margin-bottom: 0.5rem; }
+    h2 { font-size: 1.2rem; font-weight: 700; color: var(--impact-grey); margin: 2rem 0 0.75rem; }
+    h3 { font-size: 1rem; font-weight: 600; margin: 1.5rem 0 0.5rem; }
+    p  { line-height: 1.75; margin-bottom: 1rem; }
+    a  { color: var(--forest-green); }
+    ul, ol { padding-left: 1.4rem; line-height: 1.8; }
+
+    hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+
+    /* ── Pill / badge ────────────────────────────────────────────────────── */
+    .pill {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.9rem;
+      border-radius: 20px;
+      background: var(--soft-stone);
+      color: var(--impact-grey);
+    }
+
+    /* ── Skip link (WCAG 2.4.1 Bypass Blocks) ─────────────────────────── */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      background: var(--forest-green);
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      z-index: 9999;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      border-radius: 0 0 6px 0;
+      transition: top 0.15s;
+    }
+    .skip-link:focus { top: 0; }
+
+    /* ── Focus styles (WCAG 2.4.7 Focus Visible) ────────────────────── */
+    *:focus-visible {
+      outline: 3px solid var(--forest-green);
+      outline-offset: 3px;
+      border-radius: 3px;
+    }
+
+    /* ── Footer ─────────────────────────────────────────────────────────── */
+    .site-footer {
+      background: var(--impact-grey);
+      color: rgba(255,255,255,0.65);
+      text-align: center;
+      padding: 1.5rem 2rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+    }
+
+    .site-footer a { color: var(--atmosphere-blue); text-decoration: none; }
+
+    /* ── Responsive ─────────────────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .site-header { padding: 0.75rem 1rem; }
+      .site-nav { gap: 1rem; }
+      .site-nav a.nav-cta { display: none; }
+      .site-main { padding: 1.5rem 1rem 3rem; }
+    }
+
+    
+.static-body { max-width: 680px; }
+.static-body h1 { margin-bottom: 1rem; }
+.static-body h2 { font-size: 1.1rem; margin: 2rem 0 0.6rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+.static-body h3 { font-size: 0.95rem; margin: 1.5rem 0 0.4rem; }
+.static-body p  { line-height: 1.8; margin-bottom: 1rem; }
+.static-body ul, .static-body ol { padding-left: 1.4rem; margin-bottom: 1rem; line-height: 1.8; }
+.static-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.85rem; }
+.static-body th { background: var(--soft-stone); padding: 0.5rem 0.75rem; text-align: left; border: 1px solid var(--border); font-weight: 600; }
+.static-body td { padding: 0.45rem 0.75rem; border: 1px solid var(--border); vertical-align: top; }
+.static-body blockquote { border-left: 3px solid var(--forest-green); padding: 0.5rem 1rem; background: #f4f7f0; border-radius: 0 6px 6px 0; margin: 1rem 0; color: #555; font-style: italic; }
+.static-body code { font-family: monospace; background: #eee; padding: 0.1em 0.4em; border-radius: 3px; font-size: 0.9em; }
+.static-body pre { background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; overflow-x: auto; margin: 1rem 0; }
+.static-body pre code { background: none; padding: 0; }
+
+  </style>
+</head>
+<body>
+
+  <!-- Skip to main content (WCAG 2.4.1) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <a class="logo-link" href="/">
+      <img src="/logo.png" alt="Resourcehip home" />
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/" >Home</a>
+      <a href="/ratings/" >Ratings</a>
+      <a href="/methodology" >Methodology</a>
+      <a href="/about" >About</a>
+      <a href="/verified-ratings" >Verified Ratings</a>
+      <a href="/submit" class="nav-cta">Submit a Product</a>
+    </nav>
+  </header>
+
+  <main id="main-content" class="site-main ">
+    
+<div class="static-body">
+  <h1>Suggest a Product</h1>
+<p>We publish independent HIP Score ratings for everyday consumer products — from kettles to cordless drills. Every rating we add helps shoppers make better-informed choices about the long-term material impact of what they buy.</p>
+<h2>Tell us what to rate next</h2>
+<p>If there's a product category you'd like us to rate, we'd love to hear from you. Drop us an email with your suggestion and we'll add it to our ratings queue.</p>
+<p><a href="mailto:hello@resourcehip.com?subject=Product%20suggestion">Suggest a product category →</a></p>
+<p>We read every message. We can't guarantee a timeline, but popular requests move up the queue.</p>
+<hr />
+<h2>What makes a good suggestion?</h2>
+<p>We rate <strong>product categories</strong> rather than individual brands — for example, "cordless drills" rather than "Brand X Model Y". The best suggestions are:</p>
+<ul>
+<li>everyday products that many people buy</li>
+<li>categories where materials and supply chains are worth scrutinising</li>
+<li>things you genuinely wish you had better information about before purchasing</li>
+</ul>
+<p>If you're a manufacturer and want a <strong>Verified Rating</strong> for a specific product, that's a separate process — <a href="mailto:hello@resourcehip.com?subject=Verified%20rating%20enquiry">get in touch</a> and we can explain how it works.</p>
+<hr />
+<p><em>Resourcehip Ltd · Registered in Scotland · <a href="/privacy">Privacy Policy</a> · <a href="/terms">Terms</a></em></p>
+</div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div>&copy; 2026 Resourcehip Ltd &nbsp;&middot;&nbsp; Reg. SC873386 &nbsp;&middot;&nbsp; Office 90, Alloa Business Centre, Whins Road, Alloa, Clackmannanshire, FK10&nbsp;3SA, Scotland</div>
+    <!-- TODO: add VAT no. once registered (only required if VAT-registered) -->
+    <div style="margin-top:0.4rem;">
+      <span id="rh-email"></span> &nbsp;|&nbsp;
+      <a href="/methodology">Methodology v1.1</a> &nbsp;|&nbsp;
+      <a href="/privacy">Privacy</a> &nbsp;|&nbsp;
+      <a href="/terms">Terms</a> &nbsp;|&nbsp;
+      <a href="/cookies">Cookies &amp; AI</a>
+    </div>
+  </footer>
+  <script>
+    /* Email obfuscation — assembled at runtime to deter address harvesting bots */
+    (function() {
+      var u = 'hello', d = ['resourcehip', 'com'].join('.');
+      var addr = u + '\u0040' + d;
+      var el = document.getElementById('rh-email');
+      if (el) el.innerHTML = '<a href="mailto:' + addr + '">' + addr + '</a>';
+    })();
+  </script>
+
+</body>
+</html>
