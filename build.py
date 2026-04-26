@@ -117,7 +117,7 @@ def build_ratings() -> list[dict]:
         rel_path = md_file.relative_to(RATINGS_DIR)     # e.g. kettles.md OR manufacturers/tester/t-100.md
         slug = data.get("slug") or slug_from_path(md_file)
         data.setdefault("slug", slug)
-        data.setdefault("methodology_version", "1.1")
+        data.setdefault("methodology_version", "1.3")
         data.setdefault("hip_label", hip_label(data.get("hip_score", 0)))
 
         html = template.render(

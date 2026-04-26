@@ -8,7 +8,7 @@ active_page: methodology
 
 This page explains how every HIP Score is produced. Transparency about methodology is a core part of what makes a rating credible — and it is our strongest defence if a score is ever questioned.
 
-**Current version: 1.1 · Effective April 2026**
+**Current version: 1.3 · Effective April 2026**
 
 ---
 
@@ -122,7 +122,8 @@ Where data is missing, the pipeline uses the most conservative reasonable assump
 
 | Version | Date | Key changes |
 |---------|------|-------------|
-| 1.1 | April 2026 | Added Regenerative Index (RI) as seventh dimension. Adjusted weights: MSI 20%, SCR 18%, RC 18%, R 13%, SEI 8%, PL 8%, RI 15%. |
+| 1.3 | April 2026 | Clarified RI scoring criteria; updated Depleting vs Extractive band definitions and added worked examples to the scoring rubric. |
+| 1.1 | March 2026 | Added Regenerative Index (RI) as seventh dimension. Adjusted weights: MSI 20%, SCR 18%, RC 18%, R 13%, SEI 8%, PL 8%, RI 15%. |
 | 1.0 | February 2026 | Initial six-dimension methodology. |
 
 ---
@@ -143,4 +144,4 @@ If you believe a rating contains an error, see the [Dispute a Rating](/dispute) 
 
 ---
 
-*Methodology v1.1 · Resourcehip Ltd · [Terms](/terms) · [Privacy](/privacy)*
+*Methodology v1.3 · Resourcehip Ltd · [Terms](/terms) · [Privacy](/privacy)*
