@@ -10,8 +10,6 @@ active_page: ""
 
 By using this website you agree to these terms. If you do not agree, please do not use the site.
 
-The full Terms and Conditions document, including all clauses governing liability, intellectual property, manufacturer submissions, and payment terms, is available as a [downloadable Word document](/legal/Resourcehip_Terms_and_Conditions.docx) from our Legal folder.
-
 ---
 
 ## Key points
