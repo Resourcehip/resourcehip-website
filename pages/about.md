@@ -32,7 +32,7 @@ Every HIP Score is built from seven independently assessed dimensions:
 
 The Regenerative Index (RI) is unique to Resourcehip. It runs from −10 to +10. Negative scores are valid and common — most conventional manufactured goods depend on finite extracted materials and actively deplete natural reserves. The honest acknowledgement of that is the starting point for change, not a failure.
 
-## Two types of rating
+## Two types of rating { #two-types-of-rating }
 
 **Category ratings** assess a whole product category — for example, Hair Dryers — using publicly available data. No specific brand or manufacturer is named. These ratings show where a typical product in the category sits, and give consumers a baseline for comparison.
 

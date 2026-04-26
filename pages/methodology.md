@@ -94,7 +94,7 @@ No rating is ever published automatically without human sign-off.
 
 ---
 
-## Data sources
+## Data sources { #data-sources }
 
 The following public data sources are used across ratings. Each rating page lists the specific sources used for that assessment.
 
