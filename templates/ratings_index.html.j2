@@ -1,0 +1,135 @@
+{% extends "base.html.j2" %}
+
+{% block extra_styles %}
+.ratings-intro { margin-bottom: 2rem; }
+.ratings-intro p { color: #666; max-width: 600px; }
+
+.ratings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.rating-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: box-shadow 0.2s, transform 0.15s;
+  border-top: 4px solid var(--card-tier-colour, var(--eco-teal));
+}
+.rating-card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+.rating-card-category {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: #aaa; margin-bottom: 0.4rem;
+}
+.rating-card-title {
+  font-size: 1rem; font-weight: 700; color: var(--impact-grey);
+  margin-bottom: 0.2rem; line-height: 1.3;
+}
+.rating-card-brand {
+  font-size: 0.78rem; color: #888; margin-bottom: 0.75rem;
+}
+
+.rating-card-scores {
+  display: flex; gap: 0.75rem; align-items: center;
+}
+.rating-card-hip {
+  font-size: 1.8rem; font-weight: 700;
+  color: var(--card-tier-colour, var(--eco-teal));
+  line-height: 1;
+}
+.rating-card-hip-label {
+  font-size: 0.68rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  color: #aaa;
+}
+.rating-card-ri {
+  font-size: 0.78rem; font-weight: 600;
+  margin-left: auto;
+  color: var(--card-ri-colour, #888);
+}
+
+.rating-card-date {
+  font-size: 0.68rem; color: #bbb; margin-top: 0.75rem;
+}
+
+.verified-tick {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em;
+  background: #E0F0F0; color: var(--eco-teal);
+  padding: 0.2rem 0.6rem; border-radius: 10px;
+  display: inline-block; margin-top: 0.5rem;
+}
+
+.no-ratings {
+  text-align: center; padding: 4rem 2rem;
+  color: #aaa; font-style: italic;
+}
+{% endblock %}
+
+{% block main_class %}wide{% endblock %}
+
+{% block content %}
+
+<div class="ratings-intro">
+  <h1>All Ratings</h1>
+  <p>Human Impact Profiles for everyday product categories, assessed using public data and the
+     <a href="/methodology">Resourcehip Methodology v1.1</a>.
+     Verified ratings include manufacturer-submitted data.</p>
+</div>
+
+{% if ratings %}
+  <div class="ratings-grid">
+    {% for r in ratings %}
+      {%- if r.hip_score >= 6.5 -%}
+        {%- set card_tier_colour = '#3a9e62' -%}
+      {%- elif r.hip_score >= 4.0 -%}
+        {%- set card_tier_colour = '#7a9ab8' -%}
+      {%- else -%}
+        {%- set card_tier_colour = '#c8920a' -%}
+      {%- endif -%}
+      {%- if r.ri_descriptor == 'Regenerative' -%}{%- set card_ri_colour = '#3a9e62' -%}
+      {%- elif r.ri_descriptor == 'Restorative' -%}{%- set card_ri_colour = '#7ab85a' -%}
+      {%- elif r.ri_descriptor == 'Renewable'   -%}{%- set card_ri_colour = '#4FA9A5' -%}
+      {%- elif r.ri_descriptor == 'Extractive'  -%}{%- set card_ri_colour = '#c8920a' -%}
+      {%- else -%}{%- set card_ri_colour = '#c04040' -%}
+      {%- endif -%}
+
+      <a class="rating-card" href="/ratings/{{ r.url_path|default(r.slug) }}"
+         style="--card-tier-colour:{{ card_tier_colour }}; --card-ri-colour:{{ card_ri_colour }};">
+        <div class="rating-card-category">{{ r.category }}</div>
+        <div class="rating-card-title">{{ r.title }}</div>
+        {% if r.rating_type == 'verified' and r.brand %}
+          <div class="rating-card-brand">{{ r.brand }}</div>
+        {% endif %}
+        <div class="rating-card-scores">
+          <div>
+            <div class="rating-card-hip">{{ "%.1f"|format(r.hip_score) }}</div>
+            <div class="rating-card-hip-label">HIP Score</div>
+          </div>
+          <div class="rating-card-ri">
+            {% if r.ri_score > 0 %}+{% endif %}{{ "%.1f"|format(r.ri_score) }}<br>
+            <span style="font-weight:400; color:#aaa;">{{ r.ri_descriptor }}</span>
+          </div>
+        </div>
+        {% if r.rating_type == 'verified' %}
+          <div><span class="verified-tick">✓ Verified</span></div>
+        {% endif %}
+        <div class="rating-card-date">Assessed {{ r.assessment_date }}</div>
+      </a>
+    {% endfor %}
+  </div>
+{% else %}
+  <div class="no-ratings">
+    No ratings published yet — check back soon.
+  </div>
+{% endif %}
+
+{% endblock %}

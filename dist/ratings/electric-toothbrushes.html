@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Electric Toothbrushes — Resourcehip</title>
+  <meta name="description" content="This electric toothbrush has a low overall score of 2.0 out of 10, indicating significant environmental challenges. Its Regenerative Index is -7.0, which means the product is depleting resources rather than supporting a circular system. The design makes it difficult to repair or recycle, and it contains no recycled materials." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <!-- Self-hosted Montserrat — no Google Fonts CDN (GDPR: no IP sent to Google) -->
+  <!-- Run fonts/download_fonts.py once to fetch the .woff2 files -->
+  <link rel="stylesheet" href="/fonts/montserrat.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --forest-green:    #6B8E23;
+      --eco-teal:        #4FA9A5;
+      --atmosphere-blue: #A8DADC;
+      --soft-stone:      #F1F1F1;
+      --impact-grey:     #4A4A4A;
+      --page-bg:         #F7F8F6;
+      --card-bg:         #FFFFFF;
+      --border:          #E2E6E0;
+      /* HIP Mark tier colours */
+      --tier-emerald:    #3a9e62;
+      --tier-slate:      #7a9ab8;
+      --tier-amber:      #c8920a;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--page-bg);
+      color: var(--impact-grey);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Header ─────────────────────────────────────────────────────────── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+    }
+
+    .site-header .logo-link img {
+      height: 48px;
+      width: auto;
+      display: block;
+    }
+
+    .site-nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .site-nav a {
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--impact-grey);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .site-nav a:hover,
+    .site-nav a.active { color: var(--forest-green); }
+
+    .site-nav a.nav-cta {
+      background: linear-gradient(135deg, var(--forest-green), var(--eco-teal));
+      color: #fff;
+      padding: 0.45rem 1.1rem;
+      border-radius: 6px;
+      letter-spacing: 0.06em;
+    }
+
+    .site-nav a.nav-cta:hover { opacity: 0.9; color: #fff; }
+
+    /* ── Main content area ──────────────────────────────────────────────── */
+    .site-main {
+      flex: 1;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    .site-main.wide {
+      max-width: 1100px;
+    }
+
+    /* ── Shared card ────────────────────────────────────────────────────── */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ── Shared typography ──────────────────────────────────────────────── */
+    h1 { font-size: 1.75rem; font-weight: 700; color: var(--forest-green); margin-bottom: 0.5rem; }
+    h2 { font-size: 1.2rem; font-weight: 700; color: var(--impact-grey); margin: 2rem 0 0.75rem; }
+    h3 { font-size: 1rem; font-weight: 600; margin: 1.5rem 0 0.5rem; }
+    p  { line-height: 1.75; margin-bottom: 1rem; }
+    a  { color: var(--forest-green); }
+    ul, ol { padding-left: 1.4rem; line-height: 1.8; }
+
+    hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+
+    /* ── Pill / badge ────────────────────────────────────────────────────── */
+    .pill {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.9rem;
+      border-radius: 20px;
+      background: var(--soft-stone);
+      color: var(--impact-grey);
+    }
+
+    /* ── Skip link (WCAG 2.4.1 Bypass Blocks) ─────────────────────────── */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      background: var(--forest-green);
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      z-index: 9999;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      border-radius: 0 0 6px 0;
+      transition: top 0.15s;
+    }
+    .skip-link:focus { top: 0; }
+
+    /* ── Focus styles (WCAG 2.4.7 Focus Visible) ────────────────────── */
+    *:focus-visible {
+      outline: 3px solid var(--forest-green);
+      outline-offset: 3px;
+      border-radius: 3px;
+    }
+
+    /* ── Footer ─────────────────────────────────────────────────────────── */
+    .site-footer {
+      background: var(--impact-grey);
+      color: rgba(255,255,255,0.65);
+      text-align: center;
+      padding: 1.5rem 2rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+    }
+
+    .site-footer a { color: var(--atmosphere-blue); text-decoration: none; }
+
+    /* ── Responsive ─────────────────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .site-header { padding: 0.75rem 1rem; }
+      .site-nav { gap: 1rem; }
+      .site-nav a.nav-cta { display: none; }
+      .site-main { padding: 1.5rem 1rem 3rem; }
+    }
+
+    
+/* ── Rating page specific styles ──────────────────────────────────────── */
+
+/* Score header */
+.rating-header { margin-bottom: 1.5rem; }
+.rating-meta { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; margin-bottom: 0.75rem; }
+.rating-type-badge {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 0.25rem 0.75rem; border-radius: 20px;
+}
+.badge-generic  { background: #E8F0E0; color: #3d5212; } /* darkened for WCAG AA contrast (was forest-green #6B8E23 at 3.26:1 — failed) */
+.badge-verified { background: #E0F0F0; color: var(--eco-teal); border: 1px solid var(--eco-teal); }
+
+/* HIP Score + RI two-panel card */
+.score-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 560px) { .score-panel { grid-template-columns: 1fr; } }
+
+.hip-score-card, .ri-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  background: #fff;
+}
+
+.hip-score-card { border-top: 4px solid var(--tier-colour, var(--eco-teal)); }
+
+.score-label {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em;
+  text-transform: uppercase; color: #888; margin-bottom: 0.5rem;
+}
+.score-value {
+  font-size: 3.5rem; font-weight: 700;
+  color: var(--tier-colour, var(--eco-teal));
+  line-height: 1;
+}
+.score-denom { font-size: 1.2rem; font-weight: 400; color: #666; } /* was #aaa — failed WCAG AA */
+.score-tier-name {
+  font-size: 0.8rem; font-weight: 600; color: var(--tier-colour);
+  margin-top: 0.4rem; letter-spacing: 0.06em;
+}
+.score-vs-baseline {
+  font-size: 0.72rem; color: #767676; margin-top: 0.5rem; /* was #888 — failed WCAG AA at this size */
+}
+.score-vs-ceiling {
+  font-size: 0.72rem; color: #767676; margin-top: 0.2rem;
+}
+.vs-positive { color: var(--tier-emerald); font-weight: 600; }
+.vs-negative { color: var(--tier-amber); font-weight: 600; }
+
+/* RI card */
+.ri-score-value {
+  font-size: 3rem; font-weight: 700; line-height: 1;
+}
+.ri-descriptor {
+  font-size: 0.85rem; font-weight: 700; margin-top: 0.4rem;
+  letter-spacing: 0.06em;
+}
+.ri-scale {
+  display: flex; justify-content: center; gap: 2px;
+  margin: 0.75rem auto 0; max-width: 160px;
+}
+.ri-pip {
+  flex: 1; height: 6px; border-radius: 3px; background: #E2E6E0;
+}
+.ri-pip.active { background: var(--ri-colour); }
+
+/* Dimension bars */
+.dimensions-grid { display: flex; flex-direction: column; gap: 0.85rem; }
+
+.dim-row { display: grid; grid-template-columns: 160px 1fr 48px; gap: 0.75rem; align-items: center; }
+@media (max-width: 560px) {
+  .dim-row { grid-template-columns: 1fr; gap: 0.25rem; }
+  .dim-bar-wrap { order: 2; }
+  .dim-score-num { order: 3; text-align: left; }
+}
+
+.dim-name {
+  font-size: 0.78rem; font-weight: 600; color: var(--impact-grey);
+  line-height: 1.3;
+}
+.dim-weight { font-size: 0.68rem; color: #666; font-weight: 400; } /* was #aaa — critical WCAG AA fail (2.32:1) */
+
+.dim-bar-wrap {
+  background: #EDF0EC; border-radius: 6px; height: 12px; overflow: hidden;
+}
+.dim-bar {
+  height: 100%; border-radius: 6px;
+  transition: width 0.6s ease;
+}
+.bar-high   { background: linear-gradient(to right, var(--tier-emerald), #5db878); }
+.bar-medium { background: linear-gradient(to right, #e0a020, var(--tier-amber)); }
+.bar-low    { background: linear-gradient(to right, #d05050, #e07070); }
+
+.dim-score-num {
+  font-size: 0.85rem; font-weight: 700; text-align: right;
+  color: var(--impact-grey);
+}
+
+.dim-finding {
+  grid-column: 1 / -1;
+  font-size: 0.75rem; color: #666; line-height: 1.5;
+  padding-left: 0; margin-top: -0.4rem;
+  border-left: 2px solid var(--border);
+  padding-left: 0.6rem;
+}
+
+/* Rendered markdown body */
+.rating-body h2 { font-size: 1.1rem; margin: 2rem 0 0.5rem; color: var(--forest-green); }
+.rating-body h3 { font-size: 0.95rem; }
+.rating-body table {
+  width: 100%; border-collapse: collapse; font-size: 0.82rem;
+  margin: 1rem 0;
+}
+.rating-body th {
+  background: var(--soft-stone); font-weight: 600; text-align: left;
+  padding: 0.5rem 0.75rem; border: 1px solid var(--border);
+}
+.rating-body td { padding: 0.45rem 0.75rem; border: 1px solid var(--border); }
+.rating-body blockquote {
+  border-left: 3px solid var(--eco-teal); padding: 0.5rem 1rem;
+  background: #f0f8f8; border-radius: 0 6px 6px 0;
+  color: #555; font-size: 0.85rem; margin: 1rem 0;
+}
+.rating-body ul { margin-bottom: 1rem; }
+
+/* Generic rating notice */
+.generic-notice {
+  background: #fffbf0; border: 1px solid #e8d080;
+  border-left: 4px solid var(--tier-amber);
+  border-radius: 0 8px 8px 0; padding: 0.9rem 1.25rem;
+  font-size: 0.8rem; line-height: 1.65; color: #665500;
+  margin-bottom: 1.25rem;
+}
+.generic-notice strong { display: block; margin-bottom: 0.25rem; }
+
+/* Data sources */
+.data-sources {
+  font-size: 0.75rem; color: #666; line-height: 1.6; /* was #888 — failed WCAG AA at this size */
+  margin-top: 0.5rem;
+}
+.data-sources strong { color: #4A4A4A; }
+
+/* Disclaimer */
+.disclaimer-box {
+  background: #fafaf8; border: 1px solid var(--border);
+  border-radius: 8px; padding: 1.25rem 1.5rem;
+  font-size: 0.78rem; line-height: 1.7; color: #666;
+  margin-top: 2rem;
+}
+.disclaimer-box p { margin-bottom: 0.5rem; }
+
+  </style>
+</head>
+<body>
+
+  <!-- Skip to main content (WCAG 2.4.1) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <a class="logo-link" href="/">
+      <img src="/logo.png" alt="Resourcehip home" />
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/" >Home</a>
+      <a href="/ratings/" class="active" aria-current="page">Ratings</a>
+      <a href="/methodology" >Methodology</a>
+      <a href="/about" >About</a>
+      <a href="/verified-ratings" >Verified Ratings</a>
+      <a href="/submit" class="nav-cta">Submit a Product</a>
+    </nav>
+  </header>
+
+  <main id="main-content" class="site-main ">
+    
+
+<style>
+  :root {
+    --tier-colour: #c8920a;
+    --ri-colour:   #c04040;
+  }
+</style>
+
+<!-- ── Generic rating notice ──────────────────────────────────────────────── -->
+
+<div class="generic-notice">
+  <strong>Category rating — not an assessment of any specific brand</strong>
+  This rating covers a typical, mass-market <em>personal care</em> product based on publicly available data.
+  It does not name or assess any specific manufacturer or product.
+  Individual products may perform better or worse.
+  <a href="/about#two-types-of-rating">Learn about verified ratings →</a>
+</div>
+
+
+<!-- ── Rating header ─────────────────────────────────────────────────────── -->
+<div class="rating-header">
+  <div class="rating-meta">
+    
+      <span class="rating-type-badge badge-generic">Category Rating</span>
+    
+    <span class="pill">personal care</span>
+    <span class="pill">Assessed 2026-04-18</span>
+    <span class="pill">1.3</span>
+  </div>
+  <h1>Electric Toothbrushes</h1>
+  
+</div>
+
+<!-- ── HIP Score + RI ─────────────────────────────────────────────────────── -->
+<div class="score-panel">
+
+  <div class="hip-score-card">
+    <div class="score-label">HIP Score</div>
+    <div class="score-value">
+      2.0<span class="score-denom">/10</span>
+    </div>
+    <div class="score-tier-name">Low Resilience</div>
+    <div class="score-vs-baseline">At category baseline (2.0)</div>
+    
+    
+    <div class="score-vs-ceiling">
+      Highest estimated rating: 6.5/10
+    </div>
+    
+  </div>
+
+  <div class="ri-card">
+    <div class="score-label">Regenerative Index</div>
+    <div class="ri-score-value" style="color: var(--ri-colour);">
+      -7.0
+    </div>
+    <div class="ri-descriptor" style="color: var(--ri-colour);">Depleting</div>
+    <!-- RI scale: 5 pips, one per tier (Depleting → Regenerative) -->
+    <div class="ri-scale">
+        <div class="ri-pip active"
+             style="background:#c04040">
+        </div>
+      
+        <div class="ri-pip "
+             style="">
+        </div>
+      
+        <div class="ri-pip "
+             style="">
+        </div>
+      
+        <div class="ri-pip "
+             style="">
+        </div>
+      
+        <div class="ri-pip "
+             style="">
+        </div>
+      
+    </div>
+    <div class="score-vs-baseline" style="margin-top:0.75rem;">At category average (-7.0)</div>
+    
+    
+    <div class="score-vs-ceiling">
+      Highest estimated RI: -2.0
+    </div>
+    
+  </div>
+
+</div>
+
+<!-- ── Dimension Breakdown ────────────────────────────────────────────────── -->
+<div class="card">
+  <h2 style="margin-top:0;">Score Breakdown</h2><div class="dimensions-grid">
+    <div class="dim-row">
+        <div class="dim-name">
+          Material Scarcity Index<br>
+          <span class="dim-weight">20% weight</span>
+        </div>
+        <div class="dim-bar-wrap">
+          <div class="dim-bar bar-low" style="width:15%"></div>
+        </div>
+        <div class="dim-score-num">1.5</div>
+        
+          <div class="dim-finding">The product relies heavily on lithium and cobalt, both designated as Critical Raw Materials by the EU and US due to high supply risk and concentration in single countries. The absence of recycled content and the use of multiple scarce metals typical of consumer electronics result in a critically scarce rating.</div>
+        
+      </div>
+    <div class="dim-row">
+        <div class="dim-name">
+          Supply Chain Risk<br>
+          <span class="dim-weight">18% weight</span>
+        </div>
+        <div class="dim-bar-wrap">
+          <div class="dim-bar bar-low" style="width:25%"></div>
+        </div>
+        <div class="dim-score-num">2.5</div>
+        
+          <div class="dim-finding">The electric toothbrush contains rare earth magnets (neodymium) and copper, with rare earths sourced predominantly from China (high concentration risk) and copper from moderate-risk jurisdictions. Due to the lack of submitted due diligence standards, audit verification, or alternative suppliers, the supply chain is highly vulnerable to geopolitical and governance shocks.</div>
+        
+      </div>
+    <div class="dim-row">
+        <div class="dim-name">
+          Recyclability & Circularity<br>
+          <span class="dim-weight">18% weight</span>
+        </div>
+        <div class="dim-bar-wrap">
+          <div class="dim-bar bar-low" style="width:20%"></div>
+        </div>
+        <div class="dim-score-num">2.0</div>
+        
+          <div class="dim-finding">The electric toothbrush is assumed to be glued with no take-back scheme, making material separation impractical without specialist equipment. Only an estimated 20% of the product (metal components) enters practical recycling streams, while the sealed ABS housing and internal heating elements are routinely landfilled. This aligns with the non-recyclable baseline for sealed consumer electronics lacking disassembly features.</div>
+        
+      </div>
+    <div class="dim-row">
+        <div class="dim-name">
+          Repairability<br>
+          <span class="dim-weight">13% weight</span>
+        </div>
+        <div class="dim-bar-wrap">
+          <div class="dim-bar bar-low" style="width:10%"></div>
+        </div>
+        <div class="dim-score-num">1.0</div>
+        
+          <div class="dim-finding">The electric toothbrush is assumed to be glued shut with no spare parts available and no public service manual, fitting the profile of an unrepairable sealed consumer product. Without fasteners or a parts programme, the device is designed for replacement rather than repair.</div>
+        
+      </div>
+    <div class="dim-row">
+        <div class="dim-name">
+          Social & Environmental Impact<br>
+          <span class="dim-weight">8% weight</span>
+        </div>
+        <div class="dim-bar-wrap">
+          <div class="dim-bar bar-low" style="width:35%"></div>
+        </div>
+        <div class="dim-score-num">3.5</div>
+        
+          <div class="dim-finding">The product is manufactured in China, a moderate-to-high risk jurisdiction, with no submitted third-party audits, environmental certifications, or modern slavery statements. While ILO compliance is not claimed, the absence of independent verification and supply chain transparency places this in the elevated risk category.</div>
+        
+      </div>
+    <div class="dim-row">
+        <div class="dim-name">
+          Product Longevity<br>
+          <span class="dim-weight">8% weight</span>
+        </div>
+        <div class="dim-bar-wrap">
+          <div class="dim-bar bar-low" style="width:35%"></div>
+        </div>
+        <div class="dim-score-num">3.5</div>
+        
+          <div class="dim-finding">The product has a 2-year warranty and a stated design life of 4 years, placing it in the below-average lifespan category typical for mass-market small appliances. The lack of an IP rating or modular design prevents a higher score, as the product is not explicitly designed for extended maintenance or multi-decade use.</div>
+        
+      </div>
+    
+
+    <!-- RI row (separate — different scale) --><div class="dim-row">
+      <div class="dim-name">
+        Regenerative Index<br>
+        <span class="dim-weight">15% weight · scale −10 to +10</span>
+      </div>
+      <div class="dim-bar-wrap">
+        <div class="dim-bar bar-low" style="width:15%"></div>
+      </div>
+      <div class="dim-score-num" style="font-size:0.78rem;">
+        -7.0
+      </div>
+      
+        <div class="dim-finding">The product is scored as Depleting because it is a conventional electric toothbrush with 0% recycled content, no take-back scheme, and no regenerative certifications. Not Depleting because recycled content >= 50% with verified take-back does not apply, as the product lacks both recycled inputs and recovery programmes.</div>
+      
+    </div>
+
+  </div><!-- /.dimensions-grid -->
+
+  <p style="font-size:0.72rem; color:#767676; margin-top:1.25rem; margin-bottom:0;">
+    MSI 20% · SCR 18% · RC 18% · R 13% · SEI 8% · PL 8% · RI 15% = 100%
+  </p>
+</div><!-- /.card -->
+
+<!-- ── Key Materials ───────────────────────────────────────────────────────── -->
+
+
+<!-- ── Consumer sections (from frontmatter or body) ──────────────────────── -->
+
+<div class="card">
+  <h2 style="margin-top:0;">Consumer Summary</h2>
+  <p>This electric toothbrush has a low overall score of 2.0 out of 10, indicating significant environmental challenges. Its Regenerative Index is -7.0, which means the product is depleting resources rather than supporting a circular system. The design makes it difficult to repair or recycle, and it contains no recycled materials.</p>
+</div>
+
+
+
+<div class="card">
+  <h2 style="margin-top:0;">What This Means For You</h2>
+  <p>When shopping for an electric toothbrush, look for models that are designed to be easily repaired with available spare parts and that offer a take-back program for recycling. Prioritize products that use recycled materials and have a longer lifespan to reduce waste. Avoid devices that are glued shut or lack clear instructions for maintenance and end-of-life disposal.</p>
+</div>
+
+
+<!-- ── Rendered markdown body (data sources, improvement opps, etc.) ──────── -->
+
+<div class="card rating-body">
+  <h2>Data Transparency</h2>
+<p>This is a <strong>category rating</strong> based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and LLM training knowledge:</p>
+<ul>
+<li><code>material_percentages</code></li>
+<li><code>recycled_content_pct</code></li>
+<li><code>country_of_primary_extraction</code></li>
+<li><code>primary_sourcing_countries</code></li>
+<li><code>tier1_supplier_count</code></li>
+<li><code>due_diligence_standard</code></li>
+<li><code>alternative_supplier_exists</code></li>
+<li><code>disassembly_type</code></li>
+<li><code>recyclable_streams_pct</code></li>
+<li><code>recycling_label_compliant</code></li>
+<li><code>takeback_scheme</code></li>
+<li><code>design_for_disassembly</code></li>
+<li><code>fastener_type</code></li>
+<li><code>spare_parts_available</code></li>
+<li><code>spare_parts_years_committed</code></li>
+<li><code>service_manual_public</code></li>
+<li><code>ifixit_score</code></li>
+<li><code>ecodesign_in_scope</code></li>
+<li><code>manufacturing_countries</code></li>
+<li><code>environmental_certifications</code></li>
+<li><code>third_party_certification</code></li>
+<li><code>rba_audit_completed</code></li>
+<li><code>modern_slavery_statement</code></li>
+<li><code>ilo_compliance_claimed</code></li>
+<li><code>ip_rating</code></li>
+<li><code>modular_design</code></li>
+<li><code>software_support_years</code></li>
+<li><code>primary_material_origin</code></li>
+<li><code>takeback_scheme</code></li>
+<li><code>regenerative_certifications</code></li>
+<li><code>closed_loop_programme</code></li>
+<li><code>end_of_life_programme</code></li>
+<li><code>material_origin_certified</code></li>
+<li><code>regenerative_practices</code></li>
+<li><code>third_party_certification</code></li>
+</ul>
+<p>A <a href="/about#two-types-of-rating">verified rating</a> uses manufacturer-submitted data and produces a more accurate, product-specific score.</p>
+<h2>Material Watch Points</h2>
+<ul>
+<li>Lithium — EU Critical Raw Materials list</li>
+<li>Cobalt — EU Critical Raw Materials list</li>
+<li>Nickel — EU Critical Raw Materials list</li>
+<li>High single-country supply concentration risk</li>
+<li>Rare earths (neodymium) — &gt;60% global supply from China, high concentration risk</li>
+<li>No due-diligence programme documented</li>
+<li>No alternative supplier documented</li>
+<li>No third-party audit verification</li>
+</ul>
+<h2>About This Rating</h2>
+<p>Produced under <a href="/methodology">Resourcehip Methodology v1.3</a> (CC BY-NC 4.0). Assessed: 2026-04-18. Next scheduled review: 2027-04-18.</p>
+<p><a href="/dispute">Dispute this rating</a> · <a href="/methodology">Our methodology</a> · <a href="/ratings/">All ratings</a></p>
+</div>
+
+
+<!-- ── Data sources ───────────────────────────────────────────────────────── -->
+
+<div class="card">
+  <h2 style="margin-top:0; font-size:0.95rem;">Data Sources</h2>
+  <div class="data-sources">
+    <strong>This rating draws on the following public sources:</strong><br>
+    USGS Mineral Resources Program (public domain) · EU Critical Raw Materials List 2023 (CC BY 4.0) · World Bank Worldwide Governance Indicators (CC BY 4.0) · LLM training knowledge (for assumed fields — no manufacturer submission)<br>
+    All sources are public domain or published under open data licences.
+    <a href="/methodology#data-sources">Full source list →</a>
+  </div>
+</div>
+
+
+<!-- ── Disclaimer ─────────────────────────────────────────────────────────── -->
+<div class="disclaimer-box">
+  <p><strong>About this rating:</strong>
+  HIP scores are based on publicly available data at the assessment date.
+  They are estimates of material resilience — not guarantees of product performance, safety, or future supply conditions.
+  Resourcehip accepts no liability for decisions made in reliance on these ratings.</p>
+  <p><strong>Scope:</strong>
+  
+    This is a <em>category rating</em> for Electric Toothbrushes and does not assess any specific brand or manufacturer.
+    Individual products may perform better or worse than this baseline.
+  
+  Produced under <a href="/methodology">Resourcehip Scoring Methodology 1.3</a>.</p>
+  <p><strong>AI disclosure:</strong>
+  This rating was produced using an AI scoring pipeline (local, no cloud — no data shared externally) and reviewed and approved by a human assessor before publication.
+  
+  Scoring model: <code>qwen3.5:35b</code>.
+  The model's training data influences the findings — see the methodology for caveats.
+  
+  <a href="/cookies">AI transparency notice →</a></p>
+  <p><strong>Not financial or investment advice.</strong>
+  Ratings are for consumer information only.
+  <a href="/dispute">Dispute this rating</a> · <a href="/methodology">Our methodology</a> · <a href="/ratings/">All ratings</a>
+  </p>
+  <p style="margin-bottom:0; color:#767676;">
+    Assessed: 2026-04-18 · Next review: 2027-04-18 · Methodology 1.3
+  </p>
+</div>
+
+
+  </main>
+
+  <footer class="site-footer">
+    <div>&copy; 2026 Resourcehip Ltd &nbsp;&middot;&nbsp; Reg. SC873386 &nbsp;&middot;&nbsp; Office 90, Alloa Business Centre, Whins Road, Alloa, Clackmannanshire, FK10&nbsp;3SA, Scotland</div>
+    <!-- TODO: add VAT no. once registered (only required if VAT-registered) -->
+    <div style="margin-top:0.4rem;">
+      <span id="rh-email"></span> &nbsp;|&nbsp;
+      <a href="/methodology">Methodology v1.3</a> &nbsp;|&nbsp;
+      <a href="/privacy">Privacy</a> &nbsp;|&nbsp;
+      <a href="/terms">Terms</a> &nbsp;|&nbsp;
+      <a href="/cookies">Cookies &amp; AI</a>
+    </div>
+  </footer>
+  <script>
+    /* Email obfuscation — assembled at runtime to deter address harvesting bots */
+    (function() {
+      var u = 'hello', d = ['resourcehip', 'com'].join('.');
+      var addr = u + '\u0040' + d;
+      var el = document.getElementById('rh-email');
+      if (el) el.innerHTML = '<a href="mailto:' + addr + '">' + addr + '</a>';
+    })();
+  </script>
+
+</body>
+</html>

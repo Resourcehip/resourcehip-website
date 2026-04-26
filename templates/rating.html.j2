@@ -1,0 +1,434 @@
+{% extends "base.html.j2" %}
+
+{% block extra_styles %}
+/* ── Rating page specific styles ──────────────────────────────────────── */
+
+/* Score header */
+.rating-header { margin-bottom: 1.5rem; }
+.rating-meta { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; margin-bottom: 0.75rem; }
+.rating-type-badge {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 0.25rem 0.75rem; border-radius: 20px;
+}
+.badge-generic  { background: #E8F0E0; color: #3d5212; } /* darkened for WCAG AA contrast (was forest-green #6B8E23 at 3.26:1 — failed) */
+.badge-verified { background: #E0F0F0; color: var(--eco-teal); border: 1px solid var(--eco-teal); }
+
+/* HIP Score + RI two-panel card */
+.score-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 560px) { .score-panel { grid-template-columns: 1fr; } }
+
+.hip-score-card, .ri-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  background: #fff;
+}
+
+.hip-score-card { border-top: 4px solid var(--tier-colour, var(--eco-teal)); }
+
+.score-label {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em;
+  text-transform: uppercase; color: #888; margin-bottom: 0.5rem;
+}
+.score-value {
+  font-size: 3.5rem; font-weight: 700;
+  color: var(--tier-colour, var(--eco-teal));
+  line-height: 1;
+}
+.score-denom { font-size: 1.2rem; font-weight: 400; color: #666; } /* was #aaa — failed WCAG AA */
+.score-tier-name {
+  font-size: 0.8rem; font-weight: 600; color: var(--tier-colour);
+  margin-top: 0.4rem; letter-spacing: 0.06em;
+}
+.score-vs-baseline {
+  font-size: 0.72rem; color: #767676; margin-top: 0.5rem; /* was #888 — failed WCAG AA at this size */
+}
+.score-vs-ceiling {
+  font-size: 0.72rem; color: #767676; margin-top: 0.2rem;
+}
+.vs-positive { color: var(--tier-emerald); font-weight: 600; }
+.vs-negative { color: var(--tier-amber); font-weight: 600; }
+
+/* RI card */
+.ri-score-value {
+  font-size: 3rem; font-weight: 700; line-height: 1;
+}
+.ri-descriptor {
+  font-size: 0.85rem; font-weight: 700; margin-top: 0.4rem;
+  letter-spacing: 0.06em;
+}
+.ri-scale {
+  display: flex; justify-content: center; gap: 2px;
+  margin: 0.75rem auto 0; max-width: 160px;
+}
+.ri-pip {
+  flex: 1; height: 6px; border-radius: 3px; background: #E2E6E0;
+}
+.ri-pip.active { background: var(--ri-colour); }
+
+/* Dimension bars */
+.dimensions-grid { display: flex; flex-direction: column; gap: 0.85rem; }
+
+.dim-row { display: grid; grid-template-columns: 160px 1fr 48px; gap: 0.75rem; align-items: center; }
+@media (max-width: 560px) {
+  .dim-row { grid-template-columns: 1fr; gap: 0.25rem; }
+  .dim-bar-wrap { order: 2; }
+  .dim-score-num { order: 3; text-align: left; }
+}
+
+.dim-name {
+  font-size: 0.78rem; font-weight: 600; color: var(--impact-grey);
+  line-height: 1.3;
+}
+.dim-weight { font-size: 0.68rem; color: #666; font-weight: 400; } /* was #aaa — critical WCAG AA fail (2.32:1) */
+
+.dim-bar-wrap {
+  background: #EDF0EC; border-radius: 6px; height: 12px; overflow: hidden;
+}
+.dim-bar {
+  height: 100%; border-radius: 6px;
+  transition: width 0.6s ease;
+}
+.bar-high   { background: linear-gradient(to right, var(--tier-emerald), #5db878); }
+.bar-medium { background: linear-gradient(to right, #e0a020, var(--tier-amber)); }
+.bar-low    { background: linear-gradient(to right, #d05050, #e07070); }
+
+.dim-score-num {
+  font-size: 0.85rem; font-weight: 700; text-align: right;
+  color: var(--impact-grey);
+}
+
+.dim-finding {
+  grid-column: 1 / -1;
+  font-size: 0.75rem; color: #666; line-height: 1.5;
+  padding-left: 0; margin-top: -0.4rem;
+  border-left: 2px solid var(--border);
+  padding-left: 0.6rem;
+}
+
+/* Rendered markdown body */
+.rating-body h2 { font-size: 1.1rem; margin: 2rem 0 0.5rem; color: var(--forest-green); }
+.rating-body h3 { font-size: 0.95rem; }
+.rating-body table {
+  width: 100%; border-collapse: collapse; font-size: 0.82rem;
+  margin: 1rem 0;
+}
+.rating-body th {
+  background: var(--soft-stone); font-weight: 600; text-align: left;
+  padding: 0.5rem 0.75rem; border: 1px solid var(--border);
+}
+.rating-body td { padding: 0.45rem 0.75rem; border: 1px solid var(--border); }
+.rating-body blockquote {
+  border-left: 3px solid var(--eco-teal); padding: 0.5rem 1rem;
+  background: #f0f8f8; border-radius: 0 6px 6px 0;
+  color: #555; font-size: 0.85rem; margin: 1rem 0;
+}
+.rating-body ul { margin-bottom: 1rem; }
+
+/* Generic rating notice */
+.generic-notice {
+  background: #fffbf0; border: 1px solid #e8d080;
+  border-left: 4px solid var(--tier-amber);
+  border-radius: 0 8px 8px 0; padding: 0.9rem 1.25rem;
+  font-size: 0.8rem; line-height: 1.65; color: #665500;
+  margin-bottom: 1.25rem;
+}
+.generic-notice strong { display: block; margin-bottom: 0.25rem; }
+
+/* Data sources */
+.data-sources {
+  font-size: 0.75rem; color: #666; line-height: 1.6; /* was #888 — failed WCAG AA at this size */
+  margin-top: 0.5rem;
+}
+.data-sources strong { color: #4A4A4A; }
+
+/* Disclaimer */
+.disclaimer-box {
+  background: #fafaf8; border: 1px solid var(--border);
+  border-radius: 8px; padding: 1.25rem 1.5rem;
+  font-size: 0.78rem; line-height: 1.7; color: #666;
+  margin-top: 2rem;
+}
+.disclaimer-box p { margin-bottom: 0.5rem; }
+{% endblock %}
+
+{% block main_class %}{% endblock %}
+
+{% block content %}
+
+{# ── Tier colour logic ──────────────────────────────────────────────────── #}
+{%- if hip_score >= 6.5 -%}
+  {%- set tier_colour = '#3a9e62' -%}
+  {%- set tier_name   = 'Emerald' -%}
+  {%- set tier_label  = 'High Resilience' -%}
+{%- elif hip_score >= 4.0 -%}
+  {%- set tier_colour = '#7a9ab8' -%}
+  {%- set tier_name   = 'Slate' -%}
+  {%- set tier_label  = 'Moderate Resilience' -%}
+{%- else -%}
+  {%- set tier_colour = '#c8920a' -%}
+  {%- set tier_name   = 'Amber' -%}
+  {%- set tier_label  = 'Low Resilience' -%}
+{%- endif -%}
+
+{# ── RI colour logic ────────────────────────────────────────────────────── #}
+{%- if ri_descriptor == 'Regenerative' -%}
+  {%- set ri_colour = '#3a9e62' -%}
+{%- elif ri_descriptor == 'Restorative' -%}
+  {%- set ri_colour = '#7ab85a' -%}
+{%- elif ri_descriptor == 'Renewable' -%}
+  {%- set ri_colour = '#4FA9A5' -%}
+{%- elif ri_descriptor == 'Extractive' -%}
+  {%- set ri_colour = '#c8920a' -%}
+{%- else -%}
+  {%- set ri_colour = '#c04040' -%}
+{%- endif -%}
+
+<style>
+  :root {
+    --tier-colour: {{ tier_colour }};
+    --ri-colour:   {{ ri_colour }};
+  }
+</style>
+
+<!-- ── Generic rating notice ──────────────────────────────────────────────── -->
+{% if rating_type != 'verified' %}
+<div class="generic-notice">
+  <strong>Category rating — not an assessment of any specific brand</strong>
+  This rating covers a typical, mass-market <em>{{ category }}</em> product based on publicly available data.
+  It does not name or assess any specific manufacturer or product.
+  Individual products may perform better or worse.
+  <a href="/about#two-types-of-rating">Learn about verified ratings →</a>
+</div>
+{% endif %}
+
+<!-- ── Rating header ─────────────────────────────────────────────────────── -->
+<div class="rating-header">
+  <div class="rating-meta">
+    {% if rating_type == 'verified' %}
+      <span class="rating-type-badge badge-verified">✓ Verified Rating</span>
+    {% else %}
+      <span class="rating-type-badge badge-generic">Category Rating</span>
+    {% endif %}
+    <span class="pill">{{ category }}</span>
+    <span class="pill">Assessed {{ assessment_date }}</span>
+    <span class="pill">{{ methodology_version }}</span>
+  </div>
+  <h1>{{ title }}</h1>
+  {% if rating_type == 'verified' and brand %}
+    <p style="font-size:1rem; color:#666; margin-top:0.25rem;">{{ brand }}</p>
+  {% endif %}
+</div>
+
+<!-- ── HIP Score + RI ─────────────────────────────────────────────────────── -->
+<div class="score-panel">
+
+  <div class="hip-score-card">
+    <div class="score-label">HIP Score</div>
+    <div class="score-value">
+      {{ "%.1f"|format(hip_score) }}<span class="score-denom">/10</span>
+    </div>
+    <div class="score-tier-name">{{ tier_label }}</div>
+    <div class="score-vs-baseline">
+      {%- set diff = hip_score - category_baseline_hip -%}
+      {%- if diff > 0 -%}
+        <span class="vs-positive">+{{ "%.1f"|format(diff) }}</span> vs category baseline ({{ "%.1f"|format(category_baseline_hip) }})
+      {%- elif diff < 0 -%}
+        <span class="vs-negative">{{ "%.1f"|format(diff) }}</span> vs category baseline ({{ "%.1f"|format(category_baseline_hip) }})
+      {%- else -%}
+        At category baseline ({{ "%.1f"|format(category_baseline_hip) }})
+      {%- endif -%}
+    </div>
+    {% set _ceil_hip = category_ceiling_hip|default(none) %}
+    {% if _ceil_hip is not none %}
+    <div class="score-vs-ceiling">
+      Highest estimated rating: {{ "%.1f"|format(_ceil_hip) }}/10
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="ri-card">
+    <div class="score-label">Regenerative Index</div>
+    <div class="ri-score-value" style="color: var(--ri-colour);">
+      {% if ri_score > 0 %}+{% endif %}{{ "%.1f"|format(ri_score) }}
+    </div>
+    <div class="ri-descriptor" style="color: var(--ri-colour);">{{ ri_descriptor }}</div>
+    <!-- RI scale: 5 pips, one per tier (Depleting → Regenerative) -->
+    <div class="ri-scale">
+      {%- set ri_tiers = ['Depleting','Extractive','Renewable','Restorative','Regenerative'] -%}
+      {%- set ri_pip_colours = ['#c04040','#c8920a','#4FA9A5','#7ab85a','#3a9e62'] -%}
+      {%- set ri_active_idx = ri_tiers.index(ri_descriptor) if ri_descriptor in ri_tiers else 2 -%}
+      {% for i in range(5) %}
+        <div class="ri-pip {% if i <= ri_active_idx %}active{% endif %}"
+             style="{% if i <= ri_active_idx %}background:{{ ri_pip_colours[ri_active_idx] }}{% endif %}">
+        </div>
+      {% endfor %}
+    </div>
+    <div class="score-vs-baseline" style="margin-top:0.75rem;">
+      {%- set ri_diff = ri_score - category_baseline_ri -%}
+      {%- if ri_diff > 0 -%}
+        <span class="vs-positive">+{{ "%.1f"|format(ri_diff) }}</span> vs category ({{ "%.1f"|format(category_baseline_ri) }})
+      {%- elif ri_diff < 0 -%}
+        <span class="vs-negative">{{ "%.1f"|format(ri_diff) }}</span> vs category ({{ "%.1f"|format(category_baseline_ri) }})
+      {%- else -%}
+        At category average ({{ "%.1f"|format(category_baseline_ri) }})
+      {%- endif -%}
+    </div>
+    {% set _ceil_ri = category_ceiling_ri|default(none) %}
+    {% if _ceil_ri is not none %}
+    <div class="score-vs-ceiling">
+      Highest estimated RI: {% if _ceil_ri > 0 %}+{% endif %}{{ "%.1f"|format(_ceil_ri) }}
+    </div>
+    {% endif %}
+  </div>
+
+</div>
+
+<!-- ── Dimension Breakdown ────────────────────────────────────────────────── -->
+<div class="card">
+  <h2 style="margin-top:0;">Score Breakdown</h2>
+
+  {%- set dimensions = [
+    ('Material Scarcity Index',        msi_score, 20, msi_finding | default('')),
+    ('Supply Chain Risk',              scr_score, 18, scr_finding | default('')),
+    ('Recyclability & Circularity',    rc_score,  18, rc_finding  | default('')),
+    ('Repairability',                  r_score,   13, r_finding   | default('')),
+    ('Social & Environmental Impact',  sei_score,  8, sei_finding | default('')),
+    ('Product Longevity',              pl_score,   8, pl_finding  | default('')),
+  ] -%}
+
+  <div class="dimensions-grid">
+    {% for name, score, weight, finding in dimensions %}
+      {%- if score >= 7.0 -%}{%- set bar_class = 'bar-high' -%}
+      {%- elif score >= 4.0 -%}{%- set bar_class = 'bar-medium' -%}
+      {%- else -%}{%- set bar_class = 'bar-low' -%}
+      {%- endif -%}
+      <div class="dim-row">
+        <div class="dim-name">
+          {{ name }}<br>
+          <span class="dim-weight">{{ weight }}% weight</span>
+        </div>
+        <div class="dim-bar-wrap">
+          <div class="dim-bar {{ bar_class }}" style="width:{{ (score * 10) | int }}%"></div>
+        </div>
+        <div class="dim-score-num">{{ "%.1f"|format(score) }}</div>
+        {% if finding %}
+          <div class="dim-finding">{{ finding }}</div>
+        {% endif %}
+      </div>
+    {% endfor %}
+
+    <!-- RI row (separate — different scale) -->
+    {%- if ri_score >= 1 -%}{%- set ri_bar_class = 'bar-high' -%}
+    {%- elif ri_score >= -4 -%}{%- set ri_bar_class = 'bar-medium' -%}
+    {%- else -%}{%- set ri_bar_class = 'bar-low' -%}
+    {%- endif -%}
+    {# Normalise −10→+10 to 0–100% for bar #}
+    {%- set ri_pct = ((ri_score + 10) / 20 * 100) | int -%}
+    <div class="dim-row">
+      <div class="dim-name">
+        Regenerative Index<br>
+        <span class="dim-weight">15% weight · scale −10 to +10</span>
+      </div>
+      <div class="dim-bar-wrap">
+        <div class="dim-bar {{ ri_bar_class }}" style="width:{{ ri_pct }}%"></div>
+      </div>
+      <div class="dim-score-num" style="font-size:0.78rem;">
+        {% if ri_score > 0 %}+{% endif %}{{ "%.1f"|format(ri_score) }}
+      </div>
+      {% if ri_finding | default('') %}
+        <div class="dim-finding">{{ ri_finding }}</div>
+      {% endif %}
+    </div>
+
+  </div><!-- /.dimensions-grid -->
+
+  <p style="font-size:0.72rem; color:#767676; margin-top:1.25rem; margin-bottom:0;">
+    MSI 20% · SCR 18% · RC 18% · R 13% · SEI 8% · PL 8% · RI 15% = 100%
+  </p>
+</div><!-- /.card -->
+
+<!-- ── Key Materials ───────────────────────────────────────────────────────── -->
+{% if key_materials %}
+<div class="card">
+  <h2 style="margin-top:0;">Key Materials</h2>
+  <ul>
+    {% for mat in key_materials %}
+      <li><strong>{{ mat.name }}</strong> — {{ mat.note }}</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
+<!-- ── Consumer sections (from frontmatter or body) ──────────────────────── -->
+{% if consumer_summary %}
+<div class="card">
+  <h2 style="margin-top:0;">Consumer Summary</h2>
+  <p>{{ consumer_summary }}</p>
+</div>
+{% endif %}
+
+{% if what_this_means %}
+<div class="card">
+  <h2 style="margin-top:0;">What This Means For You</h2>
+  <p>{{ what_this_means }}</p>
+</div>
+{% endif %}
+
+<!-- ── Rendered markdown body (data sources, improvement opps, etc.) ──────── -->
+{% if body %}
+<div class="card rating-body">
+  {{ body }}
+</div>
+{% endif %}
+
+<!-- ── Data sources ───────────────────────────────────────────────────────── -->
+{% if data_sources %}
+<div class="card">
+  <h2 style="margin-top:0; font-size:0.95rem;">Data Sources</h2>
+  <div class="data-sources">
+    <strong>This rating draws on the following public sources:</strong><br>
+    {% for src in data_sources %}{{ src }}{% if not loop.last %} · {% endif %}{% endfor %}<br>
+    All sources are public domain or published under open data licences.
+    <a href="/methodology#data-sources">Full source list →</a>
+  </div>
+</div>
+{% endif %}
+
+<!-- ── Disclaimer ─────────────────────────────────────────────────────────── -->
+<div class="disclaimer-box">
+  <p><strong>About this rating:</strong>
+  HIP scores are based on publicly available data{% if rating_type == 'verified' %} and manufacturer-submitted information{% endif %} at the assessment date.
+  They are estimates of material resilience — not guarantees of product performance, safety, or future supply conditions.
+  Resourcehip accepts no liability for decisions made in reliance on these ratings.</p>
+  <p><strong>Scope:</strong>
+  {% if rating_type != 'verified' %}
+    This is a <em>category rating</em> for {{ title }} and does not assess any specific brand or manufacturer.
+    Individual products may perform better or worse than this baseline.
+  {% else %}
+    This is a <em>verified product rating</em> for {{ brand }}, assessed using manufacturer-submitted data and public category data.
+  {% endif %}
+  Produced under <a href="/methodology">Resourcehip Scoring Methodology {{ methodology_version }}</a>.</p>
+  <p><strong>AI disclosure:</strong>
+  This rating was produced using an AI scoring pipeline (local, no cloud — no data shared externally) and reviewed and approved by a human assessor before publication.
+  {% if scoring_model %}
+  Scoring model: <code>{{ scoring_model }}</code>{% if prose_model and prose_model != scoring_model %}. Prose model: <code>{{ prose_model }}</code>{% endif %}.
+  The model's training data influences the findings — see the methodology for caveats.
+  {% endif %}
+  <a href="/cookies">AI transparency notice →</a></p>
+  <p><strong>Not financial or investment advice.</strong>
+  Ratings are for consumer information only.
+  <a href="/dispute">Dispute this rating</a> · <a href="/methodology">Our methodology</a> · <a href="/ratings/">All ratings</a>
+  {% if rating_type == 'verified' %} · <a href="/submit">Submit updated data</a>{% endif %}</p>
+  <p style="margin-bottom:0; color:#767676;">
+    Assessed: {{ assessment_date }} · Next review: {{ next_review | default('Annual') }} · Methodology {{ methodology_version }}
+  </p>
+</div>
+
+{% endblock %}

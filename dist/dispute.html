@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dispute a Rating — Resourcehip</title>
+  <meta name="description" content="If you believe a Resourcehip rating contains an error, here is how to request a review." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <!-- Self-hosted Montserrat — no Google Fonts CDN (GDPR: no IP sent to Google) -->
+  <!-- Run fonts/download_fonts.py once to fetch the .woff2 files -->
+  <link rel="stylesheet" href="/fonts/montserrat.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --forest-green:    #6B8E23;
+      --eco-teal:        #4FA9A5;
+      --atmosphere-blue: #A8DADC;
+      --soft-stone:      #F1F1F1;
+      --impact-grey:     #4A4A4A;
+      --page-bg:         #F7F8F6;
+      --card-bg:         #FFFFFF;
+      --border:          #E2E6E0;
+      /* HIP Mark tier colours */
+      --tier-emerald:    #3a9e62;
+      --tier-slate:      #7a9ab8;
+      --tier-amber:      #c8920a;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--page-bg);
+      color: var(--impact-grey);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Header ─────────────────────────────────────────────────────────── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+    }
+
+    .site-header .logo-link img {
+      height: 48px;
+      width: auto;
+      display: block;
+    }
+
+    .site-nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .site-nav a {
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--impact-grey);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .site-nav a:hover,
+    .site-nav a.active { color: var(--forest-green); }
+
+    .site-nav a.nav-cta {
+      background: linear-gradient(135deg, var(--forest-green), var(--eco-teal));
+      color: #fff;
+      padding: 0.45rem 1.1rem;
+      border-radius: 6px;
+      letter-spacing: 0.06em;
+    }
+
+    .site-nav a.nav-cta:hover { opacity: 0.9; color: #fff; }
+
+    /* ── Main content area ──────────────────────────────────────────────── */
+    .site-main {
+      flex: 1;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    .site-main.wide {
+      max-width: 1100px;
+    }
+
+    /* ── Shared card ────────────────────────────────────────────────────── */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ── Shared typography ──────────────────────────────────────────────── */
+    h1 { font-size: 1.75rem; font-weight: 700; color: var(--forest-green); margin-bottom: 0.5rem; }
+    h2 { font-size: 1.2rem; font-weight: 700; color: var(--impact-grey); margin: 2rem 0 0.75rem; }
+    h3 { font-size: 1rem; font-weight: 600; margin: 1.5rem 0 0.5rem; }
+    p  { line-height: 1.75; margin-bottom: 1rem; }
+    a  { color: var(--forest-green); }
+    ul, ol { padding-left: 1.4rem; line-height: 1.8; }
+
+    hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+
+    /* ── Pill / badge ────────────────────────────────────────────────────── */
+    .pill {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.9rem;
+      border-radius: 20px;
+      background: var(--soft-stone);
+      color: var(--impact-grey);
+    }
+
+    /* ── Skip link (WCAG 2.4.1 Bypass Blocks) ─────────────────────────── */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      background: var(--forest-green);
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      z-index: 9999;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      border-radius: 0 0 6px 0;
+      transition: top 0.15s;
+    }
+    .skip-link:focus { top: 0; }
+
+    /* ── Focus styles (WCAG 2.4.7 Focus Visible) ────────────────────── */
+    *:focus-visible {
+      outline: 3px solid var(--forest-green);
+      outline-offset: 3px;
+      border-radius: 3px;
+    }
+
+    /* ── Footer ─────────────────────────────────────────────────────────── */
+    .site-footer {
+      background: var(--impact-grey);
+      color: rgba(255,255,255,0.65);
+      text-align: center;
+      padding: 1.5rem 2rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+    }
+
+    .site-footer a { color: var(--atmosphere-blue); text-decoration: none; }
+
+    /* ── Responsive ─────────────────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .site-header { padding: 0.75rem 1rem; }
+      .site-nav { gap: 1rem; }
+      .site-nav a.nav-cta { display: none; }
+      .site-main { padding: 1.5rem 1rem 3rem; }
+    }
+
+    
+.static-body { max-width: 680px; }
+.static-body h1 { margin-bottom: 1rem; }
+.static-body h2 { font-size: 1.1rem; margin: 2rem 0 0.6rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+.static-body h3 { font-size: 0.95rem; margin: 1.5rem 0 0.4rem; }
+.static-body p  { line-height: 1.8; margin-bottom: 1rem; }
+.static-body ul, .static-body ol { padding-left: 1.4rem; margin-bottom: 1rem; line-height: 1.8; }
+.static-body table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.85rem; }
+.static-body th { background: var(--soft-stone); padding: 0.5rem 0.75rem; text-align: left; border: 1px solid var(--border); font-weight: 600; }
+.static-body td { padding: 0.45rem 0.75rem; border: 1px solid var(--border); vertical-align: top; }
+.static-body blockquote { border-left: 3px solid var(--forest-green); padding: 0.5rem 1rem; background: #f4f7f0; border-radius: 0 6px 6px 0; margin: 1rem 0; color: #555; font-style: italic; }
+.static-body code { font-family: monospace; background: #eee; padding: 0.1em 0.4em; border-radius: 3px; font-size: 0.9em; }
+.static-body pre { background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; overflow-x: auto; margin: 1rem 0; }
+.static-body pre code { background: none; padding: 0; }
+
+  </style>
+</head>
+<body>
+
+  <!-- Skip to main content (WCAG 2.4.1) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <a class="logo-link" href="/">
+      <img src="/logo.png" alt="Resourcehip home" />
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/" >Home</a>
+      <a href="/ratings/" >Ratings</a>
+      <a href="/methodology" >Methodology</a>
+      <a href="/about" >About</a>
+      <a href="/verified-ratings" >Verified Ratings</a>
+      <a href="/submit" class="nav-cta">Submit a Product</a>
+    </nav>
+  </header>
+
+  <main id="main-content" class="site-main ">
+    
+<div class="static-body">
+  <h1>Dispute a Rating</h1>
+<p>Resourcehip ratings are based on publicly available data and, for verified ratings, manufacturer-submitted information. We make every effort to ensure scores are accurate and based on the best available evidence. However, we may not always have access to the most current or complete data.</p>
+<p>If you are a manufacturer and believe a rating of your product category is based on incorrect data, or that relevant evidence has not been considered, you can request a formal review.</p>
+<hr />
+<h2>What you can dispute</h2>
+<ul>
+<li>A dimension score that you believe is based on factually incorrect information</li>
+<li>A generic category rating where you have evidence the category assumption is wrong</li>
+<li>A verified rating where the submitted data has been misapplied</li>
+</ul>
+<p>You <strong>cannot</strong> dispute a score simply because you disagree with the methodology or the weighting applied. The methodology is publicly documented and applied consistently. If you have concerns about the methodology itself, please contact us separately at <a href="mailto:methodology@resourcehip.com">methodology@resourcehip.com</a>.</p>
+<hr />
+<h2>How to raise a dispute</h2>
+<p>Email <strong><a href="mailto:methodology@resourcehip.com">methodology@resourcehip.com</a></strong> with the following:</p>
+<ol>
+<li><strong>The rating you are disputing</strong> — the product category name and the URL of the rating page</li>
+<li><strong>The specific dimension(s)</strong> you believe are incorrectly scored</li>
+<li><strong>The evidence you are relying on</strong> — with the source clearly cited (e.g. a published data sheet, a certification document, a public database record)</li>
+<li><strong>Your contact details</strong> and your role (e.g. manufacturer, industry body, researcher)</li>
+</ol>
+<p>We cannot review disputes that do not include specific evidence. Assertions that a score "feels wrong" or "is too low" without supporting data will not initiate a formal review.</p>
+<hr />
+<h2>What happens next</h2>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Timeframe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Acknowledgement</td>
+<td>Within 5 business days of receiving your dispute</td>
+</tr>
+<tr>
+<td>Review</td>
+<td>Within 30 days of acknowledgement</td>
+</tr>
+<tr>
+<td>Outcome</td>
+<td>Written response explaining our decision and any changes made</td>
+</tr>
+</tbody>
+</table>
+<p>If we determine that a rating should be updated based on your evidence, we will revise the rating and note the revision date and reason on the rating page. If we determine the score stands, we will explain why.</p>
+<hr />
+<h2>Escalation</h2>
+<p>If you are unsatisfied with the outcome of a review, you may request that it be reconsidered by a second reviewer. Escalation requests must be made within 14 days of receiving the initial outcome and must include new or additional evidence not submitted with the original dispute.</p>
+<hr />
+<h2>Good faith</h2>
+<p>Resourcehip operates in good faith. Our ratings are intended to be useful, accurate, and fair. We welcome evidence that helps us improve a rating — that is part of how the system is designed to work. Manufacturers who engage with the dispute process in good faith and provide credible evidence will find Resourcehip responsive.</p>
+<p>If you are interested in having your specific product assessed through the <a href="/submit">verified rating process</a>, this is often the most effective route to a score that accurately reflects your product's characteristics.</p>
+<hr />
+<p><em>Resourcehip Ltd · <a href="/methodology">Methodology</a> · <a href="/about">About</a> · <a href="/terms">Terms</a></em></p>
+</div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div>&copy; 2026 Resourcehip Ltd &nbsp;&middot;&nbsp; Reg. SC873386 &nbsp;&middot;&nbsp; Office 90, Alloa Business Centre, Whins Road, Alloa, Clackmannanshire, FK10&nbsp;3SA, Scotland</div>
+    <!-- TODO: add VAT no. once registered (only required if VAT-registered) -->
+    <div style="margin-top:0.4rem;">
+      <span id="rh-email"></span> &nbsp;|&nbsp;
+      <a href="/methodology">Methodology v1.1</a> &nbsp;|&nbsp;
+      <a href="/privacy">Privacy</a> &nbsp;|&nbsp;
+      <a href="/terms">Terms</a> &nbsp;|&nbsp;
+      <a href="/cookies">Cookies &amp; AI</a>
+    </div>
+  </footer>
+  <script>
+    /* Email obfuscation — assembled at runtime to deter address harvesting bots */
+    (function() {
+      var u = 'hello', d = ['resourcehip', 'com'].join('.');
+      var addr = u + '\u0040' + d;
+      var el = document.getElementById('rh-email');
+      if (el) el.innerHTML = '<a href="mailto:' + addr + '">' + addr + '</a>';
+    })();
+  </script>
+
+</body>
+</html>
