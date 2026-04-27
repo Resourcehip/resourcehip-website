@@ -25,11 +25,11 @@ Verified Ratings are for:
 
 The HIP Mark is Resourcehip's consumer-facing quality badge. It has three tiers:
 
-| Tier | HIP Score required | Rating type required |
-|------|--------------------|----------------------|
-| HIP Mark Standard | 4.0–6.4 | Verified |
-| HIP Mark Silver | 6.5–7.9 | Verified |
-| HIP Mark Gold | 8.0+ | Verified |
+| Tier | HIP Score required | Additional requirement | Rating type required |
+|------|--------------------|------------------------|----------------------|
+| HIP Mark Standard | 6.0+ | — | Verified |
+| HIP Mark Silver | 7.5+ | — | Verified |
+| HIP Mark Gold | 9.0+ | Regenerative Index ≥ +6.0 | Verified |
 
 **A Verified Rating is required for all HIP Mark tiers.** Generic category ratings are not eligible. This ensures the badge reflects real, independently verified product data — not an estimate.
 
@@ -44,7 +44,7 @@ Getting a Verified Rating involves three stages:
    Your submitted data is scored against the seven HIP dimensions by Resourcehip's assessment team. The process is transparent: you will receive a breakdown of each dimension score, the evidence used, and the rationale for the final HIP Score.
 
 3. **HIP Mark licence (if your score qualifies)**
-   If your product achieves a score of 4.0 or above on a Verified Rating, you are eligible to licence the HIP Mark for use in product communications, packaging, and marketing. Licence terms: [#missing# — to be confirmed].
+   If your product achieves a score of 6.0 or above on a Verified Rating, you are eligible to licence the HIP Mark for use in product communications, packaging, and marketing. Licence terms: [#missing# — to be confirmed].
 
 ## Enquire about a Verified Rating
 

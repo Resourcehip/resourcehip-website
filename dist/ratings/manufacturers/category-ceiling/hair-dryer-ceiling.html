@@ -306,6 +306,29 @@
 }
 .rating-body ul { margin-bottom: 1rem; }
 
+/* HIP Mark badge */
+.hip-mark-banner {
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.85rem 1.25rem;
+  border-radius: 8px; margin-bottom: 1.25rem;
+  border: 1.5px solid;
+}
+.hip-mark-banner.mark-gold     { background: #fffbea; border-color: #c8920a; }
+.hip-mark-banner.mark-silver   { background: #f2f6fb; border-color: #7a9ab8; }
+.hip-mark-banner.mark-standard { background: #f0f8f4; border-color: #3a9e62; }
+.hip-mark-icon {
+  font-size: 1.4rem; flex-shrink: 0;
+}
+.hip-mark-text { line-height: 1.4; }
+.hip-mark-title {
+  font-size: 0.88rem; font-weight: 700;
+  display: block; margin-bottom: 0.15rem;
+}
+.hip-mark-title.mark-gold     { color: #8a5a00; }
+.hip-mark-title.mark-silver   { color: #4a6a88; }
+.hip-mark-title.mark-standard { color: #2a6e44; }
+.hip-mark-desc { font-size: 0.75rem; color: #666; }
+
 /* Generic rating notice */
 .generic-notice {
   background: #fffbf0; border: 1px solid #e8d080;
@@ -439,6 +462,18 @@
   </div>
 
 </div>
+
+<!-- ── HIP Mark banner ────────────────────────────────────────────────────── -->
+
+
+<div class="hip-mark-banner mark-standard">
+  <div class="hip-mark-icon">✓</div>
+  <div class="hip-mark-text">
+    <span class="hip-mark-title mark-standard">HIP Mark Standard</span>
+    <span class="hip-mark-desc">This verified product achieved a HIP Score of 6.5, qualifying for the HIP Mark Standard tier.</span>
+  </div>
+</div>
+
 
 <!-- ── Dimension Breakdown ────────────────────────────────────────────────── -->
 <div class="card">
