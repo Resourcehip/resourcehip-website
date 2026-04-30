@@ -1,4 +1,4 @@
-# Resourcehip Website — Build System
+# Resourcehip Website — Build & Deploy Guide
 
 <!--
 =============================================================================
@@ -10,43 +10,37 @@ Network:
 
 Full pipeline command (run from the Resourcehip/ folder on the XPS):
 
-  # Step 1 — Score a product (sends prompts to Ollama on the 5820)
-  python pipeline/score.py \
-    --input pipeline/inputs/hair-dryers-generic.json \
-    --output result.json \
-    --host http://10.0.0.1:11434
+  # Score, rate, and rebuild in one step (recommended)
+  python3 pipeline/resourcehip.py run <slug>
 
-  # Step 2 — Generate the rating .md page from the scores
-  python pipeline/rate.py --input result.json
+  # Or step by step:
+  python3 pipeline/resourcehip.py score <slug>   # Score all 7 dimensions
+  python3 pipeline/resourcehip.py rate  <slug>   # Generate rating .md
+  python3 pipeline/resourcehip.py build          # Rebuild static site
 
-  # Step 3 — Rebuild the site and regenerate the sitemap
+  # Then push to deploy:
   cd resourcehip_website
-  python build.py
-  python sitemap.py
-
-  # Step 4 — Commit and push to GitHub (auto-deploys via Cloudflare Pages)
-  git add .
-  git commit -m "Add hair dryers rating"
+  git add -A
+  git commit -m "Add <slug> rating"
   git push
-
-One-liner for steps 1–3 (from Resourcehip/ folder):
-  python pipeline/score.py -i pipeline/inputs/hair-dryers-generic.json -o result.json --host http://10.0.0.1:11434 && python pipeline/rate.py -i result.json && cd resourcehip_website && python build.py && python sitemap.py
 
 Notes:
   - Ollama must be running on the 5820 (check: http://10.0.0.1:11434 in browser)
-  - Models needed: qwen3.5:35b (scoring and prose — single model strategy)
-  - Default Ollama port is 11434 — confirm with: curl http://10.0.0.1:11434/api/tags
+  - Models: qwen3.5:35b (scoring and prose — single model)
+  - Default Ollama port is 11434 — confirm: curl http://10.0.0.1:11434/api/tags
+  - Checkpoints survive restarts — safe to kill mid-run and resume
 =============================================================================
 -->
 
 ## Overview
 
-The website is a static site hosted on **Cloudflare Pages**, auto-deployed from GitHub.
-`build.py` converts rating `.md` files and static page `.md` files into HTML using Jinja2 templates.
-`sitemap.py` generates `sitemap.xml` and `robots.txt` from the built pages.
+The website is a static site hosted on **Cloudflare Pages**, auto-deployed from the
+`main` branch of `github.com/Resourcehip/resourcehip-website`.
 
-No CMS, no database, no server-side code. The local LLM pipeline produces `.md` rating files;
-the build script turns them into web pages; Cloudflare serves them.
+`build.py` converts rating `.md` files and static page `.md` files into HTML using
+Jinja2 templates. `sitemap.py` generates `sitemap.xml` and `robots.txt`. No CMS,
+no database, no server-side code. Every push to `main` triggers a Cloudflare build
+and live deploy.
 
 ---
 
@@ -55,70 +49,107 @@ the build script turns them into web pages; Cloudflare serves them.
 ```
 resourcehip_website/
 │
-├── index.html              # Holding page (deployed as-is until GitHub/Cloudflare connected)
-├── logo.png                # Current logo (replace with logoV2 when GIMP polish done)
-├── background.jpg          # Hero background photo
-├── favicon.svg             # Forest-green R mark — wired into all pages
+├── WEBSITE_BUILD.md            # This file — build, deploy, and procedure guide
+├── build.py                    # Static site builder — compiles all pages to dist/
+├── sitemap.py                  # Sitemap/robots.txt generator — run after build.py
+├── requirements.txt            # Python dependencies: jinja2, pyyaml, markdown
 │
-├── fonts/                  # Self-hosted Montserrat (no Google Fonts CDN — GDPR)
-│   ├── montserrat.css      # @font-face declarations (weights 300/400/600/700 + italic)
-│   └── download_fonts.py   # Run once on your machine to fetch the .woff2 files
+├── index.html                  # Landing/home page (root, not rendered by build.py)
+├── logo.png                    # Brand logo
+├── background.jpg              # Hero background photo
+├── favicon.svg                 # Forest-green R mark
 │
-├── ratings/                # ← Pipeline drops .md rating files here (rate.py output)
+├── fonts/                      # Self-hosted Montserrat (no Google Fonts CDN — GDPR)
+│   ├── montserrat.css          # @font-face declarations (weights 300/400/600/700 + italic)
+│   └── download_fonts.py       # Run once per machine to fetch the .woff2 files
 │
-├── pages/                  # ← Static content pages (all created Apr 2026)
-│   ├── about.md            # → dist/about.html
-│   ├── methodology.md      # → dist/methodology.html
-│   ├── dispute.md          # → dist/dispute.html
-│   ├── privacy.md          # → dist/privacy.html
-│   ├── terms.md            # → dist/terms.html
-│   └── cookies.md          # → dist/cookies.html
+├── ratings/                    # ← Pipeline drops .md rating files here (rate output)
+│   └── manufacturers/          # Manufacturer-submitted category ceiling and tester ratings
+│       ├── category-ceiling/   # Category ceiling .md files
+│       └── tester/             # Tester-specific .md files
 │
-├── templates/              # Jinja2 HTML templates
-│   ├── base.html.j2        # Shared layout: header, nav, footer, CSS (WCAG AA compliant)
-│   ├── rating.html.j2      # Individual rating page with score card + dimension bars
-│   ├── static_page.html.j2 # Article layout for static pages
-│   └── ratings_index.html.j2  # /ratings/ catalogue grid
+├── pages/                      # Static content pages
+│   ├── about.md                # → dist/about.html
+│   ├── methodology/            # → dist/methodology/ (multi-page section)
+│   ├── dispute.md              # → dist/dispute.html
+│   ├── privacy.md              # → dist/privacy.html
+│   ├── terms.md                # → dist/terms.html
+│   ├── cookies.md              # → dist/cookies.html
+│   ├── verified-ratings.md     # → dist/verified-ratings.html
+│   ├── submit.md               # → dist/submit.html
+│   └── apply.md                # → dist/apply.html
 │
-├── dist/                   # Build output — Cloudflare Pages serves this directory
-│   ├── index.html
-│   ├── favicon.svg
-│   ├── logo.png
-│   ├── background.jpg
-│   ├── fonts/              # Copied from fonts/ during build
-│   ├── sitemap.xml         # Generated by sitemap.py
-│   ├── robots.txt          # Generated by sitemap.py
-│   ├── about.html
-│   ├── methodology.html
-│   ├── dispute.html
-│   ├── privacy.html
-│   ├── terms.html
-│   ├── cookies.html
-│   └── ratings/
-│       ├── index.html      # Catalogue of all ratings
-│       └── [slug].html     # One file per rating
+├── blog/                       # Blog articles
+│   └── *.md                    # → dist/blog/*.html
 │
-├── build.py                # Build script — compiles all pages to dist/
-├── sitemap.py              # Sitemap generator — run after build.py
-├── requirements.txt        # Python dependencies
-└── WEBSITE_BUILD.md        # This file
+├── templates/                  # Jinja2 HTML templates
+│   ├── base.html.j2            # Shared layout: header, nav, footer, CSS (WCAG 2.1 AA)
+│   ├── rating.html.j2          # Individual rating page with score card + dimension bars
+│   ├── static_page.html.j2     # Article layout for static pages
+│   ├── ratings_index.html.j2   # /ratings/ catalogue grid
+│   ├── blog_post.html.j2       # Individual blog post layout
+│   ├── blog_index.html.j2      # Blog index/listing page
+│   └── blog_category.html.j2   # Blog category listing
+│
+├── assets/                     # Images and brand materials
+│   ├── marks/                  # HIP Mark badges (Standard/Silver/Gold — SVG, PNG, PDF)
+│   └── marketing/              # Marketing assets (about, anchor, outreach, ratings)
+│
+├── brand/                      # Brand asset generation docs (internal, not deployed)
+│   ├── GENERATION_LOG.md
+│   ├── midjourney-runbook.md
+│   └── midjourney-workflow.md
+│
+├── editorial/                  # Editorial guidelines (internal, not deployed)
+│   └── CONTENT_BRIEF.md
+│
+└── dist/                       # Build output — Cloudflare Pages serves this directory
+    ├── index.html              # Copied from root index.html
+    ├── favicon.svg
+    ├── logo.png
+    ├── background.jpg
+    ├── fonts/                  # Copied from fonts/ during build
+    ├── assets/                 # Copied from assets/ during build
+    ├── sitemap.xml             # Generated by sitemap.py
+    ├── robots.txt              # Generated by sitemap.py
+    ├── about.html
+    ├── methodology/
+    ├── dispute.html
+    ├── privacy.html
+    ├── terms.html
+    ├── cookies.html
+    ├── verified-ratings.html
+    ├── submit.html
+    ├── apply.html
+    ├── blog/
+    │   └── index.html + *.html
+    └── ratings/
+        ├── index.html          # Catalogue of all ratings
+        ├── [slug].html         # One file per generic/verified rating
+        └── manufacturers/
+            ├── category-ceiling/
+            └── tester/
 ```
+
+> **Note:** `dist/` is committed to git. There is no `.gitignore`. Cloudflare Pages
+> re-runs `build.py` on every push, but the committed `dist/` is what you preview
+> locally and what CI serves if the build step is skipped.
 
 ---
 
 ## Running the Build Locally
 
 ```bash
-# First time only — install dependencies (Windows: no --break-system-packages needed)
+# First time only — install dependencies
 pip install -r requirements.txt
 
-# Build once
+# Build once (run from inside resourcehip_website/)
 python build.py
 
-# Generate sitemap (run after build.py)
+# Generate sitemap (always run after build.py)
 python sitemap.py
 
-# Watch mode — rebuilds automatically when files change (development only)
+# Watch mode — rebuilds automatically on file change (development only)
 python build.py --watch
 ```
 
@@ -128,53 +159,181 @@ Output goes to `dist/`. Open `dist/ratings/index.html` in a browser to preview.
 
 ## Cloudflare Pages Configuration
 
-| Setting | Value |
-|---|---|
-| Build command | `pip install -r requirements.txt && python build.py && python sitemap.py` |
-| Output directory | `dist` |
-| Root directory | `Resourcehip/resourcehip_website` |
-| Python version | 3.11+ |
+| Setting           | Value                                                             |
+|-------------------|-------------------------------------------------------------------|
+| Build command     | `pip install -r requirements.txt && python build.py && python sitemap.py` |
+| Output directory  | `dist`                                                            |
+| Root directory    | `Resourcehip/resourcehip_website`                                 |
+| Python version    | 3.11+                                                             |
+| Branch            | `main`                                                            |
 
-Cloudflare Pages runs the build command on every push to the connected GitHub branch.
-The `dist/` folder is served as the live site.
-
-**Status (Apr 2026):** Custom domain `resourcehip.com` is live on Cloudflare with a holding page.
-GitHub repository setup is the next step — once connected, every push auto-deploys.
+Cloudflare Pages runs the build command on every push to `main`.
+The `dist/` folder is served as the live site at `resourcehip.com`.
 
 ---
 
-## Self-Hosted Montserrat Font
+## Push Protocol
 
-The site uses Montserrat self-hosted from `fonts/` — no Google Fonts CDN.
-This avoids sending visitor IP addresses to Google under UK GDPR.
+> Every push to `main` triggers a live deploy. Follow this checklist.
 
-**One-time setup** (run on your machine, not needed on Cloudflare — it copies the directory):
-```bash
-python resourcehip_website/fonts/download_fonts.py
+### Pre-Push Checklist
+
+1. **Build locally first**
+   ```bash
+   cd resourcehip_website
+   python build.py && python sitemap.py
+   ```
+   Confirm no errors in the build output.
+
+2. **Spot-check in browser**
+   Open `dist/ratings/index.html` and the specific pages you changed. Verify:
+   - Scores display correctly (check RI — it can be negative)
+   - HIP Mark badge shows (or is absent) correctly
+   - No broken links in the nav
+
+3. **Stage and review**
+   ```bash
+   git -C resourcehip_website status
+   git -C resourcehip_website diff --stat HEAD
+   ```
+   Confirm you are only committing what you intend. Untracked `brand/` and
+   `editorial/` files are internal working docs — commit them only when they
+   represent a stable reference state.
+
+4. **Commit with a clear message** (see conventions below)
+
+5. **Push**
+   ```bash
+   git -C resourcehip_website push origin main
+   ```
+
+6. **Verify deploy** — Cloudflare Pages will build within ~60 seconds.
+   Check `resourcehip.com` or the Cloudflare Pages dashboard for deploy status.
+
+### Commit Message Conventions
+
+Use the imperative present tense. Keep the subject line under 72 characters.
+
+| Change type                  | Convention                                                   |
+|------------------------------|--------------------------------------------------------------|
+| New rating(s)                | `Add <slug> rating` / `Add 3 new ratings: a, b, c`          |
+| Rating update                | `Update <slug> rating — methodology v1.3`                    |
+| New page                     | `Add <page-name> page`                                       |
+| Page edit                    | `Update about page — add company registration number`        |
+| New blog post                | `Add blog post: <post-title>`                                |
+| Template/layout change       | `Fix <template>.html.j2 — <one-line description>`            |
+| Build script change          | `Update build.py — <one-line description>`                   |
+| Asset/brand update           | `Add HIP Mark badge assets (SVG, PNG, PDF)`                  |
+| Batch rebuild (dist/ only)   | `Rebuild dist — regenerate all pages after template update`  |
+
+**Examples:**
+```
+Add hair-dryers rating
+Add 44 new ratings, HIP Mark badges, and fix verified-ratings thresholds
+Update methodology version references from v1.1 to v1.3
+Rebuild dist — regenerate all pages after base template nav fix
 ```
 
-This fetches 9 `.woff2` files (weights 300/400/600/700 + light italic, latin + latin-ext subsets).
-Already-downloaded files are skipped automatically.
+### What to Commit
+
+| Path                    | Commit?  | Notes                                           |
+|-------------------------|----------|-------------------------------------------------|
+| `ratings/*.md`          | Yes      | Pipeline output — always commit when new/updated |
+| `pages/*.md`            | Yes      | Static content pages                            |
+| `blog/*.md`             | Yes      | Blog articles                                   |
+| `templates/*.j2`        | Yes      | Template changes always require a dist rebuild  |
+| `build.py`, `sitemap.py`| Yes      | Build tooling                                   |
+| `dist/`                 | Yes      | Commit after every build (no .gitignore)        |
+| `assets/`               | Yes      | HIP Mark badges and marketing assets            |
+| `brand/`                | Yes      | Brand docs when stable; ok to stage for a batch |
+| `editorial/`            | Yes      | Editorial guidelines when stable                |
+| `fonts/*.woff2`         | Yes (one-time) | Fonts are large — commit once, not on every run |
+| `*.pyc`, `__pycache__/` | No       | Add a `.gitignore` if these appear              |
+
+---
+
+## Adding a New Rating (End-to-End Procedure)
+
+```bash
+# 1. From the Resourcehip/ parent folder — score, rate, build in one step
+python3 pipeline/resourcehip.py run <slug>
+
+# 2. Confirm the .md file was generated
+ls resourcehip_website/ratings/<slug>.md
+
+# 3. Review the rating file (spot-check scores against methodology.yaml)
+cat resourcehip_website/ratings/<slug>.md | head -40
+
+# 4. Preview in browser
+open resourcehip_website/dist/ratings/<slug>.html   # macOS
+# or: xdg-open resourcehip_website/dist/ratings/<slug>.html  (Linux)
+
+# 5. Commit and push
+cd resourcehip_website
+git add ratings/<slug>.md dist/
+git commit -m "Add <slug> rating"
+git push origin main
+```
+
+For a batch of ratings (e.g. running the full ceiling queue):
+
+```bash
+# Score and build each slug in the queue
+for slug in air-fryer bluetooth-headphones coffee-pod-machine cordless-drill \
+    electric-toothbrush hair-dryer hair-straightener kettle portable-speaker \
+    robot-vacuum smartphone toaster wireless-earbuds; do
+  python3 pipeline/resourcehip.py run ${slug}-ceiling
+done
+
+# Rebuild once for all
+cd resourcehip_website
+python build.py && python sitemap.py
+
+# Commit all at once
+git add -A
+git commit -m "Add ceiling ratings batch — 13 verified manufacturer slugs"
+git push origin main
+```
+
+---
+
+## Adding a New Static Page
+
+1. Create `pages/<slug>.md` with YAML frontmatter:
+   ```yaml
+   ---
+   title: "Page Title"
+   ---
+
+   Content in Markdown...
+   ```
+2. Run `python build.py` — output is `dist/<slug>.html`.
+3. Add nav link in `templates/base.html.j2` if the page should appear in navigation.
+4. Commit `pages/<slug>.md` + `dist/<slug>.html` + (if nav changed) the template.
+
+---
+
+## Adding a New Blog Post
+
+1. Create `blog/<slug>.md` with YAML frontmatter:
+   ```yaml
+   ---
+   title: "Post Title"
+   date: "2026-04-30"
+   category: "methodology"   # or: guides, news, industry
+   description: "One-sentence summary for SEO."
+   ---
+
+   Content in Markdown...
+   ```
+2. Run `python build.py && python sitemap.py`.
+3. Commit `blog/<slug>.md` + `dist/blog/` changes.
 
 ---
 
 ## Rating File Format
 
-Each rating is a `.md` file with YAML frontmatter. Generated automatically by the pipeline:
-
-```bash
-# Score a product
-python pipeline/score.py --input pipeline/inputs/hair-dryers-generic.json --output result.json
-
-# Generate the rating .md file
-python pipeline/rate.py --input result.json
-# → Writes to resourcehip_website/ratings/hair-dryers.md
-
-# Rebuild the site
-cd resourcehip_website && python build.py && python sitemap.py
-```
-
-### Required Frontmatter Fields
+Each rating is a `.md` file with YAML frontmatter generated by the pipeline:
 
 ```yaml
 ---
@@ -184,7 +343,6 @@ rating_type:      "generic"            # "generic" or "verified"
 brand:            null                 # null for generic; "Brand — Model" for verified
 slug:             "hair-dryers"
 
-# Scores
 hip_score:        4.8
 hip_label:        "Moderate"
 msi_score:        5.2                  # Material Scarcity Index      (weight 20%)
@@ -196,71 +354,87 @@ pl_score:         5.5                  # Product Longevity            (weight 8%
 ri_score:        -4.0                  # Regenerative Index (weight 15%, scale −10 to +10)
 ri_descriptor:    "Extractive"         # Depleting/Extractive/Renewable/Restorative/Regenerative
 
-# Baseline comparison
 category_baseline_hip: 4.8
 category_baseline_ri: -4.0
 above_baseline: false
 
-# Dates
-assessment_date:  "2026-04-08"
-methodology_version: "1.1"
-next_review:      "2027-04-08"
+assessment_date:  "2026-04-30"
+methodology_version: "1.3"
+next_review:      "2027-04-30"
 
-# Dimension findings (one sentence each — shown under dimension bars)
-msi_finding:  "Rare earth elements in motor windings present supply concentration risk."
-scr_finding:  "Over 85% of components manufactured in China; high geopolitical concentration."
-rc_finding:   "ABS plastic housing is theoretically recyclable but rarely recovered."
-r_finding:    "No spare parts available; proprietary screws prevent DIY repair."
-sei_finding:  "No third-party labour or environmental certification found."
-pl_finding:   "Average warranted lifespan 1–2 years; actual use 3–4 years before failure."
-ri_finding:   "Key materials are finite and consumed without a regenerative pathway."
+msi_finding:  "One sentence for this dimension."
+scr_finding:  "One sentence for this dimension."
+rc_finding:   "One sentence for this dimension."
+r_finding:    "One sentence for this dimension."
+sei_finding:  "One sentence for this dimension."
+pl_finding:   "One sentence for this dimension."
+ri_finding:   "One sentence for this dimension."
 
-# Consumer prose (LLM-generated)
-consumer_summary: "Hair dryers score moderately on material resilience..."
-what_this_means:  "When buying a hair dryer, look for models with longer warranties..."
+consumer_summary: "LLM-generated paragraph."
+what_this_means:  "LLM-generated action paragraph."
 
-# HIP Mark (null if not eligible)
-hip_mark: null                         # null, "Standard", "Silver", or "Gold"
+hip_mark: null   # null, "Standard" (≥6.0), "Silver" (≥7.5), or "Gold" (≥9.0 AND ri≥+6)
 
-# Data sources list
 data_sources:
   - "USGS Mineral Resources Program (public domain)"
   - "EU Critical Raw Materials List 2023 (CC BY 4.0)"
 ---
 ```
 
+### HIP Mark Thresholds
+
+| Mark     | Condition                       |
+|----------|---------------------------------|
+| Standard | HIP Score ≥ 6.0                 |
+| Silver   | HIP Score ≥ 7.5                 |
+| Gold     | HIP Score ≥ 9.0 AND RI ≥ +6.0  |
+
 ---
 
-## Static Pages
+## Self-Hosted Montserrat Font
 
-Place `.md` files in `pages/` with YAML frontmatter:
+Montserrat is served from `fonts/` — no Google Fonts CDN (UK GDPR: no third-party IP leakage).
 
-```yaml
----
-title: "About Resourcehip"
----
-
-Content here in standard Markdown...
+**One-time setup per machine** (not needed on Cloudflare — it copies the directory):
+```bash
+python resourcehip_website/fonts/download_fonts.py
 ```
 
-The slug is derived from the filename: `pages/about.md` → `/about`.
-Active nav link is highlighted automatically for `about` and `methodology`.
+Fetches 9 `.woff2` files (weights 300/400/600/700 + light italic, latin + latin-ext subsets).
+Already-downloaded files are skipped.
 
 ---
 
 ## HIP Mark Tier Colours
 
-| Tier | Colour | HIP Score |
-|---|---|---|
-| Emerald | `#3a9e62` | ≥ 6.5 |
-| Slate | `#7a9ab8` | 4.0 – 6.4 |
-| Amber | `#c8920a` | < 4.0 |
+| Tier    | Colour    | HIP Score |
+|---------|-----------|-----------|
+| Emerald | `#3a9e62` | ≥ 6.5     |
+| Slate   | `#7a9ab8` | 4.0–6.4   |
+| Amber   | `#c8920a` | < 4.0     |
 
 ---
 
-## WCAG 2.1 AA Compliance (Apr 2026)
+## Brand Reference
 
-All templates meet WCAG 2.1 AA. Key implementations:
+CSS variables defined in `templates/base.html.j2`:
+
+| Variable             | Value     | Usage                         |
+|----------------------|-----------|-------------------------------|
+| `--forest-green`     | `#6B8E23` | Brand primary, headings, links |
+| `--eco-teal`         | `#4FA9A5` | Accents, nav CTA              |
+| `--atmosphere-blue`  | `#A8DADC` | Footer links                  |
+| `--soft-stone`       | `#F1F1F1` | Pill backgrounds              |
+| `--impact-grey`      | `#4A4A4A` | Body text                     |
+| `--tier-emerald`     | `#3a9e62` | HIP Mark high tier            |
+| `--tier-slate`       | `#7a9ab8` | HIP Mark mid tier             |
+| `--tier-amber`       | `#c8920a` | HIP Mark low tier             |
+
+---
+
+## WCAG 2.1 AA Compliance
+
+All templates meet WCAG 2.1 AA:
 - Skip-to-main-content link (hidden until focused)
 - Visible focus ring on all interactive elements
 - `aria-label="Main navigation"` and `aria-current="page"` on nav
@@ -269,28 +443,9 @@ All templates meet WCAG 2.1 AA. Key implementations:
 
 ---
 
-## Brand Reference
-
-CSS variables defined in `base.html.j2`:
-
-| Variable | Value | Usage |
-|---|---|---|
-| `--forest-green` | `#6B8E23` | Brand primary, headings, links |
-| `--eco-teal` | `#4FA9A5` | Accents, nav CTA |
-| `--atmosphere-blue` | `#A8DADC` | Footer links |
-| `--soft-stone` | `#F1F1F1` | Pill backgrounds |
-| `--impact-grey` | `#4A4A4A` | Body text |
-| `--tier-emerald` | `#3a9e62` | HIP Mark high tier |
-| `--tier-slate` | `#7a9ab8` | HIP Mark mid tier |
-| `--tier-amber` | `#c8920a` | HIP Mark low tier |
-
-See also: `Resourcehip_Brand_Specification.html` in the Resourcehip folder.
-
----
-
 ## Remaining TODOs
 
 - [ ] Replace `logo.png` with `logoV2.png` once GIMP edits are complete
 - [ ] Add company registration number, ICO number, and registered address to footer
-      (`base.html.j2` line ~176 — TODO comment already in place)
-- [ ] GitHub repository setup + connect to Cloudflare Pages (Chris action)
+      (`templates/base.html.j2` — TODO comment already in place)
+- [ ] Add `.gitignore` to exclude `__pycache__/` and `*.pyc` if they appear
