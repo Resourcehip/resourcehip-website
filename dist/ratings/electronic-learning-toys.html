@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Electronic Learning Toys — Resourcehip</title>
-  <meta name="description" content="This electronic learning toy has a low overall HIP Score of 1.8 out of 10, indicating significant environmental and social challenges in its production. Its Regenerative Index is -7.0, which means the product is depleting resources rather than supporting a circular economy, as it relies on scarce materials and cannot be easily repaired or recycled." />
+  <meta name="description" content="This electronic learning toy has a HIP Score of 1.7 out of 10, which matches the current market baseline for this category. Its Regenerative Index is -7.0, indicating it relies entirely on newly mined materials with no recycled content or take-back options. Overall, the product is designed with a short lifespan and limited repairability compared to more sustainable alternatives." />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <!-- Self-hosted Montserrat — no Google Fonts CDN (GDPR: no IP sent to Google) -->
   <!-- Run fonts/download_fonts.py once to fetch the .woff2 files -->
@@ -308,7 +308,7 @@
 
 /* HIP Mark badge */
 .hip-mark-banner {
-  display: flex; align-items: center; gap: 1rem;
+  display: flex; align-items: center; gap: 1.25rem;
   padding: 0.85rem 1.25rem;
   border-radius: 8px; margin-bottom: 1.25rem;
   border: 1.5px solid;
@@ -316,8 +316,8 @@
 .hip-mark-banner.mark-gold     { background: #fffbea; border-color: #c8920a; }
 .hip-mark-banner.mark-silver   { background: #f2f6fb; border-color: #7a9ab8; }
 .hip-mark-banner.mark-standard { background: #f0f8f4; border-color: #3a9e62; }
-.hip-mark-icon {
-  font-size: 1.4rem; flex-shrink: 0;
+.hip-mark-badge-img {
+  flex-shrink: 0; width: 52px; height: auto;
 }
 .hip-mark-text { line-height: 1.4; }
 .hip-mark-title {
@@ -355,7 +355,37 @@
 }
 .disclaimer-box p { margin-bottom: 0.5rem; }
 
+/* Score hierarchy (category pages) */
+.score-ceiling-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #888; margin-bottom: 0.4rem; }
+.score-ceiling-value { font-size: 3.5rem; font-weight: 700; color: var(--tier-colour, var(--eco-teal)); line-height: 1; }
+.score-baseline-row { font-size: 0.88rem; font-weight: 600; color: #555; margin-top: 0.7rem; }
+.score-baseline-label { font-size: 0.7rem; color: #767676; font-weight: 400; display: block; margin-top: 0.15rem; }
+
+/* §1 Category page boilerplate */
+.score-boilerplate { background: #f5f8f5; border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; font-size: 0.85rem; line-height: 1.75; color: #444; }
+.score-boilerplate strong { display: block; font-size: 0.88rem; color: var(--forest-green); margin-bottom: 0.5rem; }
+
+/* §3a+§3b Manufacturer CTA */
+.mfr-cta-block { background: #f0f7f0; border: 1px solid #c0d8c0; border-left: 4px solid var(--eco-teal); border-radius: 0 8px 8px 0; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; }
+.mfr-cta-block h3 { font-size: 0.92rem; font-weight: 700; margin: 0 0 0.75rem; color: var(--forest-green); }
+.mfr-cta-block p { font-size: 0.82rem; line-height: 1.75; color: #444; margin-bottom: 0.75rem; }
+.btn-verified-assessment { display: inline-block; background: var(--eco-teal); color: #fff; font-weight: 700; font-size: 0.85rem; padding: 0.65rem 1.5rem; border-radius: 6px; text-decoration: none; letter-spacing: 0.02em; transition: background 0.2s; }
+.btn-verified-assessment:hover { background: var(--forest-green); }
+
+/* §2c Methodology disclosure */
+.methodology-disclosure { margin-top: 1.25rem; border-top: 1px solid var(--border); padding-top: 1rem; }
+.methodology-disclosure summary { font-size: 0.75rem; color: var(--eco-teal); cursor: pointer; list-style: none; font-weight: 600; }
+.methodology-disclosure summary::-webkit-details-marker { display: none; }
+.methodology-disclosure-body { font-size: 0.78rem; color: #555; line-height: 1.7; margin-top: 0.75rem; background: #f5f9f9; border-left: 2px solid var(--eco-teal); padding: 0.75rem 1rem; border-radius: 0 6px 6px 0; }
+
+/* §5 Ceiling page hero */
+.ceiling-hero { background: linear-gradient(135deg, #f0faf5 0%, #e8f5f8 100%); border: 1px solid #b8d8d0; border-radius: 12px; padding: 1.75rem 2rem; margin-bottom: 1.75rem; }
+.ceiling-hero-eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--eco-teal); margin-bottom: 0.5rem; }
+.ceiling-hero-score { font-size: 2.8rem; font-weight: 700; color: var(--tier-colour, var(--eco-teal)); line-height: 1.1; margin-bottom: 0.75rem; }
+.ceiling-hero-copy { font-size: 0.85rem; line-height: 1.75; color: #444; }
+
   </style>
+  
 </head>
 <body>
 
@@ -369,6 +399,7 @@
     <nav class="site-nav" aria-label="Main navigation">
       <a href="/" >Home</a>
       <a href="/ratings/" class="active" aria-current="page">Ratings</a>
+      <a href="/blog/" >Blog</a>
       <a href="/methodology" >Methodology</a>
       <a href="/about" >About</a>
       <a href="/verified-ratings" >Verified Ratings</a>
@@ -385,6 +416,9 @@
     --ri-colour:   #c04040;
   }
 </style>
+
+
+
 
 <!-- ── Generic rating notice ──────────────────────────────────────────────── -->
 
@@ -404,7 +438,7 @@
       <span class="rating-type-badge badge-generic">Category Rating</span>
     
     <span class="pill">toys and children's</span>
-    <span class="pill">Assessed 2026-04-26</span>
+    <span class="pill">Assessed 2026-04-28</span>
     <span class="pill">1.3</span>
   </div>
   <h1>Electronic Learning Toys</h1>
@@ -415,59 +449,79 @@
 <div class="score-panel">
 
   <div class="hip-score-card">
-    <div class="score-label">HIP Score</div>
-    <div class="score-value">
-      1.8<span class="score-denom">/10</span>
-    </div>
-    <div class="score-tier-name">Low Resilience</div>
-    <div class="score-vs-baseline">At category baseline (1.8)</div>
-    
-    
-    <div class="score-vs-ceiling">
-      Highest estimated rating: 6.1/10
-    </div>
+      
+      <div class="score-ceiling-label">Category ceiling</div>
+      <div class="score-ceiling-value">6.1<span class="score-denom"> HIP</span></div>
+      <div class="score-tier-name">Low Resilience</div>
+      <div class="score-baseline-row">
+        Current market baseline: <strong>1.7 HIP</strong>
+        <span class="score-baseline-label">Pre-verification score from public data</span>
+      </div>
     
   </div>
 
   <div class="ri-card">
-    <div class="score-label">Regenerative Index</div>
-    <div class="ri-score-value" style="color: var(--ri-colour);">
-      -7.0
-    </div>
-    <div class="ri-descriptor" style="color: var(--ri-colour);">Depleting</div>
-    <!-- RI scale: 5 pips, one per tier (Depleting → Regenerative) -->
-    <div class="ri-scale">
-        <div class="ri-pip active"
-             style="background:#c04040">
-        </div>
       
-        <div class="ri-pip "
-             style="">
-        </div>
-      
-        <div class="ri-pip "
-             style="">
-        </div>
-      
-        <div class="ri-pip "
-             style="">
-        </div>
-      
-        <div class="ri-pip "
-             style="">
-        </div>
-      
-    </div>
-    <div class="score-vs-baseline" style="margin-top:0.75rem;">At category average (-7.0)</div>
-    
-    
-    <div class="score-vs-ceiling">
-      Highest estimated RI: -2.0
-    </div>
+      <div class="score-ceiling-label">Category ceiling RI</div>
+      <div class="ri-score-value" style="color: #c8920a;">
+        -2.0
+      </div>
+      <div class="ri-scale">
+        
+          <div class="ri-pip active"
+               style="background:#c04040">
+          </div>
+        
+          <div class="ri-pip "
+               style="">
+          </div>
+        
+          <div class="ri-pip "
+               style="">
+          </div>
+        
+          <div class="ri-pip "
+               style="">
+          </div>
+        
+          <div class="ri-pip "
+               style="">
+          </div>
+        
+      </div>
+      <div class="score-baseline-row" style="margin-top:0.75rem;">
+        Current market baseline RI: <strong>-7.0</strong>
+        <span class="score-baseline-label">(Depleting)</span>
+      </div>
     
   </div>
 
 </div>
+
+
+
+<div class="score-boilerplate">
+  <strong>What this score means</strong>
+  The current market baseline for toys and children's reflects what the HIP methodology can confirm from publicly available
+  specification data alone, before any manufacturer evidence is reviewed. The category ceiling shown above is what the
+  methodology rewards when materials, supply chain, repairability, and end-of-life pathways are fully evidenced.
+  Manufacturers close that gap by applying for verified assessment.
+</div>
+
+
+
+
+<div class="mfr-cta-block">
+  <h3>Manufacturer? Verified assessment closes the gap.</h3>
+  <p>The current market baseline for this category is 1.7 HIP.
+  The category ceiling — what the methodology rewards when materials, supply chain, repairability, and end-of-life
+  pathways are fully evidenced — is 6.1 HIP.
+  The first verified product in our programme demonstrated 6.9 HIP and earned the HIP Mark.</p>
+  <p>If your product can evidence the methodology dimensions, verified assessment gives it the score it has earned.</p>
+  <a class="btn-verified-assessment" href="/apply">Apply for verified assessment</a>
+</div>
+  
+
 
 <!-- ── HIP Mark banner ────────────────────────────────────────────────────── -->
 
@@ -486,7 +540,7 @@
         </div>
         <div class="dim-score-num">1.5</div>
         
-          <div class="dim-finding">The product relies heavily on cobalt and lithium, both designated as EU Critical Raw Materials with high supply risk and significant concentration in single countries. The absence of recycled content (0%) and the use of critical materials in an electronic device result in a critically scarce rating.</div>
+          <div class="dim-finding">The product relies heavily on cobalt and lithium, both designated as EU Critical Raw Materials with high supply risk, alongside copper and LCD glass components. With zero recycled content and assembly in China, which concentrates global supply chains for these materials, the product aligns with the critically scarce category for conventional consumer electronics.</div>
         
       </div>
     <div class="dim-row">
@@ -495,11 +549,11 @@
           <span class="dim-weight">18% weight</span>
         </div>
         <div class="dim-bar-wrap">
-          <div class="dim-bar bar-low" style="width:25%"></div>
+          <div class="dim-bar bar-low" style="width:20%"></div>
         </div>
-        <div class="dim-score-num">2.5</div>
+        <div class="dim-score-num">2.0</div>
         
-          <div class="dim-finding">The product is an electronic learning toy assembled in China, implying reliance on rare earth elements and copper which face high geopolitical concentration risks. Due to the lack of submitted due diligence standards, alternative suppliers, or audit verification, the assessment defaults to a critical risk profile consistent with unverified electronics supply chains.</div>
+          <div class="dim-finding">The electronic learning toy relies on rare earth elements and copper, with China dominating global rare earth supply and presenting high geopolitical concentration risk. Due to the absence of submitted due-diligence standards, alternative suppliers, or third-party audits, the supply chain lacks verified mitigation measures for these critical material dependencies.</div>
         
       </div>
     <div class="dim-row">
@@ -512,7 +566,7 @@
         </div>
         <div class="dim-score-num">1.5</div>
         
-          <div class="dim-finding">The product is an electronic learning toy with glued assembly and no take-back scheme, making material separation impractical. Only an estimated 20% of the weight (primarily metals) enters practical recycling streams, while the majority of plastics and internal components are effectively landfilled. This aligns with the lowest tier for sealed consumer electronics lacking recovery infrastructure.</div>
+          <div class="dim-finding">The product is an electronic learning toy manufactured in China with no submitted take-back scheme or recycling labels. Assuming a glued assembly and only 20% of materials entering practical recycling streams, the design prevents material separation, resulting in a score at the pre-verification baseline for sealed consumer electronics.</div>
         
       </div>
     <div class="dim-row">
@@ -525,7 +579,7 @@
         </div>
         <div class="dim-score-num">1.0</div>
         
-          <div class="dim-finding">The product is an electronic learning toy with a glued housing and no available spare parts or service manual, making it unrepairable. This aligns with the criteria for sealed consumer electronics designed for replacement rather than repair.</div>
+          <div class="dim-finding">The product is an electronic learning toy with a glued housing and no available spare parts or service manual. It lacks an iFixit score and falls outside EU Ecodesign scope, aligning with the unrepairable category typical of sealed consumer electronics.</div>
         
       </div>
     <div class="dim-row">
@@ -538,7 +592,7 @@
         </div>
         <div class="dim-score-num">3.5</div>
         
-          <div class="dim-finding">The product is manufactured in China, a moderate-to-high risk jurisdiction for labour and environmental issues, with no submitted third-party audits or certifications to verify compliance. While the product type is an electronic learning toy, the absence of an RBA audit, ISO 14001, or a modern slavery statement means the score remains in the elevated risk range based on the conservative generic rating assumptions.</div>
+          <div class="dim-finding">The product is an electronic learning toy manufactured in China, a moderate-risk jurisdiction, with no submitted third-party audits, environmental certifications, or modern slavery statements. The score reflects the elevated risk profile of the manufacturing location combined with the absence of verified mitigation measures or independent compliance evidence.</div>
         
       </div>
     <div class="dim-row">
@@ -551,7 +605,7 @@
         </div>
         <div class="dim-score-num">2.0</div>
         
-          <div class="dim-finding">The product receives a low score due to a 1-year warranty and a stated design life of only 3 years, which classifies it as a disposable or ultra-low-cost item. The lack of an IP rating, modular design, or long-term parts commitment further confirms its short lifespan, typical for electronic learning toys designed for replacement rather than maintenance.</div>
+          <div class="dim-finding">The product has a 1-year warranty and a stated design life of 3 years, which falls below the 5-year threshold for average lifespan. The absence of an IP rating and modular design, combined with the classification as an electronic learning toy, aligns with the disposable category baseline.</div>
         
       </div>
     
@@ -568,7 +622,7 @@
         -7.0
       </div>
       
-        <div class="dim-finding">The product is scored as Depleting because it is a conventional electronic learning toy with 0% recycled content, no take-back scheme, and no regenerative certifications. It does not qualify for the Extractive band minimum of -3 because the required condition of recycled content >= 50% with a verified take-back scheme is not met.</div>
+        <div class="dim-finding">The product is classified as Depleting because it relies on virgin mined materials with zero recycled content and lacks a take-back scheme. This aligns with the standard for conventional consumer electronics manufactured in China without verified recovery pathways. It does not meet the criteria for the Extractive band as there is no recycled content or take-back program to mitigate depletion.</div>
       
     </div>
 
@@ -577,6 +631,19 @@
   <p style="font-size:0.72rem; color:#767676; margin-top:1.25rem; margin-bottom:0;">
     MSI 20% · SCR 18% · RC 18% · R 13% · SEI 8% · PL 8% · RI 15% = 100%
   </p>
+
+  <!-- ── §2c Methodology disclosure ────────────────────────────────────────── -->
+  <details class="methodology-disclosure">
+    <summary>About the HIP Methodology ▸</summary>
+    <div class="methodology-disclosure-body">
+      Generic ratings are intentionally conservative. They represent only what the HIP methodology can confirm from
+      publicly available specification data, before any manufacturer-supplied evidence is reviewed. Most categories sit
+      in the 2–4 range at the pre-verification baseline. This is the methodology working as designed: it makes the gap
+      between current market practice and demonstrable resilience legible to consumers, manufacturers, and procurement
+      buyers. Verified assessment is the path across that gap, and the HIP Mark is the proof of crossing it.
+      <a href="/methodology" style="white-space:nowrap;">Read the full methodology →</a>
+    </div>
+  </details>
 </div><!-- /.card -->
 
 <!-- ── Key Materials ───────────────────────────────────────────────────────── -->
@@ -586,14 +653,14 @@
 
 <div class="card">
   <h2 style="margin-top:0;">Consumer Summary</h2>
-  <p>This electronic learning toy has a low overall HIP Score of 1.8 out of 10, indicating significant environmental and social challenges in its production. Its Regenerative Index is -7.0, which means the product is depleting resources rather than supporting a circular economy, as it relies on scarce materials and cannot be easily repaired or recycled.</p>
+  <p>This electronic learning toy has a HIP Score of 1.7 out of 10, which matches the current market baseline for this category. Its Regenerative Index is -7.0, indicating it relies entirely on newly mined materials with no recycled content or take-back options. Overall, the product is designed with a short lifespan and limited repairability compared to more sustainable alternatives.</p>
 </div>
 
 
 
 <div class="card">
   <h2 style="margin-top:0;">What This Means For You</h2>
-  <p>When buying electronic toys, look for items designed with modular parts that can be replaced or repaired, and check for take-back programs that ensure materials are recovered at the end of their life. Avoid products that are glued together, lack spare parts, or have very short design lives, as these contribute to waste and resource depletion.</p>
+  <p>When shopping for electronic toys, look for items that explicitly state they contain recycled materials and offer a repair or recycling program. Prioritize products with longer warranties and designs that allow for easy part replacement rather than those that are glued shut. Choosing items with these features helps support a more circular economy where materials are kept in use for longer.</p>
 </div>
 
 
@@ -604,6 +671,7 @@
 <p>This is a <strong>category rating</strong> based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and LLM training knowledge:</p>
 <ul>
 <li><code>material_percentages</code></li>
+<li><code>recycled_content_pct</code></li>
 <li><code>country_of_primary_extraction</code></li>
 <li><code>primary_sourcing_countries</code></li>
 <li><code>tier1_supplier_count</code></li>
@@ -630,6 +698,7 @@
 <li><code>modular_design</code></li>
 <li><code>software_support_years</code></li>
 <li><code>primary_material_origin</code></li>
+<li><code>recycled_content_pct</code></li>
 <li><code>takeback_scheme</code></li>
 <li><code>regenerative_certifications</code></li>
 <li><code>closed_loop_programme</code></li>
@@ -643,14 +712,14 @@
 <ul>
 <li>Cobalt — EU Critical Raw Materials list</li>
 <li>Lithium — EU Critical Raw Materials list</li>
-<li>0% Recycled Content</li>
-<li>Rare earth elements — China &gt;60% global supply, high geopolitical concentration</li>
+<li>China — High concentration of global supply for cobalt and lithium processing</li>
+<li>Rare earth elements — China &gt;60% global supply, high concentration risk</li>
 <li>No due-diligence programme documented</li>
 <li>No alternative supplier documented</li>
 <li>No third-party audit verification</li>
 </ul>
 <h2>About This Rating</h2>
-<p>Produced under <a href="/methodology">Resourcehip Methodology v1.3</a> (CC BY-NC 4.0). Assessed: 2026-04-26. Next scheduled review: 2027-04-26.</p>
+<p>Produced under <a href="/methodology">Resourcehip Methodology v1.3</a> (CC BY-NC 4.0). Assessed: 2026-04-28. Next scheduled review: 2027-04-28.</p>
 <p><a href="/dispute">Dispute this rating</a> · <a href="/methodology">Our methodology</a> · <a href="/ratings/">All ratings</a></p>
 </div>
 
@@ -692,7 +761,7 @@
   <a href="/dispute">Dispute this rating</a> · <a href="/methodology">Our methodology</a> · <a href="/ratings/">All ratings</a>
   </p>
   <p style="margin-bottom:0; color:#767676;">
-    Assessed: 2026-04-26 · Next review: 2027-04-26 · Methodology 1.3
+    Assessed: 2026-04-28 · Next review: 2027-04-28 · Methodology 1.3
   </p>
 </div>
 

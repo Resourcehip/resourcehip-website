@@ -1,0 +1,13 @@
+{
+  "prompt": "Single matte black cordless drill resting on a workbench of unfinished softwood, soft directional north light from a workshop window, muted palette of warm wood, matte black, and a restrained warm ochre (#c8920a) accent in the background. Negative space dominates the right two-thirds of the frame. UK workshop context. No people, no text, no brand marks, no clutter. Editorial, honest, photorealistic, 35mm prime. --ar 21:9 --style raw --v 7",
+  "oref_image": "assets/marketing/anchor/identity-v1.png",
+  "ow": 150,
+  "seed": null,
+  "version": "midjourney-workflow-v1",
+  "accepted_at": "2026-04-30T06:14:00Z",
+  "accepted_by": "Chris Bowness (founder)",
+  "surface": "/ratings/cordless-drills header",
+  "notes": "Append --oref <anchor-url> --ow 400 when running. Variants for other power-tool/electronics categories (smartphone on desk, robot vacuum on hard floor, wireless earbuds on desk) reuse this template \u2014 swap the device noun and surface accordingly.",
+  "prompt_modifications": "Live prompt diverged from locked v1 during the 2026-04-29 session. See resourcehip_website/brand/GENERATION_LOG.md for the actually-run prompt and the rationale per asset.",
+  "generation_log": "resourcehip_website/brand/GENERATION_LOG.md"
+}

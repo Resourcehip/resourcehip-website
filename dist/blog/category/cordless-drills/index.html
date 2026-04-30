@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cordless Drills — Blog — Resourcehip</title>
+  <meta name="description" content="Articles and buying guides about cordless drills from Resourcehip." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <!-- Self-hosted Montserrat — no Google Fonts CDN (GDPR: no IP sent to Google) -->
+  <!-- Run fonts/download_fonts.py once to fetch the .woff2 files -->
+  <link rel="stylesheet" href="/fonts/montserrat.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --forest-green:    #6B8E23;
+      --eco-teal:        #4FA9A5;
+      --atmosphere-blue: #A8DADC;
+      --soft-stone:      #F1F1F1;
+      --impact-grey:     #4A4A4A;
+      --page-bg:         #F7F8F6;
+      --card-bg:         #FFFFFF;
+      --border:          #E2E6E0;
+      /* HIP Mark tier colours */
+      --tier-emerald:    #3a9e62;
+      --tier-slate:      #7a9ab8;
+      --tier-amber:      #c8920a;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--page-bg);
+      color: var(--impact-grey);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Header ─────────────────────────────────────────────────────────── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+    }
+
+    .site-header .logo-link img {
+      height: 48px;
+      width: auto;
+      display: block;
+    }
+
+    .site-nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .site-nav a {
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--impact-grey);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .site-nav a:hover,
+    .site-nav a.active { color: var(--forest-green); }
+
+    .site-nav a.nav-cta {
+      background: linear-gradient(135deg, var(--forest-green), var(--eco-teal));
+      color: #fff;
+      padding: 0.45rem 1.1rem;
+      border-radius: 6px;
+      letter-spacing: 0.06em;
+    }
+
+    .site-nav a.nav-cta:hover { opacity: 0.9; color: #fff; }
+
+    /* ── Main content area ──────────────────────────────────────────────── */
+    .site-main {
+      flex: 1;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    .site-main.wide {
+      max-width: 1100px;
+    }
+
+    /* ── Shared card ────────────────────────────────────────────────────── */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ── Shared typography ──────────────────────────────────────────────── */
+    h1 { font-size: 1.75rem; font-weight: 700; color: var(--forest-green); margin-bottom: 0.5rem; }
+    h2 { font-size: 1.2rem; font-weight: 700; color: var(--impact-grey); margin: 2rem 0 0.75rem; }
+    h3 { font-size: 1rem; font-weight: 600; margin: 1.5rem 0 0.5rem; }
+    p  { line-height: 1.75; margin-bottom: 1rem; }
+    a  { color: var(--forest-green); }
+    ul, ol { padding-left: 1.4rem; line-height: 1.8; }
+
+    hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+
+    /* ── Pill / badge ────────────────────────────────────────────────────── */
+    .pill {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.9rem;
+      border-radius: 20px;
+      background: var(--soft-stone);
+      color: var(--impact-grey);
+    }
+
+    /* ── Skip link (WCAG 2.4.1 Bypass Blocks) ─────────────────────────── */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      background: var(--forest-green);
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      z-index: 9999;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      border-radius: 0 0 6px 0;
+      transition: top 0.15s;
+    }
+    .skip-link:focus { top: 0; }
+
+    /* ── Focus styles (WCAG 2.4.7 Focus Visible) ────────────────────── */
+    *:focus-visible {
+      outline: 3px solid var(--forest-green);
+      outline-offset: 3px;
+      border-radius: 3px;
+    }
+
+    /* ── Footer ─────────────────────────────────────────────────────────── */
+    .site-footer {
+      background: var(--impact-grey);
+      color: rgba(255,255,255,0.65);
+      text-align: center;
+      padding: 1.5rem 2rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+    }
+
+    .site-footer a { color: var(--atmosphere-blue); text-decoration: none; }
+
+    /* ── Responsive ─────────────────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .site-header { padding: 0.75rem 1rem; }
+      .site-nav { gap: 1rem; }
+      .site-nav a.nav-cta { display: none; }
+      .site-main { padding: 1.5rem 1rem 3rem; }
+    }
+
+    
+.cat-header { margin-bottom: 2rem; }
+.breadcrumb { font-size: 0.8rem; color: #888; margin-bottom: 0.5rem; }
+.breadcrumb a { color: var(--forest-green); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+.cat-header h1 { font-size: 1.75rem; margin-bottom: 0.75rem; }
+
+/* rating_link() output in this template */
+.rating-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: #eef4e8;
+  border: 1px solid #c0d8a8;
+  color: var(--forest-green);
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.rating-link:hover { background: #deefd0; }
+
+.post-list { list-style: none; padding: 0; margin: 2rem 0 0; }
+.post-list li {
+  border-bottom: 1px solid var(--border);
+  padding: 1.25rem 0;
+}
+.post-list li:last-child { border-bottom: none; }
+.post-list .post-date { font-size: 0.75rem; color: #888; margin-bottom: 0.3rem; }
+.post-list h2 { font-size: 1.05rem; font-weight: 700; margin: 0 0 0.35rem; border: none; }
+.post-list h2 a { color: var(--impact-grey); text-decoration: none; }
+.post-list h2 a:hover { color: var(--forest-green); }
+.post-list .post-desc { font-size: 0.85rem; color: #666; line-height: 1.6; margin: 0; }
+
+.back-link { display: inline-block; margin-top: 2rem; font-size: 0.85rem; color: var(--forest-green); }
+
+  </style>
+  
+</head>
+<body>
+
+  <!-- Skip to main content (WCAG 2.4.1) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <a class="logo-link" href="/">
+      <img src="/logo.png" alt="Resourcehip home" />
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/" >Home</a>
+      <a href="/ratings/" >Ratings</a>
+      <a href="/blog/" class="active" aria-current="page">Blog</a>
+      <a href="/methodology" >Methodology</a>
+      <a href="/about" >About</a>
+      <a href="/verified-ratings" >Verified Ratings</a>
+      <a href="/submit" class="nav-cta">Submit a Product</a>
+    </nav>
+  </header>
+
+  <main id="main-content" class="site-main ">
+    
+<div class="cat-header">
+  <p class="breadcrumb"><a href="/blog/">Blog</a> / Cordless Drills</p>
+  <h1>Cordless Drills</h1>
+  <a href="/ratings/cordless-drills" class="rating-link">Cordless Drills HIP Rating →</a>
+</div>
+
+
+<ul class="post-list" role="list">
+  
+  <li role="listitem">
+    <div class="post-date">2026-04-28</div>
+    <h2><a href="/blog/how-to-choose-a-sustainable-cordless-drill/">How to Choose a Sustainable Cordless Drill (UK Buyer's Guide)</a></h2>
+    
+    <p class="post-desc">A cordless drill is a multi-decade tool with a five-year battery. The category baseline scores 2.5/10. The ceiling scores 6.7. Here is what closes the gap, and why the battery system matters more than the drill.</p>
+    
+  </li>
+  
+</ul>
+
+
+<a class="back-link" href="/blog/">← All posts</a>
+
+  </main>
+
+  <footer class="site-footer">
+    <div>&copy; 2026 Resourcehip Ltd &nbsp;&middot;&nbsp; Reg. SC873386 &nbsp;&middot;&nbsp; Office 90, Alloa Business Centre, Whins Road, Alloa, Clackmannanshire, FK10&nbsp;3SA, Scotland</div>
+    <!-- TODO: add VAT no. once registered (only required if VAT-registered) -->
+    <div style="margin-top:0.4rem;">
+      <span id="rh-email"></span> &nbsp;|&nbsp;
+      <a href="/methodology">Methodology v1.3</a> &nbsp;|&nbsp;
+      <a href="/privacy">Privacy</a> &nbsp;|&nbsp;
+      <a href="/terms">Terms</a> &nbsp;|&nbsp;
+      <a href="/cookies">Cookies &amp; AI</a>
+    </div>
+  </footer>
+  <script>
+    /* Email obfuscation — assembled at runtime to deter address harvesting bots */
+    (function() {
+      var u = 'hello', d = ['resourcehip', 'com'].join('.');
+      var addr = u + '\u0040' + d;
+      var el = document.getElementById('rh-email');
+      if (el) el.innerHTML = '<a href="mailto:' + addr + '">' + addr + '</a>';
+    })();
+  </script>
+
+</body>
+</html>

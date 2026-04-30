@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Carbon Fibre Bicycles — Resourcehip</title>
-  <meta name="description" content="This carbon fibre bicycle has an overall HIP Score of 3.1 out of 10, indicating limited sustainability performance. Its Regenerative Index is -7.0, which means the product relies heavily on new raw materials and is classified as depleting rather than regenerative. The design makes it difficult to repair or recycle at the end of its life, contributing to its low score." />
+  <meta name="description" content="This carbon fibre bicycle has a HIP Score of 3.1 out of 10, which matches the current market baseline for this category. Its Regenerative Index is -7.0, indicating that the product relies heavily on non-renewable materials and depletes resources rather than regenerating them. Overall, the item performs at the average level for its class but faces significant challenges regarding material recovery and end-of-life processing." />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <!-- Self-hosted Montserrat — no Google Fonts CDN (GDPR: no IP sent to Google) -->
   <!-- Run fonts/download_fonts.py once to fetch the .woff2 files -->
@@ -308,7 +308,7 @@
 
 /* HIP Mark badge */
 .hip-mark-banner {
-  display: flex; align-items: center; gap: 1rem;
+  display: flex; align-items: center; gap: 1.25rem;
   padding: 0.85rem 1.25rem;
   border-radius: 8px; margin-bottom: 1.25rem;
   border: 1.5px solid;
@@ -316,8 +316,8 @@
 .hip-mark-banner.mark-gold     { background: #fffbea; border-color: #c8920a; }
 .hip-mark-banner.mark-silver   { background: #f2f6fb; border-color: #7a9ab8; }
 .hip-mark-banner.mark-standard { background: #f0f8f4; border-color: #3a9e62; }
-.hip-mark-icon {
-  font-size: 1.4rem; flex-shrink: 0;
+.hip-mark-badge-img {
+  flex-shrink: 0; width: 52px; height: auto;
 }
 .hip-mark-text { line-height: 1.4; }
 .hip-mark-title {
@@ -355,7 +355,37 @@
 }
 .disclaimer-box p { margin-bottom: 0.5rem; }
 
+/* Score hierarchy (category pages) */
+.score-ceiling-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #888; margin-bottom: 0.4rem; }
+.score-ceiling-value { font-size: 3.5rem; font-weight: 700; color: var(--tier-colour, var(--eco-teal)); line-height: 1; }
+.score-baseline-row { font-size: 0.88rem; font-weight: 600; color: #555; margin-top: 0.7rem; }
+.score-baseline-label { font-size: 0.7rem; color: #767676; font-weight: 400; display: block; margin-top: 0.15rem; }
+
+/* §1 Category page boilerplate */
+.score-boilerplate { background: #f5f8f5; border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; font-size: 0.85rem; line-height: 1.75; color: #444; }
+.score-boilerplate strong { display: block; font-size: 0.88rem; color: var(--forest-green); margin-bottom: 0.5rem; }
+
+/* §3a+§3b Manufacturer CTA */
+.mfr-cta-block { background: #f0f7f0; border: 1px solid #c0d8c0; border-left: 4px solid var(--eco-teal); border-radius: 0 8px 8px 0; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; }
+.mfr-cta-block h3 { font-size: 0.92rem; font-weight: 700; margin: 0 0 0.75rem; color: var(--forest-green); }
+.mfr-cta-block p { font-size: 0.82rem; line-height: 1.75; color: #444; margin-bottom: 0.75rem; }
+.btn-verified-assessment { display: inline-block; background: var(--eco-teal); color: #fff; font-weight: 700; font-size: 0.85rem; padding: 0.65rem 1.5rem; border-radius: 6px; text-decoration: none; letter-spacing: 0.02em; transition: background 0.2s; }
+.btn-verified-assessment:hover { background: var(--forest-green); }
+
+/* §2c Methodology disclosure */
+.methodology-disclosure { margin-top: 1.25rem; border-top: 1px solid var(--border); padding-top: 1rem; }
+.methodology-disclosure summary { font-size: 0.75rem; color: var(--eco-teal); cursor: pointer; list-style: none; font-weight: 600; }
+.methodology-disclosure summary::-webkit-details-marker { display: none; }
+.methodology-disclosure-body { font-size: 0.78rem; color: #555; line-height: 1.7; margin-top: 0.75rem; background: #f5f9f9; border-left: 2px solid var(--eco-teal); padding: 0.75rem 1rem; border-radius: 0 6px 6px 0; }
+
+/* §5 Ceiling page hero */
+.ceiling-hero { background: linear-gradient(135deg, #f0faf5 0%, #e8f5f8 100%); border: 1px solid #b8d8d0; border-radius: 12px; padding: 1.75rem 2rem; margin-bottom: 1.75rem; }
+.ceiling-hero-eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--eco-teal); margin-bottom: 0.5rem; }
+.ceiling-hero-score { font-size: 2.8rem; font-weight: 700; color: var(--tier-colour, var(--eco-teal)); line-height: 1.1; margin-bottom: 0.75rem; }
+.ceiling-hero-copy { font-size: 0.85rem; line-height: 1.75; color: #444; }
+
   </style>
+  
 </head>
 <body>
 
@@ -369,6 +399,7 @@
     <nav class="site-nav" aria-label="Main navigation">
       <a href="/" >Home</a>
       <a href="/ratings/" class="active" aria-current="page">Ratings</a>
+      <a href="/blog/" >Blog</a>
       <a href="/methodology" >Methodology</a>
       <a href="/about" >About</a>
       <a href="/verified-ratings" >Verified Ratings</a>
@@ -385,6 +416,9 @@
     --ri-colour:   #c04040;
   }
 </style>
+
+
+
 
 <!-- ── Generic rating notice ──────────────────────────────────────────────── -->
 
@@ -404,7 +438,7 @@
       <span class="rating-type-badge badge-generic">Category Rating</span>
     
     <span class="pill">sports and leisure</span>
-    <span class="pill">Assessed 2026-04-26</span>
+    <span class="pill">Assessed 2026-04-28</span>
     <span class="pill">1.3</span>
   </div>
   <h1>Carbon Fibre Bicycles</h1>
@@ -415,59 +449,79 @@
 <div class="score-panel">
 
   <div class="hip-score-card">
-    <div class="score-label">HIP Score</div>
-    <div class="score-value">
-      3.1<span class="score-denom">/10</span>
-    </div>
-    <div class="score-tier-name">Low Resilience</div>
-    <div class="score-vs-baseline">At category baseline (3.1)</div>
-    
-    
-    <div class="score-vs-ceiling">
-      Highest estimated rating: 5.3/10
-    </div>
+      
+      <div class="score-ceiling-label">Category ceiling</div>
+      <div class="score-ceiling-value">5.3<span class="score-denom"> HIP</span></div>
+      <div class="score-tier-name">Low Resilience</div>
+      <div class="score-baseline-row">
+        Current market baseline: <strong>3.1 HIP</strong>
+        <span class="score-baseline-label">Pre-verification score from public data</span>
+      </div>
     
   </div>
 
   <div class="ri-card">
-    <div class="score-label">Regenerative Index</div>
-    <div class="ri-score-value" style="color: var(--ri-colour);">
-      -7.0
-    </div>
-    <div class="ri-descriptor" style="color: var(--ri-colour);">Depleting</div>
-    <!-- RI scale: 5 pips, one per tier (Depleting → Regenerative) -->
-    <div class="ri-scale">
-        <div class="ri-pip active"
-             style="background:#c04040">
-        </div>
       
-        <div class="ri-pip "
-             style="">
-        </div>
-      
-        <div class="ri-pip "
-             style="">
-        </div>
-      
-        <div class="ri-pip "
-             style="">
-        </div>
-      
-        <div class="ri-pip "
-             style="">
-        </div>
-      
-    </div>
-    <div class="score-vs-baseline" style="margin-top:0.75rem;">At category average (-7.0)</div>
-    
-    
-    <div class="score-vs-ceiling">
-      Highest estimated RI: -4.0
-    </div>
+      <div class="score-ceiling-label">Category ceiling RI</div>
+      <div class="ri-score-value" style="color: #c8920a;">
+        -4.0
+      </div>
+      <div class="ri-scale">
+        
+          <div class="ri-pip active"
+               style="background:#c04040">
+          </div>
+        
+          <div class="ri-pip "
+               style="">
+          </div>
+        
+          <div class="ri-pip "
+               style="">
+          </div>
+        
+          <div class="ri-pip "
+               style="">
+          </div>
+        
+          <div class="ri-pip "
+               style="">
+          </div>
+        
+      </div>
+      <div class="score-baseline-row" style="margin-top:0.75rem;">
+        Current market baseline RI: <strong>-7.0</strong>
+        <span class="score-baseline-label">(Depleting)</span>
+      </div>
     
   </div>
 
 </div>
+
+
+
+<div class="score-boilerplate">
+  <strong>What this score means</strong>
+  The current market baseline for sports and leisure reflects what the HIP methodology can confirm from publicly available
+  specification data alone, before any manufacturer evidence is reviewed. The category ceiling shown above is what the
+  methodology rewards when materials, supply chain, repairability, and end-of-life pathways are fully evidenced.
+  Manufacturers close that gap by applying for verified assessment.
+</div>
+
+
+
+
+<div class="mfr-cta-block">
+  <h3>Manufacturer? Verified assessment closes the gap.</h3>
+  <p>The current market baseline for this category is 3.1 HIP.
+  The category ceiling — what the methodology rewards when materials, supply chain, repairability, and end-of-life
+  pathways are fully evidenced — is 5.3 HIP.
+  The first verified product in our programme demonstrated 6.9 HIP and earned the HIP Mark.</p>
+  <p>If your product can evidence the methodology dimensions, verified assessment gives it the score it has earned.</p>
+  <a class="btn-verified-assessment" href="/apply">Apply for verified assessment</a>
+</div>
+  
+
 
 <!-- ── HIP Mark banner ────────────────────────────────────────────────────── -->
 
@@ -486,7 +540,7 @@
         </div>
         <div class="dim-score-num">3.5</div>
         
-          <div class="dim-finding">The product relies on carbon fibre and epoxy resin, which are energy-intensive and often derived from scarce precursors, alongside aluminium and steel. Due to missing data on recycled content and extraction origins, a conservative score is applied assuming low recycling rates and potential supply concentration risks for carbon fibre precursors.</div>
+          <div class="dim-finding">The product contains carbon fibre and epoxy resin, which are energy-intensive and rely on scarce precursors, alongside aluminium and steel. With zero recycled content and missing data on extraction origins, the supply chain risk is elevated under generic conservative assumptions.</div>
         
       </div>
     <div class="dim-row">
@@ -499,7 +553,7 @@
         </div>
         <div class="dim-score-num">3.5</div>
         
-          <div class="dim-finding">The carbon fibre bicycle relies on carbon fibre and aluminium, materials with significant global supply concentration in China (OECD moderate risk), creating high concentration risk. Due to missing due diligence documentation and the absence of verified alternative suppliers, the supply chain lacks resilience against geopolitical disruptions.</div>
+          <div class="dim-finding">The carbon fibre bicycle relies on carbon fibre and aluminium, materials with significant global supply concentration in China, a moderate-risk jurisdiction. Due to the absence of submitted due-diligence standards, verified alternative suppliers, or third-party audits, the supply chain remains at the pre-verification baseline for this category with high concentration risk.</div>
         
       </div>
     <div class="dim-row">
@@ -512,7 +566,7 @@
         </div>
         <div class="dim-score-num">1.5</div>
         
-          <div class="dim-finding">The product is a carbon fibre bicycle with glued assembly and no take-back scheme, making material separation impractical without specialist equipment. Carbon fibre composites are technically recyclable but rarely enter practical recycling streams, resulting in less than 20% of the product weight being recovered. This aligns with the non-recyclable baseline for sealed composite goods lacking infrastructure.</div>
+          <div class="dim-finding">The product is a carbon fibre bicycle with glued disassembly and no take-back scheme, resulting in less than 20% of materials entering practical recycling streams. Carbon fibre composites are technically recyclable but lack widespread commercial infrastructure for recovery, meaning the majority of the product is effectively non-recyclable in practice.</div>
         
       </div>
     <div class="dim-row">
@@ -525,7 +579,7 @@
         </div>
         <div class="dim-score-num">3.0</div>
         
-          <div class="dim-finding">The carbon fibre bicycle is assumed to use glued fasteners due to missing data, which typically prevents non-destructive disassembly. Although spare parts are available, the lack of a public service manual and the difficulty of accessing internal components without damaging the carbon fibre structure limits repairability to a 'difficult' level.</div>
+          <div class="dim-finding">The carbon fibre bicycle utilizes glued fasteners, preventing non-destructive disassembly, and lacks a public service manual. Although spare parts are available, the absence of a committed parts programme duration and the reliance on adhesive for structural assembly limit repairability to the difficult range.</div>
         
       </div>
     <div class="dim-row">
@@ -538,7 +592,7 @@
         </div>
         <div class="dim-score-num">3.5</div>
         
-          <div class="dim-finding">The product is manufactured in China, a moderate-to-high risk jurisdiction, with no submitted third-party audits, environmental certifications, or modern slavery statements. While no specific adverse findings were identified, the absence of verified evidence of ILO compliance or independent audits prevents a higher score.</div>
+          <div class="dim-finding">The product is a carbon fibre bicycle manufactured in China with no submitted third-party audits, environmental certifications, or modern slavery statements. This places the assessment at the pre-verification baseline for mass-market consumer goods produced in moderate-risk jurisdictions without independent verification of labour or environmental practices.</div>
         
       </div>
     <div class="dim-row">
@@ -551,7 +605,7 @@
         </div>
         <div class="dim-score-num">7.0</div>
         
-          <div class="dim-finding">The product benefits from a 3-year warranty and a stated 10-year design life, which aligns with the 'Above Average Lifespan' criteria for durable goods. However, the lack of a submitted IP rating and modular design prevents a higher score, as these are critical for maximizing longevity in outdoor or high-stress environments.</div>
+          <div class="dim-finding">The product features a 3-year warranty and a stated design life of 10 years, meeting the criteria for above-average lifespan. While the carbon fibre construction and Taiwanese assembly are noted, the lack of submitted IP rating and modular design data prevents a higher classification under the generic conservative rating type.</div>
         
       </div>
     
@@ -568,7 +622,7 @@
         -7.0
       </div>
       
-        <div class="dim-finding">The product is classified as Depleting because it relies on virgin carbon fibre (mined/extracted origin) with 0% recycled content and no take-back scheme. This aligns with the Depleting band criteria for conventional manufactured goods lacking any recovery pathway. It is not Extractive because the threshold of 20% recycled content or a take-back scheme is not met.</div>
+        <div class="dim-finding">The product is classified as Depleting because it relies on virgin carbon fibre derived from non-renewable geological reserves with zero recycled content and no take-back scheme. This score applies the Depleting floor as the product does not meet the criteria for the Extractive band, which requires either substantial recycled content or a verified take-back programme.</div>
       
     </div>
 
@@ -577,6 +631,19 @@
   <p style="font-size:0.72rem; color:#767676; margin-top:1.25rem; margin-bottom:0;">
     MSI 20% · SCR 18% · RC 18% · R 13% · SEI 8% · PL 8% · RI 15% = 100%
   </p>
+
+  <!-- ── §2c Methodology disclosure ────────────────────────────────────────── -->
+  <details class="methodology-disclosure">
+    <summary>About the HIP Methodology ▸</summary>
+    <div class="methodology-disclosure-body">
+      Generic ratings are intentionally conservative. They represent only what the HIP methodology can confirm from
+      publicly available specification data, before any manufacturer-supplied evidence is reviewed. Most categories sit
+      in the 2–4 range at the pre-verification baseline. This is the methodology working as designed: it makes the gap
+      between current market practice and demonstrable resilience legible to consumers, manufacturers, and procurement
+      buyers. Verified assessment is the path across that gap, and the HIP Mark is the proof of crossing it.
+      <a href="/methodology" style="white-space:nowrap;">Read the full methodology →</a>
+    </div>
+  </details>
 </div><!-- /.card -->
 
 <!-- ── Key Materials ───────────────────────────────────────────────────────── -->
@@ -586,14 +653,14 @@
 
 <div class="card">
   <h2 style="margin-top:0;">Consumer Summary</h2>
-  <p>This carbon fibre bicycle has an overall HIP Score of 3.1 out of 10, indicating limited sustainability performance. Its Regenerative Index is -7.0, which means the product relies heavily on new raw materials and is classified as depleting rather than regenerative. The design makes it difficult to repair or recycle at the end of its life, contributing to its low score.</p>
+  <p>This carbon fibre bicycle has a HIP Score of 3.1 out of 10, which matches the current market baseline for this category. Its Regenerative Index is -7.0, indicating that the product relies heavily on non-renewable materials and depletes resources rather than regenerating them. Overall, the item performs at the average level for its class but faces significant challenges regarding material recovery and end-of-life processing.</p>
 </div>
 
 
 
 <div class="card">
   <h2 style="margin-top:0;">What This Means For You</h2>
-  <p>When buying a bicycle, look for models that offer a clear path for repair and a take-back program to ensure materials can be reused. Avoid products that use permanent glues or lack a warranty, as these features often prevent the item from being recycled or extended in use. Prioritizing brands that design for disassembly and use recycled content will help you choose a more sustainable option.</p>
+  <p>When shopping for a bicycle, look for models that offer clear take-back schemes or designs that allow for easier repair and disassembly. Prioritize brands that provide third-party environmental audits and transparent information about their supply chains to ensure better long-term sustainability. Choosing products with longer design lives and robust warranties can also help maximize the value and utility of your purchase.</p>
 </div>
 
 
@@ -642,15 +709,16 @@
 <p>A <a href="/about#two-types-of-rating">verified rating</a> uses manufacturer-submitted data and produces a more accurate, product-specific score.</p>
 <h2>Material Watch Points</h2>
 <ul>
-<li>Carbon fibre — High energy intensity and supply chain complexity</li>
-<li>Epoxy resin — Limited recycled content availability</li>
-<li>Missing recycled content data — Assumed low (0%) per conservative generic rating</li>
-<li>Carbon fibre and aluminium supply heavily concentrated in China</li>
+<li>Carbon fibre — high energy intensity and supply concentration risk</li>
+<li>Epoxy resin — derived from scarce petrochemical feedstocks</li>
+<li>Recycled content 0% — below 20% threshold for scarcity mitigation</li>
+<li>Carbon fibre and aluminium supply concentration in China</li>
 <li>No due-diligence programme documented</li>
 <li>No alternative supplier documented</li>
+<li>Single primary supplier assumed</li>
 </ul>
 <h2>About This Rating</h2>
-<p>Produced under <a href="/methodology">Resourcehip Methodology v1.3</a> (CC BY-NC 4.0). Assessed: 2026-04-26. Next scheduled review: 2027-04-26.</p>
+<p>Produced under <a href="/methodology">Resourcehip Methodology v1.3</a> (CC BY-NC 4.0). Assessed: 2026-04-28. Next scheduled review: 2027-04-28.</p>
 <p><a href="/dispute">Dispute this rating</a> · <a href="/methodology">Our methodology</a> · <a href="/ratings/">All ratings</a></p>
 </div>
 
@@ -692,7 +760,7 @@
   <a href="/dispute">Dispute this rating</a> · <a href="/methodology">Our methodology</a> · <a href="/ratings/">All ratings</a>
   </p>
   <p style="margin-bottom:0; color:#767676;">
-    Assessed: 2026-04-26 · Next review: 2027-04-26 · Methodology 1.3
+    Assessed: 2026-04-28 · Next review: 2027-04-28 · Methodology 1.3
   </p>
 </div>
 

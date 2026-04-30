@@ -177,6 +177,7 @@
 
     {% block extra_styles %}{% endblock %}
   </style>
+  {% block head_meta %}{% endblock %}
 </head>
 <body>
 
@@ -190,6 +191,7 @@
     <nav class="site-nav" aria-label="Main navigation">
       <a href="/" {% if active_page == 'home' %}class="active" aria-current="page"{% endif %}>Home</a>
       <a href="/ratings/" {% if active_page == 'ratings' %}class="active" aria-current="page"{% endif %}>Ratings</a>
+      <a href="/blog/" {% if active_page == 'blog' %}class="active" aria-current="page"{% endif %}>Blog</a>
       <a href="/methodology" {% if active_page == 'methodology' %}class="active" aria-current="page"{% endif %}>Methodology</a>
       <a href="/about" {% if active_page == 'about' %}class="active" aria-current="page"{% endif %}>About</a>
       <a href="/verified-ratings" {% if active_page == 'verified-ratings' %}class="active" aria-current="page"{% endif %}>Verified Ratings</a>

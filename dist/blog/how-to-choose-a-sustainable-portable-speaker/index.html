@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Choose a Sustainable Portable Speaker (UK Buyer's Guide) — Resourcehip</title>
+  <meta name="description" content="Speaker drivers can last decades. The lithium-ion battery typically does not. Category baseline 2.0/10. Ceiling 6.4. Here is what closes that gap." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <!-- Self-hosted Montserrat — no Google Fonts CDN (GDPR: no IP sent to Google) -->
+  <!-- Run fonts/download_fonts.py once to fetch the .woff2 files -->
+  <link rel="stylesheet" href="/fonts/montserrat.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --forest-green:    #6B8E23;
+      --eco-teal:        #4FA9A5;
+      --atmosphere-blue: #A8DADC;
+      --soft-stone:      #F1F1F1;
+      --impact-grey:     #4A4A4A;
+      --page-bg:         #F7F8F6;
+      --card-bg:         #FFFFFF;
+      --border:          #E2E6E0;
+      /* HIP Mark tier colours */
+      --tier-emerald:    #3a9e62;
+      --tier-slate:      #7a9ab8;
+      --tier-amber:      #c8920a;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--page-bg);
+      color: var(--impact-grey);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Header ─────────────────────────────────────────────────────────── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+    }
+
+    .site-header .logo-link img {
+      height: 48px;
+      width: auto;
+      display: block;
+    }
+
+    .site-nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .site-nav a {
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--impact-grey);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .site-nav a:hover,
+    .site-nav a.active { color: var(--forest-green); }
+
+    .site-nav a.nav-cta {
+      background: linear-gradient(135deg, var(--forest-green), var(--eco-teal));
+      color: #fff;
+      padding: 0.45rem 1.1rem;
+      border-radius: 6px;
+      letter-spacing: 0.06em;
+    }
+
+    .site-nav a.nav-cta:hover { opacity: 0.9; color: #fff; }
+
+    /* ── Main content area ──────────────────────────────────────────────── */
+    .site-main {
+      flex: 1;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    .site-main.wide {
+      max-width: 1100px;
+    }
+
+    /* ── Shared card ────────────────────────────────────────────────────── */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ── Shared typography ──────────────────────────────────────────────── */
+    h1 { font-size: 1.75rem; font-weight: 700; color: var(--forest-green); margin-bottom: 0.5rem; }
+    h2 { font-size: 1.2rem; font-weight: 700; color: var(--impact-grey); margin: 2rem 0 0.75rem; }
+    h3 { font-size: 1rem; font-weight: 600; margin: 1.5rem 0 0.5rem; }
+    p  { line-height: 1.75; margin-bottom: 1rem; }
+    a  { color: var(--forest-green); }
+    ul, ol { padding-left: 1.4rem; line-height: 1.8; }
+
+    hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+
+    /* ── Pill / badge ────────────────────────────────────────────────────── */
+    .pill {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.9rem;
+      border-radius: 20px;
+      background: var(--soft-stone);
+      color: var(--impact-grey);
+    }
+
+    /* ── Skip link (WCAG 2.4.1 Bypass Blocks) ─────────────────────────── */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      background: var(--forest-green);
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      z-index: 9999;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      border-radius: 0 0 6px 0;
+      transition: top 0.15s;
+    }
+    .skip-link:focus { top: 0; }
+
+    /* ── Focus styles (WCAG 2.4.7 Focus Visible) ────────────────────── */
+    *:focus-visible {
+      outline: 3px solid var(--forest-green);
+      outline-offset: 3px;
+      border-radius: 3px;
+    }
+
+    /* ── Footer ─────────────────────────────────────────────────────────── */
+    .site-footer {
+      background: var(--impact-grey);
+      color: rgba(255,255,255,0.65);
+      text-align: center;
+      padding: 1.5rem 2rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+    }
+
+    .site-footer a { color: var(--atmosphere-blue); text-decoration: none; }
+
+    /* ── Responsive ─────────────────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .site-header { padding: 0.75rem 1rem; }
+      .site-nav { gap: 1rem; }
+      .site-nav a.nav-cta { display: none; }
+      .site-main { padding: 1.5rem 1rem 3rem; }
+    }
+
+    
+.post-header { margin-bottom: 2rem; }
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+.post-meta .cat-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--forest-green);
+  background: #eef4e8;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  text-decoration: none;
+}
+.post-meta .cat-pill:hover { background: #deefd0; }
+.post-meta .post-date { font-size: 0.78rem; color: #888; }
+
+.post-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--forest-green);
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+.post-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.post-body { max-width: 680px; margin-top: 2rem; }
+.post-body h2 { font-size: 1.15rem; margin: 2rem 0 0.6rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+.post-body h3 { font-size: 1rem; margin: 1.5rem 0 0.4rem; }
+.post-body p  { line-height: 1.8; margin-bottom: 1rem; }
+.post-body ul, .post-body ol { padding-left: 1.4rem; margin-bottom: 1rem; line-height: 1.8; }
+.post-body blockquote { border-left: 3px solid var(--forest-green); padding: 0.5rem 1rem; background: #f4f7f0; border-radius: 0 6px 6px 0; margin: 1rem 0; color: #555; font-style: italic; }
+.post-body code { font-family: monospace; background: #eee; padding: 0.1em 0.4em; border-radius: 3px; font-size: 0.9em; }
+.post-body pre { background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; overflow-x: auto; margin: 1rem 0; }
+.post-body pre code { background: none; padding: 0; }
+
+/* rating_link() helper output */
+.post-body .rating-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: #eef4e8;
+  border: 1px solid #c0d8a8;
+  color: var(--forest-green);
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 6px;
+  text-decoration: none;
+  margin: 0.25rem 0;
+}
+.post-body .rating-link:hover { background: #deefd0; }
+
+.post-footer {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.82rem;
+  color: #888;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.post-footer a { color: var(--forest-green); }
+
+.post-hero-img {
+  width: 100%;
+  border-radius: 12px;
+  margin: 1.5rem 0 0;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+  </style>
+  
+<link rel="canonical" href="https://resourcehip.com/blog/how-to-choose-a-sustainable-portable-speaker" />
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to Choose a Sustainable Portable Speaker (UK Buyer's Guide) — Resourcehip" />
+<meta property="og:description" content="Speaker drivers can last decades. The lithium-ion battery typically does not. Category baseline 2.0/10. Ceiling 6.4. Here is what closes that gap." />
+<meta property="og:url" content="https://resourcehip.com/blog/how-to-choose-a-sustainable-portable-speaker" />
+<meta property="og:site_name" content="Resourcehip" />
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="How to Choose a Sustainable Portable Speaker (UK Buyer's Guide) — Resourcehip" />
+<meta name="twitter:description" content="Speaker drivers can last decades. The lithium-ion battery typically does not. Category baseline 2.0/10. Ceiling 6.4. Here is what closes that gap." />
+<!-- Schema.org Article JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Choose a Sustainable Portable Speaker (UK Buyer\u0027s Guide)",
+  "description": "Speaker drivers can last decades. The lithium-ion battery typically does not. Category baseline 2.0/10. Ceiling 6.4. Here is what closes that gap.",
+  "url": "https://resourcehip.com/blog/how-to-choose-a-sustainable-portable-speaker",
+  "dateModified": "2026-04-28",
+  "author": {
+    "@type": "Organization",
+    "name": "Resourcehip",
+    "url": "https://resourcehip.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Resourcehip",
+    "url": "https://resourcehip.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://resourcehip.com/logo.png"
+    }
+  }
+}
+</script>
+
+</head>
+<body>
+
+  <!-- Skip to main content (WCAG 2.4.1) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <a class="logo-link" href="/">
+      <img src="/logo.png" alt="Resourcehip home" />
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/" >Home</a>
+      <a href="/ratings/" >Ratings</a>
+      <a href="/blog/" class="active" aria-current="page">Blog</a>
+      <a href="/methodology" >Methodology</a>
+      <a href="/about" >About</a>
+      <a href="/verified-ratings" >Verified Ratings</a>
+      <a href="/submit" class="nav-cta">Submit a Product</a>
+    </nav>
+  </header>
+
+  <main id="main-content" class="site-main ">
+    
+<article>
+  <header class="post-header">
+    <div class="post-meta">
+      
+      <a class="cat-pill" href="/blog/category/portable-speakers/">Portable Speakers</a>
+      
+      <span class="post-date">2026-04-28</span>
+    </div>
+    <h1 class="post-title">How to Choose a Sustainable Portable Speaker (UK Buyer's Guide)</h1>
+    
+    <p class="post-description">Speaker drivers can last decades. The lithium-ion battery typically does not. Category baseline 2.0/10. Ceiling 6.4. Here is what closes that gap.</p>
+    
+    
+  </header>
+
+  <div class="post-body">
+    <h2>A 30-Year Driver Wired to a 4-Year Battery</h2>
+<p>Speaker drivers are mature engineering. A well-made dynamic driver in a domestic speaker can produce serviceable sound for 25 to 40 years. The Bluetooth radio is solid-state and effectively does not wear out. The amplifier is mostly silicon and discrete components that, on a properly designed board, run for decades.</p>
+<p>Then there is the battery.</p>
+<p>A typical lithium-ion battery in a portable speaker has a usable life of three to five years. When the battery degrades, the speaker is still acoustically and electrically capable — but unless the manufacturer has designed for battery replacement, the device is functionally retired. The Resourcehip Human Impact Profile rates the speaker as a whole device, including that battery. By that measure, the typical mass-market portable speaker scores <strong>2.0 out of 10</strong>. The full breakdown is on the <a href="/ratings/portable-speakers">portable speakers rating page</a>.</p>
+<h2>What HIP Measures for a Portable Speaker</h2>
+<p>Three HIP dimensions sit at the bottom of the category:</p>
+<ul>
+<li><strong>Repairability (R).</strong> Baseline <strong>1/10</strong> — almost universally glued, ultrasonically welded, or sealed with adhesive gaskets to maintain water resistance. Ceiling <strong>9/10</strong> with screw-fastened access, stocked spare parts, and a public service manual.</li>
+<li><strong>Recyclability and Circularity (RC).</strong> Baseline <strong>1.5/10</strong> — sealed housings + lithium battery + mixed-material drivers route the entire device to landfill or e-waste. Ceiling <strong>7.5/10</strong> with screw-based disassembly and a manufacturer take-back scheme.</li>
+<li><strong>Material Scarcity (MSI).</strong> Baseline <strong>1.5/10</strong> — neodymium magnets in the drivers, lithium and cobalt in the battery, copper in the voice coil. Ceiling <strong>5.2/10</strong> with reduced critical-material content and partial recycled inputs.</li>
+</ul>
+<p>The remaining four dimensions — Supply Chain Risk, Social and Environmental Impact, Product Longevity, the Regenerative Index — track with the rest of the small consumer-electronics category.</p>
+<h2>The Gap Between Baseline and Ceiling</h2>
+<p>The portable-speaker category ceiling is <strong>HIP 6.4 / RI -2.0 (Extractive)</strong>, earning the <strong>Standard</strong> HIP Mark.</p>
+<p>That is a <strong>4.4-point HIP gap and a five-band RI shift</strong> between a typical mass-market speaker and what is technically demonstrable today. Closing it requires:</p>
+<ul>
+<li>Recycled content moving from 0% (assumed) to 50%+</li>
+<li>Screw-fastened access to the battery and main board</li>
+<li><strong>A user-serviceable battery design</strong> — without this, the rest of the durability story collapses</li>
+<li>Multi-year stocked spare-parts programme</li>
+<li>Take-back moving from absent to manufacturer-run</li>
+<li>Design life moving from 5 years to 10+</li>
+</ul>
+<p>That third bullet — a serviceable battery — is the highest-leverage check in this category, exactly as it is for electric toothbrushes. Speakers and earbuds occupy adjacent territory, but speakers are large enough that the design challenge is genuinely solvable; earbuds are not.</p>
+<h2>What to Check Before You Buy</h2>
+<ol>
+<li><strong>Look for a user-replaceable battery.</strong> A speaker designed around a swappable 18650 cell, or a captive battery rated for hundreds of replacement cycles via a published service procedure, is the difference between a 4-year disposable and a 15-year durable.</li>
+<li><strong>Confirm screw-fastened access.</strong> Glue and ultrasonic welding are the IP rating's most common shortcut. Gasketed, screw-fastened housings can hit the same water-resistance rating without sacrificing repairability.</li>
+<li><strong>Check the warranty length.</strong> Two years is the EU floor. Three- to five-year warranties signal the manufacturer expects the battery to outlast a typical replacement cycle.</li>
+<li><strong>Check whether the speaker can run wired.</strong> A model that accepts a 3.5 mm or USB-C audio input survives the day the Bluetooth standard moves on or the codec licence expires. Battery-only Bluetooth-only speakers are the most fragile member of the category.</li>
+</ol>
+<p>We do not name brands. The four checks above are visible on any manufacturer's product page if you look for them.</p>
+<h2>How to Read a Resourcehip Portable-Speaker Rating</h2>
+<p>Every portable-speaker listing carries:</p>
+<ul>
+<li>A HIP score from 0 to 10, calculated against the portable-speaker category baseline.</li>
+<li>A Regenerative Index from -10 to +10, with a tier name (Depleting, Extractive, Renewable, Restorative, Regenerative).</li>
+<li>A HIP Mark on verified ratings only: <strong>Standard</strong> at 6.0, <strong>Silver</strong> at 7.5, <strong>Gold</strong> at 9.0 with RI ≥ +6.</li>
+</ul>
+<p>Generic ratings sit at the category baseline. Verified ratings, where the manufacturer can show the receipts, can climb up to the ceiling.</p>
+<p>For the methodology, see <a href="/methodology">How HIP scoring works</a>. For every portable speaker we have rated:</p>
+<p><a href="/ratings/portable-speakers" class="rating-link">Portable Speakers HIP Rating →</a></p>
+<h2>The Bigger Picture</h2>
+<p>Portable speakers are a category where the gap between potential lifespan and actual lifespan is unusually wide. The drivers will outlast the buyer; the battery will not, and almost no shipping product is designed to bridge that gap. A category whose ceiling sits at HIP 6.4 has plenty of room to move — and a manufacturer that builds for a 15-year speaker around a serviceable battery has a story that nobody else in the segment is currently telling.</p>
+<hr />
+<p><em>Methodology and edits by Chris Bowness; assistive AI used for drafting.</em></p>
+  </div>
+
+  <footer class="post-footer">
+    <span>Last updated: 2026-04-28</span>
+    
+    <a href="/blog/category/portable-speakers/">More Portable Speakers articles →</a>
+    
+    <a href="/blog/">← All posts</a>
+  </footer>
+</article>
+
+  </main>
+
+  <footer class="site-footer">
+    <div>&copy; 2026 Resourcehip Ltd &nbsp;&middot;&nbsp; Reg. SC873386 &nbsp;&middot;&nbsp; Office 90, Alloa Business Centre, Whins Road, Alloa, Clackmannanshire, FK10&nbsp;3SA, Scotland</div>
+    <!-- TODO: add VAT no. once registered (only required if VAT-registered) -->
+    <div style="margin-top:0.4rem;">
+      <span id="rh-email"></span> &nbsp;|&nbsp;
+      <a href="/methodology">Methodology v1.3</a> &nbsp;|&nbsp;
+      <a href="/privacy">Privacy</a> &nbsp;|&nbsp;
+      <a href="/terms">Terms</a> &nbsp;|&nbsp;
+      <a href="/cookies">Cookies &amp; AI</a>
+    </div>
+  </footer>
+  <script>
+    /* Email obfuscation — assembled at runtime to deter address harvesting bots */
+    (function() {
+      var u = 'hello', d = ['resourcehip', 'com'].join('.');
+      var addr = u + '\u0040' + d;
+      var el = document.getElementById('rh-email');
+      if (el) el.innerHTML = '<a href="mailto:' + addr + '">' + addr + '</a>';
+    })();
+  </script>
+
+</body>
+</html>

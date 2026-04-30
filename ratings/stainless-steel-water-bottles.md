@@ -4,58 +4,58 @@ category: home lifestyle
 rating_type: generic
 brand: null
 slug: stainless-steel-water-bottles
-hip_score: 3.4
+hip_score: 4.0
 hip_label: Caution
-msi_score: 3.5
+msi_score: 5.0
 scr_score: 3.5
 rc_score: 3.0
-r_score: 2.0
+r_score: 3.0
 sei_score: 3.5
 pl_score: 9.0
-ri_score: -7.0
-ri_descriptor: Depleting
-category_baseline_hip: 3.4
-category_baseline_ri: -7.0
-category_ceiling_hip: null
-category_ceiling_ri: null
+ri_score: -4.0
+ri_descriptor: Extractive
+category_baseline_hip: 4.0
+category_baseline_ri: -4.0
+category_ceiling_hip: 7.8
+category_ceiling_ri: -3.0
 above_baseline: false
-assessment_date: '2026-04-26'
+assessment_date: '2026-04-29'
 methodology_version: '1.3'
-next_review: '2027-04-26'
+next_review: '2027-04-29'
 scoring_model: qwen3.5:35b
 prose_model: qwen3.5:35b
-msi_finding: The product relies on stainless steel and polypropylene, which are generally abundant, but the absence of submitted
-  recycled content (assumed 0%) and unknown extraction origins creates significant supply risk. Under generic conservative
-  scoring, the lack of verified recycled content and potential single-country concentration for steel or silicone processing
-  lowers the score to the Scarce range.
-scr_finding: The product is a stainless steel water bottle assembled in China, a country with moderate governance risks and
-  high concentration for key raw materials like nickel and chromium. Due to the lack of submitted due diligence standards
-  or verified alternative suppliers, the supply chain faces significant concentration risk without third-party verification.
-rc_finding: The product is a stainless steel water bottle, which is theoretically highly recyclable; however, with no disassembly
-  data submitted, it is conservatively assumed to be glued, preventing clean material separation. Consequently, only the metal
-  component is considered practically recoverable, placing it in the 'Poorly Recyclable' band where 20-40% of weight enters
-  recycling streams.
-r_finding: The product is assumed to be glued shut with no public service manual, making disassembly destructive. Although
-  spare parts are available, the lack of fasteners and the generic rating assumption for a sealed consumer accessory result
-  in a low repairability score.
-sei_finding: The product is manufactured in China, a moderate-to-high risk jurisdiction, with no submitted third-party audits,
-  environmental certifications, or modern slavery statements. While ILO compliance is not claimed, the absence of independent
-  verification or audit evidence places the score in the elevated risk category.
-pl_finding: The product demonstrates exceptional longevity with a 5-year warranty and a stated design life of 20 years, exceeding
-  the 'Designed for Life' threshold of 10 years. While IP rating and modular design data are missing, the stainless steel
-  construction and extended design life indicate a product clearly intended to outlast market norms.
-ri_finding: The product is scored as Depleting (-7) because it relies on virgin stainless steel with zero recycled content
-  and no take-back scheme, fitting the criteria for conventional manufactured goods. It does not qualify for the Extractive
-  band minimum of -3 because the required 50% recycled content and verified take-back are absent. No renewable or regenerative
-  certifications are present to shift the score toward zero or positive.
-consumer_summary: This stainless steel water bottle has an overall HIP Score of 3.4 out of 10, indicating limited sustainability
-  performance. Its Regenerative Index is -7.0, meaning the product relies on new raw materials rather than recycled ones and
-  does not support a circular lifecycle. While it is built to last for many years, the lack of recycled content and difficulty
-  in recycling it at the end of its life are significant drawbacks.
-what_this_means: When shopping for durable water bottles, look for options that explicitly state they contain recycled materials
-  to improve their environmental impact. Prioritize products that offer clear repair guides or spare parts, as this extends
-  their usable life and reduces waste. Avoid items that are permanently glued or lack information on how to recycle them,
-  as these end up in landfills despite their long design life.
+msi_finding: The product relies on stainless steel, silicone, and polypropylene, which are generally abundant materials not
+  listed as critical raw materials. However, the recycled content is 20%, which falls below the 40% threshold required for
+  a Low Scarcity rating. Additionally, the country of primary extraction is unknown, preventing verification of supply diversity
+  and necessitating a conservative assessment.
+scr_finding: The stainless steel water bottle is assembled in China, a country with moderate governance scores but high concentration
+  risk for stainless steel inputs. No due-diligence programme is documented, and no alternative suppliers are verified, resulting
+  in a score at the pre-verification baseline for this category.
+rc_finding: The product is a stainless steel water bottle, a material with high practical recyclability, but the lack of a
+  submitted disassembly type assumes a glued construction which hinders separation. With an assumed 20% recovery rate and
+  no take-back scheme or compliant labelling, the product aligns with the baseline for mass-market items where only specific
+  metal streams are practically recovered. This score reflects the gap between the theoretical recyclability of stainless
+  steel and the practical constraints of the assumed assembly method.
+r_finding: The product utilizes glued fasteners, preventing non-destructive disassembly, and lacks a public service manual.
+  Although spare parts are available, the absence of a committed availability period and the use of adhesive align with the
+  'Difficult to Repair' criteria for mass-market items.
+sei_finding: The product is manufactured in China, a moderate-risk jurisdiction, with no submitted third-party audits or environmental
+  certifications. While the product type is a stainless steel water bottle, the absence of verified ILO compliance, RBA audits,
+  or modern slavery statements places the assessment at the pre-verification baseline for this category.
+pl_finding: The product features a 5-year warranty and a stated design life of 20 years, which exceeds the 10-year threshold
+  for the highest longevity tier. The stainless steel construction supports long-term durability, and the explicit design
+  life commitment places this item well above typical market norms for beverage containers.
+ri_finding: The product scores in the Extractive band (-5 to -1) due to 20% recycled content, which provides a partial mitigation
+  against depletion. It is not Depleting because the presence of recycled content prevents the application of the -7 floor,
+  though the lack of a take-back scheme and absence of bio-based or certified renewable materials prevents a higher score.
+consumer_summary: This stainless steel water bottle carries a HIP Score of 4.0 out of 10, matching the current market baseline
+  for this category. Its Regenerative Index is -4.0, indicating that while it includes some recycled materials, it currently
+  operates within an extractive production model. Overall, the product performs at the standard level found in the home lifestyle
+  sector.
+what_this_means: When shopping for durable water bottles, look for items that offer long warranties and are designed for easy
+  repair to extend their lifespan. Seek out products that provide clear information on their manufacturing origins and include
+  third-party environmental audits. Prioritizing brands that disclose their use of recycled content can help shift the market
+  toward more regenerative practices.
 hip_mark: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
@@ -69,7 +69,6 @@ data_sources:
 This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and LLM training knowledge:
 
 - `material_percentages`
-- `recycled_content_pct`
 - `country_of_primary_extraction`
 - `primary_sourcing_countries`
 - `tier1_supplier_count`
@@ -78,7 +77,6 @@ This is a **category rating** based on publicly available data. The following da
 - `disassembly_type`
 - `recyclable_streams_pct`
 - `recycling_label_compliant`
-- `takeback_scheme`
 - `design_for_disassembly`
 - `fastener_type`
 - `spare_parts_years_committed`
@@ -107,14 +105,12 @@ A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data
 
 ## Material Watch Points
 
-- Recycled content assumed 0% due to missing data
-- Primary extraction country unknown, potential supply concentration risk
-- Primary materials (nickel, chromium) heavily concentrated in China
 - No due-diligence programme documented
-- No alternative supplier documented
+- Single primary supplier with no alternative
+- Assembly in China with high material concentration risk
 
 ## About This Rating
 
-Produced under [Resourcehip Methodology v1.3](/methodology) (CC BY-NC 4.0). Assessed: 2026-04-26. Next scheduled review: 2027-04-26.
+Produced under [Resourcehip Methodology v1.3](/methodology) (CC BY-NC 4.0). Assessed: 2026-04-29. Next scheduled review: 2027-04-29.
 
 [Dispute this rating](/dispute) · [Our methodology](/methodology) · [All ratings](/ratings/)

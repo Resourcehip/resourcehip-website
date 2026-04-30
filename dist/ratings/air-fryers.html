@@ -308,7 +308,7 @@
 
 /* HIP Mark badge */
 .hip-mark-banner {
-  display: flex; align-items: center; gap: 1rem;
+  display: flex; align-items: center; gap: 1.25rem;
   padding: 0.85rem 1.25rem;
   border-radius: 8px; margin-bottom: 1.25rem;
   border: 1.5px solid;
@@ -316,8 +316,8 @@
 .hip-mark-banner.mark-gold     { background: #fffbea; border-color: #c8920a; }
 .hip-mark-banner.mark-silver   { background: #f2f6fb; border-color: #7a9ab8; }
 .hip-mark-banner.mark-standard { background: #f0f8f4; border-color: #3a9e62; }
-.hip-mark-icon {
-  font-size: 1.4rem; flex-shrink: 0;
+.hip-mark-badge-img {
+  flex-shrink: 0; width: 52px; height: auto;
 }
 .hip-mark-text { line-height: 1.4; }
 .hip-mark-title {
@@ -355,7 +355,37 @@
 }
 .disclaimer-box p { margin-bottom: 0.5rem; }
 
+/* Score hierarchy (category pages) */
+.score-ceiling-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #888; margin-bottom: 0.4rem; }
+.score-ceiling-value { font-size: 3.5rem; font-weight: 700; color: var(--tier-colour, var(--eco-teal)); line-height: 1; }
+.score-baseline-row { font-size: 0.88rem; font-weight: 600; color: #555; margin-top: 0.7rem; }
+.score-baseline-label { font-size: 0.7rem; color: #767676; font-weight: 400; display: block; margin-top: 0.15rem; }
+
+/* §1 Category page boilerplate */
+.score-boilerplate { background: #f5f8f5; border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; font-size: 0.85rem; line-height: 1.75; color: #444; }
+.score-boilerplate strong { display: block; font-size: 0.88rem; color: var(--forest-green); margin-bottom: 0.5rem; }
+
+/* §3a+§3b Manufacturer CTA */
+.mfr-cta-block { background: #f0f7f0; border: 1px solid #c0d8c0; border-left: 4px solid var(--eco-teal); border-radius: 0 8px 8px 0; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; }
+.mfr-cta-block h3 { font-size: 0.92rem; font-weight: 700; margin: 0 0 0.75rem; color: var(--forest-green); }
+.mfr-cta-block p { font-size: 0.82rem; line-height: 1.75; color: #444; margin-bottom: 0.75rem; }
+.btn-verified-assessment { display: inline-block; background: var(--eco-teal); color: #fff; font-weight: 700; font-size: 0.85rem; padding: 0.65rem 1.5rem; border-radius: 6px; text-decoration: none; letter-spacing: 0.02em; transition: background 0.2s; }
+.btn-verified-assessment:hover { background: var(--forest-green); }
+
+/* §2c Methodology disclosure */
+.methodology-disclosure { margin-top: 1.25rem; border-top: 1px solid var(--border); padding-top: 1rem; }
+.methodology-disclosure summary { font-size: 0.75rem; color: var(--eco-teal); cursor: pointer; list-style: none; font-weight: 600; }
+.methodology-disclosure summary::-webkit-details-marker { display: none; }
+.methodology-disclosure-body { font-size: 0.78rem; color: #555; line-height: 1.7; margin-top: 0.75rem; background: #f5f9f9; border-left: 2px solid var(--eco-teal); padding: 0.75rem 1rem; border-radius: 0 6px 6px 0; }
+
+/* §5 Ceiling page hero */
+.ceiling-hero { background: linear-gradient(135deg, #f0faf5 0%, #e8f5f8 100%); border: 1px solid #b8d8d0; border-radius: 12px; padding: 1.75rem 2rem; margin-bottom: 1.75rem; }
+.ceiling-hero-eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--eco-teal); margin-bottom: 0.5rem; }
+.ceiling-hero-score { font-size: 2.8rem; font-weight: 700; color: var(--tier-colour, var(--eco-teal)); line-height: 1.1; margin-bottom: 0.75rem; }
+.ceiling-hero-copy { font-size: 0.85rem; line-height: 1.75; color: #444; }
+
   </style>
+  
 </head>
 <body>
 
@@ -369,6 +399,7 @@
     <nav class="site-nav" aria-label="Main navigation">
       <a href="/" >Home</a>
       <a href="/ratings/" class="active" aria-current="page">Ratings</a>
+      <a href="/blog/" >Blog</a>
       <a href="/methodology" >Methodology</a>
       <a href="/about" >About</a>
       <a href="/verified-ratings" >Verified Ratings</a>
@@ -385,6 +416,9 @@
     --ri-colour:   #c04040;
   }
 </style>
+
+
+
 
 <!-- ── Generic rating notice ──────────────────────────────────────────────── -->
 
@@ -415,59 +449,79 @@
 <div class="score-panel">
 
   <div class="hip-score-card">
-    <div class="score-label">HIP Score</div>
-    <div class="score-value">
-      2.9<span class="score-denom">/10</span>
-    </div>
-    <div class="score-tier-name">Low Resilience</div>
-    <div class="score-vs-baseline">At category baseline (2.9)</div>
-    
-    
-    <div class="score-vs-ceiling">
-      Highest estimated rating: 7.1/10
-    </div>
+      
+      <div class="score-ceiling-label">Category ceiling</div>
+      <div class="score-ceiling-value">7.1<span class="score-denom"> HIP</span></div>
+      <div class="score-tier-name">Low Resilience</div>
+      <div class="score-baseline-row">
+        Current market baseline: <strong>2.9 HIP</strong>
+        <span class="score-baseline-label">Pre-verification score from public data</span>
+      </div>
     
   </div>
 
   <div class="ri-card">
-    <div class="score-label">Regenerative Index</div>
-    <div class="ri-score-value" style="color: var(--ri-colour);">
-      -7.0
-    </div>
-    <div class="ri-descriptor" style="color: var(--ri-colour);">Depleting</div>
-    <!-- RI scale: 5 pips, one per tier (Depleting → Regenerative) -->
-    <div class="ri-scale">
-        <div class="ri-pip active"
-             style="background:#c04040">
-        </div>
       
-        <div class="ri-pip "
-             style="">
-        </div>
-      
-        <div class="ri-pip "
-             style="">
-        </div>
-      
-        <div class="ri-pip "
-             style="">
-        </div>
-      
-        <div class="ri-pip "
-             style="">
-        </div>
-      
-    </div>
-    <div class="score-vs-baseline" style="margin-top:0.75rem;">At category average (-7.0)</div>
-    
-    
-    <div class="score-vs-ceiling">
-      Highest estimated RI: -3.0
-    </div>
+      <div class="score-ceiling-label">Category ceiling RI</div>
+      <div class="ri-score-value" style="color: #c8920a;">
+        -3.0
+      </div>
+      <div class="ri-scale">
+        
+          <div class="ri-pip active"
+               style="background:#c04040">
+          </div>
+        
+          <div class="ri-pip "
+               style="">
+          </div>
+        
+          <div class="ri-pip "
+               style="">
+          </div>
+        
+          <div class="ri-pip "
+               style="">
+          </div>
+        
+          <div class="ri-pip "
+               style="">
+          </div>
+        
+      </div>
+      <div class="score-baseline-row" style="margin-top:0.75rem;">
+        Current market baseline RI: <strong>-7.0</strong>
+        <span class="score-baseline-label">(Depleting)</span>
+      </div>
     
   </div>
 
 </div>
+
+
+
+<div class="score-boilerplate">
+  <strong>What this score means</strong>
+  The current market baseline for small appliances reflects what the HIP methodology can confirm from publicly available
+  specification data alone, before any manufacturer evidence is reviewed. The category ceiling shown above is what the
+  methodology rewards when materials, supply chain, repairability, and end-of-life pathways are fully evidenced.
+  Manufacturers close that gap by applying for verified assessment.
+</div>
+
+
+
+
+<div class="mfr-cta-block">
+  <h3>Manufacturer? Verified assessment closes the gap.</h3>
+  <p>The current market baseline for this category is 2.9 HIP.
+  The category ceiling — what the methodology rewards when materials, supply chain, repairability, and end-of-life
+  pathways are fully evidenced — is 7.1 HIP.
+  The first verified product in our programme demonstrated 6.9 HIP and earned the HIP Mark.</p>
+  <p>If your product can evidence the methodology dimensions, verified assessment gives it the score it has earned.</p>
+  <a class="btn-verified-assessment" href="/apply">Apply for verified assessment</a>
+</div>
+  
+
 
 <!-- ── HIP Mark banner ────────────────────────────────────────────────────── -->
 
@@ -577,6 +631,19 @@
   <p style="font-size:0.72rem; color:#767676; margin-top:1.25rem; margin-bottom:0;">
     MSI 20% · SCR 18% · RC 18% · R 13% · SEI 8% · PL 8% · RI 15% = 100%
   </p>
+
+  <!-- ── §2c Methodology disclosure ────────────────────────────────────────── -->
+  <details class="methodology-disclosure">
+    <summary>About the HIP Methodology ▸</summary>
+    <div class="methodology-disclosure-body">
+      Generic ratings are intentionally conservative. They represent only what the HIP methodology can confirm from
+      publicly available specification data, before any manufacturer-supplied evidence is reviewed. Most categories sit
+      in the 2–4 range at the pre-verification baseline. This is the methodology working as designed: it makes the gap
+      between current market practice and demonstrable resilience legible to consumers, manufacturers, and procurement
+      buyers. Verified assessment is the path across that gap, and the HIP Mark is the proof of crossing it.
+      <a href="/methodology" style="white-space:nowrap;">Read the full methodology →</a>
+    </div>
+  </details>
 </div><!-- /.card -->
 
 <!-- ── Key Materials ───────────────────────────────────────────────────────── -->

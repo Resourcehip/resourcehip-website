@@ -1,0 +1,113 @@
+{% extends "base.html.j2" %}
+
+{% block extra_styles %}
+.blog-header { margin-bottom: 2rem; }
+.blog-header h1 { font-size: 2rem; }
+.blog-header p { color: #666; margin-top: 0.4rem; }
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.blog-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.blog-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+.blog-card .cat-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--forest-green);
+  margin-bottom: 0.6rem;
+}
+.blog-card h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--impact-grey);
+  margin: 0 0 0.5rem;
+  border: none;
+  line-height: 1.4;
+}
+.blog-card .card-desc {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+.blog-card .card-meta {
+  font-size: 0.72rem;
+  color: #888;
+  letter-spacing: 0.04em;
+}
+
+.feed-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--eco-teal);
+  text-decoration: none;
+  margin-top: 2rem;
+}
+.feed-link:hover { text-decoration: underline; }
+
+.empty-state {
+  text-align: center;
+  color: #888;
+  padding: 4rem 0;
+}
+{% endblock %}
+
+{% block main_class %}wide{% endblock %}
+
+{% block content %}
+<div class="blog-header">
+  <h1>Blog</h1>
+  <p>Insights, buying guides, and sustainability analysis from the Resourcehip team.</p>
+</div>
+
+{% if posts %}
+<div class="blog-grid" role="list">
+  {% for post in posts %}
+  <a class="blog-card" href="/blog/{{ post.slug }}/" role="listitem">
+    {% if post.category %}
+    <div class="cat-label">{{ post.category | replace("-", " ") | title }}</div>
+    {% endif %}
+    <h2>{{ post.title }}</h2>
+    {% if post.description %}
+    <p class="card-desc">{{ post.description }}</p>
+    {% endif %}
+    <div class="card-meta">{{ post.last_updated }}</div>
+  </a>
+  {% endfor %}
+</div>
+{% else %}
+<div class="empty-state">
+  <p>No posts published yet — check back soon.</p>
+</div>
+{% endif %}
+
+<a class="feed-link" href="/blog/feed.xml">
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+    <circle cx="3" cy="11" r="2" fill="currentColor"/>
+    <path d="M1 5.5C4.59 5.5 7.5 8.41 7.5 12" stroke="currentColor" stroke-width="1.5" fill="none"/>
+    <path d="M1 1C7.07 1 12 5.93 12 12" stroke="currentColor" stroke-width="1.5" fill="none"/>
+  </svg>
+  RSS Feed
+</a>
+{% endblock %}
