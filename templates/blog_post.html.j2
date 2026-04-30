@@ -1,0 +1,159 @@
+{% extends "base.html.j2" %}
+
+{% block head_meta %}
+<link rel="canonical" href="{{ canonical_url }}" />
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{{ title }} — Resourcehip" />
+<meta property="og:description" content="{{ description | default('') }}" />
+<meta property="og:url" content="{{ canonical_url }}" />
+<meta property="og:site_name" content="Resourcehip" />
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{{ title }} — Resourcehip" />
+<meta name="twitter:description" content="{{ description | default('') }}" />
+<!-- Schema.org Article JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ title | tojson }},
+  "description": {{ description | default("") | tojson }},
+  "url": {{ canonical_url | tojson }},
+  "dateModified": {{ last_updated | string | tojson }},
+  "author": {
+    "@type": "Organization",
+    "name": "Resourcehip",
+    "url": "https://resourcehip.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Resourcehip",
+    "url": "https://resourcehip.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://resourcehip.com/logo.png"
+    }
+  }
+}
+</script>
+{% endblock %}
+
+{% block extra_styles %}
+.post-header { margin-bottom: 2rem; }
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+.post-meta .cat-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--forest-green);
+  background: #eef4e8;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  text-decoration: none;
+}
+.post-meta .cat-pill:hover { background: #deefd0; }
+.post-meta .post-date { font-size: 0.78rem; color: #888; }
+
+.post-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--forest-green);
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+.post-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.post-body { max-width: 680px; margin-top: 2rem; }
+.post-body h2 { font-size: 1.15rem; margin: 2rem 0 0.6rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+.post-body h3 { font-size: 1rem; margin: 1.5rem 0 0.4rem; }
+.post-body p  { line-height: 1.8; margin-bottom: 1rem; }
+.post-body ul, .post-body ol { padding-left: 1.4rem; margin-bottom: 1rem; line-height: 1.8; }
+.post-body blockquote { border-left: 3px solid var(--forest-green); padding: 0.5rem 1rem; background: #f4f7f0; border-radius: 0 6px 6px 0; margin: 1rem 0; color: #555; font-style: italic; }
+.post-body code { font-family: monospace; background: #eee; padding: 0.1em 0.4em; border-radius: 3px; font-size: 0.9em; }
+.post-body pre { background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; overflow-x: auto; margin: 1rem 0; }
+.post-body pre code { background: none; padding: 0; }
+
+/* rating_link() helper output */
+.post-body .rating-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: #eef4e8;
+  border: 1px solid #c0d8a8;
+  color: var(--forest-green);
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 6px;
+  text-decoration: none;
+  margin: 0.25rem 0;
+}
+.post-body .rating-link:hover { background: #deefd0; }
+
+.post-footer {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.82rem;
+  color: #888;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.post-footer a { color: var(--forest-green); }
+
+.post-hero-img {
+  width: 100%;
+  border-radius: 12px;
+  margin: 1.5rem 0 0;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+{% endblock %}
+
+{% block content %}
+<article>
+  <header class="post-header">
+    <div class="post-meta">
+      {% if category %}
+      <a class="cat-pill" href="/blog/category/{{ category }}/">{{ category | replace("-", " ") | title }}</a>
+      {% endif %}
+      <span class="post-date">{{ last_updated }}</span>
+    </div>
+    <h1 class="post-title">{{ title }}</h1>
+    {% if description %}
+    <p class="post-description">{{ description }}</p>
+    {% endif %}
+    {% if hero_image %}
+    <img class="post-hero-img" src="{{ hero_image }}" alt="{{ title }}" loading="lazy" width="1200" height="675">
+    {% endif %}
+  </header>
+
+  <div class="post-body">
+    {{ body }}
+  </div>
+
+  <footer class="post-footer">
+    <span>Last updated: {{ last_updated }}</span>
+    {% if category %}
+    <a href="/blog/category/{{ category }}/">More {{ category | replace("-", " ") | title }} articles →</a>
+    {% endif %}
+    <a href="/blog/">← All posts</a>
+  </footer>
+</article>
+{% endblock %}

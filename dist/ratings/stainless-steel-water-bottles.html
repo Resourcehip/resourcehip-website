@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stainless Steel Water Bottles — Resourcehip</title>
-  <meta name="description" content="This stainless steel water bottle has an overall HIP Score of 3.4 out of 10, indicating limited sustainability performance. Its Regenerative Index is -7.0, meaning the product relies on new raw materials rather than recycled ones and does not support a circular lifecycle. While it is built to last for many years, the lack of recycled content and difficulty in recycling it at the end of its life are significant drawbacks." />
+  <meta name="description" content="This stainless steel water bottle carries a HIP Score of 4.0 out of 10, matching the current market baseline for this category. Its Regenerative Index is -4.0, indicating that while it includes some recycled materials, it currently operates within an extractive production model. Overall, the product performs at the standard level found in the home lifestyle sector." />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <!-- Self-hosted Montserrat — no Google Fonts CDN (GDPR: no IP sent to Google) -->
   <!-- Run fonts/download_fonts.py once to fetch the .woff2 files -->
@@ -308,7 +308,7 @@
 
 /* HIP Mark badge */
 .hip-mark-banner {
-  display: flex; align-items: center; gap: 1rem;
+  display: flex; align-items: center; gap: 1.25rem;
   padding: 0.85rem 1.25rem;
   border-radius: 8px; margin-bottom: 1.25rem;
   border: 1.5px solid;
@@ -316,8 +316,8 @@
 .hip-mark-banner.mark-gold     { background: #fffbea; border-color: #c8920a; }
 .hip-mark-banner.mark-silver   { background: #f2f6fb; border-color: #7a9ab8; }
 .hip-mark-banner.mark-standard { background: #f0f8f4; border-color: #3a9e62; }
-.hip-mark-icon {
-  font-size: 1.4rem; flex-shrink: 0;
+.hip-mark-badge-img {
+  flex-shrink: 0; width: 52px; height: auto;
 }
 .hip-mark-text { line-height: 1.4; }
 .hip-mark-title {
@@ -355,7 +355,37 @@
 }
 .disclaimer-box p { margin-bottom: 0.5rem; }
 
+/* Score hierarchy (category pages) */
+.score-ceiling-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #888; margin-bottom: 0.4rem; }
+.score-ceiling-value { font-size: 3.5rem; font-weight: 700; color: var(--tier-colour, var(--eco-teal)); line-height: 1; }
+.score-baseline-row { font-size: 0.88rem; font-weight: 600; color: #555; margin-top: 0.7rem; }
+.score-baseline-label { font-size: 0.7rem; color: #767676; font-weight: 400; display: block; margin-top: 0.15rem; }
+
+/* §1 Category page boilerplate */
+.score-boilerplate { background: #f5f8f5; border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; font-size: 0.85rem; line-height: 1.75; color: #444; }
+.score-boilerplate strong { display: block; font-size: 0.88rem; color: var(--forest-green); margin-bottom: 0.5rem; }
+
+/* §3a+§3b Manufacturer CTA */
+.mfr-cta-block { background: #f0f7f0; border: 1px solid #c0d8c0; border-left: 4px solid var(--eco-teal); border-radius: 0 8px 8px 0; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; }
+.mfr-cta-block h3 { font-size: 0.92rem; font-weight: 700; margin: 0 0 0.75rem; color: var(--forest-green); }
+.mfr-cta-block p { font-size: 0.82rem; line-height: 1.75; color: #444; margin-bottom: 0.75rem; }
+.btn-verified-assessment { display: inline-block; background: var(--eco-teal); color: #fff; font-weight: 700; font-size: 0.85rem; padding: 0.65rem 1.5rem; border-radius: 6px; text-decoration: none; letter-spacing: 0.02em; transition: background 0.2s; }
+.btn-verified-assessment:hover { background: var(--forest-green); }
+
+/* §2c Methodology disclosure */
+.methodology-disclosure { margin-top: 1.25rem; border-top: 1px solid var(--border); padding-top: 1rem; }
+.methodology-disclosure summary { font-size: 0.75rem; color: var(--eco-teal); cursor: pointer; list-style: none; font-weight: 600; }
+.methodology-disclosure summary::-webkit-details-marker { display: none; }
+.methodology-disclosure-body { font-size: 0.78rem; color: #555; line-height: 1.7; margin-top: 0.75rem; background: #f5f9f9; border-left: 2px solid var(--eco-teal); padding: 0.75rem 1rem; border-radius: 0 6px 6px 0; }
+
+/* §5 Ceiling page hero */
+.ceiling-hero { background: linear-gradient(135deg, #f0faf5 0%, #e8f5f8 100%); border: 1px solid #b8d8d0; border-radius: 12px; padding: 1.75rem 2rem; margin-bottom: 1.75rem; }
+.ceiling-hero-eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--eco-teal); margin-bottom: 0.5rem; }
+.ceiling-hero-score { font-size: 2.8rem; font-weight: 700; color: var(--tier-colour, var(--eco-teal)); line-height: 1.1; margin-bottom: 0.75rem; }
+.ceiling-hero-copy { font-size: 0.85rem; line-height: 1.75; color: #444; }
+
   </style>
+  
 </head>
 <body>
 
@@ -369,6 +399,7 @@
     <nav class="site-nav" aria-label="Main navigation">
       <a href="/" >Home</a>
       <a href="/ratings/" class="active" aria-current="page">Ratings</a>
+      <a href="/blog/" >Blog</a>
       <a href="/methodology" >Methodology</a>
       <a href="/about" >About</a>
       <a href="/verified-ratings" >Verified Ratings</a>
@@ -381,10 +412,13 @@
 
 <style>
   :root {
-    --tier-colour: #c8920a;
-    --ri-colour:   #c04040;
+    --tier-colour: #7a9ab8;
+    --ri-colour:   #c8920a;
   }
 </style>
+
+
+
 
 <!-- ── Generic rating notice ──────────────────────────────────────────────── -->
 
@@ -404,7 +438,7 @@
       <span class="rating-type-badge badge-generic">Category Rating</span>
     
     <span class="pill">home lifestyle</span>
-    <span class="pill">Assessed 2026-04-26</span>
+    <span class="pill">Assessed 2026-04-29</span>
     <span class="pill">1.3</span>
   </div>
   <h1>Stainless Steel Water Bottles</h1>
@@ -415,51 +449,79 @@
 <div class="score-panel">
 
   <div class="hip-score-card">
-    <div class="score-label">HIP Score</div>
-    <div class="score-value">
-      3.4<span class="score-denom">/10</span>
-    </div>
-    <div class="score-tier-name">Low Resilience</div>
-    <div class="score-vs-baseline">At category baseline (3.4)</div>
-    
+      
+      <div class="score-ceiling-label">Category ceiling</div>
+      <div class="score-ceiling-value">7.8<span class="score-denom"> HIP</span></div>
+      <div class="score-tier-name">Moderate Resilience</div>
+      <div class="score-baseline-row">
+        Current market baseline: <strong>4.0 HIP</strong>
+        <span class="score-baseline-label">Pre-verification score from public data</span>
+      </div>
     
   </div>
 
   <div class="ri-card">
-    <div class="score-label">Regenerative Index</div>
-    <div class="ri-score-value" style="color: var(--ri-colour);">
-      -7.0
-    </div>
-    <div class="ri-descriptor" style="color: var(--ri-colour);">Depleting</div>
-    <!-- RI scale: 5 pips, one per tier (Depleting → Regenerative) -->
-    <div class="ri-scale">
-        <div class="ri-pip active"
-             style="background:#c04040">
-        </div>
       
-        <div class="ri-pip "
-             style="">
-        </div>
-      
-        <div class="ri-pip "
-             style="">
-        </div>
-      
-        <div class="ri-pip "
-             style="">
-        </div>
-      
-        <div class="ri-pip "
-             style="">
-        </div>
-      
-    </div>
-    <div class="score-vs-baseline" style="margin-top:0.75rem;">At category average (-7.0)</div>
-    
+      <div class="score-ceiling-label">Category ceiling RI</div>
+      <div class="ri-score-value" style="color: #c8920a;">
+        -3.0
+      </div>
+      <div class="ri-scale">
+        
+          <div class="ri-pip active"
+               style="background:#c8920a">
+          </div>
+        
+          <div class="ri-pip active"
+               style="background:#c8920a">
+          </div>
+        
+          <div class="ri-pip "
+               style="">
+          </div>
+        
+          <div class="ri-pip "
+               style="">
+          </div>
+        
+          <div class="ri-pip "
+               style="">
+          </div>
+        
+      </div>
+      <div class="score-baseline-row" style="margin-top:0.75rem;">
+        Current market baseline RI: <strong>-4.0</strong>
+        <span class="score-baseline-label">(Extractive)</span>
+      </div>
     
   </div>
 
 </div>
+
+
+
+<div class="score-boilerplate">
+  <strong>What this score means</strong>
+  The current market baseline for home lifestyle reflects what the HIP methodology can confirm from publicly available
+  specification data alone, before any manufacturer evidence is reviewed. The category ceiling shown above is what the
+  methodology rewards when materials, supply chain, repairability, and end-of-life pathways are fully evidenced.
+  Manufacturers close that gap by applying for verified assessment.
+</div>
+
+
+
+
+<div class="mfr-cta-block">
+  <h3>Manufacturer? Verified assessment closes the gap.</h3>
+  <p>The current market baseline for this category is 4.0 HIP.
+  The category ceiling — what the methodology rewards when materials, supply chain, repairability, and end-of-life
+  pathways are fully evidenced — is 7.8 HIP.
+  The first verified product in our programme demonstrated 6.9 HIP and earned the HIP Mark.</p>
+  <p>If your product can evidence the methodology dimensions, verified assessment gives it the score it has earned.</p>
+  <a class="btn-verified-assessment" href="/apply">Apply for verified assessment</a>
+</div>
+  
+
 
 <!-- ── HIP Mark banner ────────────────────────────────────────────────────── -->
 
@@ -474,11 +536,11 @@
           <span class="dim-weight">20% weight</span>
         </div>
         <div class="dim-bar-wrap">
-          <div class="dim-bar bar-low" style="width:35%"></div>
+          <div class="dim-bar bar-medium" style="width:50%"></div>
         </div>
-        <div class="dim-score-num">3.5</div>
+        <div class="dim-score-num">5.0</div>
         
-          <div class="dim-finding">The product relies on stainless steel and polypropylene, which are generally abundant, but the absence of submitted recycled content (assumed 0%) and unknown extraction origins creates significant supply risk. Under generic conservative scoring, the lack of verified recycled content and potential single-country concentration for steel or silicone processing lowers the score to the Scarce range.</div>
+          <div class="dim-finding">The product relies on stainless steel, silicone, and polypropylene, which are generally abundant materials not listed as critical raw materials. However, the recycled content is 20%, which falls below the 40% threshold required for a Low Scarcity rating. Additionally, the country of primary extraction is unknown, preventing verification of supply diversity and necessitating a conservative assessment.</div>
         
       </div>
     <div class="dim-row">
@@ -491,7 +553,7 @@
         </div>
         <div class="dim-score-num">3.5</div>
         
-          <div class="dim-finding">The product is a stainless steel water bottle assembled in China, a country with moderate governance risks and high concentration for key raw materials like nickel and chromium. Due to the lack of submitted due diligence standards or verified alternative suppliers, the supply chain faces significant concentration risk without third-party verification.</div>
+          <div class="dim-finding">The stainless steel water bottle is assembled in China, a country with moderate governance scores but high concentration risk for stainless steel inputs. No due-diligence programme is documented, and no alternative suppliers are verified, resulting in a score at the pre-verification baseline for this category.</div>
         
       </div>
     <div class="dim-row">
@@ -504,7 +566,7 @@
         </div>
         <div class="dim-score-num">3.0</div>
         
-          <div class="dim-finding">The product is a stainless steel water bottle, which is theoretically highly recyclable; however, with no disassembly data submitted, it is conservatively assumed to be glued, preventing clean material separation. Consequently, only the metal component is considered practically recoverable, placing it in the 'Poorly Recyclable' band where 20-40% of weight enters recycling streams.</div>
+          <div class="dim-finding">The product is a stainless steel water bottle, a material with high practical recyclability, but the lack of a submitted disassembly type assumes a glued construction which hinders separation. With an assumed 20% recovery rate and no take-back scheme or compliant labelling, the product aligns with the baseline for mass-market items where only specific metal streams are practically recovered. This score reflects the gap between the theoretical recyclability of stainless steel and the practical constraints of the assumed assembly method.</div>
         
       </div>
     <div class="dim-row">
@@ -513,11 +575,11 @@
           <span class="dim-weight">13% weight</span>
         </div>
         <div class="dim-bar-wrap">
-          <div class="dim-bar bar-low" style="width:20%"></div>
+          <div class="dim-bar bar-low" style="width:30%"></div>
         </div>
-        <div class="dim-score-num">2.0</div>
+        <div class="dim-score-num">3.0</div>
         
-          <div class="dim-finding">The product is assumed to be glued shut with no public service manual, making disassembly destructive. Although spare parts are available, the lack of fasteners and the generic rating assumption for a sealed consumer accessory result in a low repairability score.</div>
+          <div class="dim-finding">The product utilizes glued fasteners, preventing non-destructive disassembly, and lacks a public service manual. Although spare parts are available, the absence of a committed availability period and the use of adhesive align with the 'Difficult to Repair' criteria for mass-market items.</div>
         
       </div>
     <div class="dim-row">
@@ -530,7 +592,7 @@
         </div>
         <div class="dim-score-num">3.5</div>
         
-          <div class="dim-finding">The product is manufactured in China, a moderate-to-high risk jurisdiction, with no submitted third-party audits, environmental certifications, or modern slavery statements. While ILO compliance is not claimed, the absence of independent verification or audit evidence places the score in the elevated risk category.</div>
+          <div class="dim-finding">The product is manufactured in China, a moderate-risk jurisdiction, with no submitted third-party audits or environmental certifications. While the product type is a stainless steel water bottle, the absence of verified ILO compliance, RBA audits, or modern slavery statements places the assessment at the pre-verification baseline for this category.</div>
         
       </div>
     <div class="dim-row">
@@ -543,7 +605,7 @@
         </div>
         <div class="dim-score-num">9.0</div>
         
-          <div class="dim-finding">The product demonstrates exceptional longevity with a 5-year warranty and a stated design life of 20 years, exceeding the 'Designed for Life' threshold of 10 years. While IP rating and modular design data are missing, the stainless steel construction and extended design life indicate a product clearly intended to outlast market norms.</div>
+          <div class="dim-finding">The product features a 5-year warranty and a stated design life of 20 years, which exceeds the 10-year threshold for the highest longevity tier. The stainless steel construction supports long-term durability, and the explicit design life commitment places this item well above typical market norms for beverage containers.</div>
         
       </div>
     
@@ -554,13 +616,13 @@
         <span class="dim-weight">15% weight · scale −10 to +10</span>
       </div>
       <div class="dim-bar-wrap">
-        <div class="dim-bar bar-low" style="width:15%"></div>
+        <div class="dim-bar bar-medium" style="width:30%"></div>
       </div>
       <div class="dim-score-num" style="font-size:0.78rem;">
-        -7.0
+        -4.0
       </div>
       
-        <div class="dim-finding">The product is scored as Depleting (-7) because it relies on virgin stainless steel with zero recycled content and no take-back scheme, fitting the criteria for conventional manufactured goods. It does not qualify for the Extractive band minimum of -3 because the required 50% recycled content and verified take-back are absent. No renewable or regenerative certifications are present to shift the score toward zero or positive.</div>
+        <div class="dim-finding">The product scores in the Extractive band (-5 to -1) due to 20% recycled content, which provides a partial mitigation against depletion. It is not Depleting because the presence of recycled content prevents the application of the -7 floor, though the lack of a take-back scheme and absence of bio-based or certified renewable materials prevents a higher score.</div>
       
     </div>
 
@@ -569,6 +631,19 @@
   <p style="font-size:0.72rem; color:#767676; margin-top:1.25rem; margin-bottom:0;">
     MSI 20% · SCR 18% · RC 18% · R 13% · SEI 8% · PL 8% · RI 15% = 100%
   </p>
+
+  <!-- ── §2c Methodology disclosure ────────────────────────────────────────── -->
+  <details class="methodology-disclosure">
+    <summary>About the HIP Methodology ▸</summary>
+    <div class="methodology-disclosure-body">
+      Generic ratings are intentionally conservative. They represent only what the HIP methodology can confirm from
+      publicly available specification data, before any manufacturer-supplied evidence is reviewed. Most categories sit
+      in the 2–4 range at the pre-verification baseline. This is the methodology working as designed: it makes the gap
+      between current market practice and demonstrable resilience legible to consumers, manufacturers, and procurement
+      buyers. Verified assessment is the path across that gap, and the HIP Mark is the proof of crossing it.
+      <a href="/methodology" style="white-space:nowrap;">Read the full methodology →</a>
+    </div>
+  </details>
 </div><!-- /.card -->
 
 <!-- ── Key Materials ───────────────────────────────────────────────────────── -->
@@ -578,14 +653,14 @@
 
 <div class="card">
   <h2 style="margin-top:0;">Consumer Summary</h2>
-  <p>This stainless steel water bottle has an overall HIP Score of 3.4 out of 10, indicating limited sustainability performance. Its Regenerative Index is -7.0, meaning the product relies on new raw materials rather than recycled ones and does not support a circular lifecycle. While it is built to last for many years, the lack of recycled content and difficulty in recycling it at the end of its life are significant drawbacks.</p>
+  <p>This stainless steel water bottle carries a HIP Score of 4.0 out of 10, matching the current market baseline for this category. Its Regenerative Index is -4.0, indicating that while it includes some recycled materials, it currently operates within an extractive production model. Overall, the product performs at the standard level found in the home lifestyle sector.</p>
 </div>
 
 
 
 <div class="card">
   <h2 style="margin-top:0;">What This Means For You</h2>
-  <p>When shopping for durable water bottles, look for options that explicitly state they contain recycled materials to improve their environmental impact. Prioritize products that offer clear repair guides or spare parts, as this extends their usable life and reduces waste. Avoid items that are permanently glued or lack information on how to recycle them, as these end up in landfills despite their long design life.</p>
+  <p>When shopping for durable water bottles, look for items that offer long warranties and are designed for easy repair to extend their lifespan. Seek out products that provide clear information on their manufacturing origins and include third-party environmental audits. Prioritizing brands that disclose their use of recycled content can help shift the market toward more regenerative practices.</p>
 </div>
 
 
@@ -596,7 +671,6 @@
 <p>This is a <strong>category rating</strong> based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and LLM training knowledge:</p>
 <ul>
 <li><code>material_percentages</code></li>
-<li><code>recycled_content_pct</code></li>
 <li><code>country_of_primary_extraction</code></li>
 <li><code>primary_sourcing_countries</code></li>
 <li><code>tier1_supplier_count</code></li>
@@ -605,7 +679,6 @@
 <li><code>disassembly_type</code></li>
 <li><code>recyclable_streams_pct</code></li>
 <li><code>recycling_label_compliant</code></li>
-<li><code>takeback_scheme</code></li>
 <li><code>design_for_disassembly</code></li>
 <li><code>fastener_type</code></li>
 <li><code>spare_parts_years_committed</code></li>
@@ -633,14 +706,12 @@
 <p>A <a href="/about#two-types-of-rating">verified rating</a> uses manufacturer-submitted data and produces a more accurate, product-specific score.</p>
 <h2>Material Watch Points</h2>
 <ul>
-<li>Recycled content assumed 0% due to missing data</li>
-<li>Primary extraction country unknown, potential supply concentration risk</li>
-<li>Primary materials (nickel, chromium) heavily concentrated in China</li>
 <li>No due-diligence programme documented</li>
-<li>No alternative supplier documented</li>
+<li>Single primary supplier with no alternative</li>
+<li>Assembly in China with high material concentration risk</li>
 </ul>
 <h2>About This Rating</h2>
-<p>Produced under <a href="/methodology">Resourcehip Methodology v1.3</a> (CC BY-NC 4.0). Assessed: 2026-04-26. Next scheduled review: 2027-04-26.</p>
+<p>Produced under <a href="/methodology">Resourcehip Methodology v1.3</a> (CC BY-NC 4.0). Assessed: 2026-04-29. Next scheduled review: 2027-04-29.</p>
 <p><a href="/dispute">Dispute this rating</a> · <a href="/methodology">Our methodology</a> · <a href="/ratings/">All ratings</a></p>
 </div>
 
@@ -682,7 +753,7 @@
   <a href="/dispute">Dispute this rating</a> · <a href="/methodology">Our methodology</a> · <a href="/ratings/">All ratings</a>
   </p>
   <p style="margin-bottom:0; color:#767676;">
-    Assessed: 2026-04-26 · Next review: 2027-04-26 · Methodology 1.3
+    Assessed: 2026-04-29 · Next review: 2027-04-29 · Methodology 1.3
   </p>
 </div>
 

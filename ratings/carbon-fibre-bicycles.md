@@ -19,42 +19,42 @@ category_baseline_ri: -7.0
 category_ceiling_hip: 5.3
 category_ceiling_ri: -4.0
 above_baseline: false
-assessment_date: '2026-04-26'
+assessment_date: '2026-04-28'
 methodology_version: '1.3'
-next_review: '2027-04-26'
+next_review: '2027-04-28'
 scoring_model: qwen3.5:35b
 prose_model: qwen3.5:35b
-msi_finding: The product relies on carbon fibre and epoxy resin, which are energy-intensive and often derived from scarce
-  precursors, alongside aluminium and steel. Due to missing data on recycled content and extraction origins, a conservative
-  score is applied assuming low recycling rates and potential supply concentration risks for carbon fibre precursors.
+msi_finding: The product contains carbon fibre and epoxy resin, which are energy-intensive and rely on scarce precursors,
+  alongside aluminium and steel. With zero recycled content and missing data on extraction origins, the supply chain risk
+  is elevated under generic conservative assumptions.
 scr_finding: The carbon fibre bicycle relies on carbon fibre and aluminium, materials with significant global supply concentration
-  in China (OECD moderate risk), creating high concentration risk. Due to missing due diligence documentation and the absence
-  of verified alternative suppliers, the supply chain lacks resilience against geopolitical disruptions.
-rc_finding: The product is a carbon fibre bicycle with glued assembly and no take-back scheme, making material separation
-  impractical without specialist equipment. Carbon fibre composites are technically recyclable but rarely enter practical
-  recycling streams, resulting in less than 20% of the product weight being recovered. This aligns with the non-recyclable
-  baseline for sealed composite goods lacking infrastructure.
-r_finding: The carbon fibre bicycle is assumed to use glued fasteners due to missing data, which typically prevents non-destructive
-  disassembly. Although spare parts are available, the lack of a public service manual and the difficulty of accessing internal
-  components without damaging the carbon fibre structure limits repairability to a 'difficult' level.
-sei_finding: The product is manufactured in China, a moderate-to-high risk jurisdiction, with no submitted third-party audits,
-  environmental certifications, or modern slavery statements. While no specific adverse findings were identified, the absence
-  of verified evidence of ILO compliance or independent audits prevents a higher score.
-pl_finding: The product benefits from a 3-year warranty and a stated 10-year design life, which aligns with the 'Above Average
-  Lifespan' criteria for durable goods. However, the lack of a submitted IP rating and modular design prevents a higher score,
-  as these are critical for maximizing longevity in outdoor or high-stress environments.
-ri_finding: The product is classified as Depleting because it relies on virgin carbon fibre (mined/extracted origin) with
-  0% recycled content and no take-back scheme. This aligns with the Depleting band criteria for conventional manufactured
-  goods lacking any recovery pathway. It is not Extractive because the threshold of 20% recycled content or a take-back scheme
-  is not met.
-consumer_summary: This carbon fibre bicycle has an overall HIP Score of 3.1 out of 10, indicating limited sustainability performance.
-  Its Regenerative Index is -7.0, which means the product relies heavily on new raw materials and is classified as depleting
-  rather than regenerative. The design makes it difficult to repair or recycle at the end of its life, contributing to its
-  low score.
-what_this_means: When buying a bicycle, look for models that offer a clear path for repair and a take-back program to ensure
-  materials can be reused. Avoid products that use permanent glues or lack a warranty, as these features often prevent the
-  item from being recycled or extended in use. Prioritizing brands that design for disassembly and use recycled content will
-  help you choose a more sustainable option.
+  in China, a moderate-risk jurisdiction. Due to the absence of submitted due-diligence standards, verified alternative suppliers,
+  or third-party audits, the supply chain remains at the pre-verification baseline for this category with high concentration
+  risk.
+rc_finding: The product is a carbon fibre bicycle with glued disassembly and no take-back scheme, resulting in less than 20%
+  of materials entering practical recycling streams. Carbon fibre composites are technically recyclable but lack widespread
+  commercial infrastructure for recovery, meaning the majority of the product is effectively non-recyclable in practice.
+r_finding: The carbon fibre bicycle utilizes glued fasteners, preventing non-destructive disassembly, and lacks a public service
+  manual. Although spare parts are available, the absence of a committed parts programme duration and the reliance on adhesive
+  for structural assembly limit repairability to the difficult range.
+sei_finding: The product is a carbon fibre bicycle manufactured in China with no submitted third-party audits, environmental
+  certifications, or modern slavery statements. This places the assessment at the pre-verification baseline for mass-market
+  consumer goods produced in moderate-risk jurisdictions without independent verification of labour or environmental practices.
+pl_finding: The product features a 3-year warranty and a stated design life of 10 years, meeting the criteria for above-average
+  lifespan. While the carbon fibre construction and Taiwanese assembly are noted, the lack of submitted IP rating and modular
+  design data prevents a higher classification under the generic conservative rating type.
+ri_finding: The product is classified as Depleting because it relies on virgin carbon fibre derived from non-renewable geological
+  reserves with zero recycled content and no take-back scheme. This score applies the Depleting floor as the product does
+  not meet the criteria for the Extractive band, which requires either substantial recycled content or a verified take-back
+  programme.
+consumer_summary: This carbon fibre bicycle has a HIP Score of 3.1 out of 10, which matches the current market baseline for
+  this category. Its Regenerative Index is -7.0, indicating that the product relies heavily on non-renewable materials and
+  depletes resources rather than regenerating them. Overall, the item performs at the average level for its class but faces
+  significant challenges regarding material recovery and end-of-life processing.
+what_this_means: When shopping for a bicycle, look for models that offer clear take-back schemes or designs that allow for
+  easier repair and disassembly. Prioritize brands that provide third-party environmental audits and transparent information
+  about their supply chains to ensure better long-term sustainability. Choosing products with longer design lives and robust
+  warranties can also help maximize the value and utility of your purchase.
 hip_mark: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
@@ -107,15 +107,16 @@ A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data
 
 ## Material Watch Points
 
-- Carbon fibre — High energy intensity and supply chain complexity
-- Epoxy resin — Limited recycled content availability
-- Missing recycled content data — Assumed low (0%) per conservative generic rating
-- Carbon fibre and aluminium supply heavily concentrated in China
+- Carbon fibre — high energy intensity and supply concentration risk
+- Epoxy resin — derived from scarce petrochemical feedstocks
+- Recycled content 0% — below 20% threshold for scarcity mitigation
+- Carbon fibre and aluminium supply concentration in China
 - No due-diligence programme documented
 - No alternative supplier documented
+- Single primary supplier assumed
 
 ## About This Rating
 
-Produced under [Resourcehip Methodology v1.3](/methodology) (CC BY-NC 4.0). Assessed: 2026-04-26. Next scheduled review: 2027-04-26.
+Produced under [Resourcehip Methodology v1.3](/methodology) (CC BY-NC 4.0). Assessed: 2026-04-28. Next scheduled review: 2027-04-28.
 
 [Dispute this rating](/dispute) · [Our methodology](/methodology) · [All ratings](/ratings/)

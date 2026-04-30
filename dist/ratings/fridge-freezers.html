@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fridge-Freezers — Resourcehip</title>
-  <meta name="description" content="This fridge-freezer has an overall HIP Score of 3.3 out of 10, indicating average performance in its category. Its Regenerative Index is -7.0, which means the product is depleting resources rather than helping to replenish them. This low score reflects that the appliance contains no recycled materials and is difficult to recycle at the end of its life." />
+  <meta name="description" content="This fridge-freezer has a HIP Score of 3.3 out of 10, which matches the current market baseline for this category. Its Regenerative Index is -7.0, indicating that the product relies entirely on new materials and does not support a circular lifecycle. Overall, the design prioritizes a long lifespan but currently lacks the features needed for material recovery or recycling." />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <!-- Self-hosted Montserrat — no Google Fonts CDN (GDPR: no IP sent to Google) -->
   <!-- Run fonts/download_fonts.py once to fetch the .woff2 files -->
@@ -308,7 +308,7 @@
 
 /* HIP Mark badge */
 .hip-mark-banner {
-  display: flex; align-items: center; gap: 1rem;
+  display: flex; align-items: center; gap: 1.25rem;
   padding: 0.85rem 1.25rem;
   border-radius: 8px; margin-bottom: 1.25rem;
   border: 1.5px solid;
@@ -316,8 +316,8 @@
 .hip-mark-banner.mark-gold     { background: #fffbea; border-color: #c8920a; }
 .hip-mark-banner.mark-silver   { background: #f2f6fb; border-color: #7a9ab8; }
 .hip-mark-banner.mark-standard { background: #f0f8f4; border-color: #3a9e62; }
-.hip-mark-icon {
-  font-size: 1.4rem; flex-shrink: 0;
+.hip-mark-badge-img {
+  flex-shrink: 0; width: 52px; height: auto;
 }
 .hip-mark-text { line-height: 1.4; }
 .hip-mark-title {
@@ -355,7 +355,37 @@
 }
 .disclaimer-box p { margin-bottom: 0.5rem; }
 
+/* Score hierarchy (category pages) */
+.score-ceiling-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #888; margin-bottom: 0.4rem; }
+.score-ceiling-value { font-size: 3.5rem; font-weight: 700; color: var(--tier-colour, var(--eco-teal)); line-height: 1; }
+.score-baseline-row { font-size: 0.88rem; font-weight: 600; color: #555; margin-top: 0.7rem; }
+.score-baseline-label { font-size: 0.7rem; color: #767676; font-weight: 400; display: block; margin-top: 0.15rem; }
+
+/* §1 Category page boilerplate */
+.score-boilerplate { background: #f5f8f5; border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; font-size: 0.85rem; line-height: 1.75; color: #444; }
+.score-boilerplate strong { display: block; font-size: 0.88rem; color: var(--forest-green); margin-bottom: 0.5rem; }
+
+/* §3a+§3b Manufacturer CTA */
+.mfr-cta-block { background: #f0f7f0; border: 1px solid #c0d8c0; border-left: 4px solid var(--eco-teal); border-radius: 0 8px 8px 0; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; }
+.mfr-cta-block h3 { font-size: 0.92rem; font-weight: 700; margin: 0 0 0.75rem; color: var(--forest-green); }
+.mfr-cta-block p { font-size: 0.82rem; line-height: 1.75; color: #444; margin-bottom: 0.75rem; }
+.btn-verified-assessment { display: inline-block; background: var(--eco-teal); color: #fff; font-weight: 700; font-size: 0.85rem; padding: 0.65rem 1.5rem; border-radius: 6px; text-decoration: none; letter-spacing: 0.02em; transition: background 0.2s; }
+.btn-verified-assessment:hover { background: var(--forest-green); }
+
+/* §2c Methodology disclosure */
+.methodology-disclosure { margin-top: 1.25rem; border-top: 1px solid var(--border); padding-top: 1rem; }
+.methodology-disclosure summary { font-size: 0.75rem; color: var(--eco-teal); cursor: pointer; list-style: none; font-weight: 600; }
+.methodology-disclosure summary::-webkit-details-marker { display: none; }
+.methodology-disclosure-body { font-size: 0.78rem; color: #555; line-height: 1.7; margin-top: 0.75rem; background: #f5f9f9; border-left: 2px solid var(--eco-teal); padding: 0.75rem 1rem; border-radius: 0 6px 6px 0; }
+
+/* §5 Ceiling page hero */
+.ceiling-hero { background: linear-gradient(135deg, #f0faf5 0%, #e8f5f8 100%); border: 1px solid #b8d8d0; border-radius: 12px; padding: 1.75rem 2rem; margin-bottom: 1.75rem; }
+.ceiling-hero-eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--eco-teal); margin-bottom: 0.5rem; }
+.ceiling-hero-score { font-size: 2.8rem; font-weight: 700; color: var(--tier-colour, var(--eco-teal)); line-height: 1.1; margin-bottom: 0.75rem; }
+.ceiling-hero-copy { font-size: 0.85rem; line-height: 1.75; color: #444; }
+
   </style>
+  
 </head>
 <body>
 
@@ -369,6 +399,7 @@
     <nav class="site-nav" aria-label="Main navigation">
       <a href="/" >Home</a>
       <a href="/ratings/" class="active" aria-current="page">Ratings</a>
+      <a href="/blog/" >Blog</a>
       <a href="/methodology" >Methodology</a>
       <a href="/about" >About</a>
       <a href="/verified-ratings" >Verified Ratings</a>
@@ -385,6 +416,9 @@
     --ri-colour:   #c04040;
   }
 </style>
+
+
+
 
 <!-- ── Generic rating notice ──────────────────────────────────────────────── -->
 
@@ -404,7 +438,7 @@
       <span class="rating-type-badge badge-generic">Category Rating</span>
     
     <span class="pill">larger appliances</span>
-    <span class="pill">Assessed 2026-04-26</span>
+    <span class="pill">Assessed 2026-04-28</span>
     <span class="pill">1.3</span>
   </div>
   <h1>Fridge-Freezers</h1>
@@ -415,51 +449,79 @@
 <div class="score-panel">
 
   <div class="hip-score-card">
-    <div class="score-label">HIP Score</div>
-    <div class="score-value">
-      3.3<span class="score-denom">/10</span>
-    </div>
-    <div class="score-tier-name">Low Resilience</div>
-    <div class="score-vs-baseline">At category baseline (3.3)</div>
-    
+      
+      <div class="score-ceiling-label">Category ceiling</div>
+      <div class="score-ceiling-value">7.1<span class="score-denom"> HIP</span></div>
+      <div class="score-tier-name">Low Resilience</div>
+      <div class="score-baseline-row">
+        Current market baseline: <strong>3.3 HIP</strong>
+        <span class="score-baseline-label">Pre-verification score from public data</span>
+      </div>
     
   </div>
 
   <div class="ri-card">
-    <div class="score-label">Regenerative Index</div>
-    <div class="ri-score-value" style="color: var(--ri-colour);">
-      -7.0
-    </div>
-    <div class="ri-descriptor" style="color: var(--ri-colour);">Depleting</div>
-    <!-- RI scale: 5 pips, one per tier (Depleting → Regenerative) -->
-    <div class="ri-scale">
-        <div class="ri-pip active"
-             style="background:#c04040">
-        </div>
       
-        <div class="ri-pip "
-             style="">
-        </div>
-      
-        <div class="ri-pip "
-             style="">
-        </div>
-      
-        <div class="ri-pip "
-             style="">
-        </div>
-      
-        <div class="ri-pip "
-             style="">
-        </div>
-      
-    </div>
-    <div class="score-vs-baseline" style="margin-top:0.75rem;">At category average (-7.0)</div>
-    
+      <div class="score-ceiling-label">Category ceiling RI</div>
+      <div class="ri-score-value" style="color: #c8920a;">
+        -2.0
+      </div>
+      <div class="ri-scale">
+        
+          <div class="ri-pip active"
+               style="background:#c04040">
+          </div>
+        
+          <div class="ri-pip "
+               style="">
+          </div>
+        
+          <div class="ri-pip "
+               style="">
+          </div>
+        
+          <div class="ri-pip "
+               style="">
+          </div>
+        
+          <div class="ri-pip "
+               style="">
+          </div>
+        
+      </div>
+      <div class="score-baseline-row" style="margin-top:0.75rem;">
+        Current market baseline RI: <strong>-7.0</strong>
+        <span class="score-baseline-label">(Depleting)</span>
+      </div>
     
   </div>
 
 </div>
+
+
+
+<div class="score-boilerplate">
+  <strong>What this score means</strong>
+  The current market baseline for larger appliances reflects what the HIP methodology can confirm from publicly available
+  specification data alone, before any manufacturer evidence is reviewed. The category ceiling shown above is what the
+  methodology rewards when materials, supply chain, repairability, and end-of-life pathways are fully evidenced.
+  Manufacturers close that gap by applying for verified assessment.
+</div>
+
+
+
+
+<div class="mfr-cta-block">
+  <h3>Manufacturer? Verified assessment closes the gap.</h3>
+  <p>The current market baseline for this category is 3.3 HIP.
+  The category ceiling — what the methodology rewards when materials, supply chain, repairability, and end-of-life
+  pathways are fully evidenced — is 7.1 HIP.
+  The first verified product in our programme demonstrated 6.9 HIP and earned the HIP Mark.</p>
+  <p>If your product can evidence the methodology dimensions, verified assessment gives it the score it has earned.</p>
+  <a class="btn-verified-assessment" href="/apply">Apply for verified assessment</a>
+</div>
+  
+
 
 <!-- ── HIP Mark banner ────────────────────────────────────────────────────── -->
 
@@ -478,7 +540,7 @@
         </div>
         <div class="dim-score-num">3.5</div>
         
-          <div class="dim-finding">The product contains copper and aluminium, which are EU Critical Raw Materials, alongside steel and commodity plastics. With zero recycled content and missing data on extraction origins, the score is conservatively adjusted to reflect the scarcity risk of copper and the lack of circularity.</div>
+          <div class="dim-finding">The product contains copper and aluminium, which are EU Critical Raw Materials, alongside steel and commodity plastics. With 0% recycled content and missing data on extraction origins, the supply chain risk is elevated due to potential single-country concentration for critical metals. This places the score in the Scarce category, reflecting the reliance on materials with significant supply constraints.</div>
         
       </div>
     <div class="dim-row">
@@ -491,7 +553,7 @@
         </div>
         <div class="dim-score-num">3.5</div>
         
-          <div class="dim-finding">As a fridge-freezer, the product relies on copper and steel, which are sourced globally but often from moderate-risk jurisdictions with concentration risks. The lack of submitted due diligence standards or alternative supplier data prevents verification of governance scores, resulting in a high-risk classification based on conservative assumptions for unverified supply chains.</div>
+          <div class="dim-finding">The fridge-freezer relies on copper and steel sourced from Poland, but primary material origins are unverified and likely involve high-concentration regions for critical inputs like rare earths or copper. No due-diligence programme or third-party audit is documented, and no alternative suppliers are confirmed, placing the supply chain at the pre-verification baseline for standard appliances.</div>
         
       </div>
     <div class="dim-row">
@@ -504,7 +566,7 @@
         </div>
         <div class="dim-score-num">2.0</div>
         
-          <div class="dim-finding">The product is assumed to be glued with no take-back scheme, rendering material separation impractical without specialist equipment. While metal components may theoretically be recovered, the lack of disassembly design and recycling infrastructure compliance means less than 20% of the product enters practical recycling streams, aligning with the non-recyclable baseline for sealed appliances.</div>
+          <div class="dim-finding">The product is assumed to be glued with no take-back scheme, preventing practical material separation. Only an estimated 20% of the weight, likely limited to metal components, enters practical recycling streams, while plastics and heating elements are landfilled. This performance aligns with the pre-verification baseline for sealed consumer electronics lacking disassembly features.</div>
         
       </div>
     <div class="dim-row">
@@ -517,7 +579,7 @@
         </div>
         <div class="dim-score-num">4.0</div>
         
-          <div class="dim-finding">The product is a fridge-freezer with spare parts available, but the fastener type is assumed to be glued due to missing data, and no service manual is provided. This places it in the 'Difficult to Repair' category where repair is technically possible but not designed for straightforward independent service.</div>
+          <div class="dim-finding">The product is a fridge-freezer manufactured in Poland with spare parts available, but the fastener type is assumed to be glued due to missing data, and no public service manual exists. While parts availability prevents a lower rating, the lack of a manual and the conservative assumption of glued assembly restrict the score to the difficult-to-repair range typical of mass-market appliances without explicit repair design documentation.</div>
         
       </div>
     <div class="dim-row">
@@ -526,11 +588,11 @@
           <span class="dim-weight">8% weight</span>
         </div>
         <div class="dim-bar-wrap">
-          <div class="dim-bar bar-low" style="width:35%"></div>
+          <div class="dim-bar bar-medium" style="width:40%"></div>
         </div>
-        <div class="dim-score-num">3.5</div>
+        <div class="dim-score-num">4.0</div>
         
-          <div class="dim-finding">The product is manufactured in China, a moderate-to-high risk jurisdiction for labour and environmental issues, with no submitted third-party audits or certifications. While assembly occurs in Poland, the lack of verified supply chain data for the primary manufacturing location results in an elevated risk rating based on unverified self-reporting assumptions.</div>
+          <div class="dim-finding">The product is manufactured in China, a moderate-to-high risk jurisdiction, with no submitted third-party audits or environmental certifications. While assembly occurs in Poland, the lack of verified supply chain data and absence of RBA audits or ISO 14001 certification places the score at the pre-verification baseline for this category.</div>
         
       </div>
     <div class="dim-row">
@@ -543,7 +605,7 @@
         </div>
         <div class="dim-score-num">7.0</div>
         
-          <div class="dim-finding">The product achieves an above-average score due to a stated design life of 12 years, which aligns with the premium appliance benchmark. Although the 2-year warranty is standard for mass-market items, the explicit long-term design specification drives the rating into the 7-8 band, assuming the manufacturer honors parts availability for the stated lifespan.</div>
+          <div class="dim-finding">The product achieves an above-average score due to a stated design life of 12 years, which aligns with the upper limit of the 7-8 band. The 2-year warranty meets the minimum legal requirement but does not independently elevate the score; however, the explicit 12-year design life specification provides the necessary evidence for a score above 5. No IP rating or modular design features were submitted to further increase the rating.</div>
         
       </div>
     
@@ -560,7 +622,7 @@
         -7.0
       </div>
       
-        <div class="dim-finding">The product is scored as Depleting because it is a conventional fridge-freezer with zero recycled content, no take-back scheme, and no regenerative certifications. It does not qualify for the Extractive band minimum of -3 because the required condition of recycled content >= 50% with a verified take-back is not met.</div>
+        <div class="dim-finding">The product is classified as Depleting because it relies on virgin mined materials with zero recycled content and lacks a take-back scheme. This aligns with the Depleting band criteria for conventional appliances where no credible pathway toward regeneration exists. It does not qualify for the Extractive band minimum of -3 because the required threshold of 50% recycled content with a verified take-back program is not met.</div>
       
     </div>
 
@@ -569,6 +631,19 @@
   <p style="font-size:0.72rem; color:#767676; margin-top:1.25rem; margin-bottom:0;">
     MSI 20% · SCR 18% · RC 18% · R 13% · SEI 8% · PL 8% · RI 15% = 100%
   </p>
+
+  <!-- ── §2c Methodology disclosure ────────────────────────────────────────── -->
+  <details class="methodology-disclosure">
+    <summary>About the HIP Methodology ▸</summary>
+    <div class="methodology-disclosure-body">
+      Generic ratings are intentionally conservative. They represent only what the HIP methodology can confirm from
+      publicly available specification data, before any manufacturer-supplied evidence is reviewed. Most categories sit
+      in the 2–4 range at the pre-verification baseline. This is the methodology working as designed: it makes the gap
+      between current market practice and demonstrable resilience legible to consumers, manufacturers, and procurement
+      buyers. Verified assessment is the path across that gap, and the HIP Mark is the proof of crossing it.
+      <a href="/methodology" style="white-space:nowrap;">Read the full methodology →</a>
+    </div>
+  </details>
 </div><!-- /.card -->
 
 <!-- ── Key Materials ───────────────────────────────────────────────────────── -->
@@ -578,14 +653,14 @@
 
 <div class="card">
   <h2 style="margin-top:0;">Consumer Summary</h2>
-  <p>This fridge-freezer has an overall HIP Score of 3.3 out of 10, indicating average performance in its category. Its Regenerative Index is -7.0, which means the product is depleting resources rather than helping to replenish them. This low score reflects that the appliance contains no recycled materials and is difficult to recycle at the end of its life.</p>
+  <p>This fridge-freezer has a HIP Score of 3.3 out of 10, which matches the current market baseline for this category. Its Regenerative Index is -7.0, indicating that the product relies entirely on new materials and does not support a circular lifecycle. Overall, the design prioritizes a long lifespan but currently lacks the features needed for material recovery or recycling.</p>
 </div>
 
 
 
 <div class="card">
   <h2 style="margin-top:0;">What This Means For You</h2>
-  <p>When shopping for a fridge-freezer, look for models that explicitly state they contain recycled materials and offer a take-back or recycling program. Avoid products that are glued together or lack spare parts, as these features make it nearly impossible to repair or recycle the unit later. Prioritizing appliances designed for easy disassembly and material recovery will help reduce waste and support a more sustainable cycle.</p>
+  <p>When shopping for a fridge-freezer, look for models that explicitly state they use recycled content and offer a take-back or repair program. Prioritize products with clear information on material origins and those designed for easy disassembly to extend their useful life. Choosing appliances with these features helps shift the market away from relying solely on virgin mined resources.</p>
 </div>
 
 
@@ -636,13 +711,13 @@
 <ul>
 <li>Copper — EU Critical Raw Materials list</li>
 <li>Aluminium — EU Critical Raw Materials list</li>
-<li>Recycled content is 0%</li>
+<li>0% recycled content</li>
 <li>No due-diligence programme documented</li>
-<li>No alternative supplier documented</li>
-<li>Single primary supplier assumed</li>
+<li>Single primary supplier with no alternative</li>
+<li>Primary material origins unverified</li>
 </ul>
 <h2>About This Rating</h2>
-<p>Produced under <a href="/methodology">Resourcehip Methodology v1.3</a> (CC BY-NC 4.0). Assessed: 2026-04-26. Next scheduled review: 2027-04-26.</p>
+<p>Produced under <a href="/methodology">Resourcehip Methodology v1.3</a> (CC BY-NC 4.0). Assessed: 2026-04-28. Next scheduled review: 2027-04-28.</p>
 <p><a href="/dispute">Dispute this rating</a> · <a href="/methodology">Our methodology</a> · <a href="/ratings/">All ratings</a></p>
 </div>
 
@@ -684,7 +759,7 @@
   <a href="/dispute">Dispute this rating</a> · <a href="/methodology">Our methodology</a> · <a href="/ratings/">All ratings</a>
   </p>
   <p style="margin-bottom:0; color:#767676;">
-    Assessed: 2026-04-26 · Next review: 2027-04-26 · Methodology 1.3
+    Assessed: 2026-04-28 · Next review: 2027-04-28 · Methodology 1.3
   </p>
 </div>
 

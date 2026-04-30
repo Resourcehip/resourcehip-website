@@ -4,56 +4,56 @@ category: consumer electronics
 rating_type: generic
 brand: null
 slug: smartphones
-hip_score: 1.8
+hip_score: 1.9
 hip_label: Poor
 msi_score: 1.5
 scr_score: 2.0
-rc_score: 1.5
+rc_score: 2.0
 r_score: 1.0
 sei_score: 3.5
 pl_score: 3.5
 ri_score: -7.0
 ri_descriptor: Depleting
-category_baseline_hip: 1.8
+category_baseline_hip: 1.9
 category_baseline_ri: -7.0
-category_ceiling_hip: 6.3
+category_ceiling_hip: 6.4
 category_ceiling_ri: -2.0
 above_baseline: false
-assessment_date: '2026-04-18'
+assessment_date: '2026-04-28'
 methodology_version: '1.3'
-next_review: '2027-04-18'
+next_review: '2027-04-28'
 scoring_model: qwen3.5:35b
 prose_model: qwen3.5:35b
-msi_finding: The product relies heavily on multiple EU Critical Raw Materials including lithium, cobalt, rare earth elements,
-  tantalum, and gold, which are essential for smartphone functionality. The low recycled content of 5% and the high supply
-  concentration risk associated with rare earth elements and cobalt further drive the score into the critically scarce range.
-scr_finding: The smartphone relies on rare earth elements and cobalt, which are heavily concentrated in high-risk jurisdictions
-  like China and the DRC, with no due-diligence programme or alternative suppliers documented. This lack of transparency and
-  diversification for critical raw materials places the supply chain in the critical risk category.
-rc_finding: The smartphone is assumed to be glued with no take-back scheme, making practical disassembly and material separation
-  highly unlikely. While metals are theoretically recyclable, the sealed design and lack of infrastructure for small electronics
-  mean less than 20% of the product enters practical recycling streams, resulting in a non-recyclable rating.
-r_finding: The smartphone is assumed to be glued shut with no screws, and no spare parts or service manual are available.
-  This aligns with the 'Unrepairable' category typical of sealed consumer electronics designed for replacement rather than
-  repair.
-sei_finding: The product is a smartphone manufactured in China, a moderate-to-high risk jurisdiction for labour and environmental
-  issues, with no submitted evidence of third-party audits or certifications. While ILO compliance is not claimed, the absence
-  of an RBA audit, ISO 14001, or modern slavery statement prevents the score from reaching baseline compliance levels.
-pl_finding: The product is a smartphone with a 2-year warranty and an estimated design life of 4 years, which falls within
-  the typical mass-market range. The lack of stated IP rating, modular design, or long-term software support prevents a higher
-  score, aligning with the below-average lifespan category for standard consumer electronics.
-ri_finding: The product is scored as Depleting (-7) because it relies on virgin mined materials with only 5% recycled content
-  and no verified take-back scheme, failing to meet the minimum threshold for the Extractive band. Not Depleting because recycled
-  content >= 50% with verified take-back does not apply, as the product has neither substantial recycling nor a closed-loop
-  recovery programme.
-consumer_summary: This smartphone has a low overall score of 1.8 out of 10, indicating significant challenges with its environmental
-  impact and durability. Its Regenerative Index of -7.0 shows that the device relies heavily on newly mined materials with
-  very little recycled content, making it depleting rather than regenerative. Essentially, the product is difficult to repair,
-  uses scarce resources, and has a short lifespan before becoming waste.
-what_this_means: When buying a smartphone, look for models that are designed to be easily repaired with screws instead of
-  glue and that offer long-term software support. Prioritize devices that use a high percentage of recycled materials and
-  come with a clear plan for recycling or take-back at the end of their life. Avoid products that are sealed shut, lack spare
-  parts, or have no warranty, as these are likely to end up in landfills quickly.
+msi_finding: The product relies heavily on lithium, cobalt, rare earth elements, gold, tantalum, and tin, all designated as
+  EU Critical Raw Materials or USGS high-supply-risk materials. With only 5% recycled content and an assumed high concentration
+  of extraction in China, the supply chain faces significant scarcity risks typical of conventional consumer electronics.
+scr_finding: The smartphone relies on rare earth elements and cobalt, which are predominantly sourced from China and the DRC
+  respectively, both presenting high geopolitical and governance risks. No due-diligence programme or alternative suppliers
+  are documented for these critical materials, resulting in a critical risk profile.
+rc_finding: The smartphone is assumed to be glued with no take-back scheme, preventing practical material separation. Only
+  metal components are likely recovered, while plastics and nichrome elements are typically landfilled, resulting in a score
+  at the pre-verification baseline for sealed consumer electronics.
+r_finding: The smartphone is assumed to be glued shut with no spare parts available and no public service manual, aligning
+  with the unrepairable category for sealed consumer electronics. The lack of fastener data and parts commitment indicates
+  a design intended for replacement rather than repair.
+sei_finding: The smartphone is manufactured in China, a moderate-risk jurisdiction, with no submitted third-party audits,
+  environmental certifications, or modern slavery statements. The absence of verified evidence places the assessment at the
+  pre-verification baseline for this category, where ILO compliance claims are not independently verified.
+pl_finding: The product has a 2-year warranty and a stated design life of 4 years, which aligns with the typical mass-market
+  baseline for smartphones. The assessment assumes no IP rating or modular design due to missing data, and software support
+  is not applicable as a distinct longevity factor in this generic evaluation.
+ri_finding: The product is classified as Depleting because primary materials are conventionally mined with only 5% recycled
+  content and no verified take-back scheme. This does not meet the criteria for the Extractive band, which requires substantial
+  recycled content or a take-back programme. The absence of regenerative certifications or closed-loop programmes confirms
+  the score falls within the -7 to -6 range for conventional electronics.
+consumer_summary: This smartphone has a HIP Score of 1.9 out of 10, which matches the current market baseline for this category.
+  Its Regenerative Index is -7.0, indicating that the device relies heavily on newly mined materials with very little recycled
+  content. Overall, the product aligns with typical mass-market designs that prioritize new resource extraction over circular
+  material use.
+what_this_means: When shopping for smartphones, look for models that explicitly state a higher percentage of recycled materials
+  in their construction. Seek out brands that offer repair services, spare parts, and clear disassembly guides to extend the
+  device's life. Avoid products that are sealed shut or lack a take-back program, as these make recycling difficult and contribute
+  to resource depletion.
 hip_mark: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
@@ -104,19 +104,19 @@ A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data
 
 ## Material Watch Points
 
-- Lithium — EU Critical Raw Materials list
 - Cobalt — EU Critical Raw Materials list
+- Lithium — EU Critical Raw Materials list
 - Rare earth elements — EU Critical Raw Materials list
 - Tantalum — EU Critical Raw Materials list
-- Gold — EU Critical Raw Materials list
-- China >80% of global rare earth supply
-- Rare earths and cobalt concentration in high-risk jurisdictions (China, DRC)
+- Tin — EU Critical Raw Materials list
+- China — High concentration of global supply for key components
+- Rare earth elements — China >60% global supply, high concentration risk
+- Cobalt — DRC high-risk jurisdiction, no RBA audit
 - No due-diligence programme documented
 - No alternative supplier documented
-- Single primary supplier assumed
 
 ## About This Rating
 
-Produced under [Resourcehip Methodology v1.3](/methodology) (CC BY-NC 4.0). Assessed: 2026-04-18. Next scheduled review: 2027-04-18.
+Produced under [Resourcehip Methodology v1.3](/methodology) (CC BY-NC 4.0). Assessed: 2026-04-28. Next scheduled review: 2027-04-28.
 
 [Dispute this rating](/dispute) · [Our methodology](/methodology) · [All ratings](/ratings/)

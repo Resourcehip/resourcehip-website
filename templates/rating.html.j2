@@ -133,7 +133,7 @@
 
 /* HIP Mark badge */
 .hip-mark-banner {
-  display: flex; align-items: center; gap: 1rem;
+  display: flex; align-items: center; gap: 1.25rem;
   padding: 0.85rem 1.25rem;
   border-radius: 8px; margin-bottom: 1.25rem;
   border: 1.5px solid;
@@ -141,8 +141,8 @@
 .hip-mark-banner.mark-gold     { background: #fffbea; border-color: #c8920a; }
 .hip-mark-banner.mark-silver   { background: #f2f6fb; border-color: #7a9ab8; }
 .hip-mark-banner.mark-standard { background: #f0f8f4; border-color: #3a9e62; }
-.hip-mark-icon {
-  font-size: 1.4rem; flex-shrink: 0;
+.hip-mark-badge-img {
+  flex-shrink: 0; width: 52px; height: auto;
 }
 .hip-mark-text { line-height: 1.4; }
 .hip-mark-title {
@@ -179,6 +179,35 @@
   margin-top: 2rem;
 }
 .disclaimer-box p { margin-bottom: 0.5rem; }
+
+/* Score hierarchy (category pages) */
+.score-ceiling-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #888; margin-bottom: 0.4rem; }
+.score-ceiling-value { font-size: 3.5rem; font-weight: 700; color: var(--tier-colour, var(--eco-teal)); line-height: 1; }
+.score-baseline-row { font-size: 0.88rem; font-weight: 600; color: #555; margin-top: 0.7rem; }
+.score-baseline-label { font-size: 0.7rem; color: #767676; font-weight: 400; display: block; margin-top: 0.15rem; }
+
+/* §1 Category page boilerplate */
+.score-boilerplate { background: #f5f8f5; border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; font-size: 0.85rem; line-height: 1.75; color: #444; }
+.score-boilerplate strong { display: block; font-size: 0.88rem; color: var(--forest-green); margin-bottom: 0.5rem; }
+
+/* §3a+§3b Manufacturer CTA */
+.mfr-cta-block { background: #f0f7f0; border: 1px solid #c0d8c0; border-left: 4px solid var(--eco-teal); border-radius: 0 8px 8px 0; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; }
+.mfr-cta-block h3 { font-size: 0.92rem; font-weight: 700; margin: 0 0 0.75rem; color: var(--forest-green); }
+.mfr-cta-block p { font-size: 0.82rem; line-height: 1.75; color: #444; margin-bottom: 0.75rem; }
+.btn-verified-assessment { display: inline-block; background: var(--eco-teal); color: #fff; font-weight: 700; font-size: 0.85rem; padding: 0.65rem 1.5rem; border-radius: 6px; text-decoration: none; letter-spacing: 0.02em; transition: background 0.2s; }
+.btn-verified-assessment:hover { background: var(--forest-green); }
+
+/* §2c Methodology disclosure */
+.methodology-disclosure { margin-top: 1.25rem; border-top: 1px solid var(--border); padding-top: 1rem; }
+.methodology-disclosure summary { font-size: 0.75rem; color: var(--eco-teal); cursor: pointer; list-style: none; font-weight: 600; }
+.methodology-disclosure summary::-webkit-details-marker { display: none; }
+.methodology-disclosure-body { font-size: 0.78rem; color: #555; line-height: 1.7; margin-top: 0.75rem; background: #f5f9f9; border-left: 2px solid var(--eco-teal); padding: 0.75rem 1rem; border-radius: 0 6px 6px 0; }
+
+/* §5 Ceiling page hero */
+.ceiling-hero { background: linear-gradient(135deg, #f0faf5 0%, #e8f5f8 100%); border: 1px solid #b8d8d0; border-radius: 12px; padding: 1.75rem 2rem; margin-bottom: 1.75rem; }
+.ceiling-hero-eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--eco-teal); margin-bottom: 0.5rem; }
+.ceiling-hero-score { font-size: 2.8rem; font-weight: 700; color: var(--tier-colour, var(--eco-teal)); line-height: 1.1; margin-bottom: 0.75rem; }
+.ceiling-hero-copy { font-size: 0.85rem; line-height: 1.75; color: #444; }
 {% endblock %}
 
 {% block main_class %}{% endblock %}
@@ -220,6 +249,19 @@
   }
 </style>
 
+{# ── §5 Ceiling page hero ─────────────────────────────────────────────────── #}
+{% if brand == 'Category Ceiling' %}
+<div class="ceiling-hero">
+  <div class="ceiling-hero-eyebrow">Category ceiling</div>
+  <div class="ceiling-hero-score">{{ "%.1f"|format(hip_score) }} <span style="font-size:1.2rem;font-weight:400;color:#666;">HIP</span></div>
+  <div class="ceiling-hero-copy">
+    This is what the HIP methodology rewards when a product in this category fully evidences material provenance,
+    supply-chain integrity, repairability, and end-of-life pathways.
+    It is the benchmark for verified assessment — not a product currently on sale.
+  </div>
+</div>
+{% endif %}
+
 <!-- ── Generic rating notice ──────────────────────────────────────────────── -->
 {% if rating_type != 'verified' %}
 <div class="generic-notice">
@@ -253,71 +295,137 @@
 <div class="score-panel">
 
   <div class="hip-score-card">
-    <div class="score-label">HIP Score</div>
-    <div class="score-value">
-      {{ "%.1f"|format(hip_score) }}<span class="score-denom">/10</span>
-    </div>
-    <div class="score-tier-name">{{ tier_label }}</div>
-    <div class="score-vs-baseline">
-      {%- set diff = hip_score - category_baseline_hip -%}
-      {%- if diff > 0 -%}
-        <span class="vs-positive">+{{ "%.1f"|format(diff) }}</span> vs category baseline ({{ "%.1f"|format(category_baseline_hip) }})
-      {%- elif diff < 0 -%}
-        <span class="vs-negative">{{ "%.1f"|format(diff) }}</span> vs category baseline ({{ "%.1f"|format(category_baseline_hip) }})
-      {%- else -%}
-        At category baseline ({{ "%.1f"|format(category_baseline_hip) }})
-      {%- endif -%}
-    </div>
-    {% set _ceil_hip = category_ceiling_hip|default(none) %}
-    {% if _ceil_hip is not none %}
-    <div class="score-vs-ceiling">
-      Highest estimated rating: {{ "%.1f"|format(_ceil_hip) }}/10
-    </div>
+    {%- set _ceil_hip = category_ceiling_hip|default(none) -%}
+    {% if rating_type != 'verified' and _ceil_hip is not none %}
+      {# Category page: ceiling is primary, baseline is secondary #}
+      <div class="score-ceiling-label">Category ceiling</div>
+      <div class="score-ceiling-value">{{ "%.1f"|format(_ceil_hip) }}<span class="score-denom"> HIP</span></div>
+      <div class="score-tier-name">{{ tier_label }}</div>
+      <div class="score-baseline-row">
+        Current market baseline: <strong>{{ "%.1f"|format(hip_score) }} HIP</strong>
+        <span class="score-baseline-label">Pre-verification score from public data</span>
+      </div>
+    {% else %}
+      {# Verified product (or no ceiling data) — standard display #}
+      <div class="score-label">HIP Score</div>
+      <div class="score-value">
+        {{ "%.1f"|format(hip_score) }}<span class="score-denom">/10</span>
+      </div>
+      <div class="score-tier-name">{{ tier_label }}</div>
+      <div class="score-vs-baseline">
+        {%- set diff = hip_score - category_baseline_hip -%}
+        {%- if diff > 0 -%}
+          <span class="vs-positive">+{{ "%.1f"|format(diff) }}</span> vs category baseline ({{ "%.1f"|format(category_baseline_hip) }})
+        {%- elif diff < 0 -%}
+          <span class="vs-negative">{{ "%.1f"|format(diff) }}</span> vs category baseline ({{ "%.1f"|format(category_baseline_hip) }})
+        {%- else -%}
+          At category baseline ({{ "%.1f"|format(category_baseline_hip) }})
+        {%- endif -%}
+      </div>
+      {% if _ceil_hip is not none %}
+      <div class="score-vs-ceiling">
+        Category ceiling: {{ "%.1f"|format(_ceil_hip) }} HIP
+      </div>
+      {% endif %}
     {% endif %}
   </div>
 
   <div class="ri-card">
-    <div class="score-label">Regenerative Index</div>
-    <div class="ri-score-value" style="color: var(--ri-colour);">
-      {% if ri_score > 0 %}+{% endif %}{{ "%.1f"|format(ri_score) }}
-    </div>
-    <div class="ri-descriptor" style="color: var(--ri-colour);">{{ ri_descriptor }}</div>
-    <!-- RI scale: 5 pips, one per tier (Depleting → Regenerative) -->
-    <div class="ri-scale">
-      {%- set ri_tiers = ['Depleting','Extractive','Renewable','Restorative','Regenerative'] -%}
-      {%- set ri_pip_colours = ['#c04040','#c8920a','#4FA9A5','#7ab85a','#3a9e62'] -%}
-      {%- set ri_active_idx = ri_tiers.index(ri_descriptor) if ri_descriptor in ri_tiers else 2 -%}
-      {% for i in range(5) %}
-        <div class="ri-pip {% if i <= ri_active_idx %}active{% endif %}"
-             style="{% if i <= ri_active_idx %}background:{{ ri_pip_colours[ri_active_idx] }}{% endif %}">
-        </div>
-      {% endfor %}
-    </div>
-    <div class="score-vs-baseline" style="margin-top:0.75rem;">
-      {%- set ri_diff = ri_score - category_baseline_ri -%}
-      {%- if ri_diff > 0 -%}
-        <span class="vs-positive">+{{ "%.1f"|format(ri_diff) }}</span> vs category ({{ "%.1f"|format(category_baseline_ri) }})
-      {%- elif ri_diff < 0 -%}
-        <span class="vs-negative">{{ "%.1f"|format(ri_diff) }}</span> vs category ({{ "%.1f"|format(category_baseline_ri) }})
-      {%- else -%}
-        At category average ({{ "%.1f"|format(category_baseline_ri) }})
+    {%- set _ceil_ri = category_ceiling_ri|default(none) -%}
+    {%- set ri_tiers = ['Depleting','Extractive','Renewable','Restorative','Regenerative'] -%}
+    {%- set ri_pip_colours = ['#c04040','#c8920a','#4FA9A5','#7ab85a','#3a9e62'] -%}
+    {%- set ri_active_idx = ri_tiers.index(ri_descriptor) if ri_descriptor in ri_tiers else 2 -%}
+    {% if rating_type != 'verified' and _ceil_ri is not none %}
+      {# Category page: ceiling RI is primary, baseline is secondary #}
+      {# Compute ceiling RI colour from score thresholds (RI: >=6 Regen, >=1 Rest, >=0 Ren, >=-5 Extr, else Depl) #}
+      {%- if _ceil_ri >= 6 -%}{%- set ceil_ri_colour = '#3a9e62' -%}
+      {%- elif _ceil_ri >= 1 -%}{%- set ceil_ri_colour = '#7ab85a' -%}
+      {%- elif _ceil_ri >= 0 -%}{%- set ceil_ri_colour = '#4FA9A5' -%}
+      {%- elif _ceil_ri >= -5 -%}{%- set ceil_ri_colour = '#c8920a' -%}
+      {%- else -%}{%- set ceil_ri_colour = '#c04040' -%}
       {%- endif -%}
-    </div>
-    {% set _ceil_ri = category_ceiling_ri|default(none) %}
-    {% if _ceil_ri is not none %}
-    <div class="score-vs-ceiling">
-      Highest estimated RI: {% if _ceil_ri > 0 %}+{% endif %}{{ "%.1f"|format(_ceil_ri) }}
-    </div>
+      <div class="score-ceiling-label">Category ceiling RI</div>
+      <div class="ri-score-value" style="color: {{ ceil_ri_colour }};">
+        {% if _ceil_ri > 0 %}+{% endif %}{{ "%.1f"|format(_ceil_ri) }}
+      </div>
+      <div class="ri-scale">
+        {% for i in range(5) %}
+          <div class="ri-pip {% if i <= ri_active_idx %}active{% endif %}"
+               style="{% if i <= ri_active_idx %}background:{{ ri_pip_colours[ri_active_idx] }}{% endif %}">
+          </div>
+        {% endfor %}
+      </div>
+      <div class="score-baseline-row" style="margin-top:0.75rem;">
+        Current market baseline RI: <strong>{% if ri_score > 0 %}+{% endif %}{{ "%.1f"|format(ri_score) }}</strong>
+        <span class="score-baseline-label">({{ ri_descriptor }})</span>
+      </div>
+    {% else %}
+      {# Verified product (or no ceiling data) — standard display #}
+      <div class="score-label">Regenerative Index</div>
+      <div class="ri-score-value" style="color: var(--ri-colour);">
+        {% if ri_score > 0 %}+{% endif %}{{ "%.1f"|format(ri_score) }}
+      </div>
+      <div class="ri-descriptor" style="color: var(--ri-colour);">{{ ri_descriptor }}</div>
+      <!-- RI scale: 5 pips, one per tier (Depleting → Regenerative) -->
+      <div class="ri-scale">
+        {% for i in range(5) %}
+          <div class="ri-pip {% if i <= ri_active_idx %}active{% endif %}"
+               style="{% if i <= ri_active_idx %}background:{{ ri_pip_colours[ri_active_idx] }}{% endif %}">
+          </div>
+        {% endfor %}
+      </div>
+      <div class="score-vs-baseline" style="margin-top:0.75rem;">
+        {%- set ri_diff = ri_score - category_baseline_ri -%}
+        {%- if ri_diff > 0 -%}
+          <span class="vs-positive">+{{ "%.1f"|format(ri_diff) }}</span> vs category ({{ "%.1f"|format(category_baseline_ri) }})
+        {%- elif ri_diff < 0 -%}
+          <span class="vs-negative">{{ "%.1f"|format(ri_diff) }}</span> vs category ({{ "%.1f"|format(category_baseline_ri) }})
+        {%- else -%}
+          At category average ({{ "%.1f"|format(category_baseline_ri) }})
+        {%- endif -%}
+      </div>
+      {% if _ceil_ri is not none %}
+      <div class="score-vs-ceiling">
+        Category ceiling RI: {% if _ceil_ri > 0 %}+{% endif %}{{ "%.1f"|format(_ceil_ri) }}
+      </div>
+      {% endif %}
     {% endif %}
   </div>
 
 </div>
 
+{# ── §1 Category page boilerplate ─────────────────────────────────────────── #}
+{% if rating_type != 'verified' %}
+<div class="score-boilerplate">
+  <strong>What this score means</strong>
+  The current market baseline for {{ category }} reflects what the HIP methodology can confirm from publicly available
+  specification data alone, before any manufacturer evidence is reviewed. The category ceiling shown above is what the
+  methodology rewards when materials, supply chain, repairability, and end-of-life pathways are fully evidenced.
+  Manufacturers close that gap by applying for verified assessment.
+</div>
+{% endif %}
+
+{# ── §3a+§3b Manufacturer CTA ─────────────────────────────────────────────── #}
+{% if rating_type != 'verified' %}
+  {%- set _ceil_hip_cta = category_ceiling_hip|default(none) -%}
+  {% if _ceil_hip_cta is not none %}
+<div class="mfr-cta-block">
+  <h3>Manufacturer? Verified assessment closes the gap.</h3>
+  <p>The current market baseline for this category is {{ "%.1f"|format(hip_score) }} HIP.
+  The category ceiling — what the methodology rewards when materials, supply chain, repairability, and end-of-life
+  pathways are fully evidenced — is {{ "%.1f"|format(_ceil_hip_cta) }} HIP.
+  The first verified product in our programme demonstrated 6.9 HIP and earned the HIP Mark.</p>
+  <p>If your product can evidence the methodology dimensions, verified assessment gives it the score it has earned.</p>
+  <a class="btn-verified-assessment" href="/apply">Apply for verified assessment</a>
+</div>
+  {% endif %}
+{% endif %}
+
 <!-- ── HIP Mark banner ────────────────────────────────────────────────────── -->
 {% set _hip_mark = hip_mark | default(none) %}
 {% if _hip_mark == 'Gold' %}
 <div class="hip-mark-banner mark-gold">
-  <div class="hip-mark-icon">★</div>
+  <img class="hip-mark-badge-img" src="/assets/marks/hip-mark-gold.svg" alt="HIP Mark Gold" width="52" height="61" loading="lazy">
   <div class="hip-mark-text">
     <span class="hip-mark-title mark-gold">HIP Mark Gold</span>
     <span class="hip-mark-desc">This verified product achieved a HIP Score of {{ "%.1f"|format(hip_score) }} and a Regenerative Index of {% if ri_score > 0 %}+{% endif %}{{ "%.1f"|format(ri_score) }}, qualifying for the highest tier of the HIP Mark.</span>
@@ -325,7 +433,7 @@
 </div>
 {% elif _hip_mark == 'Silver' %}
 <div class="hip-mark-banner mark-silver">
-  <div class="hip-mark-icon">◆</div>
+  <img class="hip-mark-badge-img" src="/assets/marks/hip-mark-silver.svg" alt="HIP Mark Silver" width="52" height="61" loading="lazy">
   <div class="hip-mark-text">
     <span class="hip-mark-title mark-silver">HIP Mark Silver</span>
     <span class="hip-mark-desc">This verified product achieved a HIP Score of {{ "%.1f"|format(hip_score) }}, qualifying for the HIP Mark Silver tier.</span>
@@ -333,7 +441,7 @@
 </div>
 {% elif _hip_mark == 'Standard' %}
 <div class="hip-mark-banner mark-standard">
-  <div class="hip-mark-icon">✓</div>
+  <img class="hip-mark-badge-img" src="/assets/marks/hip-mark-standard.svg" alt="HIP Mark Standard" width="52" height="61" loading="lazy">
   <div class="hip-mark-text">
     <span class="hip-mark-title mark-standard">HIP Mark Standard</span>
     <span class="hip-mark-desc">This verified product achieved a HIP Score of {{ "%.1f"|format(hip_score) }}, qualifying for the HIP Mark Standard tier.</span>
@@ -403,6 +511,19 @@
   <p style="font-size:0.72rem; color:#767676; margin-top:1.25rem; margin-bottom:0;">
     MSI 20% · SCR 18% · RC 18% · R 13% · SEI 8% · PL 8% · RI 15% = 100%
   </p>
+
+  <!-- ── §2c Methodology disclosure ────────────────────────────────────────── -->
+  <details class="methodology-disclosure">
+    <summary>About the HIP Methodology ▸</summary>
+    <div class="methodology-disclosure-body">
+      Generic ratings are intentionally conservative. They represent only what the HIP methodology can confirm from
+      publicly available specification data, before any manufacturer-supplied evidence is reviewed. Most categories sit
+      in the 2–4 range at the pre-verification baseline. This is the methodology working as designed: it makes the gap
+      between current market practice and demonstrable resilience legible to consumers, manufacturers, and procurement
+      buyers. Verified assessment is the path across that gap, and the HIP Mark is the proof of crossing it.
+      <a href="/methodology" style="white-space:nowrap;">Read the full methodology →</a>
+    </div>
+  </details>
 </div><!-- /.card -->
 
 <!-- ── Key Materials ───────────────────────────────────────────────────────── -->

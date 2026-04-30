@@ -25,6 +25,24 @@ Verified Ratings are for:
 
 The HIP Mark is Resourcehip's consumer-facing quality badge. It has three tiers:
 
+<div style="display:flex; gap:2rem; align-items:flex-start; flex-wrap:wrap; margin:1.5rem 0;">
+  <div style="text-align:center; width:110px;">
+    <img src="/assets/marks/hip-mark-standard.svg" alt="HIP Mark Standard" width="88" height="104" style="display:block; margin:0 auto 0.5rem;">
+    <strong style="font-size:0.82rem; color:#2a6e44;">Standard</strong><br>
+    <span style="font-size:0.75rem; color:#555;">HIP ≥ 6.0</span>
+  </div>
+  <div style="text-align:center; width:110px;">
+    <img src="/assets/marks/hip-mark-silver.svg" alt="HIP Mark Silver" width="88" height="104" style="display:block; margin:0 auto 0.5rem;">
+    <strong style="font-size:0.82rem; color:#4a6a88;">Silver</strong><br>
+    <span style="font-size:0.75rem; color:#555;">HIP ≥ 7.5</span>
+  </div>
+  <div style="text-align:center; width:110px;">
+    <img src="/assets/marks/hip-mark-gold.svg" alt="HIP Mark Gold" width="88" height="104" style="display:block; margin:0 auto 0.5rem;">
+    <strong style="font-size:0.82rem; color:#8a5a00;">Gold</strong><br>
+    <span style="font-size:0.75rem; color:#555;">HIP ≥ 9.0 + RI ≥ +6</span>
+  </div>
+</div>
+
 | Tier | HIP Score required | Additional requirement | Rating type required |
 |------|--------------------|------------------------|----------------------|
 | HIP Mark Standard | 6.0+ | — | Verified |
@@ -32,6 +50,18 @@ The HIP Mark is Resourcehip's consumer-facing quality badge. It has three tiers:
 | HIP Mark Gold | 9.0+ | Regenerative Index ≥ +6.0 | Verified |
 
 **A Verified Rating is required for all HIP Mark tiers.** Generic category ratings are not eligible. This ensures the badge reflects real, independently verified product data — not an estimate.
+
+### Regenerative Index tiers
+
+Every Verified Rating also carries a Regenerative Index (RI) score — a measure from −10 to +10 of whether the product's materials and supply chains are extracting from or restoring natural systems. Products are assigned one of five RI tiers:
+
+<div style="display:flex; flex-direction:column; gap:0.5rem; margin:1rem 0 1.5rem;">
+  <img src="/assets/marks/ri-chip-depleting.svg" alt="RI tier: Depleting" width="200" height="36" style="display:block;">
+  <img src="/assets/marks/ri-chip-extractive.svg" alt="RI tier: Extractive" width="200" height="36" style="display:block;">
+  <img src="/assets/marks/ri-chip-renewable.svg" alt="RI tier: Renewable" width="200" height="36" style="display:block;">
+  <img src="/assets/marks/ri-chip-restorative.svg" alt="RI tier: Restorative" width="200" height="36" style="display:block;">
+  <img src="/assets/marks/ri-chip-regenerative.svg" alt="RI tier: Regenerative" width="200" height="36" style="display:block;">
+</div>
 
 ## What the process involves
 
@@ -46,10 +76,9 @@ Getting a Verified Rating involves three stages:
 3. **HIP Mark licence (if your score qualifies)**
    If your product achieves a score of 6.0 or above on a Verified Rating, you are eligible to licence the HIP Mark for use in product communications, packaging, and marketing. Licence terms: [#missing# — to be confirmed].
 
-## Enquire about a Verified Rating
+## Ready to apply?
 
-To find out more or to begin the submission process:
-
-**Email:** [hello@resourcehip.com](mailto:hello@resourcehip.com)
-
-Please include the product name, product category, and a brief description of the evidence you expect to submit. We will respond with an information pack and next steps.
+<div style="background: #f0f7f0; border: 1px solid #c0d8c0; border-left: 4px solid #4FA9A5; border-radius: 0 8px 8px 0; padding: 1.25rem 1.5rem; margin: 1rem 0;">
+  <p style="margin-bottom: 0.75rem;">Use the structured application form to submit your product for assessment. We respond within 3 working days.</p>
+  <a href="/apply" style="display: inline-block; background: #4FA9A5; color: #fff; font-weight: 700; font-size: 0.9rem; padding: 0.65rem 1.5rem; border-radius: 6px; text-decoration: none;">Apply for verified assessment →</a>
+</div>

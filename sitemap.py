@@ -31,7 +31,8 @@ BASE_URL   = "https://resourcehip.com"
 PAGE_SETTINGS = {
     "/":              {"priority": "1.0", "changefreq": "weekly"},
     "/ratings/":      {"priority": "0.9", "changefreq": "weekly"},
-    "/methodology":   {"priority": "0.8", "changefreq": "monthly"},
+    "/methodology/":  {"priority": "0.8", "changefreq": "monthly"},
+    "/methodology/hip-mark-brand-guidelines": {"priority": "0.6", "changefreq": "yearly"},
     "/about":         {"priority": "0.7", "changefreq": "monthly"},
     "/dispute":       {"priority": "0.5", "changefreq": "yearly"},
     "/privacy":       {"priority": "0.3", "changefreq": "yearly"},

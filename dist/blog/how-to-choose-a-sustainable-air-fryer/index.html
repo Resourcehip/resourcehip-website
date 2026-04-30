@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Choose a Sustainable Air Fryer (UK Buyer's Guide) — Resourcehip</title>
+  <meta name="description" content="Air fryers cook efficiently but most are designed to be unrepairable and short-lived. The category baseline scores 2.9/10. The ceiling scores 7.1. Here is what closes that gap." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <!-- Self-hosted Montserrat — no Google Fonts CDN (GDPR: no IP sent to Google) -->
+  <!-- Run fonts/download_fonts.py once to fetch the .woff2 files -->
+  <link rel="stylesheet" href="/fonts/montserrat.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --forest-green:    #6B8E23;
+      --eco-teal:        #4FA9A5;
+      --atmosphere-blue: #A8DADC;
+      --soft-stone:      #F1F1F1;
+      --impact-grey:     #4A4A4A;
+      --page-bg:         #F7F8F6;
+      --card-bg:         #FFFFFF;
+      --border:          #E2E6E0;
+      /* HIP Mark tier colours */
+      --tier-emerald:    #3a9e62;
+      --tier-slate:      #7a9ab8;
+      --tier-amber:      #c8920a;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--page-bg);
+      color: var(--impact-grey);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Header ─────────────────────────────────────────────────────────── */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+    }
+
+    .site-header .logo-link img {
+      height: 48px;
+      width: auto;
+      display: block;
+    }
+
+    .site-nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .site-nav a {
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--impact-grey);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .site-nav a:hover,
+    .site-nav a.active { color: var(--forest-green); }
+
+    .site-nav a.nav-cta {
+      background: linear-gradient(135deg, var(--forest-green), var(--eco-teal));
+      color: #fff;
+      padding: 0.45rem 1.1rem;
+      border-radius: 6px;
+      letter-spacing: 0.06em;
+    }
+
+    .site-nav a.nav-cta:hover { opacity: 0.9; color: #fff; }
+
+    /* ── Main content area ──────────────────────────────────────────────── */
+    .site-main {
+      flex: 1;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    .site-main.wide {
+      max-width: 1100px;
+    }
+
+    /* ── Shared card ────────────────────────────────────────────────────── */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ── Shared typography ──────────────────────────────────────────────── */
+    h1 { font-size: 1.75rem; font-weight: 700; color: var(--forest-green); margin-bottom: 0.5rem; }
+    h2 { font-size: 1.2rem; font-weight: 700; color: var(--impact-grey); margin: 2rem 0 0.75rem; }
+    h3 { font-size: 1rem; font-weight: 600; margin: 1.5rem 0 0.5rem; }
+    p  { line-height: 1.75; margin-bottom: 1rem; }
+    a  { color: var(--forest-green); }
+    ul, ol { padding-left: 1.4rem; line-height: 1.8; }
+
+    hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+
+    /* ── Pill / badge ────────────────────────────────────────────────────── */
+    .pill {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.9rem;
+      border-radius: 20px;
+      background: var(--soft-stone);
+      color: var(--impact-grey);
+    }
+
+    /* ── Skip link (WCAG 2.4.1 Bypass Blocks) ─────────────────────────── */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      background: var(--forest-green);
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      z-index: 9999;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      border-radius: 0 0 6px 0;
+      transition: top 0.15s;
+    }
+    .skip-link:focus { top: 0; }
+
+    /* ── Focus styles (WCAG 2.4.7 Focus Visible) ────────────────────── */
+    *:focus-visible {
+      outline: 3px solid var(--forest-green);
+      outline-offset: 3px;
+      border-radius: 3px;
+    }
+
+    /* ── Footer ─────────────────────────────────────────────────────────── */
+    .site-footer {
+      background: var(--impact-grey);
+      color: rgba(255,255,255,0.65);
+      text-align: center;
+      padding: 1.5rem 2rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+    }
+
+    .site-footer a { color: var(--atmosphere-blue); text-decoration: none; }
+
+    /* ── Responsive ─────────────────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .site-header { padding: 0.75rem 1rem; }
+      .site-nav { gap: 1rem; }
+      .site-nav a.nav-cta { display: none; }
+      .site-main { padding: 1.5rem 1rem 3rem; }
+    }
+
+    
+.post-header { margin-bottom: 2rem; }
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+.post-meta .cat-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--forest-green);
+  background: #eef4e8;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  text-decoration: none;
+}
+.post-meta .cat-pill:hover { background: #deefd0; }
+.post-meta .post-date { font-size: 0.78rem; color: #888; }
+
+.post-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--forest-green);
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+.post-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.post-body { max-width: 680px; margin-top: 2rem; }
+.post-body h2 { font-size: 1.15rem; margin: 2rem 0 0.6rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+.post-body h3 { font-size: 1rem; margin: 1.5rem 0 0.4rem; }
+.post-body p  { line-height: 1.8; margin-bottom: 1rem; }
+.post-body ul, .post-body ol { padding-left: 1.4rem; margin-bottom: 1rem; line-height: 1.8; }
+.post-body blockquote { border-left: 3px solid var(--forest-green); padding: 0.5rem 1rem; background: #f4f7f0; border-radius: 0 6px 6px 0; margin: 1rem 0; color: #555; font-style: italic; }
+.post-body code { font-family: monospace; background: #eee; padding: 0.1em 0.4em; border-radius: 3px; font-size: 0.9em; }
+.post-body pre { background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; overflow-x: auto; margin: 1rem 0; }
+.post-body pre code { background: none; padding: 0; }
+
+/* rating_link() helper output */
+.post-body .rating-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: #eef4e8;
+  border: 1px solid #c0d8a8;
+  color: var(--forest-green);
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 6px;
+  text-decoration: none;
+  margin: 0.25rem 0;
+}
+.post-body .rating-link:hover { background: #deefd0; }
+
+.post-footer {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.82rem;
+  color: #888;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.post-footer a { color: var(--forest-green); }
+
+.post-hero-img {
+  width: 100%;
+  border-radius: 12px;
+  margin: 1.5rem 0 0;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+  </style>
+  
+<link rel="canonical" href="https://resourcehip.com/blog/how-to-choose-a-sustainable-air-fryer" />
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to Choose a Sustainable Air Fryer (UK Buyer's Guide) — Resourcehip" />
+<meta property="og:description" content="Air fryers cook efficiently but most are designed to be unrepairable and short-lived. The category baseline scores 2.9/10. The ceiling scores 7.1. Here is what closes that gap." />
+<meta property="og:url" content="https://resourcehip.com/blog/how-to-choose-a-sustainable-air-fryer" />
+<meta property="og:site_name" content="Resourcehip" />
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="How to Choose a Sustainable Air Fryer (UK Buyer's Guide) — Resourcehip" />
+<meta name="twitter:description" content="Air fryers cook efficiently but most are designed to be unrepairable and short-lived. The category baseline scores 2.9/10. The ceiling scores 7.1. Here is what closes that gap." />
+<!-- Schema.org Article JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Choose a Sustainable Air Fryer (UK Buyer\u0027s Guide)",
+  "description": "Air fryers cook efficiently but most are designed to be unrepairable and short-lived. The category baseline scores 2.9/10. The ceiling scores 7.1. Here is what closes that gap.",
+  "url": "https://resourcehip.com/blog/how-to-choose-a-sustainable-air-fryer",
+  "dateModified": "2026-04-28",
+  "author": {
+    "@type": "Organization",
+    "name": "Resourcehip",
+    "url": "https://resourcehip.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Resourcehip",
+    "url": "https://resourcehip.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://resourcehip.com/logo.png"
+    }
+  }
+}
+</script>
+
+</head>
+<body>
+
+  <!-- Skip to main content (WCAG 2.4.1) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <a class="logo-link" href="/">
+      <img src="/logo.png" alt="Resourcehip home" />
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/" >Home</a>
+      <a href="/ratings/" >Ratings</a>
+      <a href="/blog/" class="active" aria-current="page">Blog</a>
+      <a href="/methodology" >Methodology</a>
+      <a href="/about" >About</a>
+      <a href="/verified-ratings" >Verified Ratings</a>
+      <a href="/submit" class="nav-cta">Submit a Product</a>
+    </nav>
+  </header>
+
+  <main id="main-content" class="site-main ">
+    
+<article>
+  <header class="post-header">
+    <div class="post-meta">
+      
+      <a class="cat-pill" href="/blog/category/air-fryers/">Air Fryers</a>
+      
+      <span class="post-date">2026-04-28</span>
+    </div>
+    <h1 class="post-title">How to Choose a Sustainable Air Fryer (UK Buyer's Guide)</h1>
+    
+    <p class="post-description">Air fryers cook efficiently but most are designed to be unrepairable and short-lived. The category baseline scores 2.9/10. The ceiling scores 7.1. Here is what closes that gap.</p>
+    
+    
+  </header>
+
+  <div class="post-body">
+    <h2>The Trade-Off Nobody Talks About</h2>
+<p>The marketing case for air fryers is energy-in-use: less electricity than a fan oven, faster cooking, no preheat. That part is real. The part that is less discussed is the <strong>embodied</strong> cost of the appliance itself — the materials, the design lifespan, and what happens at end of life.</p>
+<p>The Resourcehip Human Impact Profile measures that embodied cost, not the energy a device uses while it cooks. By that measure, the typical mass-market air fryer scores <strong>2.9 out of 10</strong>. The full breakdown, including all seven HIP dimensions, is on the <a href="/ratings/air-fryers">air fryers rating page</a>.</p>
+<p>The energy you save in the oven gets quietly handed back when the air fryer is in landfill four years later.</p>
+<h2>What HIP Measures for an Air Fryer</h2>
+<p>Three HIP dimensions dominate the air-fryer category:</p>
+<ul>
+<li><strong>Repairability (R).</strong> A typical air fryer scores <strong>2/10</strong> — glued construction, no spare parts, no public service manual. The verified ceiling demonstrates 9/10: screw-fastened, multi-year spare-parts commitment, accessible service documentation.</li>
+<li><strong>Material Scarcity (MSI).</strong> PTFE coatings and nichrome heating elements appear on critical-materials watchlists. The baseline scores 3.5/10. The ceiling reaches 8.5/10 by switching to recycled stainless steel and aluminium with diversified sourcing.</li>
+<li><strong>Recyclability and Circularity (RC).</strong> Glued joints and mixed-material baskets keep the baseline at 3.0/10 — barely 20% of the device enters practical recycling. The ceiling moves to 7.5/10 with a take-back scheme and design-for-disassembly.</li>
+</ul>
+<p>Energy in use does not appear directly in the HIP score. We score how the product is built, sourced, and recovered — because that is where the long-tail environmental cost sits, and where consumers have least visibility.</p>
+<h2>The Gap Between Baseline and Ceiling</h2>
+<p>The air-fryer category ceiling — what a verified, fully evidenced submission can currently achieve — is <strong>HIP 7.1 / RI -2.0 (Extractive)</strong>, earning the <strong>Standard</strong> HIP Mark.</p>
+<p>That is a <strong>4.2-point HIP gap and a five-band RI shift</strong> between the typical mass-market device and what is technically demonstrable today. Closing it requires:</p>
+<ul>
+<li>Recycled content moving from 0% (assumed) to 78%</li>
+<li>PTFE and nichrome substitution where possible; full disclosure where not</li>
+<li>Disassembly moving from glued to screw-fastened</li>
+<li>Spare parts shifting from "none" to a stocked multi-year commitment</li>
+<li>Take-back moving from absent to verified</li>
+<li>Design life moving from 4 years to 7+</li>
+</ul>
+<p>A category ceiling at HIP 7.1 sits in the <strong>Standard</strong> band today. <strong>Silver</strong> (7.5) is within reach for a manufacturer prepared to push two of those levers further. <strong>Gold</strong> (9.0 with RI ≥ +6) requires the regenerative tier — closed-loop material recovery and certified ecosystem restoration — which no air-fryer manufacturer has demonstrated yet.</p>
+<h2>What to Check Before You Buy</h2>
+<ol>
+<li><strong>Look for screw-fastened construction.</strong> If the spec sheet does not say "user-serviceable" or the manufacturer does not publish a teardown, assume glue. Glued air fryers cannot be repaired by anyone outside the factory.</li>
+<li><strong>Confirm the warranty length.</strong> Two years is the EU floor and the category norm. A four- or five-year warranty signals the manufacturer expects the unit to last beyond the typical replacement cycle.</li>
+<li><strong>Check the basket coating disclosure.</strong> PTFE works, but cheap PTFE flakes within 18 months and goes straight to landfill. Stainless-steel or ceramic-coated baskets last longer and are easier to recycle.</li>
+<li><strong>Ask about take-back.</strong> A category ceiling-grade air fryer has a documented end-of-life return path. Generic mass-market models do not.</li>
+</ol>
+<p>We do not name brands. The four checks above are visible on any manufacturer's published product page, and they map directly onto the HIP dimensions where the category most underperforms.</p>
+<h2>How to Read a Resourcehip Air-Fryer Rating</h2>
+<p>Every air-fryer listing carries:</p>
+<ul>
+<li>A HIP score from 0 to 10, calculated against the air-fryer category baseline.</li>
+<li>A Regenerative Index from -10 to +10, with a tier name (Depleting, Extractive, Renewable, Restorative, Regenerative).</li>
+<li>A HIP Mark on verified ratings only: <strong>Standard</strong> at 6.0, <strong>Silver</strong> at 7.5, <strong>Gold</strong> at 9.0 with RI ≥ +6.</li>
+</ul>
+<p>Generic ratings — assigned to any product in scope where no manufacturer evidence has been submitted — sit conservatively at the category baseline. Verified ratings, where the manufacturer can show the receipts, can climb up to the ceiling.</p>
+<p>For the methodology, see <a href="/methodology">How HIP scoring works</a>. For every air fryer we have rated:</p>
+<p><a href="/ratings/air-fryers" class="rating-link">Air Fryers HIP Rating →</a></p>
+<h2>The Bigger Picture</h2>
+<p>Air fryers are a useful test case because they are sold on a real environmental virtue (lower in-use energy) while sitting on top of an unaddressed liability (short, unrepairable, hard-to-recycle hardware). The HIP score makes that second half of the equation visible. A category that today caps out at HIP 7.1 has obvious room to move — none of the levers are exotic, and most have been demonstrated in adjacent appliance categories. The first manufacturer to ship a Silver-grade air fryer in the UK will own the conversation.</p>
+<hr />
+<p><em>Methodology and edits by Chris Bowness; assistive AI used for drafting.</em></p>
+  </div>
+
+  <footer class="post-footer">
+    <span>Last updated: 2026-04-28</span>
+    
+    <a href="/blog/category/air-fryers/">More Air Fryers articles →</a>
+    
+    <a href="/blog/">← All posts</a>
+  </footer>
+</article>
+
+  </main>
+
+  <footer class="site-footer">
+    <div>&copy; 2026 Resourcehip Ltd &nbsp;&middot;&nbsp; Reg. SC873386 &nbsp;&middot;&nbsp; Office 90, Alloa Business Centre, Whins Road, Alloa, Clackmannanshire, FK10&nbsp;3SA, Scotland</div>
+    <!-- TODO: add VAT no. once registered (only required if VAT-registered) -->
+    <div style="margin-top:0.4rem;">
+      <span id="rh-email"></span> &nbsp;|&nbsp;
+      <a href="/methodology">Methodology v1.3</a> &nbsp;|&nbsp;
+      <a href="/privacy">Privacy</a> &nbsp;|&nbsp;
+      <a href="/terms">Terms</a> &nbsp;|&nbsp;
+      <a href="/cookies">Cookies &amp; AI</a>
+    </div>
+  </footer>
+  <script>
+    /* Email obfuscation — assembled at runtime to deter address harvesting bots */
+    (function() {
+      var u = 'hello', d = ['resourcehip', 'com'].join('.');
+      var addr = u + '\u0040' + d;
+      var el = document.getElementById('rh-email');
+      if (el) el.innerHTML = '<a href="mailto:' + addr + '">' + addr + '</a>';
+    })();
+  </script>
+
+</body>
+</html>

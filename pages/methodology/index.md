@@ -68,6 +68,8 @@ The HIP Mark is awarded when the HIP Score meets a minimum threshold:
 
 Products scoring below 6.0 receive a HIP Score on the rating page but do not carry the HIP Mark.
 
+Manufacturers holding a current verified rating and signed licence may display the HIP Mark. See the [Brand Guidelines](/methodology/hip-mark-brand-guidelines) for visual standards, permitted usage, and licensing requirements.
+
 ---
 
 ## Generic vs verified ratings

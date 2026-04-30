@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  HIP Mark — Template tier  |  template / sample (score field blank)
+  Issued by Resourcehip Ltd (SC873386) · resourcehip.com
+  Brand guidelines: RES-84 · Licence required to display.
+  Montserrat font (Google Fonts) must be loaded for exact brand rendering.
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 200 236" width="200" height="236"
+     role="img" aria-label="HIP Mark Template">
+  <title>HIP Mark Template</title>
+  <desc>Resourcehip HIP Mark, Template tier, template / sample (score field blank). resourcehip.com</desc>
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&amp;display=swap');</style>
+  </defs>
+
+  <!-- Backing disc -->
+  <circle cx="100.0" cy="100.0" r="89.0" fill="white"/>
+
+  <!-- Track ring (full circle) -->
+  <circle cx="100.0" cy="100.0" r="68.64"
+          fill="none" stroke="#e5e5e5" stroke-width="38.72"/>
+
+  <!-- Template: no arc — score field blank -->
+
+  <!-- Score number -->
+  <text x="100.0" y="84.8"
+        text-anchor="middle" dominant-baseline="central"
+        font-family="Montserrat, 'Ubuntu Sans', sans-serif" font-weight="800" font-size="40.0"
+        fill="#888888">&#x2014;</text>
+
+
+
+
+  <!-- Authority line -->
+  <text x="100.0" y="219.8"
+        text-anchor="middle" dominant-baseline="central"
+        font-family="Montserrat, 'Ubuntu Sans', sans-serif" font-weight="600" font-size="16.400000000000002"
+        fill="#888888" opacity="0.55">resourcehip.com</text>
+</svg>
