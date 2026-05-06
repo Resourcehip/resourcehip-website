@@ -33,6 +33,10 @@
       --tier-emerald:    #3a9e62;
       --tier-slate:      #7a9ab8;
       --tier-amber:      #c8920a;
+      /* ── Tier text-safe variants (WCAG AA body text on --page-bg — §3.4 colour spec v1.1) ── */
+      --tier-emerald-text: #2a6e44;
+      --tier-slate-text:   #4a6a88;
+      --tier-amber-text:   #8a5a00;
       /* ── Regenerative Index ramp (methodology data viz — §3.5 colour spec) ── */
       --ri-depleting:    #c04040;
       --ri-extractive:   #c8920a;
@@ -251,17 +255,17 @@
 <div style="display:flex; gap:2rem; align-items:flex-start; flex-wrap:wrap; margin:1.5rem 0;">
   <div style="text-align:center; width:110px;">
     <img src="/assets/marks/hip-mark-standard.svg" alt="HIP Mark Standard" width="88" height="104" style="display:block; margin:0 auto 0.5rem;">
-    <strong style="font-size:0.82rem; color:var(--tier-emerald);">Standard</strong><br>
+    <strong style="font-size:0.82rem; color:var(--tier-emerald-text);">Standard</strong><br>
     <span style="font-size:0.75rem; color:#555;">HIP ≥ 6.0</span>
   </div>
   <div style="text-align:center; width:110px;">
     <img src="/assets/marks/hip-mark-silver.svg" alt="HIP Mark Silver" width="88" height="104" style="display:block; margin:0 auto 0.5rem;">
-    <strong style="font-size:0.82rem; color:var(--tier-slate);">Silver</strong><br>
+    <strong style="font-size:0.82rem; color:var(--tier-slate-text);">Silver</strong><br>
     <span style="font-size:0.75rem; color:#555;">HIP ≥ 7.5</span>
   </div>
   <div style="text-align:center; width:110px;">
     <img src="/assets/marks/hip-mark-gold.svg" alt="HIP Mark Gold" width="88" height="104" style="display:block; margin:0 auto 0.5rem;">
-    <strong style="font-size:0.82rem; color:var(--tier-amber);">Gold</strong><br>
+    <strong style="font-size:0.82rem; color:var(--tier-amber-text);">Gold</strong><br>
     <span style="font-size:0.75rem; color:#555;">HIP ≥ 9.0 + RI ≥ +6</span>
   </div>
 </div>
