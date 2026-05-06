@@ -13,25 +13,38 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --forest-green:    #6B8E23;
-      --eco-teal:        #4FA9A5;
-      --atmosphere-blue: #A8DADC;
-      --soft-stone:      #F1F1F1;
-      --impact-grey:     #4A4A4A;
-      --page-bg:         #F7F8F6;
+      /* ── Brand ── */
+      --hip-blue:        #0E4C8F;
+      --hip-blue-deep:   #0A3A6E;
+      --hip-blue-tint:   #E6EEF7;
+      /* ── Neutrals (warm) ── */
+      --mark-black:      #1A1A1A;
+      --ink:             #2E3742;
+      --muted:           #5C6773;
+      --rule:            #DDD9CD;
+      --surface:         #F6F4EE;
+      --page-bg:         #FBFAF6;
       --card-bg:         #FFFFFF;
-      --border:          #E2E6E0;
-      /* HIP Mark tier colours */
+      /* ── Footer / inverse ── */
+      --footer-bg:       #0A2440;
+      --footer-fg:       #F6F4EE;
+      --footer-link:     #A8C4E6;
+      /* ── HIP Mark tier colours (brand-locked — do not adjust) ── */
       --tier-emerald:    #3a9e62;
       --tier-slate:      #7a9ab8;
       --tier-amber:      #c8920a;
+      /* ── Functional ── */
+      --positive:        #3a9e62;
+      --negative:        #B5482E;
+      --warning-bg:      #FFF8E6;
+      --warning-fg:      #6B5400;
     }
 
     html { scroll-behavior: smooth; }
     body {
       font-family: 'Montserrat', sans-serif;
       background: var(--page-bg);
-      color: var(--impact-grey);
+      color: var(--ink);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -40,7 +53,7 @@
     /* ── Header ─────────────────────────────────────────────────────────── */
     .site-header {
       background: #fff;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid var(--rule);
       padding: 0.75rem 2rem;
       display: flex;
       align-items: center;
@@ -68,16 +81,16 @@
       font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--impact-grey);
+      color: var(--ink);
       text-decoration: none;
       transition: color 0.2s;
     }
 
     .site-nav a:hover,
-    .site-nav a.active { color: var(--forest-green); }
+    .site-nav a.active { color: var(--hip-blue); }
 
     .site-nav a.nav-cta {
-      background: linear-gradient(135deg, var(--forest-green), var(--eco-teal));
+      background: linear-gradient(135deg, var(--hip-blue), var(--hip-blue-deep));
       color: #fff;
       padding: 0.45rem 1.1rem;
       border-radius: 6px;
@@ -102,21 +115,21 @@
     /* ── Shared card ────────────────────────────────────────────────────── */
     .card {
       background: var(--card-bg);
-      border: 1px solid var(--border);
+      border: 1px solid var(--rule);
       border-radius: 12px;
       padding: 2rem;
       margin-bottom: 1.5rem;
     }
 
     /* ── Shared typography ──────────────────────────────────────────────── */
-    h1 { font-size: 1.75rem; font-weight: 700; color: var(--forest-green); margin-bottom: 0.5rem; }
-    h2 { font-size: 1.2rem; font-weight: 700; color: var(--impact-grey); margin: 2rem 0 0.75rem; }
+    h1 { font-size: 1.75rem; font-weight: 700; color: var(--mark-black); margin-bottom: 0.5rem; }
+    h2 { font-size: 1.2rem; font-weight: 700; color: var(--ink); margin: 2rem 0 0.75rem; }
     h3 { font-size: 1rem; font-weight: 600; margin: 1.5rem 0 0.5rem; }
     p  { line-height: 1.75; margin-bottom: 1rem; }
-    a  { color: var(--forest-green); }
+    a  { color: var(--hip-blue); }
     ul, ol { padding-left: 1.4rem; line-height: 1.8; }
 
-    hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+    hr { border: none; border-top: 1px solid var(--rule); margin: 2rem 0; }
 
     /* ── Pill / badge ────────────────────────────────────────────────────── */
     .pill {
@@ -127,8 +140,8 @@
       text-transform: uppercase;
       padding: 0.3rem 0.9rem;
       border-radius: 20px;
-      background: var(--soft-stone);
-      color: var(--impact-grey);
+      background: var(--surface);
+      color: var(--ink);
     }
 
     /* ── Skip link (WCAG 2.4.1 Bypass Blocks) ─────────────────────────── */
@@ -136,7 +149,7 @@
       position: absolute;
       top: -100%;
       left: 0;
-      background: var(--forest-green);
+      background: var(--hip-blue);
       color: #fff;
       padding: 0.6rem 1.2rem;
       z-index: 9999;
@@ -150,22 +163,22 @@
 
     /* ── Focus styles (WCAG 2.4.7 Focus Visible) ────────────────────── */
     *:focus-visible {
-      outline: 3px solid var(--forest-green);
+      outline: 3px solid var(--hip-blue);
       outline-offset: 3px;
       border-radius: 3px;
     }
 
     /* ── Footer ─────────────────────────────────────────────────────────── */
     .site-footer {
-      background: var(--impact-grey);
-      color: rgba(255,255,255,0.65);
+      background: var(--footer-bg);
+      color: var(--footer-fg);
       text-align: center;
       padding: 1.5rem 2rem;
       font-size: 0.72rem;
       letter-spacing: 0.05em;
     }
 
-    .site-footer a { color: var(--atmosphere-blue); text-decoration: none; }
+    .site-footer a { color: var(--footer-link); text-decoration: none; }
 
     /* ── Responsive ─────────────────────────────────────────────────────── */
     @media (max-width: 640px) {

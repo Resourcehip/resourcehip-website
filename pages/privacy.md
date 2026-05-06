@@ -8,9 +8,9 @@ active_page: ""
 
 **Resourcehip Ltd · Version 1.0 · April 2026**
 
-Resourcehip Ltd ("Resourcehip", "we", "us") is registered in Scotland, United Kingdom (Company No. [to be added]). We publish independent material resilience ratings for consumer product categories and licence the HIP Mark trust mark.
+Resourcehip Ltd ("Resourcehip", "we", "us") is registered in Scotland, United Kingdom (Company No. SC873386). We publish independent material resilience ratings for consumer product categories and licence the HIP Mark trust mark.
 
-**Data controller:** Resourcehip Ltd · **ICO Registration No.:** [to be added] · **Contact:** [email to be added]
+**Data controller:** Resourcehip Ltd · **ICO Registration No.:** [to be added — ICO registration pending; do not publish until complete] · **Contact:** hello@resourcehip.com
 
 ---
 
@@ -57,7 +57,7 @@ No other third parties receive your personal data. The UK–EU adequacy decision
 
 You have the right to: **access** the data we hold · **correct** inaccurate data · **request deletion** · **object** to processing · **data portability** · **lodge a complaint** with the ICO ([ico.org.uk](https://ico.org.uk)).
 
-To exercise any right, email [email to be added]. We will respond within one month.
+To exercise any right, email [hello@resourcehip.com](mailto:hello@resourcehip.com). We will respond within one month.
 
 ---
 
@@ -81,4 +81,4 @@ This policy is governed by Scots law. Disputes are subject to the exclusive juri
 
 ## 8. Contact
 
-Resourcehip Ltd · [address to be added] · [email to be added]
+Resourcehip Ltd · Office 90, Alloa Business Centre, Whins Road, Alloa, Clackmannanshire, FK10 3SA · [hello@resourcehip.com](mailto:hello@resourcehip.com)

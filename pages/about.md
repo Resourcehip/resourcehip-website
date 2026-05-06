@@ -40,7 +40,7 @@ The Regenerative Index (RI) is unique to Resourcehip. It runs from −10 to +10.
 
 ## How ratings are produced
 
-Ratings are produced using a local AI scoring pipeline running on Resourcehip's own hardware. No product data is sent to external cloud services. Two AI models are used: one for structured scoring, one for writing the human-readable sections. Every rating is reviewed and approved by a human assessor before publication. No rating is ever published automatically.
+Ratings are produced using a local AI scoring pipeline running on Resourcehip's own hardware. No product data is sent to external cloud services. A single AI model (`qwen3.5:35b`) handles both structured scoring and writing the human-readable sections. Every rating is reviewed and approved by a human assessor before publication. No rating is ever published automatically.
 
 The full methodology — including the scoring rubric for each dimension — is available on the [Methodology](/methodology) page.
 
@@ -60,4 +60,4 @@ For HIP Mark licensing enquiries: [licensing@resourcehip.com](mailto:licensing@r
 
 ---
 
-*Resourcehip Ltd · Registered in Scotland · Company No. [to be added] · [Privacy Policy](/privacy) · [Terms](/terms)*
+*Resourcehip Ltd · Registered in Scotland · Company No. SC873386 · [Privacy Policy](/privacy) · [Terms](/terms)*
