@@ -392,6 +392,67 @@
     @media (max-width: 380px) {
       .ratings-grid { grid-template-columns: 1fr; }
     }
+
+    /* ── HiP Mark tier showcase ── */
+    .marks-section {
+      background: var(--soft-stone);
+      padding: 4rem 2rem;
+    }
+
+    .marks-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .marks-section .section-header {
+      margin-bottom: 2.5rem;
+    }
+
+    .marks-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .mark-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2rem 1.5rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+
+    .mark-card img {
+      width: clamp(80px, 20vw, 120px);
+      height: auto;
+    }
+
+    .mark-card-name {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .mark-card-name.emerald { color: var(--tier-emerald); }
+    .mark-card-name.slate   { color: var(--tier-slate); }
+    .mark-card-name.amber   { color: var(--tier-amber); }
+
+    .mark-card-range {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #888;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 640px) {
+      .marks-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -400,7 +461,7 @@
 
   <header class="site-header">
     <a class="logo-link" href="/">
-      <img src="/logo.png" alt="Resourcehip home" />
+      <img src="/assets/hip-lockup-master.svg" alt="Resourcehip — HiP Certified" />
     </a>
     <nav class="site-nav" aria-label="Main navigation">
       <a href="/" class="active" aria-current="page">Home</a>
@@ -424,7 +485,7 @@
         <div class="fog-layer"></div>
       </div>
       <div class="hero-content">
-        <img class="hero-logo" src="logo.png" alt="Resourcehip — Human Impact Profile" />
+        <img class="hero-logo" src="/assets/hip-lockup-master.svg" alt="Resourcehip — HiP Certified" />
         <div class="hero-divider" aria-hidden="true"></div>
         <p class="hero-tagline">
           Making the long-term material future of everyday products visible —
@@ -440,6 +501,33 @@
         <h2>What is the HIP Score?</h2>
         <p>The HIP Score (Human Impact Profile Score) is a number from 0 to 10 that summarises how resilient, responsibly sourced, and long-lived a product is from a materials and supply chain perspective. It is not a carbon footprint — it focuses on whether the materials a product depends on are abundant or at risk, whether they are sourced responsibly, and whether the product can be repaired and recovered at end of life.</p>
         <p>Ratings are produced using a local AI scoring pipeline and reviewed by a human assessor before publication. No product data is sent to external cloud services.</p>
+      </div>
+    </section>
+
+    <!-- HiP Mark tiers -->
+    <section class="marks-section" aria-label="HiP Mark certification tiers">
+      <div class="marks-inner">
+        <div class="section-header">
+          <h2>The HiP Mark</h2>
+          <p>Products that earn a verified HiP Score carry a tier mark indicating their level of material resilience.</p>
+        </div>
+        <div class="marks-grid">
+          <div class="mark-card">
+            <img src="/assets/marks/hip-mark-standard.svg" alt="HiP Mark Standard" />
+            <span class="mark-card-name amber">Standard</span>
+            <span class="mark-card-range">HIP Score 7–8</span>
+          </div>
+          <div class="mark-card">
+            <img src="/assets/marks/hip-mark-silver.svg" alt="HiP Mark Silver" />
+            <span class="mark-card-name slate">Silver</span>
+            <span class="mark-card-range">HIP Score 8–9</span>
+          </div>
+          <div class="mark-card">
+            <img src="/assets/marks/hip-mark-gold.svg" alt="HiP Mark Gold" />
+            <span class="mark-card-name emerald">Gold</span>
+            <span class="mark-card-range">HIP Score 9+</span>
+          </div>
+        </div>
       </div>
     </section>
 
