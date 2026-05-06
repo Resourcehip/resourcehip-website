@@ -33,6 +33,12 @@
       --tier-emerald:    #3a9e62;
       --tier-slate:      #7a9ab8;
       --tier-amber:      #c8920a;
+      /* ── Regenerative Index ramp (methodology data viz — §3.5 colour spec) ── */
+      --ri-depleting:    #c04040;
+      --ri-extractive:   #c8920a;
+      --ri-renewable:    #4FA9A5;
+      --ri-restorative:  #7ab85a;
+      --ri-regenerative: #3a9e62;
       /* ── Functional ── */
       --positive:        #3a9e62;
       --negative:        #B5482E;
@@ -297,7 +303,7 @@
 
   <div class="ratings-grid">
     <a class="rating-card" href="/ratings/bamboo-kitchenware"
-         style="--card-tier-colour:#7a9ab8; --card-ri-colour:#4FA9A5;">
+         style="--card-tier-colour:var(--tier-slate); --card-ri-colour:var(--ri-renewable);">
         <div class="rating-card-category">kitchen equipment</div>
         <div class="rating-card-title">Bamboo Kitchenware</div>
         
@@ -315,7 +321,7 @@
         <div class="rating-card-date">Assessed 2026-04-29</div>
       </a>
     <a class="rating-card" href="/ratings/cast-iron-cookware"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">kitchen equipment</div>
         <div class="rating-card-title">Cast Iron Cookware</div>
         
@@ -333,7 +339,7 @@
         <div class="rating-card-date">Assessed 2026-04-29</div>
       </a>
     <a class="rating-card" href="/ratings/cork-products"
-         style="--card-tier-colour:#7a9ab8; --card-ri-colour:#4FA9A5;">
+         style="--card-tier-colour:var(--tier-slate); --card-ri-colour:var(--ri-renewable);">
         <div class="rating-card-category">home & garden</div>
         <div class="rating-card-title">Cork Products</div>
         
@@ -351,7 +357,7 @@
         <div class="rating-card-date">Assessed 2026-04-29</div>
       </a>
     <a class="rating-card" href="/ratings/glass-food-storage"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">kitchen equipment</div>
         <div class="rating-card-title">Glass Food Storage</div>
         
@@ -369,7 +375,7 @@
         <div class="rating-card-date">Assessed 2026-04-29</div>
       </a>
     <a class="rating-card" href="/ratings/linen-hemp-accessories"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">home lifestyle</div>
         <div class="rating-card-title">Linen and Hemp Accessories</div>
         
@@ -387,7 +393,7 @@
         <div class="rating-card-date">Assessed 2026-04-29</div>
       </a>
     <a class="rating-card" href="/ratings/natural-latex-sleep"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#4FA9A5;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-renewable);">
         <div class="rating-card-category">home lifestyle</div>
         <div class="rating-card-title">Natural Latex Sleep Products</div>
         
@@ -405,7 +411,7 @@
         <div class="rating-card-date">Assessed 2026-04-29</div>
       </a>
     <a class="rating-card" href="/ratings/recycled-hdpe-furniture"
-         style="--card-tier-colour:#7a9ab8; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-slate); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">outdoor furniture</div>
         <div class="rating-card-title">Recycled HDPE Outdoor Furniture</div>
         
@@ -423,7 +429,7 @@
         <div class="rating-card-date">Assessed 2026-04-29</div>
       </a>
     <a class="rating-card" href="/ratings/stainless-steel-water-bottles"
-         style="--card-tier-colour:#7a9ab8; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-slate); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">home lifestyle</div>
         <div class="rating-card-title">Stainless Steel Water Bottles</div>
         
@@ -441,7 +447,7 @@
         <div class="rating-card-date">Assessed 2026-04-29</div>
       </a>
     <a class="rating-card" href="/ratings/wooden-toys-games"
-         style="--card-tier-colour:#7a9ab8; --card-ri-colour:#4FA9A5;">
+         style="--card-tier-colour:var(--tier-slate); --card-ri-colour:var(--ri-renewable);">
         <div class="rating-card-category">children's products</div>
         <div class="rating-card-title">Wooden Toys and Games</div>
         
@@ -459,7 +465,7 @@
         <div class="rating-card-date">Assessed 2026-04-29</div>
       </a>
     <a class="rating-card" href="/ratings/basic-fitness-trackers"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">sports and fitness</div>
         <div class="rating-card-title">Basic Fitness Trackers</div>
         
@@ -477,7 +483,7 @@
         <div class="rating-card-date">Assessed 2026-04-28</div>
       </a>
     <a class="rating-card" href="/ratings/carbon-fibre-bicycles"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">sports and leisure</div>
         <div class="rating-card-title">Carbon Fibre Bicycles</div>
         
@@ -495,7 +501,7 @@
         <div class="rating-card-date">Assessed 2026-04-28</div>
       </a>
     <a class="rating-card" href="/ratings/electronic-learning-toys"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">toys and children's</div>
         <div class="rating-card-title">Electronic Learning Toys</div>
         
@@ -513,7 +519,7 @@
         <div class="rating-card-date">Assessed 2026-04-28</div>
       </a>
     <a class="rating-card" href="/ratings/fridge-freezers"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">larger appliances</div>
         <div class="rating-card-title">Fridge-Freezers</div>
         
@@ -531,7 +537,7 @@
         <div class="rating-card-date">Assessed 2026-04-28</div>
       </a>
     <a class="rating-card" href="/ratings/smartphones"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">consumer electronics</div>
         <div class="rating-card-title">Smartphones</div>
         
@@ -549,7 +555,7 @@
         <div class="rating-card-date">Assessed 2026-04-28</div>
       </a>
     <a class="rating-card" href="/ratings/air-purifiers"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">home lifestyle</div>
         <div class="rating-card-title">Air Purifiers</div>
         
@@ -567,7 +573,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/aluminium-bicycles"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">sports and leisure</div>
         <div class="rating-card-title">Aluminium Bicycles</div>
         
@@ -585,7 +591,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/angle-grinders"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">power tools</div>
         <div class="rating-card-title">Angle Grinders</div>
         
@@ -603,7 +609,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/camping-tents"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">outdoor equipment</div>
         <div class="rating-card-title">Camping Tents</div>
         
@@ -621,7 +627,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/carpets"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">floor coverings</div>
         <div class="rating-card-title">Carpets</div>
         
@@ -639,7 +645,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/circular-saws"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">power tools</div>
         <div class="rating-card-title">Circular Saws</div>
         
@@ -657,7 +663,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/cookware"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">kitchen equipment</div>
         <div class="rating-card-title">Cookware</div>
         
@@ -675,7 +681,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/cordless-lawnmowers"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">garden and outdoor</div>
         <div class="rating-card-title">Cordless Lawnmowers</div>
         
@@ -693,7 +699,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/dishwashers"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">larger appliances</div>
         <div class="rating-card-title">Dishwashers</div>
         
@@ -711,7 +717,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/e-bikes"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">sports and leisure</div>
         <div class="rating-card-title">E-Bikes</div>
         
@@ -729,7 +735,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/electric-ride-on-toys"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">toys and children's</div>
         <div class="rating-card-title">Electric Ride-On Toys</div>
         
@@ -747,7 +753,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/electric-scooters"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">sports and fitness</div>
         <div class="rating-card-title">Electric Scooters</div>
         
@@ -765,7 +771,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/garden-furniture"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">outdoor furniture</div>
         <div class="rating-card-title">Garden Furniture</div>
         
@@ -783,7 +789,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/gym-equipment"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">sports and fitness</div>
         <div class="rating-card-title">Gym Equipment</div>
         
@@ -801,7 +807,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/hedge-trimmers"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">garden and outdoor</div>
         <div class="rating-card-title">Hedge Trimmers</div>
         
@@ -819,7 +825,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/leaf-blowers"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">garden and outdoor</div>
         <div class="rating-card-title">Leaf Blowers</div>
         
@@ -837,7 +843,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/air-purifier-ceiling"
-         style="--card-tier-colour:#3a9e62; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-emerald); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">home lifestyle</div>
         <div class="rating-card-title">Air Purifier — Category Ceiling</div>
         
@@ -859,7 +865,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/aluminium-bicycle-ceiling"
-         style="--card-tier-colour:#3a9e62; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-emerald); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">sports and leisure</div>
         <div class="rating-card-title">Aluminium Bicycle — Category Ceiling</div>
         
@@ -881,7 +887,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/angle-grinder-ceiling"
-         style="--card-tier-colour:#3a9e62; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-emerald); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">power tools</div>
         <div class="rating-card-title">Angle Grinder — Category Ceiling</div>
         
@@ -903,7 +909,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/basic-fitness-tracker-ceiling"
-         style="--card-tier-colour:#7a9ab8; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-slate); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">sports and fitness</div>
         <div class="rating-card-title">Basic Fitness Tracker — Category Ceiling</div>
         
@@ -925,7 +931,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/camping-tent-ceiling"
-         style="--card-tier-colour:#3a9e62; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-emerald); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">outdoor equipment</div>
         <div class="rating-card-title">Camping Tent — Category Ceiling</div>
         
@@ -947,7 +953,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/carbon-fibre-bicycle-ceiling"
-         style="--card-tier-colour:#7a9ab8; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-slate); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">sports and leisure</div>
         <div class="rating-card-title">Carbon Fibre Bicycle — Category Ceiling</div>
         
@@ -969,7 +975,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/carpet-ceiling"
-         style="--card-tier-colour:#7a9ab8; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-slate); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">floor coverings</div>
         <div class="rating-card-title">Carpet — Category Ceiling</div>
         
@@ -991,7 +997,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/circular-saw-ceiling"
-         style="--card-tier-colour:#7a9ab8; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-slate); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">power tools</div>
         <div class="rating-card-title">Circular Saw — Category Ceiling</div>
         
@@ -1013,7 +1019,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/cookware-ceiling"
-         style="--card-tier-colour:#3a9e62; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-emerald); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">kitchen equipment</div>
         <div class="rating-card-title">Cookware — Category Ceiling</div>
         
@@ -1035,7 +1041,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/cordless-lawnmower-ceiling"
-         style="--card-tier-colour:#7a9ab8; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-slate); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">garden and outdoor</div>
         <div class="rating-card-title">Cordless Lawnmower — Category Ceiling</div>
         
@@ -1057,7 +1063,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/dishwasher-ceiling"
-         style="--card-tier-colour:#3a9e62; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-emerald); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">larger appliances</div>
         <div class="rating-card-title">Dishwasher — Category Ceiling</div>
         
@@ -1079,7 +1085,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/e-bike-ceiling"
-         style="--card-tier-colour:#7a9ab8; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-slate); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">sports and leisure</div>
         <div class="rating-card-title">E-Bike — Category Ceiling</div>
         
@@ -1101,7 +1107,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/electric-ride-on-toy-ceiling"
-         style="--card-tier-colour:#7a9ab8; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-slate); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">toys and children's</div>
         <div class="rating-card-title">Electric Ride-On Toy — Category Ceiling</div>
         
@@ -1123,7 +1129,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/electric-scooter-ceiling"
-         style="--card-tier-colour:#3a9e62; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-emerald); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">sports and fitness</div>
         <div class="rating-card-title">Electric Scooter — Category Ceiling</div>
         
@@ -1145,7 +1151,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/electronic-learning-toy-ceiling"
-         style="--card-tier-colour:#7a9ab8; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-slate); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">toys and children's</div>
         <div class="rating-card-title">Electronic Learning Toy — Category Ceiling</div>
         
@@ -1167,7 +1173,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/fridge-freezer-ceiling"
-         style="--card-tier-colour:#3a9e62; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-emerald); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">larger appliances</div>
         <div class="rating-card-title">Fridge-Freezer — Category Ceiling</div>
         
@@ -1189,7 +1195,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/garden-furniture-ceiling"
-         style="--card-tier-colour:#3a9e62; --card-ri-colour:#7ab85a;">
+         style="--card-tier-colour:var(--tier-emerald); --card-ri-colour:var(--ri-restorative);">
         <div class="rating-card-category">outdoor furniture</div>
         <div class="rating-card-title">Garden Furniture — Category Ceiling</div>
         
@@ -1211,7 +1217,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/gym-equipment-ceiling"
-         style="--card-tier-colour:#3a9e62; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-emerald); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">sports and fitness</div>
         <div class="rating-card-title">Gym Equipment — Category Ceiling</div>
         
@@ -1233,7 +1239,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/hedge-trimmer-ceiling"
-         style="--card-tier-colour:#7a9ab8; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-slate); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">garden and outdoor</div>
         <div class="rating-card-title">Hedge Trimmer — Category Ceiling</div>
         
@@ -1255,7 +1261,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/leaf-blower-ceiling"
-         style="--card-tier-colour:#7a9ab8; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-slate); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">garden and outdoor</div>
         <div class="rating-card-title">Leaf Blower — Category Ceiling</div>
         
@@ -1277,7 +1283,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/mattress-ceiling"
-         style="--card-tier-colour:#3a9e62; --card-ri-colour:#7ab85a;">
+         style="--card-tier-colour:var(--tier-emerald); --card-ri-colour:var(--ri-restorative);">
         <div class="rating-card-category">sleep products</div>
         <div class="rating-card-title">Mattress — Category Ceiling</div>
         
@@ -1299,7 +1305,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/pressure-washer-ceiling"
-         style="--card-tier-colour:#3a9e62; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-emerald); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">power tools</div>
         <div class="rating-card-title">Pressure Washer — Category Ceiling</div>
         
@@ -1321,7 +1327,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/pushchair-ceiling"
-         style="--card-tier-colour:#3a9e62; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-emerald); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">baby travel systems</div>
         <div class="rating-card-title">Pushchair — Category Ceiling</div>
         
@@ -1343,7 +1349,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/rc-vehicle-drone-ceiling"
-         style="--card-tier-colour:#7a9ab8; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-slate); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">toys and children's</div>
         <div class="rating-card-title">RC Vehicle / Drone — Category Ceiling</div>
         
@@ -1365,7 +1371,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/reusable-coffee-cup-ceiling"
-         style="--card-tier-colour:#3a9e62; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-emerald); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">home lifestyle</div>
         <div class="rating-card-title">Reusable Coffee Cup — Category Ceiling</div>
         
@@ -1387,7 +1393,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/scented-candle-ceiling"
-         style="--card-tier-colour:#7a9ab8; --card-ri-colour:#7ab85a;">
+         style="--card-tier-colour:var(--tier-slate); --card-ri-colour:var(--ri-restorative);">
         <div class="rating-card-category">home fragrance</div>
         <div class="rating-card-title">Scented Candle — Category Ceiling</div>
         
@@ -1409,7 +1415,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/sofa-ceiling"
-         style="--card-tier-colour:#3a9e62; --card-ri-colour:#4FA9A5;">
+         style="--card-tier-colour:var(--tier-emerald); --card-ri-colour:var(--ri-renewable);">
         <div class="rating-card-category">upholstered furniture</div>
         <div class="rating-card-title">Sofa — Category Ceiling</div>
         
@@ -1431,7 +1437,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/stainless-steel-water-bottle-ceiling"
-         style="--card-tier-colour:#3a9e62; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-emerald); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">home lifestyle</div>
         <div class="rating-card-title">Stainless Steel Water Bottle — Category Ceiling</div>
         
@@ -1453,7 +1459,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/steel-bicycle-ceiling"
-         style="--card-tier-colour:#3a9e62; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-emerald); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">sports and leisure</div>
         <div class="rating-card-title">Steel Bicycle — Category Ceiling</div>
         
@@ -1475,7 +1481,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/washing-machine-ceiling"
-         style="--card-tier-colour:#3a9e62; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-emerald); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">larger appliances</div>
         <div class="rating-card-title">Washing Machine — Category Ceiling</div>
         
@@ -1497,7 +1503,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/mattresses"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">sleep products</div>
         <div class="rating-card-title">Mattresses</div>
         
@@ -1515,7 +1521,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/pressure-washers"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">power tools</div>
         <div class="rating-card-title">Pressure Washers</div>
         
@@ -1533,7 +1539,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/pushchairs"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">baby travel systems</div>
         <div class="rating-card-title">Pushchairs</div>
         
@@ -1551,7 +1557,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/rc-vehicles-drones"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">toys and children's</div>
         <div class="rating-card-title">RC Vehicles and Drones</div>
         
@@ -1569,7 +1575,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/reusable-coffee-cups"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">home lifestyle</div>
         <div class="rating-card-title">Reusable Coffee Cups</div>
         
@@ -1587,7 +1593,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/scented-candles"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">home fragrance</div>
         <div class="rating-card-title">Scented Candles</div>
         
@@ -1605,7 +1611,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/sofas"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">upholstered furniture</div>
         <div class="rating-card-title">Sofas</div>
         
@@ -1623,7 +1629,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/steel-bicycles"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">sports and leisure</div>
         <div class="rating-card-title">Steel Bicycles</div>
         
@@ -1641,7 +1647,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/washing-machines"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">larger appliances</div>
         <div class="rating-card-title">Washing Machines</div>
         
@@ -1659,7 +1665,7 @@
         <div class="rating-card-date">Assessed 2026-04-26</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/air-fryer-ceiling"
-         style="--card-tier-colour:#3a9e62; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-emerald); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">small appliances</div>
         <div class="rating-card-title">Air Fryer — Category Ceiling</div>
         
@@ -1681,7 +1687,7 @@
         <div class="rating-card-date">Assessed 2026-04-20</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/bluetooth-headphones-ceiling"
-         style="--card-tier-colour:#3a9e62; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-emerald); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">consumer electronics</div>
         <div class="rating-card-title">Bluetooth Headphones — Category Ceiling</div>
         
@@ -1703,7 +1709,7 @@
         <div class="rating-card-date">Assessed 2026-04-20</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/coffee-pod-machine-ceiling"
-         style="--card-tier-colour:#3a9e62; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-emerald); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">small appliances</div>
         <div class="rating-card-title">Coffee Pod Machine — Category Ceiling</div>
         
@@ -1725,7 +1731,7 @@
         <div class="rating-card-date">Assessed 2026-04-20</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/cordless-drill-ceiling"
-         style="--card-tier-colour:#3a9e62; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-emerald); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">power tools</div>
         <div class="rating-card-title">Cordless Drill — Category Ceiling</div>
         
@@ -1747,7 +1753,7 @@
         <div class="rating-card-date">Assessed 2026-04-20</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/electric-toothbrush-ceiling"
-         style="--card-tier-colour:#3a9e62; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-emerald); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">personal care</div>
         <div class="rating-card-title">Electric Toothbrush — Category Ceiling</div>
         
@@ -1769,7 +1775,7 @@
         <div class="rating-card-date">Assessed 2026-04-20</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/hair-dryer-ceiling"
-         style="--card-tier-colour:#3a9e62; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-emerald); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">small appliances</div>
         <div class="rating-card-title">Hair Dryer — Category Ceiling</div>
         
@@ -1791,7 +1797,7 @@
         <div class="rating-card-date">Assessed 2026-04-20</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/hair-straightener-ceiling"
-         style="--card-tier-colour:#3a9e62; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-emerald); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">personal care</div>
         <div class="rating-card-title">Hair Straightener — Category Ceiling</div>
         
@@ -1813,7 +1819,7 @@
         <div class="rating-card-date">Assessed 2026-04-20</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/kettle-ceiling"
-         style="--card-tier-colour:#3a9e62; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-emerald); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">small appliances</div>
         <div class="rating-card-title">Electric Kettle — Category Ceiling</div>
         
@@ -1835,7 +1841,7 @@
         <div class="rating-card-date">Assessed 2026-04-20</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/portable-speaker-ceiling"
-         style="--card-tier-colour:#7a9ab8; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-slate); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">consumer electronics</div>
         <div class="rating-card-title">Portable Speaker — Category Ceiling</div>
         
@@ -1857,7 +1863,7 @@
         <div class="rating-card-date">Assessed 2026-04-20</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/robot-vacuum-ceiling"
-         style="--card-tier-colour:#3a9e62; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-emerald); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">home appliances</div>
         <div class="rating-card-title">Robot Vacuum Cleaner — Category Ceiling</div>
         
@@ -1879,7 +1885,7 @@
         <div class="rating-card-date">Assessed 2026-04-20</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/smartphone-ceiling"
-         style="--card-tier-colour:#7a9ab8; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-slate); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">consumer electronics</div>
         <div class="rating-card-title">Smartphone — Category Ceiling</div>
         
@@ -1901,7 +1907,7 @@
         <div class="rating-card-date">Assessed 2026-04-20</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/toaster-ceiling"
-         style="--card-tier-colour:#3a9e62; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-emerald); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">small appliances</div>
         <div class="rating-card-title">Toaster — Category Ceiling</div>
         
@@ -1923,7 +1929,7 @@
         <div class="rating-card-date">Assessed 2026-04-20</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/category-ceiling/wireless-earbuds-ceiling"
-         style="--card-tier-colour:#7a9ab8; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-slate); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">consumer electronics</div>
         <div class="rating-card-title">Wireless Earbuds — Category Ceiling</div>
         
@@ -1945,7 +1951,7 @@
         <div class="rating-card-date">Assessed 2026-04-20</div>
       </a>
     <a class="rating-card" href="/ratings/air-fryers"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">small appliances</div>
         <div class="rating-card-title">Air Fryers</div>
         
@@ -1963,7 +1969,7 @@
         <div class="rating-card-date">Assessed 2026-04-18</div>
       </a>
     <a class="rating-card" href="/ratings/bluetooth-headphones"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">consumer electronics</div>
         <div class="rating-card-title">Bluetooth Headphones</div>
         
@@ -1981,7 +1987,7 @@
         <div class="rating-card-date">Assessed 2026-04-18</div>
       </a>
     <a class="rating-card" href="/ratings/coffee-pod-machines"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">small appliances</div>
         <div class="rating-card-title">Coffee Pod Machines</div>
         
@@ -1999,7 +2005,7 @@
         <div class="rating-card-date">Assessed 2026-04-18</div>
       </a>
     <a class="rating-card" href="/ratings/cordless-drills"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">power tools</div>
         <div class="rating-card-title">Cordless Drills</div>
         
@@ -2017,7 +2023,7 @@
         <div class="rating-card-date">Assessed 2026-04-18</div>
       </a>
     <a class="rating-card" href="/ratings/electric-toothbrushes"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">personal care</div>
         <div class="rating-card-title">Electric Toothbrushes</div>
         
@@ -2035,7 +2041,7 @@
         <div class="rating-card-date">Assessed 2026-04-18</div>
       </a>
     <a class="rating-card" href="/ratings/hair-dryers"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">small appliances</div>
         <div class="rating-card-title">Hair Dryers</div>
         
@@ -2053,7 +2059,7 @@
         <div class="rating-card-date">Assessed 2026-04-18</div>
       </a>
     <a class="rating-card" href="/ratings/hair-straighteners"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">personal care</div>
         <div class="rating-card-title">Hair Straighteners</div>
         
@@ -2071,7 +2077,7 @@
         <div class="rating-card-date">Assessed 2026-04-18</div>
       </a>
     <a class="rating-card" href="/ratings/kettles"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">small appliances</div>
         <div class="rating-card-title">Kettles</div>
         
@@ -2089,7 +2095,7 @@
         <div class="rating-card-date">Assessed 2026-04-18</div>
       </a>
     <a class="rating-card" href="/ratings/manufacturers/tester/t-100"
-         style="--card-tier-colour:#3a9e62; --card-ri-colour:#c8920a;">
+         style="--card-tier-colour:var(--tier-emerald); --card-ri-colour:var(--ri-extractive);">
         <div class="rating-card-category">small appliances</div>
         <div class="rating-card-title">Tester T-100 Stainless Steel Kettle</div>
         
@@ -2111,7 +2117,7 @@
         <div class="rating-card-date">Assessed 2026-04-18</div>
       </a>
     <a class="rating-card" href="/ratings/portable-speakers"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">consumer electronics</div>
         <div class="rating-card-title">Portable Speakers</div>
         
@@ -2129,7 +2135,7 @@
         <div class="rating-card-date">Assessed 2026-04-18</div>
       </a>
     <a class="rating-card" href="/ratings/robot-vacuums"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">home appliances</div>
         <div class="rating-card-title">Robot Vacuum Cleaners</div>
         
@@ -2147,7 +2153,7 @@
         <div class="rating-card-date">Assessed 2026-04-18</div>
       </a>
     <a class="rating-card" href="/ratings/toasters"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">small appliances</div>
         <div class="rating-card-title">Toasters</div>
         
@@ -2165,7 +2171,7 @@
         <div class="rating-card-date">Assessed 2026-04-18</div>
       </a>
     <a class="rating-card" href="/ratings/wireless-earbuds"
-         style="--card-tier-colour:#c8920a; --card-ri-colour:#c04040;">
+         style="--card-tier-colour:var(--tier-amber); --card-ri-colour:var(--ri-depleting);">
         <div class="rating-card-category">consumer electronics</div>
         <div class="rating-card-title">Wireless Earbuds</div>
         
