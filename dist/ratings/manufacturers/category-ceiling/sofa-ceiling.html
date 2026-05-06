@@ -33,6 +33,12 @@
       --tier-emerald:    #3a9e62;
       --tier-slate:      #7a9ab8;
       --tier-amber:      #c8920a;
+      /* ── Regenerative Index ramp (methodology data viz — §3.5 colour spec) ── */
+      --ri-depleting:    #c04040;
+      --ri-extractive:   #c8920a;
+      --ri-renewable:    #4FA9A5;
+      --ri-restorative:  #7ab85a;
+      --ri-regenerative: #3a9e62;
       /* ── Functional ── */
       --positive:        #3a9e62;
       --negative:        #B5482E;
@@ -326,9 +332,9 @@
   border-radius: 8px; margin-bottom: 1.25rem;
   border: 1.5px solid;
 }
-.hip-mark-banner.mark-gold     { background: #fffbea; border-color: #c8920a; }
-.hip-mark-banner.mark-silver   { background: #f2f6fb; border-color: #7a9ab8; }
-.hip-mark-banner.mark-standard { background: #f0f8f4; border-color: #3a9e62; }
+.hip-mark-banner.mark-gold     { background: #fffbea; border-color: var(--tier-amber); }
+.hip-mark-banner.mark-silver   { background: #f2f6fb; border-color: var(--tier-slate); }
+.hip-mark-banner.mark-standard { background: #f0f8f4; border-color: var(--tier-emerald); }
 .hip-mark-badge-img {
   flex-shrink: 0; width: 52px; height: auto;
 }
@@ -425,8 +431,8 @@
 
 <style>
   :root {
-    --tier-colour: #3a9e62;
-    --ri-colour:   #4FA9A5;
+    --tier-colour: var(--tier-emerald);
+    --ri-colour:   var(--ri-renewable);
   }
 </style>
 
@@ -488,15 +494,15 @@
       <div class="ri-scale">
         
           <div class="ri-pip active"
-               style="background:#4FA9A5">
+               style="background:var(--ri-renewable)">
           </div>
         
           <div class="ri-pip active"
-               style="background:#4FA9A5">
+               style="background:var(--ri-renewable)">
           </div>
         
           <div class="ri-pip active"
-               style="background:#4FA9A5">
+               style="background:var(--ri-renewable)">
           </div>
         
           <div class="ri-pip "
