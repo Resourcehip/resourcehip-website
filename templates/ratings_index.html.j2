@@ -95,11 +95,11 @@
       {%- else -%}
         {%- set card_tier_colour = '#c8920a' -%}
       {%- endif -%}
-      {%- if r.ri_descriptor == 'Regenerative' -%}{%- set card_ri_colour = '#3a9e62' -%}
-      {%- elif r.ri_descriptor == 'Restorative' -%}{%- set card_ri_colour = '#7ab85a' -%}
-      {%- elif r.ri_descriptor == 'Renewable'   -%}{%- set card_ri_colour = '#4FA9A5' -%}
-      {%- elif r.ri_descriptor == 'Extractive'  -%}{%- set card_ri_colour = '#c8920a' -%}
-      {%- else -%}{%- set card_ri_colour = '#c04040' -%}
+      {%- if r.ri_descriptor == 'Regenerative' -%}{%- set card_ri_colour = 'var(--ri-regenerative)' -%}
+      {%- elif r.ri_descriptor == 'Restorative' -%}{%- set card_ri_colour = 'var(--ri-restorative)' -%}
+      {%- elif r.ri_descriptor == 'Renewable'   -%}{%- set card_ri_colour = 'var(--ri-renewable)' -%}
+      {%- elif r.ri_descriptor == 'Extractive'  -%}{%- set card_ri_colour = 'var(--ri-extractive)' -%}
+      {%- else -%}{%- set card_ri_colour = 'var(--ri-depleting)' -%}
       {%- endif -%}
 
       <a class="rating-card" href="/ratings/{{ r.url_path|default(r.slug) }}"

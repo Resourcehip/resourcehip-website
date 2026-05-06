@@ -231,15 +231,15 @@
 
 {# ── RI colour logic ────────────────────────────────────────────────────── #}
 {%- if ri_descriptor == 'Regenerative' -%}
-  {%- set ri_colour = '#3a9e62' -%}
+  {%- set ri_colour = 'var(--ri-regenerative)' -%}
 {%- elif ri_descriptor == 'Restorative' -%}
-  {%- set ri_colour = '#7ab85a' -%}
+  {%- set ri_colour = 'var(--ri-restorative)' -%}
 {%- elif ri_descriptor == 'Renewable' -%}
-  {%- set ri_colour = '#4FA9A5' -%}
+  {%- set ri_colour = 'var(--ri-renewable)' -%}
 {%- elif ri_descriptor == 'Extractive' -%}
-  {%- set ri_colour = '#c8920a' -%}
+  {%- set ri_colour = 'var(--ri-extractive)' -%}
 {%- else -%}
-  {%- set ri_colour = '#c04040' -%}
+  {%- set ri_colour = 'var(--ri-depleting)' -%}
 {%- endif -%}
 
 <style>
@@ -332,7 +332,7 @@
   <div class="ri-card">
     {%- set _ceil_ri = category_ceiling_ri|default(none) -%}
     {%- set ri_tiers = ['Depleting','Extractive','Renewable','Restorative','Regenerative'] -%}
-    {%- set ri_pip_colours = ['#c04040','#c8920a','#4FA9A5','#7ab85a','#3a9e62'] -%}
+    {%- set ri_pip_colours = ['var(--ri-depleting)','var(--ri-extractive)','var(--ri-renewable)','var(--ri-restorative)','var(--ri-regenerative)'] -%}
     {%- set ri_active_idx = ri_tiers.index(ri_descriptor) if ri_descriptor in ri_tiers else 2 -%}
     {% if rating_type != 'verified' and _ceil_ri is not none %}
       {# Category page: baseline RI is primary, ceiling is secondary #}
