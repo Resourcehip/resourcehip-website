@@ -32,7 +32,7 @@ Use the button below to open a pre-filled email. Complete the fields and send â€
 
 <div style="margin: 2rem 0;">
   <a href="mailto:hello@resourcehip.com?subject=Verified%20Rating%20Application&body=Company%20name%3A%20%0AProduct%20name%20and%20model%3A%20%0AProduct%20category%20(e.g.%20cordless%20drill)%3A%20%0A%0ABrief%20description%20of%20the%20evidence%20you%20expect%20to%20submit%3A%20%0A%0AYour%20name%3A%20%0AYour%20role%3A%20%0AContact%20email%3A%20"
-     style="display: inline-block; background: var(--eco-teal); color: #fff; font-weight: 700; font-size: 0.95rem; padding: 0.8rem 2rem; border-radius: 6px; text-decoration: none; letter-spacing: 0.02em;">
+     style="display: inline-block; background: var(--hip-blue); color: #fff; font-weight: 700; font-size: 0.95rem; padding: 0.8rem 2rem; border-radius: 6px; text-decoration: none; letter-spacing: 0.02em;">
     Apply by email â†’
   </a>
 </div>

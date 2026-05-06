@@ -417,18 +417,29 @@ Already-downloaded files are skipped.
 
 ## Brand Reference
 
-CSS variables defined in `templates/base.html.j2`:
+CSS variables defined in `templates/base.html.j2` (v1.0 palette, approved 2026-05-06 — see `~/Resourcehip/Business/colour-spec.md`):
 
-| Variable             | Value     | Usage                         |
-|----------------------|-----------|-------------------------------|
-| `--forest-green`     | `#6B8E23` | Brand primary, headings, links |
-| `--eco-teal`         | `#4FA9A5` | Accents, nav CTA              |
-| `--atmosphere-blue`  | `#A8DADC` | Footer links                  |
-| `--soft-stone`       | `#F1F1F1` | Pill backgrounds              |
-| `--impact-grey`      | `#4A4A4A` | Body text                     |
-| `--tier-emerald`     | `#3a9e62` | HIP Mark high tier            |
-| `--tier-slate`       | `#7a9ab8` | HIP Mark mid tier             |
-| `--tier-amber`       | `#c8920a` | HIP Mark low tier             |
+| Variable          | Value     | Usage                                                   |
+|-------------------|-----------|---------------------------------------------------------|
+| `--hip-blue`      | `#0E4C8F` | Primary brand: CTAs, links, active nav, focus rings     |
+| `--hip-blue-deep` | `#0A3A6E` | Hover/active states, gradient partner                   |
+| `--hip-blue-tint` | `#E6EEF7` | Callout backgrounds, verified-badge bg                  |
+| `--mark-black`    | `#1A1A1A` | h1, hero headings                                       |
+| `--ink`           | `#2E3742` | Body text, h2–h4                                        |
+| `--muted`         | `#5C6773` | Captions, metadata, secondary text                      |
+| `--rule`          | `#DDD9CD` | Borders, dividers, table rules                          |
+| `--surface`       | `#F6F4EE` | Section bands, cards, table headers                     |
+| `--page-bg`       | `#FBFAF6` | Site-wide background                                    |
+| `--footer-bg`     | `#0A2440` | Footer background                                       |
+| `--footer-fg`     | `#F6F4EE` | Footer text                                             |
+| `--footer-link`   | `#A8C4E6` | Footer links                                            |
+| `--tier-emerald`  | `#3a9e62` | HIP Mark Standard tier (brand-locked)                   |
+| `--tier-slate`    | `#7a9ab8` | HIP Mark Silver tier (brand-locked)                     |
+| `--tier-amber`    | `#c8920a` | HIP Mark Gold tier (brand-locked)                       |
+| `--positive`      | `#3a9e62` | Better-than-baseline delta indicators                   |
+| `--negative`      | `#B5482E` | Worse-than-baseline deltas, error states                |
+| `--warning-bg`    | `#FFF8E6` | Methodology callout background                          |
+| `--warning-fg`    | `#6B5400` | Methodology callout text                                |
 
 ---
 
