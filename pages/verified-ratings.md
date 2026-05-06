@@ -28,17 +28,17 @@ The HIP Mark is Resourcehip's consumer-facing quality badge. It has three tiers:
 <div style="display:flex; gap:2rem; align-items:flex-start; flex-wrap:wrap; margin:1.5rem 0;">
   <div style="text-align:center; width:110px;">
     <img src="/assets/marks/hip-mark-standard.svg" alt="HIP Mark Standard" width="88" height="104" style="display:block; margin:0 auto 0.5rem;">
-    <strong style="font-size:0.82rem; color:var(--tier-emerald);">Standard</strong><br>
+    <strong style="font-size:0.82rem; color:var(--tier-emerald-text);">Standard</strong><br>
     <span style="font-size:0.75rem; color:#555;">HIP ≥ 6.0</span>
   </div>
   <div style="text-align:center; width:110px;">
     <img src="/assets/marks/hip-mark-silver.svg" alt="HIP Mark Silver" width="88" height="104" style="display:block; margin:0 auto 0.5rem;">
-    <strong style="font-size:0.82rem; color:var(--tier-slate);">Silver</strong><br>
+    <strong style="font-size:0.82rem; color:var(--tier-slate-text);">Silver</strong><br>
     <span style="font-size:0.75rem; color:#555;">HIP ≥ 7.5</span>
   </div>
   <div style="text-align:center; width:110px;">
     <img src="/assets/marks/hip-mark-gold.svg" alt="HIP Mark Gold" width="88" height="104" style="display:block; margin:0 auto 0.5rem;">
-    <strong style="font-size:0.82rem; color:var(--tier-amber);">Gold</strong><br>
+    <strong style="font-size:0.82rem; color:var(--tier-amber-text);">Gold</strong><br>
     <span style="font-size:0.75rem; color:#555;">HIP ≥ 9.0 + RI ≥ +6</span>
   </div>
 </div>
