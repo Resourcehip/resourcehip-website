@@ -19,7 +19,7 @@ import html as html_lib
 import re
 import shutil
 import sys
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -33,6 +33,11 @@ from sitemap import html_files_to_urls, generate_sitemap, generate_robots
 # ── Config ────────────────────────────────────────────────────────────────────
 
 SITE_ROOT   = Path(__file__).parent
+
+# Early adopter discount expiry. Pages with Jinja2 conditionals receive
+# `today` and `discount_expires` so the build is date-aware. A scheduled
+# rebuild on or after this date automatically removes the offer block.
+DISCOUNT_EXPIRES = date(2026, 9, 30)
 RATINGS_DIR = SITE_ROOT / "ratings"
 PAGES_DIR   = SITE_ROOT / "pages"
 BLOG_DIR    = SITE_ROOT / "blog"
@@ -201,6 +206,30 @@ def build_ratings_index(entries: list[dict]) -> None:
     print("  [index]  ratings/index.html")
 
 
+def parse_page_file(filepath: Path, render_vars: dict | None = None) -> tuple[dict, str]:
+    """Parse a page Markdown file with YAML frontmatter.
+    Renders Jinja2 expressions in the body before converting to HTML so that
+    pages can use conditionals like {% if today <= discount_expires %}.
+    """
+    text = filepath.read_text(encoding="utf-8")
+
+    if text.startswith("---"):
+        parts = text.split("---", 2)
+        if len(parts) >= 3:
+            frontmatter = yaml.safe_load(parts[1]) or {}
+            body_md = parts[2].strip()
+        else:
+            frontmatter = {}
+            body_md = text
+    else:
+        frontmatter = {}
+        body_md = text
+
+    body_md = jinja2.Template(body_md).render(**(render_vars or {}))
+    body_html = md_lib.markdown(body_md, extensions=MD_EXTENSIONS)
+    return frontmatter, body_html
+
+
 def build_pages() -> None:
     """Build static content pages from pages/**/*.md"""
     template = jinja_env.get_template("static_page.html.j2")
@@ -212,8 +241,13 @@ def build_pages() -> None:
     # Map top-level path component → active_page nav highlight
     active_map = {"about": "about", "methodology": "methodology"}
 
+    page_render_vars = {
+        "today": date.today(),
+        "discount_expires": DISCOUNT_EXPIRES,
+    }
+
     for md_file in sorted(PAGES_DIR.rglob("*.md")):
-        data, body_html = parse_md_file(md_file)
+        data, body_html = parse_page_file(md_file, render_vars=page_render_vars)
         body_html = obfuscate_emails(body_html)
         rel_path = md_file.relative_to(PAGES_DIR)
 

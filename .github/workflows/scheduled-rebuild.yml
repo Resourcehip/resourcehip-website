@@ -1,0 +1,28 @@
+name: Scheduled rebuild
+
+# Fires at 06:00 UTC on the 1st of October each year.
+# The build script is date-aware: DISCOUNT_EXPIRES = 2026-09-30 in build.py,
+# so a rebuild on or after 1 Oct 2026 automatically drops the early adopter
+# offer block from the pricing page without any manual code change.
+#
+# Requires one repository secret:
+#   CF_PAGES_DEPLOY_HOOK  — the Cloudflare Pages deploy hook URL for the
+#                            resourcehip-website project (Settings → Deploy hooks)
+on:
+  schedule:
+    - cron: '0 6 1 10 *'
+  workflow_dispatch:
+
+jobs:
+  trigger-deploy:
+    name: Trigger Cloudflare Pages rebuild
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping deploy hook
+        run: |
+          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" -X POST "${{ secrets.CF_PAGES_DEPLOY_HOOK }}")
+          if [ "$HTTP_STATUS" != "200" ] && [ "$HTTP_STATUS" != "201" ]; then
+            echo "Deploy hook returned HTTP $HTTP_STATUS — check CF_PAGES_DEPLOY_HOOK secret"
+            exit 1
+          fi
+          echo "Deploy triggered (HTTP $HTTP_STATUS)"
