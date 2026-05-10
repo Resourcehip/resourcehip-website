@@ -62,10 +62,12 @@ Subscriptions are invoiced annually in advance. Unused ratings carry over for a 
 
 ---
 
+{% if today <= discount_expires %}
 <div style="background: var(--warning-bg); border: 1px solid var(--rule); border-left: 4px solid var(--warning-fg); border-radius: 0 8px 8px 0; padding: 1.25rem 1.5rem; margin: 1.5rem 0;">
-  <p style="margin: 0 0 0.4rem 0; font-weight: 700; color: var(--warning-fg);">Early adopter offer — first 5 customers, expires Friday 15 May</p>
-  <p style="margin: 0;">The first five customers to commission a paid rating or subscription receive a <strong>30% launch discount</strong> applied to the first invoice. Reduced fees: Generic Rating £245, Verified Rating £350, Annual Base £1,050, Annual Premium £1,540. Offer closes Friday 15 May 2026.</p>
+  <p style="margin: 0 0 0.4rem 0; font-weight: 700; color: var(--warning-fg);">Early adopter offer — first 5 customers, expires 30 September 2026</p>
+  <p style="margin: 0;">The first five customers to commission a paid rating or subscription receive a <strong>30% launch discount</strong> applied to the first invoice. Reduced fees: Generic Rating £245, Verified Rating £350, Annual Base £1,050, Annual Premium £1,540. Offer closes 30 September 2026.</p>
 </div>
+{% endif %}
 
 ---
 
