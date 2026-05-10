@@ -263,6 +263,75 @@
       color: #fff;
     }
 
+    /* ── Two-audience track strip ── */
+    .audience-strip {
+      background: var(--surface);
+      padding: 2.5rem 2rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .audience-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .audience-card {
+      background: var(--card-bg);
+      border: 1px solid var(--rule);
+      border-radius: 12px;
+      padding: 1.5rem 1.5rem 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: var(--ink);
+      transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+    }
+
+    .audience-card:hover,
+    .audience-card:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(14, 76, 143, 0.10);
+      border-color: var(--hip-blue);
+      color: var(--ink);
+    }
+
+    .audience-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .audience-headline {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .audience-sub {
+      font-size: 0.9rem;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+
+    .audience-cta {
+      margin-top: 0.4rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--hip-blue);
+    }
+
+    @media (max-width: 640px) {
+      .audience-inner { grid-template-columns: 1fr; }
+    }
+
     /* ── Intro section ── */
     .intro-section {
       background: var(--page-bg);
@@ -287,6 +356,86 @@
       line-height: 1.8;
       color: var(--ink);
       margin-bottom: 1rem;
+    }
+
+    /* ── Regenerative Index ramp ── */
+    .ri-block {
+      max-width: 980px;
+      margin: 2.75rem auto 0;
+      padding-top: 2.25rem;
+      border-top: 1px solid var(--rule);
+      text-align: center;
+    }
+
+    .ri-block h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--hip-blue);
+      margin-bottom: 0.85rem;
+      letter-spacing: 0.02em;
+    }
+
+    .ri-block p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--ink);
+      margin: 0 auto 1.75rem;
+      max-width: 720px;
+    }
+
+    .ri-ramp {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.75rem;
+      margin: 0;
+      padding: 0;
+      align-items: end;
+    }
+
+    .ri-ramp-tier {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .ri-ramp-tier img {
+      width: 100%;
+      max-width: 180px;
+      height: auto;
+      display: block;
+    }
+
+    .ri-ramp-range {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      font-variant-numeric: tabular-nums;
+    }
+
+    @media (max-width: 700px) {
+      .ri-ramp {
+        grid-template-columns: 1fr;
+        gap: 0.65rem;
+        max-width: 360px;
+        margin: 0 auto;
+      }
+      .ri-ramp-tier {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+      .ri-ramp-tier img {
+        flex: 1 1 auto;
+        max-width: 220px;
+      }
+      .ri-ramp-range {
+        flex: 0 0 auto;
+        text-align: right;
+        min-width: 4.5rem;
+      }
     }
 
     /* ── Featured ratings ── */
@@ -362,8 +511,8 @@
     }
 
     .tier-emerald { background: var(--tier-emerald); }
-    .tier-slate   { background: var(--tier-slate); }
-    .tier-amber   { background: var(--tier-amber); }
+    .tier-slate   { background: var(--mark-black); }
+    .tier-amber   { background: var(--mark-black); }
 
     .ratings-cta {
       text-align: center;
@@ -417,7 +566,37 @@
       .ratings-grid { grid-template-columns: 1fr; }
     }
 
-    /* ── HiP Mark tier showcase ── */
+    /* ── Trust-signal strip (standards-body differentiator under the hero) ── */
+    .trust-strip {
+      background: var(--page-bg);
+      border-bottom: 1px solid var(--rule);
+      padding: 0.85rem 1.5rem;
+      text-align: center;
+    }
+
+    .trust-strip-text {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      line-height: 1.55;
+    }
+
+    .trust-strip-text .sep {
+      margin: 0 0.6rem;
+      color: var(--rule);
+    }
+
+    @media (max-width: 720px) {
+      .trust-strip { padding: 0.85rem 1rem; }
+      .trust-strip-text {
+        font-size: 0.72rem;
+        letter-spacing: 0.02em;
+      }
+      .trust-strip-text .sep { margin: 0 0.4rem; }
+    }
+
+    /* ── HIP Mark tier showcase ── */
     .marks-section {
       background: var(--surface);
       padding: 4rem 2rem;
@@ -485,7 +664,7 @@
 
   <header class="site-header">
     <a class="logo-link" href="/">
-      <img src="assets/hip-lockup.png" alt="Resourcehip — HiP Certified" />
+      <img src="assets/hip-lockup.png" alt="Resourcehip — HIP Certified" />
     </a>
     <nav class="site-nav" aria-label="Main navigation">
       <a href="/" class="active" aria-current="page">Home</a>
@@ -493,6 +672,7 @@
       <a href="/methodology">Methodology</a>
       <a href="/about">About</a>
       <a href="/verified-ratings">Verified Ratings</a>
+      <a href="/pricing">Pricing</a>
       <a href="/submit" class="nav-cta">Submit a Product</a>
     </nav>
   </header>
@@ -509,13 +689,65 @@
         <div class="fog-layer"></div>
       </div>
       <div class="hero-content">
-        <img class="hero-logo" src="assets/hip-lockup.png" alt="Resourcehip — HiP Certified" />
+        <img class="hero-logo" src="assets/hip-lockup.png" alt="Resourcehip — HIP Certified" />
         <div class="hero-divider" aria-hidden="true"></div>
         <p class="hero-tagline">
           Making the long-term material future of everyday products visible —
           to consumers, manufacturers, and the researchers who can change it.
         </p>
         <a class="hero-cta" href="/ratings/">View Category Ratings</a>
+      </div>
+    </section>
+
+    <!-- Trust-signal strip — standards-body differentiator under the hero -->
+    <section class="trust-strip" aria-label="Resourcehip differentiators">
+      <p class="trust-strip-text">
+        Independent<span class="sep" aria-hidden="true">·</span>Conservative methodology v1.3<span class="sep" aria-hidden="true">·</span>Reviewed by humans<span class="sep" aria-hidden="true">·</span>Local AI, no cloud<span class="sep" aria-hidden="true">·</span>Built in Scotland
+      </p>
+    </section>
+
+    <!-- HIP Mark tiers -->
+    <section class="marks-section" aria-label="HIP Mark certification tiers">
+      <div class="marks-inner">
+        <div class="section-header">
+          <h2>The HIP Mark</h2>
+          <p>Products that earn a verified HIP Score carry a tier mark indicating their level of material resilience.</p>
+        </div>
+        <div class="marks-grid">
+          <div class="mark-card">
+            <img src="/assets/marks/hip-mark-standard.svg" alt="HIP Mark Standard" />
+            <span class="mark-card-name emerald">Standard</span>
+            <span class="mark-card-range">HIP Score 6.0+</span>
+          </div>
+          <div class="mark-card">
+            <img src="/assets/marks/hip-mark-silver.svg" alt="HIP Mark Silver" />
+            <span class="mark-card-name slate">Silver</span>
+            <span class="mark-card-range">HIP Score 7.5+</span>
+          </div>
+          <div class="mark-card">
+            <img src="/assets/marks/hip-mark-gold.svg" alt="HIP Mark Gold" />
+            <span class="mark-card-name amber">Gold</span>
+            <span class="mark-card-range">HIP Score 9.0+</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Two-audience track strip — equal-weight consumer/manufacturer split -->
+    <section class="audience-strip" aria-label="Choose your path">
+      <div class="audience-inner">
+        <a class="audience-card" href="/ratings/">
+          <span class="audience-eyebrow">I&rsquo;m shopping</span>
+          <span class="audience-headline">Browse Category Ratings</span>
+          <span class="audience-sub">Free, independent ratings for everyday product categories.</span>
+          <span class="audience-cta" aria-hidden="true">Explore ratings &rarr;</span>
+        </a>
+        <a class="audience-card" href="/verified-ratings">
+          <span class="audience-eyebrow">I make products</span>
+          <span class="audience-headline">Get a Verified Rating</span>
+          <span class="audience-sub">Score your product against the category baseline.</span>
+          <span class="audience-cta" aria-hidden="true">Learn more &rarr;</span>
+        </a>
       </div>
     </section>
 
@@ -526,32 +758,39 @@
         <p>The HIP Score (Human Impact Profile Score) is a number from 0 to 10 that summarises how resilient, responsibly sourced, and long-lived a product is from a materials and supply chain perspective. It is not a carbon footprint — it focuses on whether the materials a product depends on are abundant or at risk, whether they are sourced responsibly, and whether the product can be repaired and recovered at end of life.</p>
         <p>Ratings are produced using a local AI scoring pipeline and reviewed by a human assessor before publication. No product data is sent to external cloud services.</p>
       </div>
+      <div class="ri-block">
+        <h3>The Regenerative Index</h3>
+        <p>Inside the HIP Score sits the Regenerative Index (RI) — a unique scale from &minus;10 to +10 that distinguishes products depleting finite reserves from those actively rebuilding natural capital. Most consumer products today sit below zero.</p>
+        <ol class="ri-ramp" aria-label="Regenerative Index tiers, depleting through regenerative">
+          <li class="ri-ramp-tier">
+            <img src="/assets/marks/ri-chip-depleting-200.png" alt="RI tier: Depleting" />
+            <span class="ri-ramp-range">&minus;10 to &minus;6</span>
+          </li>
+          <li class="ri-ramp-tier">
+            <img src="/assets/marks/ri-chip-extractive-200.png" alt="RI tier: Extractive" />
+            <span class="ri-ramp-range">&minus;5 to &minus;1</span>
+          </li>
+          <li class="ri-ramp-tier">
+            <img src="/assets/marks/ri-chip-renewable-200.png" alt="RI tier: Renewable" />
+            <span class="ri-ramp-range">0</span>
+          </li>
+          <li class="ri-ramp-tier">
+            <img src="/assets/marks/ri-chip-restorative-200.png" alt="RI tier: Restorative" />
+            <span class="ri-ramp-range">+1 to +5</span>
+          </li>
+          <li class="ri-ramp-tier">
+            <img src="/assets/marks/ri-chip-regenerative-200.png" alt="RI tier: Regenerative" />
+            <span class="ri-ramp-range">+6 to +10</span>
+          </li>
+        </ol>
+      </div>
     </section>
 
-    <!-- HiP Mark tiers -->
-    <section class="marks-section" aria-label="HiP Mark certification tiers">
-      <div class="marks-inner">
-        <div class="section-header">
-          <h2>The HiP Mark</h2>
-          <p>Products that earn a verified HiP Score carry a tier mark indicating their level of material resilience.</p>
-        </div>
-        <div class="marks-grid">
-          <div class="mark-card">
-            <img src="/assets/marks/hip-mark-standard.svg" alt="HiP Mark Standard" />
-            <span class="mark-card-name emerald">Standard</span>
-            <span class="mark-card-range">HIP Score 6.0+</span>
-          </div>
-          <div class="mark-card">
-            <img src="/assets/marks/hip-mark-silver.svg" alt="HiP Mark Silver" />
-            <span class="mark-card-name slate">Silver</span>
-            <span class="mark-card-range">HIP Score 7.5+</span>
-          </div>
-          <div class="mark-card">
-            <img src="/assets/marks/hip-mark-gold.svg" alt="HiP Mark Gold" />
-            <span class="mark-card-name amber">Gold</span>
-            <span class="mark-card-range">HIP Score 9.0+</span>
-          </div>
-        </div>
+    <!-- Headroom framing — why generic scores look low -->
+    <section class="intro-section" aria-label="Why the scores look low">
+      <div class="intro-inner">
+        <h2>Why the scores look low</h2>
+        <p>Generic ratings start from conservative defaults — where data is absent, the methodology assumes the worst reasonable case. The gap between that baseline and what a product can verifiably reach is real and measurable; we call it headroom. When a manufacturer submits verified data, the same pipeline scores the actual product and the real picture appears.</p>
       </div>
     </section>
 
@@ -560,40 +799,40 @@
       <div class="ratings-inner">
         <div class="section-header">
           <h2>Category Ratings</h2>
-          <p>Free, independent ratings for common product categories — no manufacturer involvement.</p>
+          <p>Generic-baseline ratings &mdash; verified submissions climb higher.</p>
         </div>
         <div class="ratings-grid">
           <a class="rating-card" href="/ratings/kettles">
             <span class="rating-card-title">Kettles</span>
-            <span class="rating-badge tier-amber">3.0 &middot; Caution</span>
+            <span class="rating-badge tier-amber">3.0 / 10 &middot; Below Standard</span>
           </a>
           <a class="rating-card" href="/ratings/smartphones">
             <span class="rating-card-title">Smartphones</span>
-            <span class="rating-badge tier-amber">1.8 &middot; Poor</span>
+            <span class="rating-badge tier-amber">1.8 / 10 &middot; Below Standard</span>
           </a>
           <a class="rating-card" href="/ratings/hair-dryers">
             <span class="rating-card-title">Hair Dryers</span>
-            <span class="rating-badge tier-amber">2.6 &middot; Poor</span>
+            <span class="rating-badge tier-amber">2.6 / 10 &middot; Below Standard</span>
           </a>
           <a class="rating-card" href="/ratings/cordless-drills">
             <span class="rating-card-title">Cordless Drills</span>
-            <span class="rating-badge tier-amber">2.5 &middot; Poor</span>
+            <span class="rating-badge tier-amber">2.5 / 10 &middot; Below Standard</span>
           </a>
           <a class="rating-card" href="/ratings/electric-toothbrushes">
             <span class="rating-card-title">Electric Toothbrushes</span>
-            <span class="rating-badge tier-amber">2.0 &middot; Poor</span>
+            <span class="rating-badge tier-amber">2.0 / 10 &middot; Below Standard</span>
           </a>
           <a class="rating-card" href="/ratings/robot-vacuums">
             <span class="rating-card-title">Robot Vacuums</span>
-            <span class="rating-badge tier-amber">2.3 &middot; Poor</span>
+            <span class="rating-badge tier-amber">2.3 / 10 &middot; Below Standard</span>
           </a>
           <a class="rating-card" href="/ratings/bluetooth-headphones">
             <span class="rating-card-title">Bluetooth Headphones</span>
-            <span class="rating-badge tier-amber">1.9 &middot; Poor</span>
+            <span class="rating-badge tier-amber">1.9 / 10 &middot; Below Standard</span>
           </a>
           <a class="rating-card" href="/ratings/toasters">
             <span class="rating-card-title">Toasters</span>
-            <span class="rating-badge tier-amber">3.0 &middot; Caution</span>
+            <span class="rating-badge tier-amber">3.0 / 10 &middot; Below Standard</span>
           </a>
         </div>
         <div class="ratings-cta">

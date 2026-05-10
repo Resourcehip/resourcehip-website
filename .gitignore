@@ -1,3 +1,7 @@
 # Brand assets and editorial content — managed outside version control
 brand/
 editorial/
+
+# Python bytecode
+__pycache__/
+*.pyc

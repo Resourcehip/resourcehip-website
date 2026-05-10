@@ -426,6 +426,7 @@
       <a href="/methodology" >Methodology</a>
       <a href="/about" >About</a>
       <a href="/verified-ratings" >Verified Ratings</a>
+      <a href="/pricing" >Pricing</a>
       <a href="/submit" class="nav-cta">Submit a Product</a>
     </nav>
   </header>
@@ -435,7 +436,7 @@
 
 <style>
   :root {
-    --tier-colour: var(--negative);
+    --tier-colour: var(--mark-black);
     --ri-colour:   var(--ri-depleting);
   }
 </style>
@@ -473,24 +474,22 @@
 
   <div class="hip-score-card">
       
-      <div class="score-label">HIP Score</div>
-      <div class="score-value">
-        2.7<span class="score-denom">/10</span>
+      <div class="score-label">Category baseline</div>
+      <div class="score-value">2.7<span class="score-denom"> HIP</span></div>
+      <div class="score-tier-name">Below Standard</div>
+      <div class="score-vs-ceiling">
+        Category ceiling: 7.5 HIP
       </div>
-      <div class="score-tier-name">Low Resilience</div>
-      <div class="score-vs-baseline">At category baseline (2.7)</div>
-      
     
   </div>
 
   <div class="ri-card">
       
       <div class="score-label">Regenerative Index</div>
-      <div class="ri-score-value" style="color: var(--ri-colour);">
+      <div class="ri-score-value" style="color: var(--ri-depleting);">
         -7.0
       </div>
-      <div class="ri-descriptor" style="color: var(--ri-colour);">Depleting</div>
-      <!-- RI scale: 5 pips, one per tier (Depleting → Regenerative) -->
+      <div class="ri-descriptor" style="color: var(--ri-depleting);">Depleting</div>
       <div class="ri-scale">
         
           <div class="ri-pip active"
@@ -514,8 +513,9 @@
           </div>
         
       </div>
-      <div class="score-vs-baseline" style="margin-top:0.75rem;">At category average (-7.0)</div>
-      
+      <div class="score-vs-ceiling" style="margin-top:0.75rem;">
+        Category ceiling RI: -2.0
+      </div>
     
   </div>
 
@@ -534,6 +534,16 @@
 
 
 
+<div class="mfr-cta-block">
+  <h3>Manufacturer? Verified assessment closes the gap.</h3>
+  <p>The current market baseline for this category is 2.7 HIP.
+  The category ceiling — what the methodology rewards when materials, supply chain, repairability, and end-of-life
+  pathways are fully evidenced — is 7.5 HIP.
+  The first verified product in our programme demonstrated 6.9 HIP and earned the HIP Mark.</p>
+  <p>If your product can evidence the methodology dimensions, verified assessment gives it the score it has earned.</p>
+  <a class="btn-verified-assessment" href="/apply">Apply for verified assessment</a>
+</div>
+  
 
 
 <!-- ── HIP Mark banner ────────────────────────────────────────────────────── -->

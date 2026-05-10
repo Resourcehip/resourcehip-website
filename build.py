@@ -20,12 +20,15 @@ import re
 import shutil
 import sys
 from datetime import datetime, timezone
+from html.parser import HTMLParser
 from pathlib import Path
 
 import yaml
 import markdown as md_lib
 import jinja2
 from markupsafe import Markup
+
+from sitemap import html_files_to_urls, generate_sitemap, generate_robots
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
@@ -195,12 +198,13 @@ def build_pages() -> None:
 
         # Remove active_page from data if present in frontmatter (avoid duplicate keyword arg)
         render_data = {k: v for k, v in data.items() if k != "active_page"}
+        active_page_value = data.get("active_page") or active_map.get(top_slug, "")
 
         html = template.render(
             **render_data,
             body=body_html,
             page_title=data.get("title", md_file.stem.replace("-", " ").title()),
-            active_page=active_map.get(top_slug, ""),
+            active_page=active_page_value,
         )
 
         out_file = (DIST / rel_path).with_suffix(".html")
@@ -234,6 +238,71 @@ def copy_static() -> None:
             print(f"  [warn]   {dirname}/ not found — skipped")
 
 
+class _LinkExtractor(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.links: list[str] = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag == "a":
+            for name, value in attrs:
+                if name == "href" and value:
+                    self.links.append(value)
+
+
+def _link_resolves(href: str, dist_dir: Path) -> bool:
+    path = href.split("?")[0].split("#")[0]
+    if not path:
+        return True
+    clean = path.lstrip("/")
+    if path.endswith("/"):
+        return (dist_dir / clean / "index.html").exists()
+    return (
+        (dist_dir / (clean + ".html")).exists()
+        or (dist_dir / clean / "index.html").exists()
+        or (dist_dir / clean).exists()
+    )
+
+
+def validate_internal_links(dist_dir: Path) -> int:
+    """Scan all built HTML files for broken internal hrefs. Returns count of unique broken links."""
+    broken_seen: set[str] = set()
+    broken_msgs: list[str] = []
+
+    for html_file in sorted(dist_dir.rglob("*.html")):
+        extractor = _LinkExtractor()
+        try:
+            extractor.feed(html_file.read_text(encoding="utf-8", errors="replace"))
+        except Exception:
+            continue
+
+        for href in extractor.links:
+            if not href or not href.startswith("/"):
+                continue
+            if href.startswith(("http://", "https://", "//")):
+                continue
+            if href in broken_seen:
+                continue
+            if not _link_resolves(href, dist_dir):
+                broken_seen.add(href)
+                rel = html_file.relative_to(dist_dir)
+                broken_msgs.append(f"  [broken-link] {href}  (first seen in {rel})")
+
+    for msg in broken_msgs:
+        print(msg, file=sys.stderr)
+    return len(broken_seen)
+
+
+def build_sitemap() -> None:
+    """Generate sitemap.xml and robots.txt from freshly built dist/."""
+    base_url = "https://resourcehip.com"
+    urls = html_files_to_urls(DIST, base_url)
+    (DIST / "sitemap.xml").write_text(generate_sitemap(urls), encoding="utf-8")
+    print(f"  [sitemap] sitemap.xml ({len(urls)} URLs)")
+    (DIST / "robots.txt").write_text(generate_robots(base_url), encoding="utf-8")
+    print("  [sitemap] robots.txt")
+
+
 def _parse_blog_post(filepath: Path) -> tuple[dict, str]:
     """Parse a blog Markdown file with YAML frontmatter.
     Processes Jinja2 calls in the body (e.g. {{ rating_link("kettles") }})
@@ -260,7 +329,7 @@ def _parse_blog_post(filepath: Path) -> tuple[dict, str]:
     return frontmatter, body_html
 
 
-def build_blog() -> list[dict]:
+def build_blog(rating_slugs: set[str] | None = None) -> list[dict]:
     """Build blog post pages, index, category landing pages, and RSS feed."""
     if not BLOG_DIR.exists():
         print("  [info] No blog/ directory found — skipping blog build")
@@ -327,6 +396,7 @@ def build_blog() -> list[dict]:
         html = cat_tmpl.render(
             category_slug=cat_slug,
             posts=cat_posts,
+            rating_slugs=rating_slugs or set(),
             page_title=f"{cat_slug.replace('-', ' ').title()} — Blog",
             page_description=f"Articles and buying guides about {cat_slug.replace('-', ' ')} from Resourcehip.",
             active_page="blog",
@@ -393,13 +463,20 @@ def build():
     print("→ Building rating pages")
     index_entries = build_ratings()
     build_ratings_index(index_entries)
+    rating_slugs = {e["slug"] for e in index_entries}
     print("→ Building static pages")
     build_pages()
     print("→ Building blog")
-    blog_posts = build_blog()
+    blog_posts = build_blog(rating_slugs=rating_slugs)
+    print("→ Generating sitemap")
+    build_sitemap()
+    print("→ Validating internal links")
+    broken = validate_internal_links(DIST)
     print(f"\nDone. Output in {DIST}/")
     print(f"  {len(index_entries)} rating(s) built")
     print(f"  {len(blog_posts)} blog post(s) built")
+    if broken:
+        print(f"  {broken} broken internal link(s) — see warnings above", file=sys.stderr)
 
 
 if __name__ == "__main__":

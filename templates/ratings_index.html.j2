@@ -88,12 +88,10 @@
 {% if ratings %}
   <div class="ratings-grid">
     {% for r in ratings %}
-      {%- if r.hip_score >= 6.5 -%}
+      {%- if r.hip_score >= 6.0 -%}
         {%- set card_tier_colour = 'var(--tier-emerald)' -%}
-      {%- elif r.hip_score >= 4.0 -%}
-        {%- set card_tier_colour = 'var(--tier-slate)' -%}
       {%- else -%}
-        {%- set card_tier_colour = 'var(--tier-amber)' -%}
+        {%- set card_tier_colour = 'var(--mark-black)' -%}
       {%- endif -%}
       {%- if r.ri_descriptor == 'Regenerative' -%}{%- set card_ri_colour = 'var(--ri-regenerative)' -%}
       {%- elif r.ri_descriptor == 'Restorative' -%}{%- set card_ri_colour = 'var(--ri-restorative)' -%}

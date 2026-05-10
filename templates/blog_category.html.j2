@@ -42,7 +42,7 @@
 <div class="cat-header">
   <p class="breadcrumb"><a href="/blog/">Blog</a> / {{ category_slug | replace("-", " ") | title }}</p>
   <h1>{{ category_slug | replace("-", " ") | title }}</h1>
-  {{ rating_link(category_slug) }}
+  {% if category_slug in rating_slugs %}{{ rating_link(category_slug) }}{% endif %}
 </div>
 
 {% if posts %}

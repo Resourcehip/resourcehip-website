@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Methodology — Resourcehip</title>
-  <meta name="description" content="How the HIP Score is calculated — data sources, scoring dimensions, AI pipeline, and version history." />
+  <title>Pricing — Resourcehip</title>
+  <meta name="description" content="Pricing for Resourcehip ratings: free Category Ratings for any consumer product, paid Generic and Verified Ratings for manufacturers, and annual subscriptions." />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <!-- Self-hosted Montserrat — no Google Fonts CDN (GDPR: no IP sent to Google) -->
   <!-- Run fonts/download_fonts.py once to fetch the .woff2 files -->
@@ -229,10 +229,10 @@
       <a href="/" >Home</a>
       <a href="/ratings/" >Ratings</a>
       <a href="/blog/" >Blog</a>
-      <a href="/methodology" class="active" aria-current="page">Methodology</a>
+      <a href="/methodology" >Methodology</a>
       <a href="/about" >About</a>
       <a href="/verified-ratings" >Verified Ratings</a>
-      <a href="/pricing" >Pricing</a>
+      <a href="/pricing" class="active" aria-current="page">Pricing</a>
       <a href="/submit" class="nav-cta">Submit a Product</a>
     </nav>
   </header>
@@ -240,229 +240,101 @@
   <main id="main-content" class="site-main ">
     
 <div class="static-body">
-  <h1>Scoring Methodology</h1>
-<p>This page explains how every HIP Score is produced. Transparency about methodology is a core part of what makes a rating credible — and it is our strongest defence if a score is ever questioned.</p>
-<p><strong>Current version: 1.3 · Effective April 2026</strong></p>
-<hr />
-<h2>What the HIP Score measures</h2>
-<p>The HIP Score (Human Impact Profile Score) is a material resilience and sustainability rating, not a carbon footprint or general environmental endorsement. It assesses seven dimensions related to materials, supply chain, and end-of-life characteristics. See the <a href="/about">About page</a> for a full summary.</p>
-<hr />
-<h2>How the score is calculated</h2>
-<h3>Step 1 — Score each dimension independently</h3>
-<p>Each of the seven dimensions is assessed separately using a structured scoring rubric — a set of written criteria for each score band (0–2, 3–4, 5–6, 7–8, 9–10). The rubric for each dimension is defined in <code>methodology.yaml</code> (link below).</p>
-<h3>Step 2 — Normalise the Regenerative Index</h3>
-<p>The RI uses a scale of −10 to +10. Before weighting, it is normalised to 0–10 using:</p>
-<blockquote>
-<p><strong>RI Normalised = (RI Raw + 10) ÷ 2</strong></p>
-</blockquote>
-<p>This maps −10 → 0, 0 → 5, +10 → 10.</p>
-<h3>Step 3 — Calculate the weighted HIP Score</h3>
-<blockquote>
-<p><strong>HIP Score = (MSI × 0.20) + (SCR × 0.18) + (RC × 0.18) + (R × 0.13) + (SEI × 0.08) + (PL × 0.08) + (RI_norm × 0.15)</strong></p>
-</blockquote>
-<p>The result is rounded to one decimal place.</p>
-<hr />
-<h2>Dimension weights</h2>
+  <h1>Pricing</h1>
+<p>Resourcehip publishes ratings in three forms. <strong>Category Ratings</strong> are free public assessments of whole product categories. <strong>Generic Ratings</strong> and <strong>Verified Ratings</strong> are paid, product-specific assessments commissioned by manufacturers — a Verified Rating is what licences the HIP Mark.</p>
+<h2>Free: Category Ratings</h2>
+<p>Category Ratings cover whole product categories — for example, "kettles" or "cordless drills" — and use conservative defaults wherever real product data is not public. They are free for anyone to read and they are deliberately conservative. A real product, scored on its actual materials and supply chain, will almost always score higher than the category baseline.</p>
+<p>There is no charge to be listed against a Category Rating. There is no opt-out either: if a category we publish includes your product, the conservative baseline applies.</p>
+<p><a href="/ratings/">Browse Category Ratings →</a></p>
+<h2>Paid: Generic and Verified Ratings</h2>
+<p>If you make the product, a Category Rating is not the end of the story. The conservative baseline is what we publish in the absence of evidence. The space between that baseline and your product's real performance is your headroom — and a paid rating turns it into a number you can show.</p>
+<p>Two product-specific options:</p>
 <table>
 <thead>
 <tr>
-<th>Code</th>
-<th>Dimension</th>
-<th>Weight</th>
-<th>Scale</th>
+<th>Rating</th>
+<th>What it is</th>
+<th>Price</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>MSI</td>
-<td>Material Scarcity Index</td>
-<td>20%</td>
-<td>0–10</td>
+<td><strong>Generic Rating</strong></td>
+<td>A product-specific HIP score scored from public data plus structured information you provide. No supplier evidence dossier required. Faster turnaround. Suitable for early benchmarking and internal use.</td>
+<td><strong>£350</strong> per rating</td>
 </tr>
 <tr>
-<td>SCR</td>
-<td>Supply Chain Risk</td>
-<td>18%</td>
-<td>0–10</td>
-</tr>
-<tr>
-<td>RC</td>
-<td>Recyclability &amp; Circularity</td>
-<td>18%</td>
-<td>0–10</td>
-</tr>
-<tr>
-<td>R</td>
-<td>Repairability</td>
-<td>13%</td>
-<td>0–10</td>
-</tr>
-<tr>
-<td>SEI</td>
-<td>Social &amp; Environmental Impact</td>
-<td>8%</td>
-<td>0–10</td>
-</tr>
-<tr>
-<td>PL</td>
-<td>Product Longevity</td>
-<td>8%</td>
-<td>0–10</td>
-</tr>
-<tr>
-<td>RI</td>
-<td>Regenerative Index</td>
-<td>15%</td>
-<td>−10 to +10 *</td>
+<td><strong>Verified Rating</strong></td>
+<td>A product-specific HIP score scored against manufacturer-submitted evidence (materials, supply chain, repairability, end-of-life). Reviewed by our assessors. <strong>Required to licence the HIP Mark.</strong></td>
+<td><strong>£500</strong> per rating</td>
 </tr>
 </tbody>
 </table>
-<p><em>* Normalised to 0–10 before weighting using the formula above.</em></p>
-<hr />
-<h2>HIP Mark tiers</h2>
-<p>The HIP Mark is awarded when the HIP Score meets a minimum threshold:</p>
+<p>Both rating types deliver:</p>
+<ul>
+<li>A full assessment against all seven HIP dimensions</li>
+<li>A published rating page on resourcehip.com tied to your brand and product</li>
+<li>A written rationale for each dimension score, including the evidence used</li>
+<li>A category peer comparison so you can see how the rating sits against the free baseline</li>
+</ul>
+<p>A Verified Rating additionally includes a 24-month HIP Mark licence (renewable annually after that at £75 per year per product) for products that score 6.0 or above.</p>
+<h3>Annual subscriptions</h3>
+<p>If you plan to rate several products a year, a subscription is cheaper per rating and includes priority handling.</p>
 <table>
 <thead>
 <tr>
-<th>Tier</th>
-<th>Minimum HIP Score</th>
-<th>RI Requirement</th>
+<th>Plan</th>
+<th>Includes</th>
+<th>Price</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>HIP Mark Standard</td>
-<td>6.0</td>
-<td>None</td>
+<td><strong>Annual Base</strong></td>
+<td>4 Generic Ratings per year. Additional ratings at 20% off list. Priority email support.</td>
+<td><strong>£1,500</strong> per year</td>
 </tr>
 <tr>
-<td>HIP Mark Silver</td>
-<td>7.5</td>
-<td>None</td>
-</tr>
-<tr>
-<td>HIP Mark Gold</td>
-<td>9.0</td>
-<td>RI raw ≥ +6.0 (Regenerative)</td>
+<td><strong>Annual Premium</strong></td>
+<td>4 Generic Ratings + 2 Verified Ratings per year. Additional ratings at 20% off list. Priority email support.</td>
+<td><strong>£2,200</strong> per year</td>
 </tr>
 </tbody>
 </table>
-<p>Products scoring below 6.0 receive a HIP Score on the rating page but do not carry the HIP Mark.</p>
-<p>Manufacturers holding a current verified rating and signed licence may display the HIP Mark. See the <a href="/methodology/hip-mark-brand-guidelines">Brand Guidelines</a> for visual standards, permitted usage, and licensing requirements.</p>
+<p>Subscriptions are billed annually upfront. Unused ratings carry over for a further 12 months from renewal.</p>
+<div style="background: var(--warning-bg); border: 1px solid var(--rule); border-left: 4px solid var(--warning-fg); border-radius: 0 8px 8px 0; padding: 1.25rem 1.5rem; margin: 1.5rem 0;">
+  <p style="margin: 0 0 0.4rem 0; font-weight: 700; color: var(--warning-fg);">Launch offer — first 5 customers, expires Friday 15 May</p>
+  <p style="margin: 0;">The first five customers to commission a paid rating or subscription receive a <strong>30% launch discount</strong> on first-year price. Generic Rating £245, Verified Rating £350, Annual Base £1,050, Annual Premium £1,540. Offer ends Friday 15 May 2026 and is not renewable.</p>
+</div>
+
+<h2>The HIP Mark</h2>
+<p>A Verified Rating that scores 6.0 or above is eligible to licence the HIP Mark — the consumer-facing badge that signals an independently assessed product. The HIP Mark has three tiers: <strong>Standard</strong> (HIP ≥ 6.0), <strong>Silver</strong> (HIP ≥ 7.5), and <strong>Gold</strong> (HIP ≥ 9.0 with a Regenerative Index of +6.0 or above).</p>
+<p>The HIP Mark licence is included in the Verified Rating fee for 24 months from the date the rating is published. After that the renewal fee is £75 per year per product. The licence is tied to a specific product and rating version; a substantively new formulation requires a new rating.</p>
+<div style="background: var(--hip-blue-tint); border: 1px solid var(--rule); border-left: 4px solid var(--hip-blue); border-radius: 0 8px 8px 0; padding: 1.25rem 1.5rem; margin: 1.5rem 0;">
+  <p style="margin-bottom: 0.75rem;">Ready to start? Send us your product details — we respond within 3 working days.</p>
+  <a href="/apply" style="display: inline-block; background: var(--hip-blue); color: #fff; font-weight: 700; font-size: 0.9rem; padding: 0.65rem 1.5rem; border-radius: 6px; text-decoration: none;">Apply for a paid rating →</a>
+</div>
+
 <hr />
-<h2>Generic vs verified ratings</h2>
-<p><strong>Category (generic) ratings</strong> are produced using publicly available data only. They rate a product category — not a specific named product — and apply conservative assumptions wherever data is missing. The result is an honest baseline for the category.</p>
-<p><strong>Verified ratings</strong> are produced using data submitted by the manufacturer through the Resourcehip submission form. Submitted data replaces the conservative category defaults. Scores above 5 on the Social &amp; Environmental Impact dimension require third-party audit evidence — self-reported claims alone cannot exceed 5.</p>
-<p>Where a verified rating uses a category default for a dimension (because no specific data was submitted for that dimension), this is clearly noted as an improvement opportunity on the rating page.</p>
-<hr />
-<h2>The AI scoring pipeline</h2>
-<p>Ratings are produced using a local AI pipeline running on Resourcehip's own hardware using <a href="https://ollama.ai">Ollama</a>. <strong>No product data is sent to external cloud AI services.</strong></p>
-<table>
-<thead>
-<tr>
-<th>Component</th>
-<th>Role</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Model — qwen3.5:35b</td>
-<td>Handles all scoring (all 7 dimensions) and all consumer prose generation</td>
-</tr>
-<tr>
-<td>Temperature</td>
-<td>0.1 — produces consistent, reproducible outputs</td>
-</tr>
-<tr>
-<td>Human review</td>
-<td>Every rating reviewed and approved before publication</td>
-</tr>
-</tbody>
-</table>
-<p>No rating is ever published automatically without human sign-off.</p>
-<hr />
-<h2 id="data-sources">Data sources</h2>
-<p>The following public data sources are used across ratings. Each rating page lists the specific sources used for that assessment.</p>
-<table>
-<thead>
-<tr>
-<th>Source</th>
-<th>Used for</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://www.usgs.gov/programs/mineral-resources-program">USGS Mineral Resources Program</a></td>
-<td>Global reserve estimates and supply-risk designations</td>
-</tr>
-<tr>
-<td><a href="https://single-market-economy.ec.europa.eu/sectors/raw-materials/areas-specific-interest/critical-raw-materials_en">EU Critical Raw Materials List (2023)</a></td>
-<td>EU high-importance, high-risk material designations</td>
-</tr>
-<tr>
-<td><a href="https://www.worldbank.org/en/publication/worldwide-governance-indicators">World Bank Worldwide Governance Indicators</a></td>
-<td>Country political stability scores for supply chain risk</td>
-</tr>
-<tr>
-<td><a href="https://www.ifixit.com/repairability">iFixit Repairability Database</a></td>
-<td>Standardised repairability scores for consumer products</td>
-</tr>
-<tr>
-<td><a href="https://www.ellenmacarthurfoundation.org/">Ellen MacArthur Foundation</a></td>
-<td>Circular economy metrics and design-for-circularity benchmarks</td>
-</tr>
-<tr>
-<td><a href="https://www.wrap.ngo/">UK WRAP</a></td>
-<td>UK material recycling rates and kerbside collection data</td>
-</tr>
-<tr>
-<td><a href="https://regenorganic.org/">Regenerative Organic Certified (ROC)</a></td>
-<td>Verified regenerative agricultural certifications</td>
-</tr>
-</tbody>
-</table>
-<p>All data sources are public domain or published under open data licences. Attribution is shown on each rating page.</p>
-<hr />
-<h2>Conservative by design</h2>
-<p>Where data is missing, the pipeline uses the most conservative reasonable assumption — not the most optimistic. This protects the integrity of the rating and creates a genuine incentive for manufacturers to submit better data. A verified rating with real data almost always scores higher than the category default.</p>
-<hr />
-<h2>Methodology version history</h2>
-<table>
-<thead>
-<tr>
-<th>Version</th>
-<th>Date</th>
-<th>Key changes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1.3</td>
-<td>April 2026</td>
-<td>Clarified RI scoring criteria; updated Depleting vs Extractive band definitions and added worked examples to the scoring rubric.</td>
-</tr>
-<tr>
-<td>1.1</td>
-<td>March 2026</td>
-<td>Added Regenerative Index (RI) as seventh dimension. Adjusted weights: MSI 20%, SCR 18%, RC 18%, R 13%, SEI 8%, PL 8%, RI 15%.</td>
-</tr>
-<tr>
-<td>1.0</td>
-<td>February 2026</td>
-<td>Initial six-dimension methodology.</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2>Licence and source</h2>
-<p>The HIP Score methodology is published under <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons CC BY-NC 4.0</a> — free to share and adapt for non-commercial purposes with attribution to Resourcehip.</p>
-<p>The authoritative source file is <code>methodology.yaml</code>, maintained in the Resourcehip pipeline repository. <!-- Link to GitHub repository will be added when repository is made public. --></p>
-<p>The HIP Mark logo and Resourcehip brand are proprietary and may not be used without a licence.</p>
-<hr />
-<h2>Dispute a rating</h2>
-<p>If you believe a rating contains an error, see the <a href="/dispute">Dispute a Rating</a> page for the review process.</p>
-<hr />
-<p><em>Methodology v1.3 · Resourcehip Ltd · <a href="/terms">Terms</a> · <a href="/privacy">Privacy</a></em></p>
+<h2>Frequently asked questions</h2>
+<h3>What is the difference between a Category Rating and a Generic Rating?</h3>
+<p>A Category Rating is free, covers a whole category, and uses conservative defaults. A Generic Rating is paid (£350), covers one specific product from one named manufacturer, and uses the structured information you submit alongside public data — without requiring a full evidence dossier. A Generic Rating will almost always score higher than its Category baseline, because it is scored on the product, not the worst-case assumption for the category.</p>
+<h3>What is the difference between a Generic Rating and a Verified Rating?</h3>
+<p>A Verified Rating (£500) is scored against a full evidence dossier — materials, supply-chain provenance, repairability, end-of-life — that our assessors review. A Verified Rating is the only rating that licences the HIP Mark. A Generic Rating is faster and cheaper but is not HIP-Mark eligible.</p>
+<h3>How long does a rating take?</h3>
+<p>A Generic Rating: 5–7 working days from submission. A Verified Rating: 2–4 weeks from a complete submission. Most of that time on a Verified Rating is reviewing your evidence and following up on the supply chain; the scoring itself is fast.</p>
+<h3>What data do I need to submit?</h3>
+<p>For a Generic Rating: a structured product information form (we send the template). For a Verified Rating: materials composition (down to component level for assemblies), supplier provenance for primary materials, repairability documentation, end-of-life pathway information, and supporting documents. We send the full submission template after your enquiry — you do not need to assemble everything upfront.</p>
+<h3>What if I do not have all the data?</h3>
+<p>Send what you have. We will tell you what is missing and what is needed to produce a defensible score. In some cases a rating can proceed with documented assumptions on minor inputs; in others it cannot. We will be honest about which it is before you commit.</p>
+<h3>Pay-per-rating or subscription — which should I pick?</h3>
+<p>If you expect to rate fewer than four products in the next year, pay-per-rating is simpler. If you expect four or more — or if you have a portfolio you want to benchmark over time — Annual Base is cheaper per rating. Annual Premium is for portfolios that include a mix of Generic and Verified ratings.</p>
+<h3>How is the HIP Mark licensed?</h3>
+<p>The licence is included in the Verified Rating fee for 24 months from the date the rating is published. It permits use of the HIP Mark on the rated product's packaging, in product-specific marketing, and on the product's page on your website. The mark is tied to one product and one rating version; it does not extend to a brand or a wider range.</p>
+<h3>What happens at renewal?</h3>
+<p>After 24 months we contact you with a renewal offer at £75 per year per product. You can renew on the existing rating, commission an updated rating, or let the licence lapse. If the licence lapses, the published rating remains live but the HIP Mark may no longer be displayed on the product or its marketing.</p>
+<h3>What if a published rating is wrong?</h3>
+<p>You can dispute a rating at any time at no cost. The process is described on our <a href="/dispute">Dispute</a> page. If new evidence changes a score, we update the published rating and note the revision.</p>
 </div>
 
   </main>

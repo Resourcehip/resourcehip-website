@@ -35,7 +35,7 @@ Three tier-specific variants are issued:
 | Silver | HIP ≥ 7.5 | Blue-grey `#7a9ab8` |
 | Gold | HIP ≥ 9.0 *and* RI ≥ +6.0 (Regenerative) | Gold `#c8920a` |
 
-The Resourcehip institutional brand colour is HiP Institutional Blue `#0E4C8F`. It is not a tier colour and must not be substituted for one.
+The Resourcehip institutional brand colour is HIP Institutional Blue `#0E4C8F`. It is not a tier colour and must not be substituted for one.
 
 The tier names **Standard**, **Silver** and **Gold** are canonical. They must not be relabelled, translated to a marketing alternative, or paired with words that imply a different tier (for example "Premium HIP", "HIP Plus"). The Regenerative Index tier names **Depleting**, **Extractive**, **Renewable**, **Restorative** and **Regenerative** are also canonical.
 
