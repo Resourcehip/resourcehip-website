@@ -1,66 +1,74 @@
 ---
-title: "Apply for Verified Assessment"
-page_description: "Apply for a Verified Rating from Resourcehip. Submit your product for independent HIP Score assessment using your actual materials and supply chain data."
+title: "Request a Rating"
+page_description: "Commission a Generic or Verified HIP Rating for your product. Submit your details and we will issue a formal invoice within 3 working days. Certification released on payment."
 ---
 
-# Apply for Verified Assessment
+# Request a HIP Rating
 
-A Verified Rating assesses your specific product using the evidence you provide — materials composition, supply chain provenance, repairability, and end-of-life pathways. Unlike a category rating, it reflects what your product actually contains and how it is actually made.
+Use this form to commission a Generic or Verified HIP Rating. We will confirm scope and issue a formal invoice within 3 working days of your submission. Certification and the HIP Mark licence (where eligible) are released on payment confirmation.
 
-Verified products that score 6.0 or above are eligible to licence the **HIP Mark**, Resourcehip's consumer-facing quality badge.
-
-[Learn how Verified Ratings work →](/verified-ratings)
-
----
-
-## Pricing
-
-| Tier | Price | What's included |
-|---|---|---|
-| **Verified Basic** | £200 | Full HIP Score assessment, PDF report, HIP Mark licence if eligible |
-| **Verified Standard** | £400 | Basic plus priority queue and a one-page brand marketing summary |
-| **Verified Premium** | £850 | Standard plus press-ready executive summary, advisory call, and first listing on the verified-ratings page |
-
-The HIP Mark licence covers two years from the publish date. Renewal is £75/year thereafter.
+[View the full fee schedule →](/pricing)
 
 ---
 
-## What we need from you
+## Fees at a glance
 
-To assess your product we will need:
+| Service | Fee |
+|---|---|
+| Generic HIP Rating | £350 per rating |
+| Verified HIP Rating | £500 per rating |
+| Annual Base subscription (4 Generic Ratings/year) | £1,500 per year |
+| Annual Premium subscription (4 Generic + 2 Verified/year) | £2,200 per year |
 
-- **Company and product details** — legal entity name, brand name, product model name and SKU
+The Verified HIP Rating is the only route to the HIP Mark licence. A Generic Rating is suitable for internal benchmarking and ESG reporting but does not licence the Mark.
+
+Early adopter discount (30%, first 5 customers) is available until 15 May 2026 and will be applied to your invoice if you are among the first five customers.
+
+---
+
+## What to submit
+
+- **Company and product details** — legal entity name, brand name, product name and SKU
 - **Product category** — for example, "cordless drill" or "stainless steel water bottle"
-- **Evidence dossier** — materials composition data, supply chain documentation, repairability and end-of-life information. A full submission template is sent after payment.
-- **Contact details** — the person leading the submission
+- **Rating type requested** — Generic or Verified (or a subscription plan)
+- **Contact details** — the person responsible for the submission
 
-You do not need a complete dossier to get started. If you are unsure whether your evidence is sufficient, submit what you have and we will confirm what is needed.
+You do not need a complete evidence dossier at this stage. If you are unsure whether your data is sufficient for a Verified Rating, submit what you have — we will confirm requirements before you commit.
 
 ---
 
-## Apply now
-
-Use the form below to submit your product details and complete payment. You will receive a confirmation email immediately, followed by a full evidence template within 1–2 working days.
+## Submit your details
 
 <div style="margin: 2rem 0;">
   <a href="https://intake.resourcehip.com"
      style="display: inline-block; background: var(--hip-blue); color: #fff; font-weight: 700; font-size: 0.95rem; padding: 0.8rem 2rem; border-radius: 6px; text-decoration: none; letter-spacing: 0.02em;">
-    Start your application →
+    Request an invoice →
   </a>
 </div>
 
-Or email [hello@resourcehip.com](mailto:hello@resourcehip.com) with the subject line **"Verified Rating Application"** and we will guide you through the process.
+Prefer email? Write to [hello@resourcehip.com](mailto:hello@resourcehip.com) with the subject line **"HIP Rating Request"** and include your company name, product name, and rating type. We will respond within 3 working days.
 
 ---
 
 ## What happens next
 
-1. **Submit your details and payment** via the application form.
-2. **We review your submission** and confirm the evidence required (1–2 working days).
-3. **We send a full submission template** covering all seven HIP dimensions.
-4. **You complete the dossier** and return it to us.
-5. **Assessment** — your product is scored and you receive a full dimension breakdown.
-6. **HIP Mark licence** (if eligible) — products scoring 6.0+ can licence the HIP Mark for use in packaging and marketing.
+1. **Submission** — you submit product details via the form or by email.
+2. **Scoping confirmation** — we confirm the rating type, fee, and any evidence required (1–3 working days).
+3. **Invoice issued** — we send a formal invoice with 30-day payment terms. Bank transfer / BACS details and a card payment option are included.
+4. **Evidence submission** — for a Verified Rating, we send you a full evidence template; you return the completed dossier at your convenience.
+5. **Assessment** — your product is scored against all seven HIP dimensions. You receive a full dimension breakdown with written rationale.
+6. **Certification and HIP Mark** — on payment confirmation, the rating is published on resourcehip.com and the HIP Mark licence is issued (for Verified Ratings scoring 6.0 or above).
+
+---
+
+## Payment
+
+Invoices are payable within 30 days of issue by:
+
+- **Bank transfer / BACS** — bank details are included on each invoice
+- **Card / online payment** — a Stripe payment link is included on each invoice as a convenience option
+
+Certification is not released until payment is confirmed. There is no need to pay before assessment begins; the invoice is raised at submission and payment can follow once the rating is complete.
 
 ---
 
