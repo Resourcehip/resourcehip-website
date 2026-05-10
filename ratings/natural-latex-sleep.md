@@ -16,8 +16,8 @@ ri_score: 0.0
 ri_descriptor: Renewable
 category_baseline_hip: 3.8
 category_baseline_ri: 0.0
-category_ceiling_hip: null
-category_ceiling_ri: null
+category_ceiling_hip: 7.8
+category_ceiling_ri: 6.0
 above_baseline: false
 assessment_date: '2026-04-29'
 methodology_version: '1.3'

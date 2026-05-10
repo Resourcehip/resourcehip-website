@@ -16,8 +16,8 @@ ri_score: -1.0
 ri_descriptor: Extractive
 category_baseline_hip: 3.7
 category_baseline_ri: -1.0
-category_ceiling_hip: null
-category_ceiling_ri: null
+category_ceiling_hip: 8.1
+category_ceiling_ri: 6.0
 above_baseline: false
 assessment_date: '2026-04-29'
 methodology_version: '1.3'

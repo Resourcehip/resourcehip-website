@@ -16,8 +16,8 @@ ri_score: 0.0
 ri_descriptor: Renewable
 category_baseline_hip: 4.8
 category_baseline_ri: 0.0
-category_ceiling_hip: null
-category_ceiling_ri: null
+category_ceiling_hip: 7.7
+category_ceiling_ri: 0.0
 above_baseline: false
 assessment_date: '2026-04-29'
 methodology_version: '1.3'
@@ -30,7 +30,7 @@ msi_finding: The product relies on abundant materials including FSC-certified wo
 scr_finding: Wooden toys rely on timber and metal hardware, which are typically sourced from moderate-risk jurisdictions with
   40-60% global supply concentration. The assessment assumes a single primary supplier with no documented alternative and
   no third-party verified due-diligence programme, placing the supply chain at the pre-verification baseline for this category.
-rc_finding: The product is a wooden toy manufactured in Germany with a take-back scheme, which supports material recovery.
+rc_finding: The product is a wooden toy manufactured in China with a take-back scheme, which supports material recovery.
   However, the absence of submitted disassembly data assumes a glued construction, limiting practical separation of materials.
   While wood is recyclable, the conservative estimate of 20% recoverable streams and lack of verified disassembly protocols
   places the score at the lower end of the partially recyclable range.

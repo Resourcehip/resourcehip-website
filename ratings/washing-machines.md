@@ -16,8 +16,8 @@ ri_score: -7.0
 ri_descriptor: Depleting
 category_baseline_hip: 3.1
 category_baseline_ri: -7.0
-category_ceiling_hip: null
-category_ceiling_ri: null
+category_ceiling_hip: 6.7
+category_ceiling_ri: -2.0
 above_baseline: false
 assessment_date: '2026-04-26'
 methodology_version: '1.3'

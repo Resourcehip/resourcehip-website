@@ -163,7 +163,7 @@ Output goes to `dist/`. Open `dist/ratings/index.html` in a browser to preview.
 |-------------------|-------------------------------------------------------------------|
 | Build command     | `pip install -r requirements.txt && python build.py && python sitemap.py` |
 | Output directory  | `dist`                                                            |
-| Root directory    | `Resourcehip/resourcehip_website`                                 |
+| Root directory    | *(empty — repo root is the site root)*                            |
 | Python version    | 3.11+                                                             |
 | Branch            | `main`                                                            |
 

@@ -68,13 +68,13 @@ Every Verified Rating also carries a Regenerative Index (RI) score — a measure
 Getting a Verified Rating involves three stages:
 
 1. **Submit your product data and evidence dossier**
-   Resourcehip provides a structured submission template covering materials composition, supply chain provenance, repairability documentation, and end-of-life pathways. Pricing and timeline: [#missing# — to be confirmed].
+   Resourcehip provides a structured submission template covering materials composition, supply chain provenance, repairability documentation, and end-of-life pathways. Pricing and timeline: see our [Pricing](/pricing) page.
 
 2. **Assessment by Resourcehip analysts**
    Your submitted data is scored against the seven HIP dimensions by Resourcehip's assessment team. The process is transparent: you will receive a breakdown of each dimension score, the evidence used, and the rationale for the final HIP Score.
 
 3. **HIP Mark licence (if your score qualifies)**
-   If your product achieves a score of 6.0 or above on a Verified Rating, you are eligible to licence the HIP Mark for use in product communications, packaging, and marketing. Licence terms: [#missing# — to be confirmed].
+   If your product achieves a score of 6.0 or above on a Verified Rating, you are eligible to licence the HIP Mark for use in product communications, packaging, and marketing. Licence terms: see our [Pricing](/pricing) page.
 
 ## Ready to apply?
 

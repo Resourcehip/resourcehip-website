@@ -1,0 +1,5 @@
+name = "resourcehip-website"
+pages_build_output_dir = "dist"
+
+[build]
+command = "pip install -r requirements.txt && python build.py && python sitemap.py"
