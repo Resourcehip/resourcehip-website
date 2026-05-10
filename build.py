@@ -86,6 +86,30 @@ def parse_md_file(filepath: Path) -> tuple[dict, str]:
     return frontmatter, body_html
 
 
+def _encode_email(addr: str) -> str:
+    """Entity-encode every character of addr to deter address harvesting."""
+    return ''.join(f'&#{ord(c)};' for c in addr)
+
+
+def obfuscate_emails(html: str) -> str:
+    """Replace all email addresses in rendered HTML with HTML entity encoding.
+
+    Encodes mailto: href values first, then remaining plain-text addresses.
+    Browsers decode entities transparently so links remain functional.
+    """
+    html = re.sub(
+        r'(mailto:)([a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,})',
+        lambda m: m.group(1) + _encode_email(m.group(2)),
+        html,
+    )
+    html = re.sub(
+        r'([a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,})',
+        lambda m: _encode_email(m.group(1)),
+        html,
+    )
+    return html
+
+
 def slug_from_path(filepath: Path) -> str:
     """Generate a URL slug from a filename, e.g. hair_dryers.md → hair-dryers"""
     name = filepath.stem
@@ -190,6 +214,7 @@ def build_pages() -> None:
 
     for md_file in sorted(PAGES_DIR.rglob("*.md")):
         data, body_html = parse_md_file(md_file)
+        body_html = obfuscate_emails(body_html)
         rel_path = md_file.relative_to(PAGES_DIR)
 
         # Top-level component: filename stem for flat pages, dir name for nested
@@ -342,6 +367,7 @@ def build_blog(rating_slugs: set[str] | None = None) -> list[dict]:
 
     for md_file in sorted(BLOG_DIR.glob("*.md")):
         data, body_html = _parse_blog_post(md_file)
+        body_html = obfuscate_emails(body_html)
 
         if not data:
             print(f"  [skip] blog/{md_file.name} — no frontmatter")
