@@ -6,11 +6,13 @@ active_page: ""
 
 # Privacy Policy
 
-**Resourcehip Ltd · Version 1.0 · April 2026**
+**Resourcehip Ltd · Version 1.0 · May 2026**
 
 Resourcehip Ltd ("Resourcehip", "we", "us") is registered in Scotland, United Kingdom (Company No. SC873386). We publish independent material resilience ratings for consumer product categories and licence the HIP Mark trust mark.
 
-**Data controller:** Resourcehip Ltd · **ICO Registration No.:** [to be added — ICO registration pending; do not publish until complete] · **Contact:** hello@resourcehip.com
+We are registered with the Information Commissioner's Office (ICO) under registration number **ZC147997**.
+
+**Data controller:** Resourcehip Ltd · **ICO Registration No.:** ZC147997 · **Contact:** hello@resourcehip.com
 
 ---
 
@@ -58,6 +60,8 @@ No other third parties receive your personal data. The UK–EU adequacy decision
 You have the right to: **access** the data we hold · **correct** inaccurate data · **request deletion** · **object** to processing · **data portability** · **lodge a complaint** with the ICO ([ico.org.uk](https://ico.org.uk)).
 
 To exercise any right, email [hello@resourcehip.com](mailto:hello@resourcehip.com). We will respond within one month.
+
+Resourcehip Ltd is registered with the Information Commissioner's Office (ICO) under registration number **ZC147997**.
 
 ---
 
