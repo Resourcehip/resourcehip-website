@@ -16,6 +16,7 @@ Output directory:  dist/
 
 import email.utils
 import html as html_lib
+import json
 import re
 import shutil
 import sys
@@ -352,6 +353,30 @@ def validate_internal_links(dist_dir: Path) -> int:
     return len(broken_seen)
 
 
+def build_contact() -> None:
+    """Build /contact.html from the dedicated contact form template."""
+    template = jinja_env.get_template("contact.html.j2")
+    html = template.render(
+        page_title="Contact",
+        page_description="Get in touch with Resourcehip about the HIP methodology, verified ratings, or the HIP Mark.",
+        active_page="contact",
+    )
+    out_file = DIST / "contact.html"
+    out_file.write_text(html, encoding="utf-8")
+    print("  [page]   contact.html")
+
+
+def copy_functions() -> None:
+    """Copy Cloudflare Pages Functions to dist/ for deployment."""
+    src = SITE_ROOT / "functions"
+    dst = DIST / "functions"
+    if src.exists():
+        if dst.exists():
+            shutil.rmtree(dst)
+        shutil.copytree(src, dst)
+        print("  [func]   functions/ copied")
+
+
 def build_sitemap() -> None:
     """Generate sitemap.xml and robots.txt from freshly built dist/."""
     base_url = "https://resourcehip.com"
@@ -470,6 +495,66 @@ def build_blog(rating_slugs: set[str] | None = None) -> list[dict]:
     return [d for d, _ in posts_meta]
 
 
+def build_search_index(entries: list[dict] | None = None) -> None:
+    """Generate /dist/search-index.json from rating metadata.
+
+    Can be called standalone (parses .md files itself) or with pre-parsed
+    entries from a full build.  Output is a compact JSON array consumed by
+    the client-side search widget.
+    """
+    if entries is None:
+        entries = []
+        for md_file in sorted(RATINGS_DIR.rglob("*.md")):
+            data, _ = parse_md_file(md_file)
+            if not data:
+                continue
+            rel_path = md_file.relative_to(RATINGS_DIR)
+            data["url_path"] = str(rel_path.with_suffix(""))
+            entries.append(data)
+
+    index = []
+    for e in entries:
+        rating_type = e.get("rating_type", "generic")
+        brand = e.get("brand") or ""
+
+        if rating_type == "verified" and brand == "Category Ceiling":
+            search_type = "ceiling"
+        elif rating_type == "verified":
+            search_type = "manufacturer"
+        else:
+            search_type = "generic"
+
+        summary = e.get("consumer_summary") or ""
+        if len(summary) > 150:
+            summary = summary[:147] + "..."
+
+        item: dict = {
+            "name": e.get("title", ""),
+            "url": f"/ratings/{e.get('url_path', e.get('slug', ''))}",
+            "hipScore": e.get("hip_score", 0),
+            "hipLabel": e.get("hip_label", ""),
+            "riScore": e.get("ri_score", 0),
+            "riDescriptor": e.get("ri_descriptor", ""),
+            "type": search_type,
+            "category": e.get("category", ""),
+        }
+        if brand and search_type == "manufacturer":
+            item["brand"] = brand
+        if summary:
+            item["summary"] = summary
+
+        index.append(item)
+
+    DIST.mkdir(parents=True, exist_ok=True)
+    out_file = DIST / "search-index.json"
+    out_file.write_text(
+        json.dumps(index, indent=None, separators=(",", ":")),
+        encoding="utf-8",
+    )
+    size_kb = out_file.stat().st_size / 1024
+    print(f"  [search] search-index.json ({len(index)} entries, {size_kb:.1f} KB)")
+
+
 def _build_blog_rss(blog_out: Path, posts_meta: list[tuple[dict, str]]) -> None:
     """Write /blog/feed.xml as RSS 2.0."""
     site_url = "https://resourcehip.com"
@@ -526,6 +611,9 @@ def build():
     rating_slugs = {e["slug"] for e in index_entries}
     print("→ Building static pages")
     build_pages()
+    build_contact()
+    print("→ Copying Cloudflare Pages Functions")
+    copy_functions()
     print("→ Building blog")
     blog_posts = build_blog(rating_slugs=rating_slugs)
     print("→ Generating sitemap")
@@ -540,6 +628,12 @@ def build():
 
 
 if __name__ == "__main__":
+    if "--search-index" in sys.argv:
+        print("Generating search index...\n")
+        build_search_index()
+        print("\nDone.")
+        sys.exit(0)
+
     if "--watch" in sys.argv:
         # Simple watch mode using polling (no watchdog dependency)
         import time

@@ -3,3 +3,9 @@ pages_build_output_dir = "dist"
 
 [build]
 command = "pip install -r requirements.txt && python build.py && python sitemap.py"
+
+# Contact form email delivery — requires Email Routing enabled for resourcehip.com
+# in the Cloudflare dashboard. See functions/api/contact.js.
+[[send_email]]
+name = "EMAIL"
+destination_address = "hello@resourcehip.com"
