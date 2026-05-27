@@ -4,7 +4,7 @@
   Brand guidelines: RES-84. resourcehip.com
 -->
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 200 36" width="200" height="36"
+     viewBox="0 0 200 50" width="200" height="50"
      role="img" aria-label="RI tier: Renewable">
   <title>RI Tier: Renewable</title>
   <desc>Regenerative Index tier chip — Renewable (position 3 of 5). resourcehip.com</desc>
@@ -13,19 +13,19 @@
   </defs>
 
   <!-- Pill background -->
-  <path d="M 18.0,0 A 18.0,18.0 0 0,0 18.0,36 L 182.0,36 A 18.0,18.0 0 0,0 182.0,0 Z" fill="#4FA9A5"/>
+  <rect x="0" y="0" width="200" height="50" rx="18" fill="#4FA9A5"/>
 
   <!-- Tier name -->
-  <text x="19.8" y="18.0"
-        dominant-baseline="central"
+  <text x="100" y="18"
+        text-anchor="middle" dominant-baseline="central"
         font-family="Montserrat, 'Ubuntu Sans', sans-serif" font-weight="700" font-size="15.1"
         letter-spacing="0.06em"
         fill="white">RENEWABLE</text>
 
   <!-- RI position dots (1–5, left to right) -->
-  <circle cx="69.7" cy="18.0" r="5.8" fill="white" opacity="1"/>
-  <circle cx="96.3" cy="18.0" r="5.8" fill="white" opacity="1"/>
-  <circle cx="123.0" cy="18.0" r="5.8" fill="white" opacity="1"/>
-  <circle cx="149.6" cy="18.0" r="5.8" fill="white" opacity="0.25"/>
-  <circle cx="176.2" cy="18.0" r="5.8" fill="white" opacity="0.25"/>
+  <circle cx="42" cy="38" r="3.5" fill="white" opacity="1"/>
+  <circle cx="71" cy="38" r="3.5" fill="white" opacity="1"/>
+  <circle cx="100" cy="38" r="3.5" fill="white" opacity="1"/>
+  <circle cx="129" cy="38" r="3.5" fill="white" opacity="0.25"/>
+  <circle cx="158" cy="38" r="3.5" fill="white" opacity="0.25"/>
 </svg>
