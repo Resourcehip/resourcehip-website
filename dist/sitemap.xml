@@ -769,6 +769,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://resourcehip.com/contact</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://resourcehip.com/dispute</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>yearly</changefreq>

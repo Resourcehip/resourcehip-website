@@ -190,12 +190,82 @@
 
     .site-footer a { color: var(--footer-link); text-decoration: none; }
 
+    /* ── Search widget ──────────────────────────────────────────────────── */
+    .search-wrapper { position: relative; margin-left: auto; }
+    .search-wrapper input[type="search"] {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.78rem;
+      padding: 0.4rem 0.8rem;
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      width: 170px;
+      background: var(--page-bg);
+      color: var(--ink);
+      transition: width 0.2s, border-color 0.2s;
+    }
+    .search-wrapper input[type="search"]:focus {
+      width: 240px;
+      border-color: var(--hip-blue);
+      outline: none;
+    }
+    .search-results {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 360px;
+      max-height: 420px;
+      overflow-y: auto;
+      background: var(--card-bg);
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+      z-index: 200;
+      margin-top: 0.5rem;
+    }
+    .search-result {
+      display: block;
+      padding: 0.75rem 1rem;
+      text-decoration: none;
+      color: inherit;
+      border-bottom: 1px solid var(--rule);
+      transition: background 0.15s;
+    }
+    .search-result:last-child { border-bottom: none; }
+    .search-result:hover, .search-result.search-active { background: var(--surface); }
+    .search-result-name {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .search-result-meta {
+      font-size: 0.72rem;
+      color: #888;
+      margin-top: 0.15rem;
+    }
+    .search-badge {
+      font-size: 0.58rem; font-weight: 700;
+      padding: 0.1rem 0.4rem; border-radius: 8px;
+      text-transform: uppercase; letter-spacing: 0.06em;
+    }
+    .search-badge-verified { background: var(--hip-blue-tint); color: var(--hip-blue); }
+    .search-badge-ceiling { background: var(--surface); color: #888; }
+    .search-no-results {
+      padding: 1rem; color: #aaa; font-size: 0.82rem; text-align: center;
+    }
+
     /* ── Responsive ─────────────────────────────────────────────────────── */
     @media (max-width: 640px) {
       .site-header { padding: 0.75rem 1rem; }
       .site-nav { gap: 1rem; }
       .site-nav a.nav-cta { display: none; }
       .site-main { padding: 1.5rem 1rem 3rem; }
+      .search-wrapper input[type="search"] { width: 120px; font-size: 0.72rem; }
+      .search-wrapper input[type="search"]:focus { width: 160px; }
+      .search-results { width: 280px; }
     }
 
     
@@ -317,7 +387,7 @@
     "url": "https://resourcehip.com",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://resourcehip.com/logo.png"
+      "url": "https://resourcehip.com/assets/hip-lockup.png"
     }
   }
 }
@@ -331,7 +401,7 @@
 
   <header class="site-header">
     <a class="logo-link" href="/">
-      <img src="/logo.png" alt="Resourcehip home" />
+      <img src="/assets/hip-lockup.png" alt="Resourcehip — HIP Certified" />
     </a>
     <nav class="site-nav" aria-label="Main navigation">
       <a href="/" >Home</a>
@@ -339,9 +409,14 @@
       <a href="/blog/" class="active" aria-current="page">Blog</a>
       <a href="/methodology" >Methodology</a>
       <a href="/about" >About</a>
+      <a href="/contact" >Contact</a>
       <a href="/faq" >FAQ</a>
       <a href="/verified-ratings" >Verified Ratings</a>
       <a href="/pricing" >Pricing</a>
+      <div class="search-wrapper">
+        <input type="search" id="rh-search-input" placeholder="Search products..." autocomplete="off" aria-label="Search products">
+        <div id="rh-search-results" class="search-results" role="listbox" aria-label="Search results"></div>
+      </div>
       <a href="/submit" class="nav-cta">Submit a Product</a>
     </nav>
   </header>
@@ -436,6 +511,7 @@
     <!-- TODO: add VAT no. once registered (only required if VAT-registered) -->
     <div style="margin-top:0.4rem;">
       <span id="rh-email"></span> &nbsp;|&nbsp;
+      <a href="/contact">Contact</a> &nbsp;|&nbsp;
       <a href="/methodology">Methodology v1.3</a> &nbsp;|&nbsp;
       <a href="/privacy">Privacy</a> &nbsp;|&nbsp;
       <a href="/terms">Terms</a> &nbsp;|&nbsp;
@@ -449,6 +525,104 @@
       var addr = u + '\u0040' + d;
       var el = document.getElementById('rh-email');
       if (el) el.innerHTML = '<a href="mailto:' + addr + '">' + addr + '</a>';
+    })();
+  </script>
+  <script>
+    (function() {
+      var index = null, active = -1;
+      var input = document.getElementById('rh-search-input');
+      var box = document.getElementById('rh-search-results');
+      if (!input || !box) return;
+
+      var TYPE_RANK = { manufacturer: 0, generic: 1, ceiling: 2 };
+
+      function load() {
+        if (index) return Promise.resolve(index);
+        return fetch('/search-index.json')
+          .then(function(r) { return r.json(); })
+          .then(function(d) { index = d; return d; })
+          .catch(function() { index = []; return []; });
+      }
+
+      function esc(s) {
+        var d = document.createElement('div');
+        d.textContent = s || '';
+        return d.innerHTML;
+      }
+
+      function render(items) {
+        active = -1;
+        if (!items.length) {
+          box.innerHTML = '<div class="search-no-results">No results found</div>';
+          box.style.display = 'block';
+          return;
+        }
+        box.innerHTML = items.map(function(it, i) {
+          var badge = it.type === 'manufacturer'
+            ? ' <span class="search-badge search-badge-verified">Verified</span>'
+            : it.type === 'ceiling'
+            ? ' <span class="search-badge search-badge-ceiling">Ceiling</span>'
+            : '';
+          var ri = (it.riScore > 0 ? '+' : '') + it.riScore.toFixed(1);
+          return '<a class="search-result" href="' + esc(it.url) + '" role="option" data-idx="' + i + '">'
+            + '<div class="search-result-name">' + esc(it.name) + badge + '</div>'
+            + '<div class="search-result-meta">' + esc(it.category) + ' &middot; HIP ' + it.hipScore.toFixed(1) + ' &middot; RI ' + ri + '</div>'
+            + '</a>';
+        }).join('');
+        box.style.display = 'block';
+      }
+
+      function search(q) {
+        if (!index || !q) { box.innerHTML = ''; box.style.display = 'none'; return; }
+        var lq = q.toLowerCase();
+        var hits = [];
+        for (var i = 0; i < index.length; i++) {
+          var it = index[i];
+          var nameMatch = (it.name || '').toLowerCase().indexOf(lq) !== -1;
+          var catMatch = (it.category || '').toLowerCase().indexOf(lq) !== -1;
+          var brandMatch = it.brand && it.brand.toLowerCase().indexOf(lq) !== -1;
+          if (nameMatch || catMatch || brandMatch) hits.push(it);
+        }
+        hits.sort(function(a, b) {
+          var ta = TYPE_RANK[a.type] !== undefined ? TYPE_RANK[a.type] : 1;
+          var tb = TYPE_RANK[b.type] !== undefined ? TYPE_RANK[b.type] : 1;
+          if (ta !== tb) return ta - tb;
+          var aStart = (a.name || '').toLowerCase().indexOf(lq) === 0 ? 0 : 1;
+          var bStart = (b.name || '').toLowerCase().indexOf(lq) === 0 ? 0 : 1;
+          if (aStart !== bStart) return aStart - bStart;
+          return (b.hipScore || 0) - (a.hipScore || 0);
+        });
+        render(hits.slice(0, 12));
+      }
+
+      function setActive(idx) {
+        var items = box.querySelectorAll('.search-result');
+        if (active >= 0 && active < items.length) items[active].classList.remove('search-active');
+        active = idx;
+        if (active >= 0 && active < items.length) {
+          items[active].classList.add('search-active');
+          items[active].scrollIntoView({ block: 'nearest' });
+        }
+      }
+
+      input.addEventListener('focus', function() { load(); });
+      input.addEventListener('input', function() {
+        load().then(function() { search(input.value.trim()); });
+      });
+      input.addEventListener('keydown', function(e) {
+        var items = box.querySelectorAll('.search-result');
+        if (!items.length) return;
+        if (e.key === 'ArrowDown') { e.preventDefault(); setActive(Math.min(active + 1, items.length - 1)); }
+        else if (e.key === 'ArrowUp') { e.preventDefault(); setActive(Math.max(active - 1, 0)); }
+        else if (e.key === 'Enter' && active >= 0 && active < items.length) {
+          e.preventDefault();
+          items[active].click();
+        }
+        else if (e.key === 'Escape') { box.style.display = 'none'; input.blur(); }
+      });
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.search-wrapper')) box.style.display = 'none';
+      });
     })();
   </script>
 
