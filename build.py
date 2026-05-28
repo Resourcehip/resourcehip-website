@@ -608,6 +608,7 @@ def build():
     print("→ Building rating pages")
     index_entries = build_ratings()
     build_ratings_index(index_entries)
+    build_search_index(index_entries)
     rating_slugs = {e["slug"] for e in index_entries}
     print("→ Building static pages")
     build_pages()
