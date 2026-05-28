@@ -71,7 +71,7 @@ export async function onRequestPost(context) {
   const rawMime = [
     `From: "Resourcehip Contact Form" <contact-form@resourcehip.org>`,
     `Reply-To: "${name}" <${email}>`,
-    `To: hello@resourcehip.com`,
+    `To: hello@resourcehip.org`,
     `Subject: ${subject}`,
     `Content-Type: text/plain; charset=utf-8`,
     ``,
@@ -88,7 +88,7 @@ export async function onRequestPost(context) {
       },
       body: JSON.stringify({
         from: 'contact-form@resourcehip.org',
-        to: 'hello@resourcehip.com',
+        to: 'hello@resourcehip.org',
         rawMime,
       }),
     });
