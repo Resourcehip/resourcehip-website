@@ -5,3 +5,33 @@ editorial/
 # Python bytecode
 __pycache__/
 *.pyc
+
+# Hermes agent logs and session dumps (prevent accidental commits)
+20260*/
+*_[a-f0-9]{8}
+*.session.log
+*.session*.json
+*.session*.jsonl
+
+# Environment and secrets
+.env
+.env.local
+*.key
+*.pem
+*.pkcs12
+
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
+/logs/
+/tmp/
