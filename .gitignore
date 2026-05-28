@@ -1,3 +1,6 @@
+# Build output — Cloudflare Pages rebuilds from source on every deploy
+dist/
+
 # Brand assets and editorial content — managed outside version control
 brand/
 editorial/

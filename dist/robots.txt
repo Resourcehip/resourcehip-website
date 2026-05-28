@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://resourcehip.com/sitemap.xml
