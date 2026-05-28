@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>What is the HIP Score? A Plain-English Explainer — Resourcehip</title>
-  <meta name="description" content="The HIP Score is a 0–10 rating of how a product is built, sourced, and recovered — not how it performs in use. Here is what each of the seven dimensions measures, and why the score moves where it does." />
+  <title>Contact — Resourcehip</title>
+  <meta name="description" content="Get in touch with Resourcehip about the HIP methodology, verified ratings, or the HIP Mark." />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <!-- Self-hosted Montserrat — no Google Fonts CDN (GDPR: no IP sent to Google) -->
   <!-- Run fonts/download_fonts.py once to fetch the .woff2 files -->
@@ -336,130 +336,79 @@
     }
 
     
-.post-header { margin-bottom: 2rem; }
-.post-meta {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: 0.75rem;
-}
-.post-meta .cat-pill {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--hip-blue);
-  background: var(--hip-blue-tint);
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  text-decoration: none;
-}
-.post-meta .cat-pill:hover { background: var(--surface); }
-.post-meta .post-date { font-size: 0.78rem; color: #888; }
+.contact-page { max-width: 640px; }
+.contact-page h1 { margin-bottom: 0.5rem; }
+.contact-intro { margin-bottom: 2rem; }
+.contact-intro p { color: var(--muted); line-height: 1.8; }
 
-.post-title {
-  font-size: 1.9rem;
-  font-weight: 700;
-  color: var(--hip-blue);
-  line-height: 1.25;
-  margin-bottom: 0.5rem;
+.contact-form { max-width: 520px; }
+.form-group { margin-bottom: 1.25rem; }
+.form-group label {
+  display: block; font-weight: 600; font-size: 0.85rem;
+  margin-bottom: 0.3rem; color: var(--ink);
 }
-.post-description {
-  font-size: 1rem;
-  color: var(--muted);
-  line-height: 1.7;
-  margin-bottom: 0;
+.form-group .required { color: var(--negative); }
+.form-group .optional { font-weight: 400; color: var(--muted); }
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%; font-family: 'Montserrat', sans-serif; font-size: 0.88rem;
+  padding: 0.6rem 0.8rem; border: 1px solid var(--rule); border-radius: 6px;
+  background: var(--card-bg); color: var(--ink); transition: border-color 0.2s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--hip-blue); outline: none;
+  box-shadow: 0 0 0 3px rgba(14, 76, 143, 0.1);
+}
+.form-group textarea { min-height: 140px; resize: vertical; }
+.form-group select { appearance: auto; }
+.form-error {
+  color: var(--negative); font-size: 0.78rem; margin-top: 0.25rem; display: none;
+}
+.form-group.has-error input,
+.form-group.has-error select,
+.form-group.has-error textarea { border-color: var(--negative); }
+.form-group.has-error .form-error { display: block; }
+
+.hp-field { position: absolute; left: -9999px; opacity: 0; height: 0; width: 0; overflow: hidden; }
+
+.contact-submit {
+  background: linear-gradient(135deg, var(--hip-blue), var(--hip-blue-deep));
+  color: #fff; border: none; padding: 0.7rem 2rem; border-radius: 6px;
+  font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.88rem;
+  cursor: pointer; transition: opacity 0.2s; min-height: 44px; min-width: 44px;
+}
+.contact-submit:hover { opacity: 0.9; }
+.contact-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.contact-success,
+.contact-error-banner { display: none; }
+.contact-success.visible,
+.contact-error-banner.visible { display: block; }
+.contact-success {
+  background: var(--hip-blue-tint); border: 1px solid var(--hip-blue);
+  border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem;
+}
+.contact-success h2 { color: var(--hip-blue); margin-top: 0; }
+.contact-error-banner {
+  background: #fef2f2; border: 1px solid var(--negative);
+  border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem;
+}
+.contact-error-banner h2 { color: var(--negative); margin-top: 0; }
+
+.contact-footnote {
+  font-size: 0.82rem; color: var(--muted); margin-top: 1.5rem; max-width: 520px;
 }
 
-.post-body { max-width: 680px; margin-top: 2rem; }
-.post-body h2 { font-size: 1.15rem; margin: 2rem 0 0.6rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.4rem; }
-.post-body h3 { font-size: 1rem; margin: 1.5rem 0 0.4rem; }
-.post-body p  { line-height: 1.8; margin-bottom: 1rem; }
-.post-body ul, .post-body ol { padding-left: 1.4rem; margin-bottom: 1rem; line-height: 1.8; }
-.post-body blockquote { border-left: 3px solid var(--hip-blue); padding: 0.5rem 1rem; background: var(--hip-blue-tint); border-radius: 0 6px 6px 0; margin: 1rem 0; color: var(--muted); font-style: italic; }
-.post-body code { font-family: monospace; background: #eee; padding: 0.1em 0.4em; border-radius: 3px; font-size: 0.9em; }
-.post-body pre { background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; overflow-x: auto; margin: 1rem 0; }
-.post-body pre code { background: none; padding: 0; }
-
-/* rating_link() helper output */
-.post-body .rating-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  background: var(--hip-blue-tint);
-  border: 1px solid var(--hip-blue);
-  color: var(--hip-blue);
-  font-weight: 600;
-  font-size: 0.88rem;
-  padding: 0.35rem 0.9rem;
-  border-radius: 6px;
-  text-decoration: none;
-  margin: 0.25rem 0;
-}
-.post-body .rating-link:hover { background: var(--surface); }
-
-.post-footer {
-  margin-top: 2.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--rule);
-  font-size: 0.82rem;
-  color: #888;
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.post-footer a { color: var(--hip-blue); }
-
-.post-hero-img {
-  width: 100%;
-  border-radius: 12px;
-  margin: 1.5rem 0 0;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  display: block;
+@media (max-width: 640px) {
+  .contact-form { max-width: 100%; }
+  .contact-submit { width: 100%; }
 }
 
   </style>
   
-<link rel="canonical" href="https://resourcehip.com/blog/what-is-the-hip-score" />
-<!-- Open Graph -->
-<meta property="og:type" content="article" />
-<meta property="og:title" content="What is the HIP Score? A Plain-English Explainer — Resourcehip" />
-<meta property="og:description" content="The HIP Score is a 0–10 rating of how a product is built, sourced, and recovered — not how it performs in use. Here is what each of the seven dimensions measures, and why the score moves where it does." />
-<meta property="og:url" content="https://resourcehip.com/blog/what-is-the-hip-score" />
-<meta property="og:site_name" content="Resourcehip" />
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="What is the HIP Score? A Plain-English Explainer — Resourcehip" />
-<meta name="twitter:description" content="The HIP Score is a 0–10 rating of how a product is built, sourced, and recovered — not how it performs in use. Here is what each of the seven dimensions measures, and why the score moves where it does." />
-<!-- Schema.org Article JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "What is the HIP Score? A Plain-English Explainer",
-  "description": "The HIP Score is a 0\u201310 rating of how a product is built, sourced, and recovered \u2014 not how it performs in use. Here is what each of the seven dimensions measures, and why the score moves where it does.",
-  "url": "https://resourcehip.com/blog/what-is-the-hip-score",
-  "dateModified": "2026-04-28",
-  "author": {
-    "@type": "Organization",
-    "name": "Resourcehip",
-    "url": "https://resourcehip.com"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Resourcehip",
-    "url": "https://resourcehip.com",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://resourcehip.com/assets/hip-lockup.png"
-    }
-  }
-}
-</script>
-
 </head>
 <body>
 
@@ -474,10 +423,10 @@
     <nav class="site-nav" id="site-nav" aria-label="Main navigation">
       <a href="/" >Home</a>
       <a href="/ratings/" >Ratings</a>
-      <a href="/blog/" class="active" aria-current="page">Blog</a>
+      <a href="/blog/" >Blog</a>
       <a href="/methodology" >Methodology</a>
       <a href="/about" >About</a>
-      <a href="/contact" >Contact</a>
+      <a href="/contact" class="active" aria-current="page">Contact</a>
       <a href="/faq" >FAQ</a>
       <a href="/verified-ratings" >Verified Ratings</a>
       <a href="/pricing" >Pricing</a>
@@ -491,115 +440,156 @@
 
   <main id="main-content" class="site-main ">
     
-<article>
-  <header class="post-header">
-    <div class="post-meta">
-      
-      <a class="cat-pill" href="/blog/category/methodology/">Methodology</a>
-      
-      <span class="post-date">2026-04-28</span>
-    </div>
-    <h1 class="post-title">What is the HIP Score? A Plain-English Explainer</h1>
-    
-    <p class="post-description">The HIP Score is a 0–10 rating of how a product is built, sourced, and recovered — not how it performs in use. Here is what each of the seven dimensions measures, and why the score moves where it does.</p>
-    
-    
-  </header>
-
-  <div class="post-body">
-    <h2>What the HIP Score Is — And What It Is Not</h2>
-<p>The HIP Score is a single number from 0 to 10 that summarises how a product performs across seven dimensions of long-term material resilience. It is the headline figure on every Resourcehip rating page.</p>
-<p>The HIP Score is not:</p>
-<ul>
-<li>a carbon-footprint estimate</li>
-<li>a measure of in-use energy efficiency</li>
-<li>a generalised "is this good for the environment" verdict</li>
-<li>a comparison between brands or models within a category</li>
-</ul>
-<p>What it is:</p>
-<ul>
-<li>a measure of how the product is <strong>built</strong> (materials, repairability)</li>
-<li>a measure of how it is <strong>sourced</strong> (supply-chain risk and audit verification)</li>
-<li>a measure of how it is <strong>recovered</strong> at end of life (recyclability, take-back, regenerative inputs)</li>
-<li>a fixed, reproducible rubric — the same product, scored twice, gets the same score</li>
-</ul>
-<p>The reference page at <a href="/methodology"><code>/methodology</code></a> is the authoritative document. This article is the plain-English version.</p>
-<h2>The Seven Dimensions</h2>
-<p>Each dimension is scored independently from 0 to 10 against a published rubric. Six are weighted positive; one (the Regenerative Index) is normalised. The weights are not arbitrary — they reflect where the long-tail environmental cost of a consumer product actually sits.</p>
-<h3>Material Scarcity Index (MSI) — weight 20%</h3>
-<p>How dependent is the product on materials that are scarce, geopolitically concentrated, or on the EU Critical Raw Materials list? A device built from recycled stainless steel and abundant minerals scores high. A device built around lithium, cobalt, neodymium, and rare earths from single-country supply scores low.</p>
-<p>This is the biggest single weight in the score. The reason: scarcity decisions made at design time are essentially permanent. You can change recycling rates over time; you cannot un-bond a glued lithium battery into the housing.</p>
-<h3>Supply Chain Risk (SCR) — weight 18%</h3>
-<p>Where do the materials come from, who audits the suppliers, and is the supply diversified? Cobalt from the DRC with no due-diligence framework scores low. Diversified sourcing across audited suppliers in the EU, Australia, and Japan scores high. Verified third-party audits (RBA, OECD due-diligence) move this dimension significantly.</p>
-<h3>Recyclability and Circularity (RC) — weight 18%</h3>
-<p>What proportion of the product, by weight, can practically enter recycling streams at end of life? Glued, sealed, mixed-material devices score low. Screw-fastened, single-material, take-back-supported devices score high. <strong>Theoretical</strong> recyclability does not count — there has to be a real recovery path.</p>
-<h3>Repairability (R) — weight 13%</h3>
-<p>Can a non-specialist repair the device with reasonable cost and effort? iFixit scores, screw-fastened construction, public service manuals, and a stocked spare-parts programme all push this dimension up. Glue, tamper-evident seals, and missing spare parts push it down.</p>
-<h3>Social and Environmental Impact (SEI) — weight 8%</h3>
-<p>Are the manufacturing facilities audited for labour and environmental practice? RBA audits, ISO 14001 certifications, modern-slavery statements, and ILO compliance all contribute. Manufacturing in a higher-risk jurisdiction is not, by itself, a penalty — the absence of audit evidence is. Scores above 5 on this dimension require third-party audit evidence; self-reported claims cannot exceed 5.</p>
-<h3>Product Longevity (PL) — weight 8%</h3>
-<p>How long is the product designed to last? Warranty length, IP rating, modular design, and stated software-support windows (where applicable) all feed in. A 2-year warranty + 4-year design life is a baseline score; a 5-year warranty + 12-year design life moves the dimension into the upper bands.</p>
-<h3>Regenerative Index (RI) — weight 15%, scale −10 to +10</h3>
-<p>This is the only dimension where negative scores are valid. The RI measures whether a product <em>depletes</em> the systems it draws from (negative), neither depletes nor restores (around zero), or actively <em>restores</em> them (positive). The five canonical tiers are:</p>
-<ul>
-<li><strong>Depleting (−10 to −5)</strong> — virgin extraction, no recycled content, no take-back, no regenerative inputs.</li>
-<li><strong>Extractive (−5 to −1)</strong> — partial recycled content, possible take-back, but still net-extractive.</li>
-<li><strong>Renewable (0 to +3)</strong> — substantial recycled content with verified take-back; closing the loop.</li>
-<li><strong>Restorative (+3 to +6)</strong> — closed-loop material recovery + regenerative agricultural or biological inputs.</li>
-<li><strong>Regenerative (+6 to +10)</strong> — third-party-certified ecosystem restoration evidence.</li>
-</ul>
-<p>The RI is normalised to 0–10 before weighting, so a Depleting score of −7 contributes 1.5 to the weighted total; a Restorative score of +4 contributes 7.0. We have a <a href="/blog/what-is-the-regenerative-index">dedicated explainer</a> on the RI specifically.</p>
-<h2>How the Final Score is Calculated</h2>
-<p>The HIP Score is the weighted sum:</p>
-<blockquote>
-<p><strong>HIP Score = (MSI × 0.20) + (SCR × 0.18) + (RC × 0.18) + (R × 0.13) + (SEI × 0.08) + (PL × 0.08) + (RI_normalised × 0.15)</strong></p>
-</blockquote>
-<p>Rounded to one decimal place. That is it. There is no judge's bonus, no editorial adjustment, no rounding-up to keep the manufacturer happy. The same input numbers always produce the same output.</p>
-<h2>What Different Scores Mean</h2>
-<p>A HIP Score sits inside a category and should be read against the category baseline:</p>
-<ul>
-<li><strong>Below 3.0</strong> — a typical mass-market product in a structurally compromised category. Most consumer-electronics categories have generic baselines in this range.</li>
-<li><strong>3.0 to 6.0</strong> — material resilience is partial; some dimensions strong, others poor. No HIP Mark.</li>
-<li><strong>6.0 to 7.5</strong> — earns the <strong>Standard</strong> HIP Mark. The product is materially honest, designed for repair, and has a credible end-of-life path.</li>
-<li><strong>7.5 to 9.0</strong> — earns the <strong>Silver</strong> HIP Mark. Substantial recycled content, audited sourcing, and a long product life.</li>
-<li><strong>9.0 and above, with RI ≥ +6</strong> — earns the <strong>Gold</strong> HIP Mark. Closed-loop material recovery and certified regenerative inputs.</li>
-</ul>
-<p>The Gold threshold deliberately requires both a high HIP Score <em>and</em> a Regenerative Index in the Regenerative band. A product can be a Silver-grade engineering achievement without being regenerative; Gold is reserved for the combination.</p>
-<h2>Generic vs Verified Ratings</h2>
-<p>Every product rating is one of two types:</p>
-<ul>
-<li><strong>Generic ratings</strong> are produced from public data only and apply conservative assumptions wherever data is missing. They rate a product <em>category</em>, not a specific named product. Generic ratings sit at the category baseline.</li>
-<li><strong>Verified ratings</strong> use evidence submitted by the manufacturer through the <a href="/submit">submission form</a>. Submitted data replaces conservative defaults. Verified ratings can climb up to the category ceiling.</li>
-</ul>
-<p>The gap between baseline and ceiling is the <strong>headroom</strong> in a category — the space within which a manufacturer with credible evidence can demonstrate that they outperform the assumed-mass-market default. We have a <a href="/blog/generic-vs-verified-ratings">dedicated explainer</a> on why this gap exists and what it represents.</p>
-<h2>Why the HIP Score Is Built This Way</h2>
-<p>A sustainability rating that is easy to game is worse than no rating at all. Three design decisions specifically protect against gaming:</p>
-<ul>
-<li><strong>Conservative defaults.</strong> Missing data lowers the score, never raises it. There is no incentive to be vague.</li>
-<li><strong>Audit-evidence floors.</strong> SEI scores above 5 require third-party audit evidence. A manufacturer cannot self-report into the upper band.</li>
-<li><strong>Methodology transparency.</strong> The full rubric is published. Anyone can see exactly which inputs would move which score.</li>
-</ul>
-<p>The trade-off is that the HIP Score will never be a marketing-friendly badge that every product can earn with effort. It is meant to be a hard, methodology-driven number that means something specific. That is its credibility.</p>
-<h2>Where to Go From Here</h2>
-<ul>
-<li>The <a href="/methodology">methodology reference page</a> for the full rubric, weights, and worked examples.</li>
-<li>The <a href="/blog/what-is-the-regenerative-index">Regenerative Index explainer</a> for the most distinctive dimension of the seven.</li>
-<li>The <a href="/blog/generic-vs-verified-ratings">generic-vs-verified explainer</a> for the headroom story.</li>
-<li>The <a href="/ratings">ratings catalogue</a> for every category we have rated.</li>
-</ul>
-<p>If you are a manufacturer interested in submitting evidence to lift a category-default rating into a verified rating, see <a href="/submit"><code>/submit</code></a>.</p>
-<hr />
-<p><em>Methodology and edits by Chris Bowness; assistive AI used for drafting.</em></p>
+<div class="contact-page">
+  <div class="contact-intro">
+    <h1>Get in touch</h1>
+    <p>Questions about the HIP methodology, verified ratings, or the HIP Mark? Send us a message and we'll reply within two working days.</p>
   </div>
 
-  <footer class="post-footer">
-    <span>Last updated: 2026-04-28</span>
-    
-    <a href="/blog/category/methodology/">More Methodology articles →</a>
-    
-    <a href="/blog/">← All posts</a>
-  </footer>
-</article>
+  <div id="contact-success" class="contact-success" role="status">
+    <h2>Thanks &mdash; we've got your message.</h2>
+    <p>Expect a reply within two working days.</p>
+  </div>
+
+  <div id="contact-error-banner" class="contact-error-banner" role="alert">
+    <h2>Something went wrong</h2>
+    <p id="contact-error-text">Please try again, or email us directly.</p>
+  </div>
+
+  <form id="contact-form" class="contact-form" novalidate>
+    <div class="form-group">
+      <label for="cf-name">Name <span class="required" aria-hidden="true">*</span></label>
+      <input type="text" id="cf-name" name="name" required autocomplete="name" maxlength="100">
+      <div class="form-error" id="cf-name-error" role="alert" aria-live="polite"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="cf-email">Email <span class="required" aria-hidden="true">*</span></label>
+      <input type="email" id="cf-email" name="email" required autocomplete="email" maxlength="254" aria-describedby="cf-email-error">
+      <div class="form-error" id="cf-email-error" role="alert" aria-live="polite"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="cf-company">Company <span class="optional">(optional)</span></label>
+      <input type="text" id="cf-company" name="company" autocomplete="organization" maxlength="100">
+    </div>
+
+    <div class="form-group">
+      <label for="cf-reason">Reason <span class="optional">(optional)</span></label>
+      <select id="cf-reason" name="reason">
+        <option value="">&#8212; Select &#8212;</option>
+        <option value="verified-rating">Verified rating enquiry</option>
+        <option value="press">Press</option>
+        <option value="general">General</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="cf-message">Message <span class="required" aria-hidden="true">*</span></label>
+      <textarea id="cf-message" name="message" required maxlength="5000" aria-describedby="cf-message-error"></textarea>
+      <div class="form-error" id="cf-message-error" role="alert" aria-live="polite"></div>
+    </div>
+
+    <!-- Honeypot field — bots fill this, humans never see it -->
+    <div class="hp-field" aria-hidden="true">
+      <label for="cf-website">Website</label>
+      <input type="text" id="cf-website" name="website" tabindex="-1" autocomplete="off">
+    </div>
+
+    <button type="submit" class="contact-submit" id="contact-submit">Send message</button>
+  </form>
+
+  <p class="contact-footnote">All enquiries are read by a human at Resourcehip Ltd, UK.</p>
+  <p class="contact-footnote" style="margin-top: 0.4rem;">Prefer email? <span id="contact-email-link"></span></p>
+</div>
+
+<script>
+(function() {
+  var form = document.getElementById('contact-form');
+  var btn = document.getElementById('contact-submit');
+  var success = document.getElementById('contact-success');
+  var errorBanner = document.getElementById('contact-error-banner');
+  var errorText = document.getElementById('contact-error-text');
+
+  var u = 'hello', d = ['resourcehip', 'com'].join('.');
+  var addr = u + '@' + d;
+  var el = document.getElementById('contact-email-link');
+  if (el) el.innerHTML = '<a href="mailto:' + addr + '">' + addr + '</a>';
+
+  function validateEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+
+  function showError(id, msg) {
+    var group = document.getElementById(id).closest('.form-group');
+    group.classList.add('has-error');
+    var err = document.getElementById(id + '-error');
+    if (err) err.textContent = msg;
+  }
+
+  function clearErrors() {
+    var groups = form.querySelectorAll('.form-group.has-error');
+    for (var i = 0; i < groups.length; i++) {
+      groups[i].classList.remove('has-error');
+      var err = groups[i].querySelector('.form-error');
+      if (err) err.textContent = '';
+    }
+    errorBanner.classList.remove('visible');
+  }
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    clearErrors();
+
+    var name = form.elements['name'].value.trim();
+    var email = form.elements['email'].value.trim();
+    var message = form.elements['message'].value.trim();
+    var hp = form.elements['website'].value;
+
+    if (hp) { success.classList.add('visible'); form.style.display = 'none'; return; }
+
+    var valid = true;
+    if (!name) { showError('cf-name', 'Please enter your name.'); valid = false; }
+    if (!email) { showError('cf-email', 'Please enter your email address.'); valid = false; }
+    else if (!validateEmail(email)) { showError('cf-email', 'Please enter a valid email address.'); valid = false; }
+    if (!message) { showError('cf-message', 'Please enter a message.'); valid = false; }
+    if (!valid) return;
+
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        company: form.elements['company'].value.trim(),
+        reason: form.elements['reason'].value,
+        message: message
+      })
+    })
+    .then(function(res) {
+      return res.json().then(function(body) { return { ok: res.ok, body: body }; });
+    })
+    .then(function(r) {
+      if (r.ok) {
+        form.style.display = 'none';
+        success.classList.add('visible');
+      } else {
+        errorText.textContent = r.body.error || 'Please try again, or email us directly.';
+        errorBanner.classList.add('visible');
+        btn.disabled = false;
+        btn.textContent = 'Send message';
+      }
+    })
+    .catch(function() {
+      errorText.textContent = 'Network error — please try again, or email us directly.';
+      errorBanner.classList.add('visible');
+      btn.disabled = false;
+      btn.textContent = 'Send message';
+    });
+  });
+})();
+</script>
 
   </main>
 
