@@ -1,5 +1,3 @@
-import { EmailMessage } from 'cloudflare:email';
-
 export async function onRequestPost(context) {
   const { request, env } = context;
 
@@ -80,14 +78,28 @@ export async function onRequestPost(context) {
     bodyLines.join('\r\n'),
   ].join('\r\n');
 
-  if (env.EMAIL) {
+  if (env.EMAIL_WORKER) {
     try {
-      const msg = new EmailMessage(
-        'contact-form@resourcehip.org',
-        'hello@resourcehip.com',
-        rawMime,
-      );
-      await env.EMAIL.send(msg);
+      const resp = await env.EMAIL_WORKER.fetch('https://email-worker/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Worker-Auth': env.WORKER_AUTH_SECRET,
+        },
+        body: JSON.stringify({
+          from: 'contact-form@resourcehip.org',
+          to: 'hello@resourcehip.com',
+          rawMime,
+        }),
+      });
+      if (!resp.ok) {
+        const err = await resp.text();
+        console.error('Email worker error:', err);
+        return Response.json(
+          { error: 'Failed to send. Please email hello@resourcehip.com directly.' },
+          { status: 500 },
+        );
+      }
     } catch (err) {
       console.error('Email send error:', err);
       return Response.json(
@@ -96,7 +108,7 @@ export async function onRequestPost(context) {
       );
     }
   } else {
-    console.log('EMAIL binding not configured. Submission:', JSON.stringify({
+    console.log('EMAIL_WORKER binding not configured. Submission:', JSON.stringify({
       name, email, company, reason, message,
     }));
   }
