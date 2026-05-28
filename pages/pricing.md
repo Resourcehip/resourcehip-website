@@ -55,8 +55,8 @@ For manufacturers rating multiple products per year, subscription plans offer a 
 
 | Plan | Included ratings | Additional ratings | Support | Annual fee |
 |---|---|---|---|---|
-| **Annual Base** | 4 Generic Ratings | 20% off list price | Priority email | **£1,500** |
-| **Annual Premium** | 4 Generic Ratings + 2 Verified Ratings | 20% off list price | Priority email | **£2,200** |
+| **Annual Base** | 4 Verified Ratings | 25% off list price | Priority email | **£1,500** |
+| **Annual Premium** | 6 Verified Ratings | 33% off list price | Priority email | **£2,000** |
 
 Subscriptions are invoiced annually in advance. Unused ratings carry over for a further 12 months from renewal date.
 
@@ -65,7 +65,7 @@ Subscriptions are invoiced annually in advance. Unused ratings carry over for a 
 {% if today <= discount_expires %}
 <div style="background: var(--warning-bg); border: 1px solid var(--rule); border-left: 4px solid var(--warning-fg); border-radius: 0 8px 8px 0; padding: 1.25rem 1.5rem; margin: 1.5rem 0;">
   <p style="margin: 0 0 0.4rem 0; font-weight: 700; color: var(--warning-fg);">Early adopter offer — first 5 customers, expires 30 September 2026</p>
-  <p style="margin: 0;">The first five customers to commission a paid rating or subscription receive a <strong>30% launch discount</strong> applied to the first invoice. Reduced fees: Generic Rating £245, Verified Rating £350, Annual Base £1,050, Annual Premium £1,540. Offer closes 30 September 2026.</p>
+  <p style="margin: 0;">The first five customers to commission a paid rating or subscription receive a <strong>30% launch discount</strong> applied to the first invoice. Reduced fees: Generic Rating £245, Verified Rating £350, Annual Base £1,050, Annual Premium £1,400. Offer closes 30 September 2026.</p>
 </div>
 {% endif %}
 
@@ -127,7 +127,7 @@ Submit what you have. We will confirm what is needed to produce a defensible sco
 
 ### Annual subscription or pay-per-rating — which is appropriate?
 
-If you expect to commission fewer than four ratings in the next year, pay-per-rating is simpler. If you have a product portfolio to benchmark over time, or expect four or more ratings, the Annual Base plan is cheaper per rating. The Annual Premium plan is for portfolios that include a mix of Generic and Verified assessments.
+If you expect to commission fewer than four ratings in the next year, pay-per-rating is simpler. If you have a product portfolio to benchmark over time, or expect four or more ratings, the Annual Base plan bundles four Verified Ratings at a lower per-rating cost. The Annual Premium plan is for larger portfolios — six Verified Ratings and a deeper discount on additional ratings.
 
 ### How does the HIP Mark licence work?
 
