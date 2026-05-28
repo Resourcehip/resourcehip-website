@@ -46,7 +46,7 @@ The full methodology — including the scoring rubric for each dimension — is 
 
 ## Why we built this
 
-Most sustainability labels either mean very little (because no one checks) or require so much verification that only large companies can participate. Resourcehip is built on the premise that honest, transparent ratings based on publicly available data are more useful than vague claims based on opaque criteria.
+Good sustainability information should be fast, affordable, and transparent. Resourcehip produces HIP ratings using publicly available data, which means scores can be generated quickly and cost-effectively. Lower barriers mean more manufacturers can participate — and clear, comparable ratings give consumers the visibility they need to make confident choices about the products they buy.
 
 The rating system is designed to reward genuine improvement. A manufacturer who submits real data about their product will almost always see their score improve over the conservative category baseline. The improvement pathway — from generic rating to verified rating to HIP Mark — is the commercial logic of the business, and it is structured so that manufacturers have a clear reason to engage.
 
