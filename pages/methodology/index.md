@@ -130,6 +130,43 @@ Where data is missing, the pipeline uses the most conservative reasonable assump
 
 ---
 
+## Standards alignment { #standards-alignment }
+
+### ISO 14024:2026 (Type I Ecolabels)
+
+HIP is **ISO 14024-informed, not ISO-certified.** Resourcehip is building toward certification: Phase 2 (Q4 2026–2028) adds independent peer review, a Criteria Board, and third-party audit.
+
+ISO 14024:2026 is the international standard for Type I environmental labels — independent, multi-criteria ecolabels based on lifecycle assessment. The HIP methodology was designed with these principles in mind.
+
+**What HIP aligns with:**
+
+| ISO 14024 Pillar | HIP implementation |
+|---|---|
+| Transparency | Methodology published under CC BY-NC 4.0; all scoring rubrics and data sources are public |
+| Multi-criteria assessment | Seven dimensions covering materials, supply chain, circularity, repairability, social impact, longevity, and regenerative potential |
+| Science-based criteria | Rubrics cite peer-reviewed sources (OECD, ILO, RBA, USGS, BEUC) and established databases (iFixit, Ellen MacArthur Foundation, UK WRAP) |
+
+**What HIP does not yet claim:**
+
+| ISO 14024 Requirement | Current position |
+|---|---|
+| Independent governance board | HIP is currently founder-led. ISO 14024 requires a multi-stakeholder board including manufacturers, NGOs, government, and academia |
+| Third-party audit | The HUMAN_REVIEW_CHECKLIST is an internal verification gate. ISO 14024 requires an independent external auditor |
+| LCA-derived scores for all dimensions | RC, R, and RI are design-criteria dimensions that *inform* LCA outcomes; MSI and SCR are LCA-adjacent. Full ISO 14040/44 compliance is a Phase 2 goal |
+
+The Regenerative Index (RI) is a proprietary Resourcehip extension — there is no direct equivalent in ISO 14024 — and reflects our view that material resilience must account for regenerative potential, not only harm reduction.
+
+**Phase 2 certification roadmap:**
+
+| Milestone | Target |
+|---|---|
+| Academic and practitioner peer review | Q4 2026 |
+| Criteria Board formation | Q1 2027 |
+| Third-party audit engagement | Q2–Q3 2027 |
+| ISO 14024 formal certification path | 2027–2028 |
+
+---
+
 ## Licence and source
 
 The HIP Score methodology is published under [Creative Commons CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) — free to share and adapt for non-commercial purposes with attribution to Resourcehip.
