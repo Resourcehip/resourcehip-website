@@ -74,6 +74,10 @@
       box-shadow: 0 1px 8px rgba(0,0,0,0.06);
     }
 
+    .site-header .logo-link {
+      flex-shrink: 0;
+    }
+
     .site-header .logo-link img {
       height: 48px;
       width: auto;
@@ -257,15 +261,78 @@
       padding: 1rem; color: #aaa; font-size: 0.82rem; text-align: center;
     }
 
+    /* ── Hamburger toggle ───────────────────────────────────────────────── */
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      z-index: 110;
+    }
+    .nav-toggle span,
+    .nav-toggle span::before,
+    .nav-toggle span::after {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--ink);
+      border-radius: 2px;
+      transition: transform 0.25s, opacity 0.2s;
+    }
+    .nav-toggle span { position: relative; }
+    .nav-toggle span::before,
+    .nav-toggle span::after {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+    .nav-toggle span::before { top: -7px; }
+    .nav-toggle span::after  { top:  7px; }
+
+    .nav-toggle[aria-expanded="true"] span { background: transparent; }
+    .nav-toggle[aria-expanded="true"] span::before { top: 0; transform: rotate(45deg); }
+    .nav-toggle[aria-expanded="true"] span::after  { top: 0; transform: rotate(-45deg); }
+
     /* ── Responsive ─────────────────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .nav-toggle { display: block; }
+      .site-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: #fff;
+        border-bottom: 1px solid var(--rule);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        padding: 0.5rem 0;
+      }
+      .site-nav.nav-open { display: flex; }
+      .site-nav a {
+        padding: 0.7rem 1.5rem;
+        width: 100%;
+      }
+      .site-nav a:hover,
+      .site-nav a.active { background: var(--surface); }
+      .site-nav a.nav-cta {
+        margin: 0.5rem 1.5rem;
+        width: auto;
+        text-align: center;
+      }
+      .search-wrapper {
+        margin: 0.5rem 1.5rem;
+        width: auto;
+      }
+      .search-wrapper input[type="search"] { width: 100%; }
+      .search-wrapper input[type="search"]:focus { width: 100%; }
+      .search-results { width: 100%; left: 0; right: 0; }
+    }
     @media (max-width: 640px) {
       .site-header { padding: 0.75rem 1rem; }
-      .site-nav { gap: 1rem; }
-      .site-nav a.nav-cta { display: none; }
       .site-main { padding: 1.5rem 1rem 3rem; }
-      .search-wrapper input[type="search"] { width: 120px; font-size: 0.72rem; }
-      .search-wrapper input[type="search"]:focus { width: 160px; }
-      .search-results { width: 280px; }
     }
 
     
@@ -489,7 +556,8 @@
     <a class="logo-link" href="/">
       <img src="/assets/hip-lockup.png" alt="Resourcehip — HIP Certified" />
     </a>
-    <nav class="site-nav" aria-label="Main navigation">
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
       <a href="/" >Home</a>
       <a href="/ratings/" class="active" aria-current="page">Ratings</a>
       <a href="/blog/" >Blog</a>
@@ -847,6 +915,24 @@
       var addr = u + '\u0040' + d;
       var el = document.getElementById('rh-email');
       if (el) el.innerHTML = '<a href="mailto:' + addr + '">' + addr + '</a>';
+    })();
+  </script>
+  <script>
+    (function() {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('site-nav');
+      if (btn && nav) {
+        btn.addEventListener('click', function() {
+          var open = nav.classList.toggle('nav-open');
+          btn.setAttribute('aria-expanded', open);
+        });
+        document.addEventListener('click', function(e) {
+          if (!e.target.closest('.site-header')) {
+            nav.classList.remove('nav-open');
+            btn.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
     })();
   </script>
   <script>
