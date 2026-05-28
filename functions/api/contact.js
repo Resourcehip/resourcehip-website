@@ -71,7 +71,7 @@ export async function onRequestPost(context) {
   );
 
   const rawMime = [
-    `From: "Resourcehip Contact Form" <contact-form@resourcehip.com>`,
+    `From: "Resourcehip Contact Form" <contact-form@resourcehip.org>`,
     `Reply-To: "${name}" <${email}>`,
     `To: hello@resourcehip.com`,
     `Subject: ${subject}`,
@@ -83,7 +83,7 @@ export async function onRequestPost(context) {
   if (env.EMAIL) {
     try {
       const msg = new EmailMessage(
-        'contact-form@resourcehip.com',
+        'contact-form@resourcehip.org',
         'hello@resourcehip.com',
         rawMime,
       );
