@@ -366,6 +366,15 @@ def build_contact() -> None:
     print("  [page]   contact.html")
 
 
+def build_404() -> None:
+    """Generate 404.html so Cloudflare Pages returns 404 for unmatched routes."""
+    tmpl = jinja_env.get_template("404.html.j2")
+    html = tmpl.render(page_title="Page not found", active_page="")
+    out_file = DIST / "404.html"
+    out_file.write_text(html, encoding="utf-8")
+    print("  [page]   404.html")
+
+
 def copy_functions() -> None:
     """Copy Cloudflare Pages Functions to dist/ for deployment."""
     src = SITE_ROOT / "functions"
@@ -613,6 +622,7 @@ def build():
     print("→ Building static pages")
     build_pages()
     build_contact()
+    build_404()
     print("→ Copying Cloudflare Pages Functions")
     copy_functions()
     print("→ Building blog")
