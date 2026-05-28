@@ -78,39 +78,34 @@ export async function onRequestPost(context) {
     bodyLines.join('\r\n'),
   ].join('\r\n');
 
-  if (env.EMAIL_WORKER) {
-    try {
-      const resp = await env.EMAIL_WORKER.fetch('https://email-worker/send', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Worker-Auth': env.WORKER_AUTH_SECRET,
-        },
-        body: JSON.stringify({
-          from: 'contact-form@resourcehip.org',
-          to: 'hello@resourcehip.com',
-          rawMime,
-        }),
-      });
-      if (!resp.ok) {
-        const err = await resp.text();
-        console.error('Email worker error:', err);
-        return Response.json(
-          { error: 'Failed to send. Please email hello@resourcehip.com directly.' },
-          { status: 500 },
-        );
-      }
-    } catch (err) {
-      console.error('Email send error:', err);
+  try {
+    const workerUrl = env.EMAIL_WORKER_URL || 'https://resourcehip-email-worker.chris-b0e.workers.dev';
+    const resp = await fetch(workerUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Worker-Auth': env.WORKER_AUTH_SECRET || '',
+      },
+      body: JSON.stringify({
+        from: 'contact-form@resourcehip.org',
+        to: 'hello@resourcehip.com',
+        rawMime,
+      }),
+    });
+    if (!resp.ok) {
+      const err = await resp.text();
+      console.error('Email worker error:', resp.status, err);
       return Response.json(
         { error: 'Failed to send. Please email hello@resourcehip.com directly.' },
         { status: 500 },
       );
     }
-  } else {
-    console.log('EMAIL_WORKER binding not configured. Submission:', JSON.stringify({
-      name, email, company, reason, message,
-    }));
+  } catch (err) {
+    console.error('Email send error:', err);
+    return Response.json(
+      { error: 'Failed to send. Please email hello@resourcehip.com directly.' },
+      { status: 500 },
+    );
   }
 
   return Response.json({ ok: true });
