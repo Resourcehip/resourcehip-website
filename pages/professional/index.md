@@ -4,7 +4,7 @@ page_description: "HIP methodology documentation, scoring dimensions, Regenerati
 active_page: professional
 ---
 
-# Methodology and technical data
+# See how we score
 
 Resourcehip's Human Impact Profile (HIP) methodology rates consumer products on long-term material resilience across seven scored dimensions plus the Regenerative Index.
 
