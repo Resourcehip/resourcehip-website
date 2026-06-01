@@ -203,6 +203,72 @@
 .methodology-disclosure summary::-webkit-details-marker { display: none; }
 .methodology-disclosure-body { font-size: 0.78rem; color: var(--ink); line-height: 1.7; margin-top: 0.75rem; background: var(--hip-blue-tint); border-left: 2px solid var(--hip-blue); padding: 0.75rem 1rem; border-radius: 0 6px 6px 0; }
 
+/* ── Consumer Score Unit (HIP Mark badge + position bar + RI chip) ────── */
+.consumer-score-unit {
+  background: var(--card-bg);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  padding: 1.5rem 1.5rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.csu-badge-row {
+  display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem;
+}
+.csu-shield { flex-shrink: 0; width: 56px; height: auto; }
+.csu-tier-name {
+  display: block; font-size: 1.15rem; font-weight: 700; letter-spacing: 0.01em;
+}
+.csu-no-mark { color: var(--muted); }
+.csu-score-line {
+  display: block; font-size: 0.82rem; color: var(--muted); margin-top: 0.15rem;
+}
+
+.csu-bar-wrap { margin-bottom: 1rem; position: relative; padding: 0 9px; }
+.csu-bar-track {
+  display: flex; height: 12px; border-radius: 6px; overflow: hidden;
+  position: relative;
+}
+.csu-zone { height: 100%; }
+.csu-zone-below    { background: var(--rule); width: 60%; }
+.csu-zone-standard { background: var(--tier-emerald); opacity: 0.22; width: 15%; }
+.csu-zone-silver   { background: var(--tier-slate);   opacity: 0.22; width: 15%; }
+.csu-zone-gold     { background: var(--tier-amber);   opacity: 0.22; width: 10%; }
+.csu-marker {
+  position: absolute; top: 50%;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: var(--tier-colour, var(--hip-blue));
+  border: 3px solid var(--card-bg);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.18);
+  transform: translate(-50%, -50%); z-index: 2;
+}
+.csu-marker-label {
+  position: absolute; top: -20px;
+  font-size: 0.68rem; font-weight: 700; color: var(--tier-colour, var(--ink));
+  transform: translateX(-50%); white-space: nowrap;
+}
+.csu-threshold {
+  position: absolute; top: 0; width: 1px; height: 100%;
+  background: var(--card-bg); opacity: 0.7; z-index: 1;
+}
+.csu-zone-labels {
+  position: relative; height: 1.4rem; margin-top: 0.3rem;
+}
+.csu-label {
+  position: absolute;
+  font-size: 0.62rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--muted); transform: translateX(-50%);
+}
+@media (max-width: 400px) {
+  .csu-label { font-size: 0.55rem; letter-spacing: 0.04em; }
+}
+
+.csu-ri-row {
+  display: flex; align-items: center; gap: 0.6rem;
+  padding-top: 0.85rem; border-top: 1px solid var(--rule);
+}
+.csu-ri-chip { flex-shrink: 0; width: 26px; height: 26px; }
+.csu-ri-text { font-size: 0.8rem; color: var(--ink); line-height: 1.4; }
+
 /* §5 Ceiling page hero */
 .ceiling-hero { background: var(--hip-blue-tint); border: 1px solid var(--rule); border-radius: 12px; padding: 1.75rem 2rem; margin-bottom: 1.75rem; }
 .ceiling-hero-eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--hip-blue); margin-bottom: 0.5rem; }
@@ -214,8 +280,29 @@
 
 {% block content %}
 
-{# ── Tier colour logic ──────────────────────────────────────────────────── #}
-{%- if hip_score >= 6.0 -%}
+{# ── Tier colour logic (methodology.yaml thresholds: 6.0/7.5/9.0+RI≥6) ── #}
+{%- set _hip_mark_val = hip_mark | default(none) -%}
+{%- if _hip_mark_val -%}
+  {%- set mark_tier = _hip_mark_val | lower -%}
+{%- elif hip_score >= 9.0 and ri_score >= 6.0 -%}
+  {%- set mark_tier = 'gold' -%}
+{%- elif hip_score >= 7.5 -%}
+  {%- set mark_tier = 'silver' -%}
+{%- elif hip_score >= 6.0 -%}
+  {%- set mark_tier = 'standard' -%}
+{%- else -%}
+  {%- set mark_tier = 'none' -%}
+{%- endif -%}
+
+{%- if mark_tier == 'gold' -%}
+  {%- set tier_colour      = 'var(--tier-amber)' -%}
+  {%- set score_band_name  = 'Gold' -%}
+  {%- set score_band_label = 'Gold' -%}
+{%- elif mark_tier == 'silver' -%}
+  {%- set tier_colour      = 'var(--tier-slate)' -%}
+  {%- set score_band_name  = 'Silver' -%}
+  {%- set score_band_label = 'Silver' -%}
+{%- elif mark_tier == 'standard' -%}
   {%- set tier_colour      = 'var(--tier-emerald)' -%}
   {%- set score_band_name  = 'Standard' -%}
   {%- set score_band_label = 'Standard' -%}
@@ -286,6 +373,67 @@
     <p style="font-size:1rem; color:#666; margin-top:0.25rem;">{{ brand }}</p>
   {% endif %}
 </div>
+
+<!-- ── Consumer Score Visualisation ────────────────────────────────────── -->
+{% if brand != 'Category Ceiling' %}
+<div class="consumer-score-unit" role="region" aria-label="HIP Score summary">
+
+  <div class="csu-badge-row">
+    {% if mark_tier != 'none' %}
+    <img class="csu-shield"
+         src="/assets/marks/hip-mark-shield-{{ mark_tier }}.svg"
+         alt="HIP Mark {{ score_band_name }}" width="56" height="66" loading="lazy">
+    {% endif %}
+    <div class="csu-text">
+      {% if mark_tier != 'none' %}
+        <span class="csu-tier-name" style="color: var(--tier-colour);">{{ score_band_name }} HIP Mark</span>
+        <span class="csu-score-line">Score {{ "%.1f"|format(hip_score) }}/10</span>
+      {% else %}
+        <span class="csu-tier-name csu-no-mark">Below HIP Mark threshold</span>
+        <span class="csu-score-line">Score {{ "%.1f"|format(hip_score) }}/10 — Standard mark requires 6.0</span>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="csu-bar-wrap"
+       role="img"
+       aria-label="Score {{ "%.1f"|format(hip_score) }} out of 10. Standard threshold at 6.0, Silver at 7.5, Gold at 9.0.">
+    <div class="csu-bar-track">
+      <div class="csu-zone csu-zone-below"></div>
+      <div class="csu-zone csu-zone-standard"></div>
+      <div class="csu-zone csu-zone-silver"></div>
+      <div class="csu-zone csu-zone-gold"></div>
+      <div class="csu-threshold" style="left: 60%;"></div>
+      <div class="csu-threshold" style="left: 75%;"></div>
+      <div class="csu-threshold" style="left: 90%;"></div>
+      <div class="csu-marker" style="left: {{ (hip_score / 10 * 100) | round(1) }}%;">
+        <span class="csu-marker-label">{{ "%.1f"|format(hip_score) }}</span>
+      </div>
+    </div>
+    <div class="csu-zone-labels">
+      <span class="csu-label" style="left: 60%;">Standard</span>
+      <span class="csu-label" style="left: 75%;">Silver</span>
+      <span class="csu-label" style="left: 90%;">Gold</span>
+    </div>
+  </div>
+
+  <div class="csu-ri-row">
+    <img class="csu-ri-chip"
+         src="/assets/marks/ri-chip-{{ ri_descriptor | lower }}.svg"
+         alt="{{ ri_descriptor }}" width="26" height="26" loading="lazy">
+    <span class="csu-ri-text">
+      <strong style="color: var(--ri-colour);">{{ ri_descriptor }}</strong>
+      {%- if ri_descriptor == 'Depleting' %} — materials are being used up with no way to replace them
+      {%- elif ri_descriptor == 'Extractive' %} — materials take more from the planet than they give back
+      {%- elif ri_descriptor == 'Renewable' %} — materials come from sources that can be renewed
+      {%- elif ri_descriptor == 'Restorative' %} — materials or making processes help restore nature
+      {%- elif ri_descriptor == 'Regenerative' %} — materials and processes actively regenerate natural systems
+      {%- endif %}
+    </span>
+  </div>
+
+</div>
+{% endif %}
 
 <!-- ── HIP Score + RI ─────────────────────────────────────────────────────── -->
 <div class="score-panel">
@@ -409,33 +557,6 @@
   {% endif %}
 {% endif %}
 
-<!-- ── HIP Mark banner ────────────────────────────────────────────────────── -->
-{% set _hip_mark = hip_mark | default(none) %}
-{% if _hip_mark == 'Gold' %}
-<div class="hip-mark-banner mark-gold">
-  <img class="hip-mark-badge-img" src="/assets/marks/hip-mark-gold.svg" alt="HIP Mark Gold" width="52" height="61" loading="lazy">
-  <div class="hip-mark-text">
-    <span class="hip-mark-title mark-gold">HIP Mark Gold</span>
-    <span class="hip-mark-desc">This verified product achieved a HIP Score of {{ "%.1f"|format(hip_score) }} and a Regenerative Index of {% if ri_score > 0 %}+{% endif %}{{ "%.1f"|format(ri_score) }}, qualifying for the highest tier of the HIP Mark.</span>
-  </div>
-</div>
-{% elif _hip_mark == 'Silver' %}
-<div class="hip-mark-banner mark-silver">
-  <img class="hip-mark-badge-img" src="/assets/marks/hip-mark-silver.svg" alt="HIP Mark Silver" width="52" height="61" loading="lazy">
-  <div class="hip-mark-text">
-    <span class="hip-mark-title mark-silver">HIP Mark Silver</span>
-    <span class="hip-mark-desc">This verified product achieved a HIP Score of {{ "%.1f"|format(hip_score) }}, qualifying for the HIP Mark Silver tier.</span>
-  </div>
-</div>
-{% elif _hip_mark == 'Standard' %}
-<div class="hip-mark-banner mark-standard">
-  <img class="hip-mark-badge-img" src="/assets/marks/hip-mark-standard.svg" alt="HIP Mark Standard" width="52" height="61" loading="lazy">
-  <div class="hip-mark-text">
-    <span class="hip-mark-title mark-standard">HIP Mark Standard</span>
-    <span class="hip-mark-desc">This verified product achieved a HIP Score of {{ "%.1f"|format(hip_score) }}, qualifying for the HIP Mark Standard tier.</span>
-  </div>
-</div>
-{% endif %}
 
 <!-- ── Dimension Breakdown ────────────────────────────────────────────────── -->
 <div class="card">
