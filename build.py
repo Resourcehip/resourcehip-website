@@ -220,20 +220,45 @@ def build_ratings() -> list[dict]:
     return index_entries
 
 
+def _classify_rating_type(entry: dict) -> str:
+    """Return 'ceiling', 'verified', or 'generic' for a rating entry."""
+    rt = entry.get("rating_type", "generic")
+    brand = entry.get("brand") or ""
+    if rt == "verified" and brand == "Category Ceiling":
+        return "ceiling"
+    if rt == "verified":
+        return "verified"
+    return "generic"
+
+
 def build_ratings_index(entries: list[dict]) -> None:
     """Build /ratings/index.html — the catalogue page."""
     template = jinja_env.get_template("ratings_index.html.j2")
-    # Sort by assessment date descending (newest first)
-    entries_sorted = sorted(entries, key=lambda r: r.get("assessment_date", ""), reverse=True)
+
+    for e in entries:
+        e["display_type"] = _classify_rating_type(e)
+
+    groups: dict[str, list[dict]] = {}
+    for e in entries:
+        cat = e.get("category", "uncategorised")
+        groups.setdefault(cat, []).append(e)
+
+    categories = []
+    for name in sorted(groups.keys(), key=str.lower):
+        slug = re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
+        ratings = sorted(groups[name], key=lambda r: r.get("title", "").lower())
+        categories.append({"name": name, "slug": slug, "ratings": ratings, "count": len(ratings)})
+
     html = template.render(
-        ratings=entries_sorted,
-        page_title="All Ratings",
-        page_description="Human Impact Profiles for everyday product categories.",
+        categories=categories,
+        total_count=len(entries),
+        page_title="Product Ratings",
+        page_description="Human Impact Profiles for everyday product categories, organised by type.",
         active_page="ratings",
     )
     out_file = DIST / "ratings" / "index.html"
     out_file.write_text(html, encoding="utf-8")
-    print("  [index]  ratings/index.html")
+    print(f"  [index]  ratings/index.html ({len(categories)} categories, {len(entries)} ratings)")
 
 
 def parse_page_file(filepath: Path, render_vars: dict | None = None) -> tuple[dict, str]:

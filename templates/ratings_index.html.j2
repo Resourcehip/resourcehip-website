@@ -1,8 +1,57 @@
 {% extends "base.html.j2" %}
 
 {% block extra_styles %}
-.ratings-intro { margin-bottom: 2rem; }
-.ratings-intro p { color: #666; max-width: 600px; }
+.ratings-intro { margin-bottom: 1.5rem; }
+.ratings-intro p { color: #666; max-width: 640px; line-height: 1.6; }
+
+.ratings-explainer {
+  background: var(--hip-blue-tint); border-radius: 10px;
+  padding: 1rem 1.25rem; margin-bottom: 1.5rem; max-width: 640px;
+}
+.ratings-explainer summary {
+  font-weight: 700; font-size: 0.85rem; color: var(--ink); cursor: pointer;
+}
+.ratings-explainer dl { margin: 0.75rem 0 0; }
+.ratings-explainer dt {
+  font-weight: 700; font-size: 0.78rem; margin-top: 0.5rem;
+}
+.ratings-explainer dd {
+  margin: 0.15rem 0 0 0; font-size: 0.78rem; color: #555; line-height: 1.5;
+}
+
+.catalogue-toolbar {
+  display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;
+  margin-bottom: 1.75rem;
+}
+.catalogue-search {
+  flex: 1 1 220px; max-width: 320px;
+  padding: 0.5rem 0.75rem; border: 1px solid var(--rule); border-radius: 8px;
+  font-size: 0.85rem; color: var(--ink); background: var(--card-bg);
+}
+.catalogue-search:focus { outline: 2px solid var(--hip-blue); border-color: var(--hip-blue); }
+
+.category-pills {
+  display: flex; flex-wrap: wrap; gap: 0.4rem;
+}
+.category-pill {
+  padding: 0.3rem 0.7rem; border-radius: 16px; border: 1px solid var(--rule);
+  background: var(--card-bg); color: #666; font-size: 0.75rem; font-weight: 600;
+  cursor: pointer; transition: all 0.15s; white-space: nowrap;
+}
+.category-pill:hover { border-color: var(--hip-blue); color: var(--hip-blue); }
+.category-pill.active {
+  background: var(--hip-blue); color: #fff; border-color: var(--hip-blue);
+}
+
+.category-section { margin-bottom: 2.5rem; }
+.category-heading {
+  font-size: 1.1rem; font-weight: 700; color: var(--ink);
+  margin-bottom: 0.75rem; text-transform: capitalize;
+  border-bottom: 2px solid var(--rule); padding-bottom: 0.4rem;
+}
+.category-heading .cat-count {
+  font-weight: 400; font-size: 0.8rem; color: #aaa; margin-left: 0.3rem;
+}
 
 .ratings-grid {
   display: grid;
@@ -25,18 +74,24 @@
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
   transform: translateY(-2px);
 }
+.rating-card-verified { border-top-width: 6px; }
 
-.rating-card-category {
-  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em;
-  text-transform: uppercase; color: #aaa; margin-bottom: 0.4rem;
-}
+.rating-card-header { display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.35rem; flex-wrap: wrap; }
 .rating-card-title {
-  font-size: 1rem; font-weight: 700; color: var(--ink);
-  margin-bottom: 0.2rem; line-height: 1.3;
+  font-size: 1rem; font-weight: 700; color: var(--ink); line-height: 1.3;
 }
 .rating-card-brand {
-  font-size: 0.78rem; color: #888; margin-bottom: 0.75rem;
+  font-size: 0.78rem; color: #888; margin-bottom: 0.5rem;
 }
+
+.type-tag {
+  font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 8px;
+  display: inline-block; line-height: 1.4;
+}
+.type-tag-generic { background: #eee; color: #888; }
+.type-tag-verified { background: var(--hip-blue-tint); color: var(--hip-blue); }
+.type-tag-ceiling { background: #FFF3D6; color: var(--tier-amber-text); }
 
 .rating-card-scores {
   display: flex; gap: 0.75rem; align-items: center;
@@ -61,16 +116,18 @@
   font-size: 0.68rem; color: #bbb; margin-top: 0.75rem;
 }
 
-.verified-tick {
-  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em;
-  background: var(--hip-blue-tint); color: var(--hip-blue);
-  padding: 0.2rem 0.6rem; border-radius: 10px;
-  display: inline-block; margin-top: 0.5rem;
-}
-
 .no-ratings {
   text-align: center; padding: 4rem 2rem;
   color: #aaa; font-style: italic;
+}
+.no-search-results {
+  text-align: center; padding: 3rem 2rem;
+  color: #aaa; font-style: italic; display: none;
+}
+
+@media (max-width: 560px) {
+  .catalogue-toolbar { flex-direction: column; }
+  .catalogue-search { max-width: 100%; }
 }
 {% endblock %}
 
@@ -79,55 +136,163 @@
 {% block content %}
 
 <div class="ratings-intro">
-  <h1>All Ratings</h1>
+  <h1>Product Ratings</h1>
   <p>Human Impact Profiles for everyday product categories, assessed using public data and the
-     <a href="/methodology">Resourcehip Methodology v1.3</a>.
-     Verified ratings include manufacturer-submitted data.</p>
+     <a href="/methodology">Resourcehip Methodology v1.3</a>.</p>
 </div>
 
-{% if ratings %}
-  <div class="ratings-grid">
-    {% for r in ratings %}
-      {%- if r.hip_score >= 6.0 -%}
-        {%- set card_tier_colour = 'var(--tier-emerald)' -%}
-      {%- else -%}
-        {%- set card_tier_colour = 'var(--mark-black)' -%}
-      {%- endif -%}
-      {%- if r.ri_descriptor == 'Regenerative' -%}{%- set card_ri_colour = 'var(--ri-regenerative)' -%}
-      {%- elif r.ri_descriptor == 'Restorative' -%}{%- set card_ri_colour = 'var(--ri-restorative)' -%}
-      {%- elif r.ri_descriptor == 'Renewable'   -%}{%- set card_ri_colour = 'var(--ri-renewable)' -%}
-      {%- elif r.ri_descriptor == 'Extractive'  -%}{%- set card_ri_colour = 'var(--ri-extractive)' -%}
-      {%- else -%}{%- set card_ri_colour = 'var(--ri-depleting)' -%}
-      {%- endif -%}
+<details class="ratings-explainer">
+  <summary>What do the rating types mean?</summary>
+  <dl>
+    <dt>Generic</dt>
+    <dd>Based on publicly available data for a typical product in this category. Represents what a consumer can expect from an average, unbranded product.</dd>
+    <dt>Category Ceiling</dt>
+    <dd>The best score achievable in this category based on known materials and design practices. A benchmark, not a real product you can buy.</dd>
+    <dt>Verified</dt>
+    <dd>Uses data submitted directly by the manufacturer and independently assessed. The most accurate rating for that specific product.</dd>
+  </dl>
+</details>
 
-      <a class="rating-card" href="/ratings/{{ r.url_path|default(r.slug) }}"
-         style="--card-tier-colour:{{ card_tier_colour }}; --card-ri-colour:{{ card_ri_colour }};">
-        <div class="rating-card-category">{{ r.category }}</div>
-        <div class="rating-card-title">{{ r.title }}</div>
-        {% if r.rating_type == 'verified' and r.brand %}
-          <div class="rating-card-brand">{{ r.brand }}</div>
-        {% endif %}
-        <div class="rating-card-scores">
-          <div>
-            <div class="rating-card-hip">{{ "%.1f"|format(r.hip_score) }}</div>
-            <div class="rating-card-hip-label">HIP Score</div>
-          </div>
-          <div class="rating-card-ri">
-            {% if r.ri_score > 0 %}+{% endif %}{{ "%.1f"|format(r.ri_score) }}<br>
-            <span style="font-weight:400; color:#aaa;">{{ r.ri_descriptor }}</span>
-          </div>
-        </div>
-        {% if r.rating_type == 'verified' %}
-          <div><span class="verified-tick">✓ Verified</span></div>
-        {% endif %}
-        <div class="rating-card-date">Assessed {{ r.assessment_date }}</div>
-      </a>
+<div class="catalogue-toolbar">
+  <input type="search" class="catalogue-search" id="catalogue-search"
+         placeholder="Search by product name or brand..." autocomplete="off">
+  <div class="category-pills" id="category-pills">
+    <button class="category-pill active" data-cat="all">All ({{ total_count }})</button>
+    {% for cat in categories %}
+      <button class="category-pill" data-cat="{{ cat.slug }}">{{ cat.name|title }} ({{ cat.count }})</button>
     {% endfor %}
   </div>
+</div>
+
+{% if categories %}
+  {% for cat in categories %}
+    <section class="category-section" data-category="{{ cat.slug }}" id="{{ cat.slug }}">
+      <h2 class="category-heading">{{ cat.name|title }}<span class="cat-count">({{ cat.count }})</span></h2>
+      <div class="ratings-grid">
+        {% for r in cat.ratings %}
+          {%- if r.hip_score >= 6.0 -%}
+            {%- set card_tier_colour = 'var(--tier-emerald)' -%}
+          {%- elif r.display_type == 'ceiling' -%}
+            {%- set card_tier_colour = 'var(--tier-amber)' -%}
+          {%- else -%}
+            {%- set card_tier_colour = 'var(--mark-black)' -%}
+          {%- endif -%}
+          {%- if r.ri_descriptor == 'Regenerative' -%}{%- set card_ri_colour = 'var(--ri-regenerative)' -%}
+          {%- elif r.ri_descriptor == 'Restorative' -%}{%- set card_ri_colour = 'var(--ri-restorative)' -%}
+          {%- elif r.ri_descriptor == 'Renewable'   -%}{%- set card_ri_colour = 'var(--ri-renewable)' -%}
+          {%- elif r.ri_descriptor == 'Extractive'  -%}{%- set card_ri_colour = 'var(--ri-extractive)' -%}
+          {%- else -%}{%- set card_ri_colour = 'var(--ri-depleting)' -%}
+          {%- endif -%}
+
+          <a class="rating-card{% if r.display_type == 'verified' %} rating-card-verified{% endif %}"
+             href="/ratings/{{ r.url_path|default(r.slug) }}"
+             data-title="{{ r.title|lower }}"
+             data-brand="{{ (r.brand or '')|lower }}"
+             style="--card-tier-colour:{{ card_tier_colour }}; --card-ri-colour:{{ card_ri_colour }};">
+            <div class="rating-card-header">
+              <div class="rating-card-title">{{ r.title }}</div>
+              {% if r.display_type == 'ceiling' %}
+                <span class="type-tag type-tag-ceiling" title="Best achievable score in this category — a benchmark, not a purchasable product">Ceiling</span>
+              {% elif r.display_type == 'verified' %}
+                <span class="type-tag type-tag-verified">Verified</span>
+              {% else %}
+                <span class="type-tag type-tag-generic">Generic</span>
+              {% endif %}
+            </div>
+            {% if r.display_type == 'verified' and r.brand %}
+              <div class="rating-card-brand">{{ r.brand }}</div>
+            {% endif %}
+            <div class="rating-card-scores">
+              <div>
+                <div class="rating-card-hip">{{ "%.1f"|format(r.hip_score) }}</div>
+                <div class="rating-card-hip-label">HIP Score</div>
+              </div>
+              <div class="rating-card-ri">
+                {% if r.ri_score > 0 %}+{% endif %}{{ "%.1f"|format(r.ri_score) }}<br>
+                <span style="font-weight:400; color:#aaa;">{{ r.ri_descriptor }}</span>
+              </div>
+            </div>
+            <div class="rating-card-date">Assessed {{ r.assessment_date }}</div>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+  {% endfor %}
 {% else %}
   <div class="no-ratings">
     No ratings published yet — check back soon.
   </div>
 {% endif %}
 
+<div class="no-search-results" id="no-search-results">
+  No products match your search.
+</div>
+
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+(function() {
+  var pills = document.querySelectorAll('.category-pill');
+  var sections = document.querySelectorAll('.category-section');
+  var search = document.getElementById('catalogue-search');
+  var noResults = document.getElementById('no-search-results');
+  var activeCat = 'all';
+
+  function setCategory(slug) {
+    activeCat = slug;
+    pills.forEach(function(p) {
+      p.classList.toggle('active', p.getAttribute('data-cat') === slug);
+    });
+    applyFilters();
+    if (slug === 'all') {
+      history.replaceState(null, '', location.pathname);
+    } else {
+      history.replaceState(null, '', '#' + slug);
+    }
+  }
+
+  function applyFilters() {
+    var q = (search.value || '').toLowerCase().trim();
+    var anyVisible = false;
+
+    sections.forEach(function(sec) {
+      var catSlug = sec.getAttribute('data-category');
+      var catVisible = (activeCat === 'all' || activeCat === catSlug);
+      var cards = sec.querySelectorAll('.rating-card');
+      var sectionHasVisible = false;
+
+      cards.forEach(function(card) {
+        var show = catVisible;
+        if (show && q) {
+          var title = card.getAttribute('data-title') || '';
+          var brand = card.getAttribute('data-brand') || '';
+          show = title.indexOf(q) !== -1 || brand.indexOf(q) !== -1;
+        }
+        card.style.display = show ? '' : 'none';
+        if (show) sectionHasVisible = true;
+      });
+
+      sec.style.display = (catVisible && sectionHasVisible) ? '' : 'none';
+      if (sectionHasVisible && catVisible) anyVisible = true;
+    });
+
+    noResults.style.display = anyVisible ? 'none' : 'block';
+  }
+
+  pills.forEach(function(p) {
+    p.addEventListener('click', function() {
+      setCategory(this.getAttribute('data-cat'));
+    });
+  });
+
+  search.addEventListener('input', applyFilters);
+
+  var hash = location.hash.replace('#', '');
+  if (hash) {
+    var match = document.querySelector('.category-pill[data-cat="' + hash + '"]');
+    if (match) setCategory(hash);
+  }
+})();
+</script>
 {% endblock %}
