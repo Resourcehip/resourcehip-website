@@ -213,7 +213,7 @@
       filter: drop-shadow(0 4px 24px rgba(0,0,0,0.25));
     }
 
-    /* ── Animated logo sequence ── */
+    /* ── Animated logo sequence (v2) ── */
     .rh-logo-anim {
       position: relative;
       display: flex;
@@ -233,14 +233,17 @@
       display: inline-flex;
       align-items: baseline;
     }
-    .rh-word {
+    .rh-word, .rh-v2-res, .rh-v2-hip {
       font-size: clamp(1.6rem, 4.5vw, 2.6rem);
       font-weight: 700;
       color: #fff;
       text-shadow: 0 2px 12px rgba(0,0,0,0.4);
       letter-spacing: 0.03em;
     }
-    .hip-phrase {
+    .rh-v2-res, .rh-v2-hip { opacity: 0; }
+    .rh-v2-hip { transition: opacity 0.25s ease; }
+    .rh-v2-hip.rh-show { opacity: 1; }
+    .rh-v2-phrase {
       position: absolute;
       left: 105%;
       font-size: clamp(0.7rem, 1.6vw, 0.9rem);
@@ -251,28 +254,39 @@
       opacity: 0;
       pointer-events: none;
     }
-    .rh-animate .rh-word {
+    .rh-v2-l {
+      display: inline-block;
+      transition: transform 0.8s cubic-bezier(0.22,1,0.36,1),
+                  opacity 0.5s ease;
+    }
+    .rh-v2-l.rh-evap {
       opacity: 0;
-      animation: rhEnter 7s ease-out 2.4s forwards;
+      transform: translateY(-20px);
     }
-    .rh-animate .hip-phrase {
-      animation: rhReveal 7s ease-in-out 2.4s forwards;
+    .rh-v2-l.rh-dock {
+      transform: translate(var(--dock-x), var(--dock-y)) scale(var(--dock-s));
     }
-    @keyframes rhEnter {
-      0%   { opacity: 0; transform: translateX(-50px); }
-      18%  { opacity: 1; transform: translateX(0); }
-      100% { opacity: 1; transform: translateX(0); }
+    .rh-v2-l.rh-dock-hide {
+      opacity: 0;
+      transition: opacity 0.15s ease;
     }
-    @keyframes rhReveal {
-      0%   { opacity: 0; transform: translateX(50px); }
-      15%  { opacity: 0; transform: translateX(50px); }
-      38%  { opacity: 1; transform: translateX(0); }
-      68%  { opacity: 1; transform: translateX(0); }
-      100% { opacity: 0; transform: translateX(0) scale(0.88); }
+    .rh-v2 .rh-v2-res {
+      animation: rhV2ResIn 1.2s ease-out 2.4s forwards;
+    }
+    .rh-v2 .rh-v2-phrase {
+      animation: rhV2PhrIn 1.6s ease-out 3.6s forwards;
+    }
+    @keyframes rhV2ResIn {
+      from { opacity: 0; transform: translateX(-50px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes rhV2PhrIn {
+      from { opacity: 0; transform: translateX(50px); }
+      to   { opacity: 1; transform: translateX(0); }
     }
     @media (prefers-reduced-motion: reduce) {
-      .rh-animate .rh-word { animation: none; opacity: 1; }
-      .rh-animate .hip-phrase { animation: none; }
+      .rh-v2 .rh-v2-res { animation: none; opacity: 1; }
+      .rh-v2 .rh-v2-phrase { animation: none; }
     }
 
     .hero-tagline {
@@ -642,7 +656,6 @@
           </svg>
           <span class="rh-word-wrap">
             <span class="rh-word">Resourcehip</span>
-            <span class="hip-phrase" aria-hidden="true">Human Impact Profile</span>
           </span>
         </div>
         <div class="hero-divider" aria-hidden="true"></div>
@@ -718,17 +731,103 @@
 
   <script>
     (function(){
-      var el=document.querySelector('.rh-logo-anim');
-      if(!el)return;
-      if(sessionStorage.getItem('rh-anim')){el.classList.add('rh-anim-done');return;}
-      el.classList.add('rh-animate');
-      el.addEventListener('animationend',function h(e){
-        if(e.animationName==='rhReveal'){
-          sessionStorage.setItem('rh-anim','1');
-          el.classList.replace('rh-animate','rh-anim-done');
-          el.removeEventListener('animationend',h);
+      var root = document.querySelector('.rh-logo-anim');
+      if (!root) return;
+      if (sessionStorage.getItem('rh-anim') ||
+          window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        root.classList.add('rh-anim-done');
+        return;
+      }
+
+      var word = root.querySelector('.rh-word');
+      var wrap = root.querySelector('.rh-word-wrap');
+
+      var res = document.createElement('span');
+      res.className = 'rh-v2-res';
+      res.textContent = 'Resource';
+
+      var hip = document.createElement('span');
+      hip.className = 'rh-v2-hip';
+      hip.textContent = 'hip';
+
+      var phr = document.createElement('span');
+      phr.className = 'rh-v2-phrase';
+      phr.setAttribute('aria-hidden', 'true');
+
+      var txt = 'Human Impact Profile';
+      var dockAt = {0: 0, 6: 1, 13: 2};
+      var docks = [], i, s;
+
+      for (i = 0; i < txt.length; i++) {
+        s = document.createElement('span');
+        s.className = 'rh-v2-l';
+        s.textContent = txt[i] === ' ' ? ' ' : txt[i];
+        if (dockAt[i] !== undefined) { s.dataset.d = dockAt[i]; docks.push(s); }
+        phr.appendChild(s);
+      }
+
+      word.style.display = 'none';
+      wrap.appendChild(res);
+      wrap.appendChild(hip);
+      wrap.appendChild(phr);
+      root.classList.add('rh-v2');
+
+      var T = 2400;
+
+      setTimeout(function() {
+        var resSz = parseFloat(getComputedStyle(res).fontSize);
+        var phSz = parseFloat(getComputedStyle(phr).fontSize);
+        var sc = resSz / phSz;
+
+        var m = document.createElement('span');
+        m.style.cssText = 'position:fixed;top:-9999px;visibility:hidden;' +
+          'font-size:' + resSz + 'px;font-weight:700;font-family:Montserrat,sans-serif;letter-spacing:0.03em';
+        document.body.appendChild(m);
+        var w = [];
+        ['H','I','P'].forEach(function(c) { m.textContent = c; w.push(m.getBoundingClientRect().width); });
+        m.remove();
+
+        var rr = res.getBoundingClientRect();
+        var tx = rr.right, cy = rr.top + rr.height / 2;
+        for (i = 0; i < docks.length; i++) {
+          var dr = docks[i].getBoundingClientRect();
+          var cx = tx + w[i] / 2;
+          docks[i].style.setProperty('--dock-x', (cx - dr.left - dr.width / 2) + 'px');
+          docks[i].style.setProperty('--dock-y', (cy - dr.top - dr.height / 2) + 'px');
+          docks[i].style.setProperty('--dock-s', sc);
+          docks[i].style.transitionDelay = (i * 0.15) + 's';
+          tx += w[i];
         }
-      });
+
+        var all = phr.querySelectorAll('.rh-v2-l'), ei = 0;
+        for (i = 0; i < all.length; i++) {
+          if (!all[i].dataset.d) {
+            all[i].style.transitionDelay = (ei * 0.03) + 's';
+            ei++;
+            all[i].classList.add('rh-evap');
+          }
+        }
+
+        requestAnimationFrame(function() {
+          for (var j = 0; j < docks.length; j++) docks[j].classList.add('rh-dock');
+        });
+      }, T + 4500);
+
+      setTimeout(function() {
+        hip.classList.add('rh-show');
+        for (i = 0; i < docks.length; i++) {
+          docks[i].style.transitionDelay = '0s';
+          docks[i].classList.add('rh-dock-hide');
+        }
+      }, T + 6500);
+
+      setTimeout(function() {
+        word.style.display = '';
+        res.remove(); hip.remove(); phr.remove();
+        root.classList.remove('rh-v2');
+        root.classList.add('rh-anim-done');
+        sessionStorage.setItem('rh-anim', '1');
+      }, T + 7000);
     })();
   </script>
   <script>
