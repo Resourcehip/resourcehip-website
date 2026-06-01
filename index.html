@@ -213,6 +213,57 @@
       filter: drop-shadow(0 4px 24px rgba(0,0,0,0.25));
     }
 
+    /* ── Animated logo sequence ── */
+    .rh-logo-anim {
+      position: relative;
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      min-height: 1.2em;
+      filter: drop-shadow(0 4px 24px rgba(0,0,0,0.25));
+    }
+    .rh-word {
+      font-size: clamp(1.6rem, 4.5vw, 2.6rem);
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+      letter-spacing: 0.03em;
+    }
+    .hip-phrase {
+      position: absolute;
+      left: 105%;
+      font-size: clamp(0.7rem, 1.6vw, 0.9rem);
+      font-weight: 400;
+      color: var(--surface);
+      text-shadow: 0 2px 8px rgba(0,0,0,0.35);
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .rh-animate .rh-word {
+      opacity: 0;
+      animation: rhEnter 7s ease-out 2.4s forwards;
+    }
+    .rh-animate .hip-phrase {
+      animation: rhReveal 7s ease-in-out 2.4s forwards;
+    }
+    @keyframes rhEnter {
+      0%   { opacity: 0; transform: translateX(-50px); }
+      18%  { opacity: 1; transform: translateX(0); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes rhReveal {
+      0%   { opacity: 0; transform: translateX(50px); }
+      15%  { opacity: 0; transform: translateX(50px); }
+      38%  { opacity: 1; transform: translateX(0); }
+      68%  { opacity: 1; transform: translateX(0); }
+      100% { opacity: 0; transform: translateX(0) scale(0.88); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .rh-animate .rh-word { animation: none; opacity: 1; }
+      .rh-animate .hip-phrase { animation: none; }
+    }
+
     .hero-tagline {
       font-size: clamp(0.9rem, 2.2vw, 1.15rem);
       font-weight: 400;
@@ -563,7 +614,10 @@
         <div class="fog-layer"></div>
       </div>
       <div class="hero-content">
-        <img class="hero-logo" src="/assets/hip-lockup.png" alt="Resourcehip — HIP Certified" />
+        <div class="rh-logo-anim" aria-label="Resourcehip — Human Impact Profile">
+          <span class="rh-word">Resourcehip</span>
+          <span class="hip-phrase" aria-hidden="true">Human Impact Profile</span>
+        </div>
         <div class="hero-divider" aria-hidden="true"></div>
         <p class="hero-tagline">
           Independent material resilience ratings for everyday products.
@@ -635,6 +689,21 @@
     </div>
   </footer>
 
+  <script>
+    (function(){
+      var el=document.querySelector('.rh-logo-anim');
+      if(!el)return;
+      if(sessionStorage.getItem('rh-anim')){el.classList.add('rh-anim-done');return;}
+      el.classList.add('rh-animate');
+      el.addEventListener('animationend',function h(e){
+        if(e.animationName==='rhReveal'){
+          sessionStorage.setItem('rh-anim','1');
+          el.classList.replace('rh-animate','rh-anim-done');
+          el.removeEventListener('animationend',h);
+        }
+      });
+    })();
+  </script>
   <script>
     (function() {
       var u = 'hello', d = ['resourcehip', 'com'].join('.');
