@@ -143,6 +143,35 @@ def rating_link(slug: str, label: str | None = None) -> "jinja2.Markup":
 jinja_env.globals["rating_link"] = rating_link
 
 
+def _singularize_word(word: str) -> str:
+    """Singularize a single English word (naive, covers product category names)."""
+    w = word.lower()
+    if w.endswith("ies") and len(w) > 3:
+        return w[:-3] + "y"
+    if w.endswith(("shes", "ches", "xes")):
+        return w[:-2]
+    if w.endswith("sses"):
+        return w[:-2]
+    if w.endswith("s") and not w.endswith("ss") and len(w) > 1:
+        return w[:-1]
+    return w
+
+
+def singularize_title(title: str) -> str:
+    """Singularize a product title, handling 'X and Y' patterns."""
+    parts = title.lower().split(" and ")
+    result = []
+    for part in parts:
+        words = part.strip().split()
+        if words:
+            words[-1] = _singularize_word(words[-1])
+        result.append(" ".join(words))
+    return " and ".join(result)
+
+
+jinja_env.filters["singularize"] = singularize_title
+
+
 # ── Build steps ───────────────────────────────────────────────────────────────
 
 def build_ratings() -> list[dict]:
@@ -364,6 +393,39 @@ def build_contact() -> None:
     out_file = DIST / "contact.html"
     out_file.write_text(html, encoding="utf-8")
     print("  [page]   contact.html")
+
+
+def build_consumer(entries: list[dict]) -> None:
+    """Build /consumer/index.html — the consumer landing page with pipeline data."""
+    template = jinja_env.get_template("consumer.html.j2")
+    generic = [e for e in entries if e.get("rating_type") != "verified"]
+    generic.sort(key=lambda r: r.get("title", ""))
+    html = template.render(
+        ratings=generic,
+        page_title="For Consumers",
+        page_description="Check before you buy. Free, independent material resilience ratings for everyday products.",
+        active_page="consumer",
+    )
+    out_dir = DIST / "consumer"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_file = out_dir / "index.html"
+    out_file.write_text(html, encoding="utf-8")
+    print("  [page]   consumer/index.html (landing)")
+
+
+def build_consumer_mark() -> None:
+    """Build /consumer/mark/index.html — the HIP Mark explainer page."""
+    template = jinja_env.get_template("consumer_mark.html.j2")
+    html = template.render(
+        page_title="The HIP Mark",
+        page_description="Three levels of the HIP Mark: Standard, Silver, and Gold. What they mean and how they're earned.",
+        active_page="consumer",
+    )
+    out_dir = DIST / "consumer" / "mark"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_file = out_dir / "index.html"
+    out_file.write_text(html, encoding="utf-8")
+    print("  [page]   consumer/mark/index.html (HIP Mark explainer)")
 
 
 def build_404() -> None:
@@ -621,6 +683,8 @@ def build():
     rating_slugs = {e["slug"] for e in index_entries}
     print("→ Building static pages")
     build_pages()
+    build_consumer(index_entries)
+    build_consumer_mark()
     build_contact()
     build_404()
     print("→ Copying Cloudflare Pages Functions")

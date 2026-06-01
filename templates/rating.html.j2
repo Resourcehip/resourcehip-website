@@ -154,6 +154,14 @@
 .hip-mark-title.mark-standard { color: var(--tier-emerald-text); }
 .hip-mark-desc { font-size: 0.75rem; color: #666; }
 
+/* §4 Summary sentence */
+.summary-sentence {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--ink);
+  margin: 0 0 1.5rem;
+}
+
 /* Generic rating notice */
 .generic-notice {
   background: var(--warning-bg); border: 1px solid var(--rule);
@@ -225,14 +233,13 @@
 
 .csu-bar-wrap { margin-bottom: 1rem; position: relative; padding: 0 9px; }
 .csu-bar-track {
-  display: flex; height: 12px; border-radius: 6px; overflow: hidden;
-  position: relative;
+  display: flex; height: 12px; position: relative;
 }
 .csu-zone { height: 100%; }
-.csu-zone-below    { background: var(--rule); width: 60%; }
+.csu-zone-below    { background: var(--rule); width: 60%; border-radius: 6px 0 0 6px; }
 .csu-zone-standard { background: var(--tier-emerald); opacity: 0.22; width: 15%; }
 .csu-zone-silver   { background: var(--tier-slate);   opacity: 0.22; width: 15%; }
-.csu-zone-gold     { background: var(--tier-amber);   opacity: 0.22; width: 10%; }
+.csu-zone-gold     { background: var(--tier-amber);   opacity: 0.22; width: 10%; border-radius: 0 6px 6px 0; }
 .csu-marker {
   position: absolute; top: 50%;
   width: 18px; height: 18px; border-radius: 50%;
@@ -433,6 +440,64 @@
   </div>
 
 </div>
+
+{# ── §4 Summary sentence ──────────────────────────────────────────────────── #}
+{%- set _cat_singular = title|default('product')|singularize -%}
+
+{#- Tier phrase -#}
+{%- set _hip_mark_val = hip_mark|default(none) -%}
+{%- if _hip_mark_val == 'Gold' -%}
+  {%- set _tier_phrase = 'This ' ~ _cat_singular ~ ' earns the Gold HIP Mark.' -%}
+{%- elif _hip_mark_val == 'Silver' -%}
+  {%- set _tier_phrase = 'This ' ~ _cat_singular ~ ' earns the Silver HIP Mark.' -%}
+{%- elif _hip_mark_val == 'Standard' -%}
+  {%- set _tier_phrase = 'This ' ~ _cat_singular ~ ' earns the Standard HIP Mark.' -%}
+{%- else -%}
+  {%- set _tier_phrase = 'This is what a typical ' ~ _cat_singular ~ ' looks like today.' -%}
+{%- endif -%}
+
+{#- Benefit phrase — pick dimension with highest score (RI normalised to 0-10) -#}
+{%- set _scores = [
+  ('msi', msi_score|default(0)|float),
+  ('scr', scr_score|default(0)|float),
+  ('rc',  rc_score|default(0)|float),
+  ('r',   r_score|default(0)|float),
+  ('sei', sei_score|default(0)|float),
+  ('pl',  pl_score|default(0)|float),
+  ('ri',  ((ri_score|default(0)|float + 10) / 2)),
+] -%}
+{%- set _top = namespace(dim='msi', val=-999) -%}
+{%- for dim, score in _scores -%}
+  {%- if score > _top.val -%}
+    {%- set _top.dim = dim -%}
+    {%- set _top.val = score -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if _top.dim == 'msi' -%}
+  {%- set _benefit = 'It uses materials that hold up better than average.' -%}
+{%- elif _top.dim == 'scr' -%}
+  {%- set _benefit = 'The makers know where their materials come from.' -%}
+{%- elif _top.dim == 'rc' -%}
+  {%- set _benefit = "It's easier to recycle than the typical one." -%}
+{%- elif _top.dim == 'r' -%}
+  {%- set _benefit = 'You can fix it when something goes wrong.' -%}
+{%- elif _top.dim == 'sei' -%}
+  {%- set _benefit = "It's made with care for the people and places involved." -%}
+{%- elif _top.dim == 'pl' -%}
+  {%- set _benefit = "It's built to last longer than the typical one." -%}
+{%- else -%}
+  {%- set _benefit = 'It puts less strain on natural materials than average.' -%}
+{%- endif -%}
+
+{#- Action phrase -#}
+{%- if rating_type == 'verified' -%}
+  {%- set _action = 'It carries our mark because the maker has shared the data to prove it.' -%}
+{%- else -%}
+  {%- set _action = 'If the maker shares their data, the score usually goes up.' -%}
+{%- endif -%}
+
+<p class="summary-sentence">{{ _tier_phrase }} {{ _benefit }} {{ _action }}</p>
 {% endif %}
 
 <!-- ── HIP Score + RI ─────────────────────────────────────────────────────── -->
