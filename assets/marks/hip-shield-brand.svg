@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="30 30 420 480" role="img"
+     aria-label="Resourcehip">
+  <title>Resourcehip</title>
+  <path d="M40 40H440V340C440 405 360 460 240 500 120 460 40 405 40 340Z"
+        fill="#0E4C8F"/>
+  <g transform="translate(90,108) scale(0.854)" fill="#fff">
+    <g transform="translate(0,16)">
+      <rect x="0" y="0" width="36" height="200"/>
+      <rect x="104" y="0" width="36" height="200"/>
+      <rect x="36" y="82" width="68" height="36"/>
+      <rect x="168" y="60" width="36" height="140"/>
+      <circle cx="186" cy="30" r="22"/>
+      <path fill-rule="evenodd"
+            d="M232 0L268 0A60 60 0 01 268 120L268 200 232 200Z
+               M268 36A24 24 0 01 268 84L268 36Z"/>
+    </g>
+  </g>
+</svg>
