@@ -1,6 +1,6 @@
 ---
 title: Air Fryers
-category: small appliances
+category: Kitchen
 rating_type: generic
 brand: null
 slug: air-fryers

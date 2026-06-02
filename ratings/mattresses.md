@@ -1,6 +1,6 @@
 ---
 title: Mattresses
-category: sleep products
+category: Sleep & Bedroom
 rating_type: generic
 brand: null
 slug: mattresses

@@ -1,6 +1,6 @@
 ---
 title: Carpets
-category: floor coverings
+category: Home & Living
 rating_type: generic
 brand: null
 slug: carpets

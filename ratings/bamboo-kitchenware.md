@@ -1,6 +1,6 @@
 ---
 title: Bamboo Kitchenware
-category: kitchen equipment
+category: Kitchen
 rating_type: generic
 brand: null
 slug: bamboo-kitchenware

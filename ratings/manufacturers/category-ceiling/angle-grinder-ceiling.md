@@ -1,6 +1,6 @@
 ---
 title: Angle Grinder — Category Ceiling
-category: power tools
+category: Power Tools
 rating_type: verified
 brand: Category Ceiling
 slug: angle-grinder-ceiling

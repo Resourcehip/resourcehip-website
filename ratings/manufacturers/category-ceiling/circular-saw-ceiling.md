@@ -1,6 +1,6 @@
 ---
 title: Circular Saw — Category Ceiling
-category: power tools
+category: Power Tools
 rating_type: verified
 brand: Category Ceiling
 slug: circular-saw-ceiling

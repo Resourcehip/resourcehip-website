@@ -1,6 +1,6 @@
 ---
 title: Reusable Coffee Cups
-category: home lifestyle
+category: Home & Living
 rating_type: generic
 brand: null
 slug: reusable-coffee-cups

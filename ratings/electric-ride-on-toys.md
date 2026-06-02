@@ -1,6 +1,6 @@
 ---
 title: Electric Ride-On Toys
-category: toys and children's
+category: Toys & Games
 rating_type: generic
 brand: null
 slug: electric-ride-on-toys

@@ -1,6 +1,6 @@
 ---
 title: Electric Scooters
-category: sports and fitness
+category: Sports & Fitness
 rating_type: generic
 brand: null
 slug: electric-scooters

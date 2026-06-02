@@ -1,6 +1,6 @@
 ---
 title: Gym Equipment — Category Ceiling
-category: sports and fitness
+category: Sports & Fitness
 rating_type: verified
 brand: Category Ceiling
 slug: gym-equipment-ceiling

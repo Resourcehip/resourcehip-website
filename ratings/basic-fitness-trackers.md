@@ -1,6 +1,6 @@
 ---
 title: Basic Fitness Trackers
-category: sports and fitness
+category: Sports & Fitness
 rating_type: generic
 brand: null
 slug: basic-fitness-trackers

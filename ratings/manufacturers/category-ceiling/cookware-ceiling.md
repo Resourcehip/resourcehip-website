@@ -1,6 +1,6 @@
 ---
 title: Cookware — Category Ceiling
-category: kitchen equipment
+category: Kitchen
 rating_type: verified
 brand: Category Ceiling
 slug: cookware-ceiling

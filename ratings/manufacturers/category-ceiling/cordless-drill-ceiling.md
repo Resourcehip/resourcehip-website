@@ -1,6 +1,6 @@
 ---
 title: Cordless Drill — Category Ceiling
-category: power tools
+category: Power Tools
 rating_type: verified
 brand: Category Ceiling
 slug: cordless-drill-ceiling

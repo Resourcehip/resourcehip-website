@@ -1,6 +1,6 @@
 ---
 title: Sofas
-category: upholstered furniture
+category: Home & Living
 rating_type: generic
 brand: null
 slug: sofas

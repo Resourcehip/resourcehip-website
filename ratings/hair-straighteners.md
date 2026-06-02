@@ -1,6 +1,6 @@
 ---
 title: Hair Straighteners
-category: personal care
+category: Personal Care
 rating_type: generic
 brand: null
 slug: hair-straighteners

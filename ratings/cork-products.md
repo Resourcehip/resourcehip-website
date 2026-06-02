@@ -1,6 +1,6 @@
 ---
 title: Cork Products
-category: home & garden
+category: Home & Living
 rating_type: generic
 brand: null
 slug: cork-products

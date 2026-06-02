@@ -1,6 +1,6 @@
 ---
 title: Scented Candle — Category Ceiling
-category: home fragrance
+category: Home & Living
 rating_type: verified
 brand: Category Ceiling
 slug: scented-candle-ceiling

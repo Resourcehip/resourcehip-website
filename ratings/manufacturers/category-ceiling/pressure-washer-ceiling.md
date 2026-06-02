@@ -1,6 +1,6 @@
 ---
 title: Pressure Washer — Category Ceiling
-category: power tools
+category: Power Tools
 rating_type: verified
 brand: Category Ceiling
 slug: pressure-washer-ceiling

@@ -1,6 +1,6 @@
 ---
 title: Cordless Lawnmower — Category Ceiling
-category: garden and outdoor
+category: Garden & Outdoor
 rating_type: verified
 brand: Category Ceiling
 slug: cordless-lawnmower-ceiling

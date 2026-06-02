@@ -1,6 +1,6 @@
 ---
 title: Garden Furniture
-category: outdoor furniture
+category: Garden & Outdoor
 rating_type: generic
 brand: null
 slug: garden-furniture

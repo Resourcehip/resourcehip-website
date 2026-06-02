@@ -1,6 +1,6 @@
 ---
 title: Camping Tents
-category: outdoor equipment
+category: Garden & Outdoor
 rating_type: generic
 brand: null
 slug: camping-tents

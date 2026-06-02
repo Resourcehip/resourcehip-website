@@ -1,6 +1,6 @@
 ---
 title: Robot Vacuum Cleaner — Category Ceiling
-category: home appliances
+category: Home Appliances
 rating_type: verified
 brand: Category Ceiling
 slug: robot-vacuum-ceiling

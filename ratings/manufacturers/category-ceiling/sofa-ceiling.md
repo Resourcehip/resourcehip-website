@@ -1,6 +1,6 @@
 ---
 title: Sofa — Category Ceiling
-category: upholstered furniture
+category: Home & Living
 rating_type: verified
 brand: Category Ceiling
 slug: sofa-ceiling

@@ -1,6 +1,6 @@
 ---
 title: Toaster — Category Ceiling
-category: small appliances
+category: Kitchen
 rating_type: verified
 brand: Category Ceiling
 slug: toaster-ceiling

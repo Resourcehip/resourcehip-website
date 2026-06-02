@@ -1,6 +1,6 @@
 ---
 title: Linen and Hemp Accessories
-category: home lifestyle
+category: Home & Living
 rating_type: generic
 brand: null
 slug: linen-hemp-accessories

@@ -1,6 +1,6 @@
 ---
 title: Scented Candles
-category: home fragrance
+category: Home & Living
 rating_type: generic
 brand: null
 slug: scented-candles

@@ -1,6 +1,6 @@
 ---
 title: Air Purifier — Category Ceiling
-category: home lifestyle
+category: Home & Living
 rating_type: verified
 brand: Category Ceiling
 slug: air-purifier-ceiling

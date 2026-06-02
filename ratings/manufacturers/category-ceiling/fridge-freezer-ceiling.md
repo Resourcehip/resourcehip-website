@@ -1,6 +1,6 @@
 ---
 title: Fridge-Freezer — Category Ceiling
-category: larger appliances
+category: Home Appliances
 rating_type: verified
 brand: Category Ceiling
 slug: fridge-freezer-ceiling

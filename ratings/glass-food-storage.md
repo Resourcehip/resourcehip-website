@@ -1,6 +1,6 @@
 ---
 title: Glass Food Storage
-category: kitchen equipment
+category: Kitchen
 rating_type: generic
 brand: null
 slug: glass-food-storage

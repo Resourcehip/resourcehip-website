@@ -1,6 +1,6 @@
 ---
 title: Wooden Toys and Games
-category: children's products
+category: Toys & Games
 rating_type: generic
 brand: null
 slug: wooden-toys-games

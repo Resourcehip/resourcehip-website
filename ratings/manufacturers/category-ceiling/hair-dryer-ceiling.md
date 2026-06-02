@@ -1,6 +1,6 @@
 ---
 title: Hair Dryer — Category Ceiling
-category: small appliances
+category: Personal Care
 rating_type: verified
 brand: Category Ceiling
 slug: hair-dryer-ceiling

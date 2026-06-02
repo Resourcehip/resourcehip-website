@@ -1,6 +1,6 @@
 ---
 title: Fridge-Freezers
-category: larger appliances
+category: Home Appliances
 rating_type: generic
 brand: null
 slug: fridge-freezers

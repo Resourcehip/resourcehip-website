@@ -1,6 +1,6 @@
 ---
 title: E-Bike — Category Ceiling
-category: sports and leisure
+category: Sports & Fitness
 rating_type: verified
 brand: Category Ceiling
 slug: e-bike-ceiling

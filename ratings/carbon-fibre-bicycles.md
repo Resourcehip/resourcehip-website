@@ -1,6 +1,6 @@
 ---
 title: Carbon Fibre Bicycles
-category: sports and leisure
+category: Sports & Fitness
 rating_type: generic
 brand: null
 slug: carbon-fibre-bicycles

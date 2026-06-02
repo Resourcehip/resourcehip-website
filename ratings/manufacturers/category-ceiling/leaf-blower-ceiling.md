@@ -1,6 +1,6 @@
 ---
 title: Leaf Blower — Category Ceiling
-category: garden and outdoor
+category: Garden & Outdoor
 rating_type: verified
 brand: Category Ceiling
 slug: leaf-blower-ceiling

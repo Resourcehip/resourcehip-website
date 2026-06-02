@@ -1,6 +1,6 @@
 ---
 title: Natural Latex Sleep Products
-category: home lifestyle
+category: Sleep & Bedroom
 rating_type: generic
 brand: null
 slug: natural-latex-sleep

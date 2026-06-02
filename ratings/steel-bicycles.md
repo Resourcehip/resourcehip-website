@@ -1,6 +1,6 @@
 ---
 title: Steel Bicycles
-category: sports and leisure
+category: Sports & Fitness
 rating_type: generic
 brand: null
 slug: steel-bicycles

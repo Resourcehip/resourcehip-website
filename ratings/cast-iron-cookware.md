@@ -1,6 +1,6 @@
 ---
 title: Cast Iron Cookware
-category: kitchen equipment
+category: Kitchen
 rating_type: generic
 brand: null
 slug: cast-iron-cookware

@@ -1,6 +1,6 @@
 ---
 title: Cookware
-category: kitchen equipment
+category: Kitchen
 rating_type: generic
 brand: null
 slug: cookware

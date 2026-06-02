@@ -1,6 +1,6 @@
 ---
 title: Coffee Pod Machine — Category Ceiling
-category: small appliances
+category: Kitchen
 rating_type: verified
 brand: Category Ceiling
 slug: coffee-pod-machine-ceiling

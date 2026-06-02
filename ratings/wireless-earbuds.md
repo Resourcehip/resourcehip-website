@@ -1,6 +1,6 @@
 ---
 title: Wireless Earbuds
-category: consumer electronics
+category: Consumer Electronics
 rating_type: generic
 brand: null
 slug: wireless-earbuds

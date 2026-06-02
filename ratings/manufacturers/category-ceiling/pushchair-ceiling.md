@@ -1,6 +1,6 @@
 ---
 title: Pushchair — Category Ceiling
-category: baby travel systems
+category: Baby & Nursery
 rating_type: verified
 brand: Category Ceiling
 slug: pushchair-ceiling

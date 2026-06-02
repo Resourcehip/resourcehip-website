@@ -1,6 +1,6 @@
 ---
 title: Stainless Steel Water Bottles
-category: home lifestyle
+category: Home & Living
 rating_type: generic
 brand: null
 slug: stainless-steel-water-bottles

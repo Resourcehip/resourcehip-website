@@ -1,6 +1,6 @@
 ---
 title: Kettles
-category: small appliances
+category: Kitchen
 rating_type: generic
 brand: null
 slug: kettles

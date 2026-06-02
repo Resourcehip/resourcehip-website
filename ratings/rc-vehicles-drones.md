@@ -1,6 +1,6 @@
 ---
 title: RC Vehicles and Drones
-category: toys and children's
+category: Toys & Games
 rating_type: generic
 brand: null
 slug: rc-vehicles-drones

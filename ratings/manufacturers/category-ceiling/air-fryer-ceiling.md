@@ -1,6 +1,6 @@
 ---
 title: Air Fryer — Category Ceiling
-category: small appliances
+category: Kitchen
 rating_type: verified
 brand: Category Ceiling
 slug: air-fryer-ceiling

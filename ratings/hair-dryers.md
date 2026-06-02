@@ -1,6 +1,6 @@
 ---
 title: Hair Dryers
-category: small appliances
+category: Personal Care
 rating_type: generic
 brand: null
 slug: hair-dryers

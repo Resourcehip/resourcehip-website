@@ -1,6 +1,6 @@
 ---
 title: Electric Scooter — Category Ceiling
-category: sports and fitness
+category: Sports & Fitness
 rating_type: verified
 brand: Category Ceiling
 slug: electric-scooter-ceiling

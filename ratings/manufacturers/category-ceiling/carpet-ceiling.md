@@ -1,6 +1,6 @@
 ---
 title: Carpet — Category Ceiling
-category: floor coverings
+category: Home & Living
 rating_type: verified
 brand: Category Ceiling
 slug: carpet-ceiling

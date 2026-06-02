@@ -1,6 +1,6 @@
 ---
 title: Hedge Trimmers
-category: garden and outdoor
+category: Garden & Outdoor
 rating_type: generic
 brand: null
 slug: hedge-trimmers

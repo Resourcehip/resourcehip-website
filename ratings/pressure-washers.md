@@ -1,6 +1,6 @@
 ---
 title: Pressure Washers
-category: power tools
+category: Power Tools
 rating_type: generic
 brand: null
 slug: pressure-washers

@@ -1,6 +1,6 @@
 ---
 title: Pushchairs
-category: baby travel systems
+category: Baby & Nursery
 rating_type: generic
 brand: null
 slug: pushchairs

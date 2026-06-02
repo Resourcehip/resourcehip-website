@@ -1,6 +1,6 @@
 ---
 title: Recycled HDPE Outdoor Furniture
-category: outdoor furniture
+category: Garden & Outdoor
 rating_type: generic
 brand: null
 slug: recycled-hdpe-furniture

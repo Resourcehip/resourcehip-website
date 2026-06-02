@@ -1,6 +1,6 @@
 ---
 title: Robot Vacuum Cleaners
-category: home appliances
+category: Home Appliances
 rating_type: generic
 brand: null
 slug: robot-vacuums

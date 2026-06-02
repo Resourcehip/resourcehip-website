@@ -1,6 +1,6 @@
 ---
 title: E-Bikes
-category: sports and leisure
+category: Sports & Fitness
 rating_type: generic
 brand: null
 slug: e-bikes

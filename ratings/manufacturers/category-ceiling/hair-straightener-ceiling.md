@@ -1,6 +1,6 @@
 ---
 title: Hair Straightener — Category Ceiling
-category: personal care
+category: Personal Care
 rating_type: verified
 brand: Category Ceiling
 slug: hair-straightener-ceiling

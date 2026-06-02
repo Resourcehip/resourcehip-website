@@ -1,6 +1,6 @@
 ---
 title: Cordless Lawnmowers
-category: garden and outdoor
+category: Garden & Outdoor
 rating_type: generic
 brand: null
 slug: cordless-lawnmowers

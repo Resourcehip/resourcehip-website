@@ -1,6 +1,6 @@
 ---
 title: Circular Saws
-category: power tools
+category: Power Tools
 rating_type: generic
 brand: null
 slug: circular-saws

@@ -1,6 +1,6 @@
 ---
 title: Stainless Steel Water Bottle — Category Ceiling
-category: home lifestyle
+category: Home & Living
 rating_type: verified
 brand: Category Ceiling
 slug: stainless-steel-water-bottle-ceiling

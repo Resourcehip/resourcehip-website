@@ -1,6 +1,6 @@
 ---
 title: Garden Furniture — Category Ceiling
-category: outdoor furniture
+category: Garden & Outdoor
 rating_type: verified
 brand: Category Ceiling
 slug: garden-furniture-ceiling

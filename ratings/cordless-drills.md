@@ -1,6 +1,6 @@
 ---
 title: Cordless Drills
-category: power tools
+category: Power Tools
 rating_type: generic
 brand: null
 slug: cordless-drills

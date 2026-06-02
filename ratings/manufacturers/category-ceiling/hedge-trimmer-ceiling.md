@@ -1,6 +1,6 @@
 ---
 title: Hedge Trimmer — Category Ceiling
-category: garden and outdoor
+category: Garden & Outdoor
 rating_type: verified
 brand: Category Ceiling
 slug: hedge-trimmer-ceiling

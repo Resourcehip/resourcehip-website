@@ -1,6 +1,6 @@
 ---
 title: Electric Toothbrushes
-category: personal care
+category: Personal Care
 rating_type: generic
 brand: null
 slug: electric-toothbrushes

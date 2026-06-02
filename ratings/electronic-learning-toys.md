@@ -1,6 +1,6 @@
 ---
 title: Electronic Learning Toys
-category: toys and children's
+category: Toys & Games
 rating_type: generic
 brand: null
 slug: electronic-learning-toys

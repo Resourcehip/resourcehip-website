@@ -1,6 +1,6 @@
 ---
 title: Reusable Coffee Cup — Category Ceiling
-category: home lifestyle
+category: Home & Living
 rating_type: verified
 brand: Category Ceiling
 slug: reusable-coffee-cup-ceiling

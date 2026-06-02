@@ -1,6 +1,6 @@
 ---
 title: Electric Kettle — Category Ceiling
-category: small appliances
+category: Kitchen
 rating_type: verified
 brand: Category Ceiling
 slug: kettle-ceiling

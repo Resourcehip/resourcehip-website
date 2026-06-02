@@ -1,6 +1,6 @@
 ---
 title: Camping Tent — Category Ceiling
-category: outdoor equipment
+category: Garden & Outdoor
 rating_type: verified
 brand: Category Ceiling
 slug: camping-tent-ceiling

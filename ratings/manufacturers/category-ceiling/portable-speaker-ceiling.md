@@ -1,6 +1,6 @@
 ---
 title: Portable Speaker — Category Ceiling
-category: consumer electronics
+category: Consumer Electronics
 rating_type: verified
 brand: Category Ceiling
 slug: portable-speaker-ceiling

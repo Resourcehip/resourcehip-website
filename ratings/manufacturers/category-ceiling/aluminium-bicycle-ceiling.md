@@ -1,6 +1,6 @@
 ---
 title: Aluminium Bicycle — Category Ceiling
-category: sports and leisure
+category: Sports & Fitness
 rating_type: verified
 brand: Category Ceiling
 slug: aluminium-bicycle-ceiling

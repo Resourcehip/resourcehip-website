@@ -1,6 +1,6 @@
 ---
 title: Mattress — Category Ceiling
-category: sleep products
+category: Sleep & Bedroom
 rating_type: verified
 brand: Category Ceiling
 slug: mattress-ceiling

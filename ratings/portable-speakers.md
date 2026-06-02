@@ -1,6 +1,6 @@
 ---
 title: Portable Speakers
-category: consumer electronics
+category: Consumer Electronics
 rating_type: generic
 brand: null
 slug: portable-speakers

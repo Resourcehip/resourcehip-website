@@ -1,6 +1,6 @@
 ---
 title: RC Vehicle / Drone — Category Ceiling
-category: toys and children's
+category: Toys & Games
 rating_type: verified
 brand: Category Ceiling
 slug: rc-vehicle-drone-ceiling

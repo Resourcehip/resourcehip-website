@@ -1,6 +1,6 @@
 ---
 title: Leaf Blowers
-category: garden and outdoor
+category: Garden & Outdoor
 rating_type: generic
 brand: null
 slug: leaf-blowers

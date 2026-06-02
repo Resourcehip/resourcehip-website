@@ -1,6 +1,6 @@
 ---
 title: Smartphone — Category Ceiling
-category: consumer electronics
+category: Consumer Electronics
 rating_type: verified
 brand: Category Ceiling
 slug: smartphone-ceiling

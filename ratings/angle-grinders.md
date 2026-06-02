@@ -1,6 +1,6 @@
 ---
 title: Angle Grinders
-category: power tools
+category: Power Tools
 rating_type: generic
 brand: null
 slug: angle-grinders

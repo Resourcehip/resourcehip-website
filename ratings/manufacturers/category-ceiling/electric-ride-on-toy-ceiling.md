@@ -1,6 +1,6 @@
 ---
 title: Electric Ride-On Toy — Category Ceiling
-category: toys and children's
+category: Toys & Games
 rating_type: verified
 brand: Category Ceiling
 slug: electric-ride-on-toy-ceiling

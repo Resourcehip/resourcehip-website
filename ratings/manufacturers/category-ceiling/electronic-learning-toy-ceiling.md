@@ -1,6 +1,6 @@
 ---
 title: Electronic Learning Toy — Category Ceiling
-category: toys and children's
+category: Toys & Games
 rating_type: verified
 brand: Category Ceiling
 slug: electronic-learning-toy-ceiling

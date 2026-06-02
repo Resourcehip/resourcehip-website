@@ -1,6 +1,6 @@
 ---
 title: Coffee Pod Machines
-category: small appliances
+category: Kitchen
 rating_type: generic
 brand: null
 slug: coffee-pod-machines
