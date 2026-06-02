@@ -1,0 +1,344 @@
+{% extends "base.html.j2" %}
+
+{% block main_class %}landing{% endblock %}
+
+{% block extra_styles %}
+    .site-main.landing { max-width: none; padding: 0; }
+
+    /* ── Hero ── */
+    .mark-hero {
+      position: relative;
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: var(--hip-blue);
+    }
+
+    .mark-hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('/assets/marketing/about/hip-mark-explainer-v1.png') center center / cover no-repeat;
+      z-index: 0;
+    }
+
+    .mark-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(10, 36, 64, 0.40) 0%,
+        rgba(10, 36, 64, 0.60) 100%
+      );
+      z-index: 1;
+    }
+
+    .mark-hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 680px;
+      padding: 4rem 2rem;
+    }
+
+    .mark-hero h1 {
+      font-size: clamp(1.75rem, 4vw, 2.8rem);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .mark-hero-lede {
+      font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+      color: rgba(255,255,255,0.9);
+      line-height: 1.7;
+    }
+
+    /* ── Tier sections ── */
+    .tiers-strip {
+      background: var(--page-bg);
+      padding: 4rem 2rem;
+    }
+
+    .tiers-strip-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .tier-section {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      padding: 2.5rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .tier-section:last-child {
+      border-bottom: none;
+    }
+
+    .tier-badge {
+      flex-shrink: 0;
+      width: 96px;
+      height: auto;
+    }
+
+    .tier-content {
+      flex: 1;
+    }
+
+    .tier-name {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--mark-black);
+      margin-bottom: 0.25rem;
+    }
+
+    .tier-name-standard { color: var(--tier-emerald-text); }
+    .tier-name-silver { color: var(--tier-slate-text); }
+    .tier-name-gold { color: var(--tier-amber-text); }
+
+    .tier-threshold {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .tier-body {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: var(--ink);
+    }
+
+    /* ── RI section ── */
+    .ri-strip {
+      background: var(--surface);
+      padding: 4rem 2rem;
+    }
+
+    .ri-strip-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .ri-strip h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 0 0 0.5rem;
+    }
+
+    .ri-lede {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: var(--ink);
+      margin-bottom: 2rem;
+    }
+
+    .ri-ramp {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .ri-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      flex: 1;
+      min-width: 120px;
+      max-width: 160px;
+      padding: 1rem 0.5rem;
+    }
+
+    .ri-chip {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.75rem;
+    }
+
+    .ri-label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+
+    .ri-label-depleting { color: var(--ri-depleting); }
+    .ri-label-extractive { color: var(--ri-extractive); }
+    .ri-label-renewable { color: var(--ri-renewable); }
+    .ri-label-restorative { color: var(--ri-restorative); }
+    .ri-label-regenerative { color: var(--ri-regenerative); }
+
+    .ri-gloss {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ── Footer explainer ── */
+    .low-scores-strip {
+      background: var(--page-bg);
+      padding: 4rem 2rem;
+    }
+
+    .low-scores-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .low-scores-inner h2 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 0 0 1rem;
+    }
+
+    .low-scores-inner p {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: var(--ink);
+    }
+
+    .low-scores-inner .back-link {
+      display: inline-block;
+      margin-top: 1.5rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--hip-blue);
+      text-decoration: none;
+    }
+
+    .low-scores-inner .back-link:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      .mark-hero-content { padding: 3rem 1.5rem; }
+      .tiers-strip,
+      .ri-strip,
+      .low-scores-strip { padding: 2.5rem 1.5rem; }
+      .tier-section { flex-direction: column; align-items: center; text-align: center; }
+      .ri-ramp { flex-direction: column; align-items: center; }
+      .ri-step { max-width: 240px; }
+    }
+{% endblock %}
+
+{% block content %}
+
+  {# ── §3a Hero ── #}
+  <section class="mark-hero" aria-label="HIP Mark hero">
+    <div class="mark-hero-bg" aria-hidden="true"></div>
+    <div class="mark-hero-overlay" aria-hidden="true"></div>
+    <div class="mark-hero-content">
+      <h1>The HIP Mark</h1>
+      <p class="mark-hero-lede">
+        Three levels. One promise. The product is built to last and asks
+        less of the planet than the typical thing in its category.
+      </p>
+    </div>
+  </section>
+
+  {# ── §3b Tier sections ── #}
+  <section class="tiers-strip" aria-label="HIP Mark tiers">
+    <div class="tiers-strip-inner">
+
+      <div class="tier-section" id="standard">
+        <img class="tier-badge" src="/assets/marks/hip-mark-shield-standard.svg" alt="HIP Mark Standard" width="96" />
+        <div class="tier-content">
+          <div class="tier-name tier-name-standard">Standard</div>
+          <div class="tier-threshold">HIP Score 6.0 or above</div>
+          <p class="tier-body">
+            A solid baseline. The product is built to last, uses safer materials,
+            and can be repaired or recycled when you're done with it. The maker
+            has shared enough data for us to be sure.
+          </p>
+        </div>
+      </div>
+
+      <div class="tier-section" id="silver">
+        <img class="tier-badge" src="/assets/marks/hip-mark-shield-silver.svg" alt="HIP Mark Silver" width="96" />
+        <div class="tier-content">
+          <div class="tier-name tier-name-silver">Silver</div>
+          <div class="tier-threshold">HIP Score 7.5 or above</div>
+          <p class="tier-body">
+            A real step up. Better materials, easier to repair, more recyclable,
+            and longer life than the typical product in its category.
+          </p>
+        </div>
+      </div>
+
+      <div class="tier-section" id="gold">
+        <img class="tier-badge" src="/assets/marks/hip-mark-shield-gold.svg" alt="HIP Mark Gold" width="96" />
+        <div class="tier-content">
+          <div class="tier-name tier-name-gold">Gold</div>
+          <div class="tier-threshold">HIP Score 9.0 or above</div>
+          <p class="tier-body">
+            Best in its category. Top scores across all seven things we check.
+            Independently verified by us. This is what good looks like today.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  {# ── §3c Regenerative Index ── #}
+  <section class="ri-strip" aria-label="Regenerative Index">
+    <div class="ri-strip-inner">
+      <h2>The Regenerative Index</h2>
+      <p class="ri-lede">
+        Most things we buy take more from the planet than they give back.
+        The Regenerative Index says by how much.
+      </p>
+
+      <div class="ri-ramp">
+        <div class="ri-step">
+          <img class="ri-chip" src="/assets/marks/ri-chip-depleting-200.png" alt="Depleting" width="64" height="64" />
+          <span class="ri-label ri-label-depleting">Depleting</span>
+          <span class="ri-gloss">Takes the most.</span>
+        </div>
+        <div class="ri-step">
+          <img class="ri-chip" src="/assets/marks/ri-chip-extractive-200.png" alt="Extractive" width="64" height="64" />
+          <span class="ri-label ri-label-extractive">Extractive</span>
+          <span class="ri-gloss">Takes a lot.</span>
+        </div>
+        <div class="ri-step">
+          <img class="ri-chip" src="/assets/marks/ri-chip-renewable-200.png" alt="Renewable" width="64" height="64" />
+          <span class="ri-label ri-label-renewable">Renewable</span>
+          <span class="ri-gloss">Breaks even.</span>
+        </div>
+        <div class="ri-step">
+          <img class="ri-chip" src="/assets/marks/ri-chip-restorative-200.png" alt="Restorative" width="64" height="64" />
+          <span class="ri-label ri-label-restorative">Restorative</span>
+          <span class="ri-gloss">Gives a little back.</span>
+        </div>
+        <div class="ri-step">
+          <img class="ri-chip" src="/assets/marks/ri-chip-regenerative-200.png" alt="Regenerative" width="64" height="64" />
+          <span class="ri-label ri-label-regenerative">Regenerative</span>
+          <span class="ri-gloss">Gives back more than it takes.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# ── §3d Why do scores look low? ── #}
+  <section class="low-scores-strip" aria-label="Why scores look low">
+    <div class="low-scores-inner">
+      <h2>Why do most scores look low?</h2>
+      <p>
+        Most everyday products today aren't built to last. They use materials
+        that are scarce or hard to recycle. We start by assuming the worst when
+        the maker hasn't shared real data — so generic scores look low on purpose.
+        When a maker shares real data, the score usually goes up. That's the
+        point of the system.
+      </p>
+      <a class="back-link" href="/consumer/">&larr; Back to consumer ratings</a>
+    </div>
+  </section>
+
+{% endblock %}
