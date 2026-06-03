@@ -4,6 +4,7 @@ category: Consumer Electronics
 rating_type: generic
 brand: null
 slug: smartphones
+header_image: /assets/marketing/ratings/smartphone-header-v1.png
 hip_score: 1.9
 hip_label: Poor
 msi_score: 1.5

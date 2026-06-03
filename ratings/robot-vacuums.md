@@ -4,6 +4,7 @@ category: Home Appliances
 rating_type: generic
 brand: null
 slug: robot-vacuums
+header_image: /assets/marketing/ratings/robot-vacuum-header-v1.png
 hip_score: 2.3
 hip_label: Poor
 msi_score: 1.5

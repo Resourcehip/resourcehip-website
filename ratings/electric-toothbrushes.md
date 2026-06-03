@@ -4,6 +4,7 @@ category: Personal Care
 rating_type: generic
 brand: null
 slug: electric-toothbrushes
+header_image: /assets/marketing/ratings/toothbrush-header-v1.png
 hip_score: 2.0
 hip_label: Poor
 msi_score: 1.5

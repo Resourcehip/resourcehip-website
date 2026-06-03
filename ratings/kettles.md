@@ -4,6 +4,7 @@ category: Kitchen
 rating_type: generic
 brand: null
 slug: kettles
+header_image: /assets/marketing/ratings/kettles-header-v1.png
 hip_score: 3.0
 hip_label: Caution
 msi_score: 3.5
