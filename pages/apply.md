@@ -1,11 +1,11 @@
 ---
 title: "Request a Rating"
-page_description: "Commission a Generic or Verified HIP Rating for your product. Submit your details and we will issue a formal invoice within 3 working days. Certification released on payment."
+page_description: "Commission a Generic or Verified HIP Rating for your product. Submit your details and we will confirm scope and pricing within 3 working days. Certification released on payment."
 ---
 
 # Request a HIP Rating
 
-Use this form to commission a Generic or Verified HIP Rating. We will confirm scope and issue a formal invoice within 3 working days of your submission. Certification and the HIP Mark licence (where eligible) are released on payment confirmation.
+Use this form to commission a Generic or Verified HIP Rating. We will confirm scope and pricing within 3 working days of your submission. Certification and the HIP Mark licence (where eligible) are released on payment confirmation.
 
 [View the full fee schedule →](/pricing)
 
@@ -22,7 +22,7 @@ Use this form to commission a Generic or Verified HIP Rating. We will confirm sc
 
 The Verified HIP Rating is the only route to the HIP Mark licence. A Generic Rating is suitable for internal benchmarking and ESG reporting but does not licence the Mark.
 
-Early adopter discount (30%, first 5 customers) is available until 15 May 2026 and will be applied to your invoice if you are among the first five customers.
+Early adopter discount (30%, first 5 customers) is available until 15 May 2026 and will be applied automatically if you are among the first five customers.
 
 ---
 
@@ -54,7 +54,7 @@ Prefer email? Write to [hello@resourcehip.com](mailto:hello@resourcehip.com) wit
 
 1. **Submission** — you submit product details via the form or by email.
 2. **Scoping confirmation** — we confirm the rating type, fee, and any evidence required (1–3 working days).
-3. **Invoice issued** — we send a formal invoice with 30-day payment terms. Bank transfer / BACS details and a card payment option are included.
+3. **Pricing confirmed** — we send a fee confirmation with 30-day payment terms. Bank transfer, BACS, and card payment options are included.
 4. **Evidence submission** — for a Verified Rating, we send you a full evidence template; you return the completed dossier at your convenience.
 5. **Assessment** — your product is scored against all seven HIP dimensions. You receive a full dimension breakdown with written rationale.
 6. **Certification and HIP Mark** — on payment confirmation, the rating is published on resourcehip.com and the HIP Mark licence is issued (for Verified Ratings scoring 6.0 or above).
