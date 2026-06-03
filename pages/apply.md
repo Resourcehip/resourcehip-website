@@ -42,7 +42,7 @@ You do not need a complete evidence dossier at this stage. If you are unsure whe
 <div style="margin: 2rem 0;">
   <a href="https://intake.resourcehip.com"
      style="display: inline-block; background: var(--hip-blue); color: #fff; font-weight: 700; font-size: 0.95rem; padding: 0.8rem 2rem; border-radius: 6px; text-decoration: none; letter-spacing: 0.02em;">
-    Request an invoice →
+    Get rated →
   </a>
 </div>
 

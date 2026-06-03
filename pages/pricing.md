@@ -98,7 +98,7 @@ Certification and the HIP Mark licence are released upon confirmed payment recei
 
 <div style="background: var(--hip-blue-tint); border: 1px solid var(--rule); border-left: 4px solid var(--hip-blue); border-radius: 0 8px 8px 0; padding: 1.25rem 1.5rem; margin: 1.5rem 0;">
   <p style="margin-bottom: 0.75rem;">To commission a rating or discuss a subscription, submit your product details below. We will confirm scope and issue a formal invoice within 3 working days.</p>
-  <a href="/apply" style="display: inline-block; background: var(--hip-blue); color: #fff; font-weight: 700; font-size: 0.9rem; padding: 0.65rem 1.5rem; border-radius: 6px; text-decoration: none;">Request an invoice →</a>
+  <a href="/apply" style="display: inline-block; background: var(--hip-blue); color: #fff; font-weight: 700; font-size: 0.9rem; padding: 0.65rem 1.5rem; border-radius: 6px; text-decoration: none;">Get rated →</a>
 </div>
 
 ---
