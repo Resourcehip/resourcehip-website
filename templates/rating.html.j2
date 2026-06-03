@@ -104,10 +104,18 @@
   color: var(--ink);
 }
 
-.dim-finding {
+.dim-detail {
   grid-column: 1 / -1;
+  margin-top: -0.4rem;
+}
+.dim-finding-toggle {
+  font-size: 0.72rem; color: var(--hip-blue); cursor: pointer;
+  list-style: none; font-weight: 600;
+}
+.dim-finding-toggle::-webkit-details-marker { display: none; }
+.dim-finding {
   font-size: 0.75rem; color: #666; line-height: 1.5;
-  padding-left: 0; margin-top: -0.4rem;
+  margin-top: 0.4rem;
   border-left: 2px solid var(--rule);
   padding-left: 0.6rem;
 }
@@ -345,9 +353,8 @@
   <div class="ceiling-hero-eyebrow">Category ceiling</div>
   <div class="ceiling-hero-score">{{ "%.1f"|format(hip_score) }} <span style="font-size:1.2rem;font-weight:400;color:#666;">HIP</span></div>
   <div class="ceiling-hero-copy">
-    This is what the HIP methodology rewards when a product in this category fully evidences material provenance,
-    supply-chain integrity, repairability, and end-of-life pathways.
-    It is the benchmark for verified assessment — not a product currently on sale.
+    This is the best score a product in this category can reach when the maker shares full data about
+    its materials, supply chain, repairs, and end-of-life. It is a target, not a product on sale today.
   </div>
 </div>
 {% endif %}
@@ -599,10 +606,9 @@
 {% if rating_type != 'verified' %}
 <div class="score-boilerplate">
   <strong>What this score means</strong>
-  The score shown is the current market baseline for {{ title }} — what the HIP methodology can confirm from
-  publicly available specification data alone, before any manufacturer evidence is reviewed. The category ceiling
-  shown in small text below the score is what the methodology rewards when materials, supply chain, repairability,
-  and end-of-life pathways are fully evidenced. Manufacturers close that gap by applying for verified assessment.
+  This is the starting score for {{ title }}, based only on public data. No maker has sent us
+  their own data yet. The ceiling score (shown below) is what a product can reach when the maker
+  shares real evidence. To close the gap, makers apply for a verified rating.
 </div>
 {% endif %}
 
@@ -611,12 +617,11 @@
   {%- set _ceil_hip_cta = category_ceiling_hip|default(none) -%}
   {% if _ceil_hip_cta is not none %}
 <div class="mfr-cta-block">
-  <h3>Manufacturer? Verified assessment closes the gap.</h3>
-  <p>The current market baseline for this category is {{ "%.1f"|format(hip_score) }} HIP.
-  The category ceiling — what the methodology rewards when materials, supply chain, repairability, and end-of-life
-  pathways are fully evidenced — is {{ "%.1f"|format(_ceil_hip_cta) }} HIP.
-  The first verified product in our programme demonstrated 6.9 HIP and earned the HIP Mark.</p>
-  <p>If your product can evidence the methodology dimensions, verified assessment gives it the score it has earned.</p>
+  <h3>Make this product? You can raise this score.</h3>
+  <p>The starting score for this category is {{ "%.1f"|format(hip_score) }} HIP.
+  With full evidence, a product in this category can reach {{ "%.1f"|format(_ceil_hip_cta) }} HIP.
+  Our first verified product scored 6.9 and earned the HIP Mark.</p>
+  <p>Share your product data and we score what you can prove.</p>
   <a class="btn-verified-assessment" href="/apply">Apply for verified assessment</a>
 </div>
   {% endif %}
@@ -628,31 +633,34 @@
   <h2 style="margin-top:0;">Score Breakdown</h2>
 
   {%- set dimensions = [
-    ('Material Scarcity Index',        msi_score, 20, msi_finding | default('')),
-    ('Supply Chain Risk',              scr_score, 18, scr_finding | default('')),
-    ('Recyclability & Circularity',    rc_score,  18, rc_finding  | default('')),
-    ('Repairability',                  r_score,   13, r_finding   | default('')),
-    ('Social & Environmental Impact',  sei_score,  8, sei_finding | default('')),
-    ('Product Longevity',              pl_score,   8, pl_finding  | default('')),
+    ('How rare are the materials?',        'MSI', msi_score, 20, msi_finding | default('')),
+    ('Where do the materials come from?',  'SCR', scr_score, 18, scr_finding | default('')),
+    ('Can it be recycled?',                'RC',  rc_score,  18, rc_finding  | default('')),
+    ('Can you fix it?',                    'R',   r_score,   13, r_finding   | default('')),
+    ('Is it made fairly?',                 'SEI', sei_score,  8, sei_finding | default('')),
+    ('How long will it last?',             'PL',  pl_score,   8, pl_finding  | default('')),
   ] -%}
 
   <div class="dimensions-grid">
-    {% for name, score, weight, finding in dimensions %}
+    {% for label, code, score, weight, finding in dimensions %}
       {%- if score >= 7.0 -%}{%- set bar_class = 'bar-high' -%}
       {%- elif score >= 4.0 -%}{%- set bar_class = 'bar-medium' -%}
       {%- else -%}{%- set bar_class = 'bar-low' -%}
       {%- endif -%}
       <div class="dim-row">
         <div class="dim-name">
-          {{ name }}<br>
-          <span class="dim-weight">{{ weight }}% weight</span>
+          {{ label }}<br>
+          <span class="dim-weight">{{ code }} · {{ weight }}%</span>
         </div>
         <div class="dim-bar-wrap">
           <div class="dim-bar {{ bar_class }}" style="width:{{ (score * 10) | int }}%"></div>
         </div>
         <div class="dim-score-num">{{ "%.1f"|format(score) }}</div>
         {% if finding %}
-          <div class="dim-finding">{{ finding }}</div>
+          <details class="dim-detail">
+            <summary class="dim-finding-toggle">Why this score ▸</summary>
+            <div class="dim-finding">{{ finding }}</div>
+          </details>
         {% endif %}
       </div>
     {% endfor %}
@@ -666,8 +674,8 @@
     {%- set ri_pct = ((ri_score + 10) / 20 * 100) | int -%}
     <div class="dim-row">
       <div class="dim-name">
-        Regenerative Index<br>
-        <span class="dim-weight">15% weight · scale −10 to +10</span>
+        Does it give back to nature?<br>
+        <span class="dim-weight">RI · 15% · scale −10 to +10</span>
       </div>
       <div class="dim-bar-wrap">
         <div class="dim-bar {{ ri_bar_class }}" style="width:{{ ri_pct }}%"></div>
@@ -676,7 +684,10 @@
         {% if ri_score > 0 %}+{% endif %}{{ "%.1f"|format(ri_score) }}
       </div>
       {% if ri_finding | default('') %}
-        <div class="dim-finding">{{ ri_finding }}</div>
+        <details class="dim-detail">
+          <summary class="dim-finding-toggle">Why this score ▸</summary>
+          <div class="dim-finding">{{ ri_finding }}</div>
+        </details>
       {% endif %}
     </div>
 
@@ -690,11 +701,11 @@
   <details class="methodology-disclosure">
     <summary>About the HIP Methodology ▸</summary>
     <div class="methodology-disclosure-body">
-      Generic ratings are intentionally conservative. They represent only what the HIP methodology can confirm from
-      publicly available specification data, before any manufacturer-supplied evidence is reviewed. Most categories sit
-      in the 2–4 range at the pre-verification baseline. This is the methodology working as designed: it makes the gap
-      between current market practice and demonstrable resilience legible to consumers, manufacturers, and procurement
-      buyers. Verified assessment is the path across that gap, and the HIP Mark is the proof of crossing it.
+      Starting scores are low on purpose. We only count what we can confirm from public data,
+      so most products sit between 2 and 4 out of 10 before a maker shares their own evidence.
+      That gap between the starting score and what a product could reach is the whole point.
+      When a maker proves what their product is really made of, the score goes up.
+      The HIP Mark shows it has been checked.
       <a href="/methodology" style="white-space:nowrap;">Read the full methodology →</a>
     </div>
   </details>
@@ -750,9 +761,9 @@
 <!-- ── Disclaimer ─────────────────────────────────────────────────────────── -->
 <div class="disclaimer-box">
   <p><strong>About this rating:</strong>
-  HIP scores are based on publicly available data{% if rating_type == 'verified' %} and manufacturer-submitted information{% endif %} at the assessment date.
-  They are estimates of material resilience — not guarantees of product performance, safety, or future supply conditions.
-  Resourcehip accepts no liability for decisions made in reliance on these ratings.</p>
+  HIP scores are based on public data{% if rating_type == 'verified' %} and information the maker sent us{% endif %} at the date shown.
+  They show how well a product holds up over time — not a promise about safety or future supply.
+  Resourcehip is not liable for choices made based on these ratings.</p>
   <p><strong>Scope:</strong>
   {% if rating_type != 'verified' %}
     This is a <em>category rating</em> for {{ title }} and does not assess any specific brand or manufacturer.
@@ -762,10 +773,10 @@
   {% endif %}
   Produced under <a href="/methodology">Resourcehip Scoring Methodology {{ methodology_version }}</a>.</p>
   <p><strong>AI disclosure:</strong>
-  This rating was produced using an AI scoring pipeline (local, no cloud — no data shared externally) and reviewed and approved by a human assessor before publication.
+  An AI model scored this rating on our own hardware — no data was sent to the cloud.
+  A human reviewer checked and approved it before it went live.
   {% if scoring_model %}
-  Scoring model: <code>{{ scoring_model }}</code>{% if prose_model and prose_model != scoring_model %}. Prose model: <code>{{ prose_model }}</code>{% endif %}.
-  The model's training data influences the findings — see the methodology for caveats.
+  Model: <code>{{ scoring_model }}</code>{% if prose_model and prose_model != scoring_model %} · Prose: <code>{{ prose_model }}</code>{% endif %}.
   {% endif %}
   <a href="/cookies">AI transparency notice →</a></p>
   <p><strong>Not financial or investment advice.</strong>
