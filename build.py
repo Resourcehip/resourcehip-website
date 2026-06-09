@@ -288,14 +288,18 @@ def build_ratings_index(entries: list[dict]) -> None:
     consumer_entries = [e for e in entries if e["display_type"] != "ceiling"]
 
     groups: dict[str, list[dict]] = {}
+    display_names: dict[str, str] = {}
     for e in consumer_entries:
         cat = e.get("category", "uncategorised")
-        groups.setdefault(cat, []).append(e)
+        slug = re.sub(r"[^a-z0-9]+", "-", cat.lower()).strip("-")
+        groups.setdefault(slug, []).append(e)
+        if slug not in display_names:
+            display_names[slug] = cat
 
     categories = []
-    for name in sorted(groups.keys(), key=str.lower):
-        slug = re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
-        ratings = sorted(groups[name], key=lambda r: r.get("title", "").lower())
+    for slug in sorted(groups.keys()):
+        name = display_names[slug]
+        ratings = sorted(groups[slug], key=lambda r: r.get("title", "").lower())
         categories.append({"name": name, "slug": slug, "ratings": ratings, "count": len(ratings)})
 
     html = template.render(

@@ -1,6 +1,6 @@
 ---
 title: Baby Monitors — Category Ceiling
-category: baby and nursery
+category: Baby & Nursery
 rating_type: verified
 brand: Category Ceiling
 slug: baby-monitor-ceiling

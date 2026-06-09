@@ -1,6 +1,6 @@
 ---
 title: High Chairs — Category Ceiling
-category: baby and nursery
+category: Baby & Nursery
 rating_type: verified
 brand: Category Ceiling
 slug: high-chair-ceiling

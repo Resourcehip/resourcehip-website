@@ -1,6 +1,6 @@
 ---
 title: Bread Makers — Category Ceiling
-category: small appliances
+category: Small Appliances
 rating_type: verified
 brand: Category Ceiling
 slug: bread-maker-ceiling

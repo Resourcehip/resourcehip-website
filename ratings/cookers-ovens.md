@@ -1,6 +1,6 @@
 ---
 title: Cookers & Ovens
-category: larger appliances
+category: Larger Appliances
 rating_type: generic
 brand: null
 slug: cookers-ovens

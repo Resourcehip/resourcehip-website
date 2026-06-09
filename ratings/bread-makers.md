@@ -1,6 +1,6 @@
 ---
 title: Bread Makers
-category: small appliances
+category: Small Appliances
 rating_type: generic
 brand: null
 slug: bread-makers

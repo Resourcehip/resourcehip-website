@@ -1,6 +1,6 @@
 ---
 title: Lighting & LED Fittings — Category Ceiling
-category: home fixtures
+category: Home Fixtures
 rating_type: verified
 brand: Category Ceiling
 slug: led-fitting-ceiling

@@ -1,6 +1,6 @@
 ---
 title: BBQs
-category: outdoor cooking
+category: Outdoor Cooking
 rating_type: generic
 brand: null
 slug: bbqs

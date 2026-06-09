@@ -1,6 +1,6 @@
 ---
 title: Electric Shavers & Groomers — Category Ceiling
-category: personal care
+category: Personal Care
 rating_type: verified
 brand: Category Ceiling
 slug: electric-shaver-ceiling

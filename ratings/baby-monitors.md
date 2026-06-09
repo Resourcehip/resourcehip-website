@@ -1,6 +1,6 @@
 ---
 title: Baby Monitors
-category: baby and nursery
+category: Baby & Nursery
 rating_type: generic
 brand: null
 slug: baby-monitors

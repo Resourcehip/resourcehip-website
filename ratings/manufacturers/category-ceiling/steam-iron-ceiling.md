@@ -1,6 +1,6 @@
 ---
 title: Steam Irons — Category Ceiling
-category: small appliances
+category: Small Appliances
 rating_type: verified
 brand: Category Ceiling
 slug: steam-iron-ceiling

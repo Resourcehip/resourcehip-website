@@ -1,6 +1,6 @@
 ---
 title: Tumble Dryers — Category Ceiling
-category: larger appliances
+category: Larger Appliances
 rating_type: verified
 brand: Category Ceiling
 slug: tumble-dryer-ceiling

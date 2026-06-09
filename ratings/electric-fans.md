@@ -1,6 +1,6 @@
 ---
 title: Electric Fans
-category: small appliances
+category: Small Appliances
 rating_type: generic
 brand: null
 slug: electric-fans

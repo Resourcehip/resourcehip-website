@@ -1,6 +1,6 @@
 ---
 title: Duvets & Pillows — Category Ceiling
-category: home textiles
+category: Home Textiles
 rating_type: verified
 brand: Category Ceiling
 slug: duvet-ceiling

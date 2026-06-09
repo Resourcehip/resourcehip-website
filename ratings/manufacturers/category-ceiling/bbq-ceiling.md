@@ -1,6 +1,6 @@
 ---
 title: BBQs — Category Ceiling
-category: outdoor cooking
+category: Outdoor Cooking
 rating_type: verified
 brand: Category Ceiling
 slug: bbq-ceiling

@@ -1,6 +1,6 @@
 ---
 title: TVs
-category: consumer electronics
+category: Consumer Electronics
 rating_type: generic
 brand: null
 slug: tvs

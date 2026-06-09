@@ -1,6 +1,6 @@
 ---
 title: Electric Shavers & Groomers
-category: personal care
+category: Personal Care
 rating_type: generic
 brand: null
 slug: electric-shavers-groomers

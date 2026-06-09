@@ -1,6 +1,6 @@
 ---
 title: Luggage & Suitcases
-category: travel accessories
+category: Travel Accessories
 rating_type: generic
 brand: null
 slug: luggage-suitcases

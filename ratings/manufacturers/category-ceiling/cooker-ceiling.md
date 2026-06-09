@@ -1,6 +1,6 @@
 ---
 title: Cookers & Ovens — Category Ceiling
-category: larger appliances
+category: Larger Appliances
 rating_type: verified
 brand: Category Ceiling
 slug: cooker-ceiling

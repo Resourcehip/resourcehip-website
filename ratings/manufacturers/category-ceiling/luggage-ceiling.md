@@ -1,6 +1,6 @@
 ---
 title: Luggage & Suitcases — Category Ceiling
-category: travel accessories
+category: Travel Accessories
 rating_type: verified
 brand: Category Ceiling
 slug: luggage-ceiling

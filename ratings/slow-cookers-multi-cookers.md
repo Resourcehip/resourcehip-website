@@ -1,6 +1,6 @@
 ---
 title: Slow Cookers & Multi-Cookers
-category: small appliances
+category: Small Appliances
 rating_type: generic
 brand: null
 slug: slow-cookers-multi-cookers

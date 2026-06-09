@@ -1,6 +1,6 @@
 ---
 title: Sewing Machines
-category: small appliances
+category: Small Appliances
 rating_type: generic
 brand: null
 slug: sewing-machines

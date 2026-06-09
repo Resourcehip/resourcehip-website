@@ -1,6 +1,6 @@
 ---
 title: Lighting & LED Fittings
-category: home fixtures
+category: Home Fixtures
 rating_type: generic
 brand: null
 slug: lighting-led-fittings

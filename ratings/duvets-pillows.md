@@ -1,6 +1,6 @@
 ---
 title: Duvets & Pillows
-category: home textiles
+category: Home Textiles
 rating_type: generic
 brand: null
 slug: duvets-pillows

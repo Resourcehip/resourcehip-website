@@ -1,6 +1,6 @@
 ---
 title: High Chairs
-category: baby and nursery
+category: Baby & Nursery
 rating_type: generic
 brand: null
 slug: high-chairs
