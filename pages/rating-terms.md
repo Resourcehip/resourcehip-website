@@ -1,0 +1,193 @@
+---
+title: Rating Service Terms
+page_description: Terms of service for the Resourcehip HIP Rating assessment service.
+active_page: ""
+---
+
+# Rating Service Terms of Service
+
+**Resourcehip Ltd · Version 1.0 · Draft · Governing law: Scots law**
+
+These terms govern the HIP Rating assessment service provided by Resourcehip Ltd. By submitting an order you agree to these terms. If you do not agree, do not submit an order.
+
+**1. Definitions**
+
+- **"Resourcehip"**, **"we"**, **"us"** — Resourcehip Ltd (SC873386), registered in Scotland.
+- **"Customer"**, **"you"** — the legal entity or individual ordering a rating.
+- **"Order"** — a submission via our intake form or other agreed channel.
+- **"Order Reference"** — the unique reference number assigned when your order is received (format: RH-YYYY-NNNN).
+- **"HIP Rating"** — the assessment output, including HIP Score, dimension scores, Regenerative Index, and written rationale.
+- **"HIP Score"** — the weighted numerical score (0 to 10).
+- **"Regenerative Index"** or **"RI"** — the regenerative dimension score (-10 to +10).
+- **"HIP Mark"** — the consumer-facing trust mark, available under licence to eligible products.
+- **"Generic Rating"** — an assessment using publicly available data for a product category.
+- **"Verified Rating"** — an assessment using manufacturer-submitted evidence for a specific product.
+
+**2. Service description**
+
+We assess consumer products across seven dimensions using the HIP methodology (current version published at resourcehip.com/methodology). The service tiers are:
+
+| Tier | Price | Includes |
+|------|-------|----------|
+| Generic HIP Rating | £350 per rating | Seven-dimension assessment using public data. HIP Score + RI. Published to resourcehip.com. |
+| Verified HIP Rating | £500 per rating | Manufacturer-evidence assessment. Full dimension breakdown + written rationale. PDF report. HIP Mark licence if eligible (score ≥ 6.0). |
+| Annual Base | £1,500 per year | Up to 5 verified ratings per year. Priority queue. Additional ratings at £280 each. |
+| Annual Premium | £2,200 per year | Unlimited verified ratings. Dedicated account management. Press-ready summaries. Additional generic ratings at £280 each. |
+
+Prices are in GBP and exclusive of VAT. Resourcehip is not currently VAT-registered.
+
+**3. How to order**
+
+3.1. Submit the intake form at the URL provided or through another channel we agree in writing.
+
+3.2. On receipt, we assign an Order Reference and send you an acknowledgement email confirming the order details and these terms.
+
+3.3. We review your submission and confirm the assessment scope within 3 working days.
+
+3.4. We issue a formal invoice. Payment is due within 30 days.
+
+3.5. Assessment begins on receipt of payment. For verified ratings, assessment begins on receipt of both payment and your completed evidence dossier.
+
+**4. Payment**
+
+4.1. Payment may be made by BACS bank transfer or card (via Stripe). Details are provided on the invoice.
+
+4.2. Payment is due within 30 days of the invoice date.
+
+4.3. If payment is not received within 30 days, we may charge interest at 8% above the Bank of England base rate under the Late Payment of Commercial Debts (Interest) Act 1998.
+
+4.4. We are not obliged to begin or continue an assessment while payment is outstanding.
+
+**5. Your obligations**
+
+5.1. You must provide accurate and complete information. If we discover that submitted information is materially inaccurate, we may suspend or withdraw the rating.
+
+5.2. For verified ratings, you must submit the completed evidence dossier within 30 days of our evidence request. If we do not receive it within 60 days, the order may lapse. We will notify you before lapsing an order.
+
+5.3. You must notify us within 14 days of any material change to the product's materials, manufacturing, or supply chain that could affect the rating.
+
+5.4. You must not misrepresent the rating, the HIP Score, or the HIP Mark in any public communication.
+
+**6. Our obligations**
+
+6.1. We will confirm the assessment scope within 3 working days of receiving your order.
+
+6.2. We will complete the assessment within the stated turnaround: 5–7 working days for generic ratings, 7–10 working days for verified ratings (from receipt of payment and, where applicable, evidence).
+
+6.3. All ratings are produced using our published methodology and reviewed by a human assessor before publication.
+
+6.4. If we cannot complete the assessment (for example, due to insufficient public data for a generic rating), we will notify you and offer a full refund or an alternative scope.
+
+**7. HIP Mark licence**
+
+7.1. Verified ratings scoring 6.0 or above are eligible for a HIP Mark licence. The licence tier is determined by the HIP Score:
+
+| Tier | Threshold |
+|------|-----------|
+| Standard | HIP ≥ 6.0 |
+| Silver | HIP ≥ 7.5 |
+| Gold | HIP ≥ 9.0 and RI ≥ +6.0 |
+
+7.2. The licence is non-exclusive and non-transferable. It covers the United Kingdom and European Union.
+
+7.3. The licence term is 24 months from the publication date.
+
+7.4. Renewal requires a re-assessment. If the re-assessed score falls below the tier threshold, the licence converts to the applicable lower tier or is revoked.
+
+7.5. We will send a renewal reminder at least 30 days before the licence expires, stating the renewal date, the re-assessment fee, and how to cancel.
+
+7.6. The HIP Mark must be used in accordance with the HIP Mark Brand Guidelines (provided on licence grant). You must not modify the mark.
+
+7.7. We may revoke the licence immediately if you: (a) breach these terms; (b) use the mark in a misleading way; (c) score below 6.0 on re-assessment; or (d) enter insolvency.
+
+**8. Intellectual property**
+
+8.1. The HIP methodology is published under CC BY-NC 4.0. You may reference the methodology for non-commercial purposes under that licence.
+
+8.2. Ratings, scores, reports, and written rationale are copyright Resourcehip Ltd. You may quote your own rating in marketing materials, provided the score is stated accurately and in context.
+
+8.3. The HIP Mark is a proprietary mark of Resourcehip Ltd. It may only be used under a valid licence.
+
+8.4. You retain all intellectual property in the data you submit to us. We use it solely to perform the assessment.
+
+**9. Confidentiality**
+
+9.1. Evidence submitted for a verified rating is treated as confidential. We will not share it with third parties except as reasonably necessary to perform the assessment.
+
+9.2. The rating output (score, dimension breakdown, written rationale) is published to resourcehip.com. Publication is a core part of the service.
+
+9.3. We will not publish specific manufacturer evidence (bill of materials, supplier names, cost data) without your written consent.
+
+**10. Ratings and limitations**
+
+10.1. Ratings represent our assessment at the assessment date, based on the data available at that time.
+
+10.2. Ratings are not guarantees of product performance, durability, or future supply conditions.
+
+10.3. Ratings are not financial, investment, or procurement advice.
+
+10.4. Generic ratings assess a product category, not a specific manufacturer or product. They are not statements about any named company.
+
+10.5. We may update ratings when the methodology is updated or when material new data becomes available. We will notify you of any change to a published verified rating.
+
+**11. Limitation of liability**
+
+11.1. Our total liability for any claim arising from a rating is limited to the fee you paid for that specific rating.
+
+11.2. We exclude liability for indirect, consequential, or special losses, including loss of profit, loss of business, or reputational damage.
+
+11.3. Nothing in these terms limits our liability for fraud, death, or personal injury caused by our negligence, or any other liability that cannot be excluded by law.
+
+**12. Cancellation and refunds**
+
+12.1. Before we issue an invoice: you may cancel at any time with no charge.
+
+12.2. After invoice, before assessment begins: full refund minus a £50 administration fee.
+
+12.3. After assessment begins: no refund. The work has been performed.
+
+12.4. Annual subscriptions: you may cancel at renewal. No mid-term refunds. Unused ratings within a subscription period do not carry over.
+
+**13. Disputes and complaints**
+
+13.1. If you believe a rating is incorrect, contact methodology@resourcehip.com with the product name, the dimension(s) you believe are incorrect, and your supporting evidence.
+
+13.2. We will acknowledge your complaint within 5 working days and aim to complete our review within 30 days.
+
+13.3. If we cannot resolve a dispute, either party may refer it to CEDR mediation before initiating court proceedings.
+
+**14. Data protection**
+
+14.1. Our Privacy Policy (resourcehip.com/privacy) explains how we collect, use, and protect personal data.
+
+14.2. We are the data controller. ICO Registration: ZC147997.
+
+14.3. We process your data as necessary to perform this contract (UK GDPR Article 6(1)(b)).
+
+**15. Changes to these terms**
+
+15.1. We may update these terms. The current version is always available at resourcehip.com/rating-terms.
+
+15.2. We will notify you by email of material changes at least 14 days before they take effect.
+
+15.3. Orders already placed are governed by the terms in effect at the time of submission.
+
+**16. General**
+
+16.1. These terms, together with any order confirmation and the Privacy Policy, constitute the entire agreement between us.
+
+16.2. If any provision is found unenforceable, the remaining provisions continue in effect.
+
+16.3. Neither party may assign its rights without the other's written consent.
+
+16.4. A failure to enforce any right is not a waiver of that right.
+
+16.5. Notices may be sent by email to the addresses used in the order.
+
+**17. Governing law**
+
+These terms are governed by Scots law. Disputes are subject to the exclusive jurisdiction of the Scottish courts.
+
+**18. Contact**
+
+Resourcehip Ltd · Office 90, Alloa Business Centre, Whins Road, Alloa, Clackmannanshire, FK10 3SA · hello@resourcehip.com · Company No. SC873386
