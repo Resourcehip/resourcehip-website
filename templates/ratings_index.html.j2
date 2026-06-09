@@ -285,6 +285,19 @@
   });
 
   search.addEventListener('input', applyFilters);
+  search.addEventListener('search', applyFilters);
+
+  var headerSearch = document.getElementById('rh-search-input');
+  if (headerSearch) {
+    headerSearch.addEventListener('input', function() {
+      search.value = headerSearch.value;
+      applyFilters();
+    });
+    headerSearch.addEventListener('search', function() {
+      search.value = '';
+      applyFilters();
+    });
+  }
 
   var hash = location.hash.replace('#', '');
   if (hash) {
