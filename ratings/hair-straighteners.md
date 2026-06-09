@@ -4,6 +4,7 @@ category: Personal Care
 rating_type: generic
 brand: null
 slug: hair-straighteners
+header_image: /assets/marketing/ratings/hair-straightener-header-v1.webp
 hip_score: 2.7
 hip_label: Poor
 msi_score: 3.5

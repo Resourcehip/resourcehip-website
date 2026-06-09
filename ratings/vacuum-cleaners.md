@@ -4,6 +4,7 @@ category: small appliances
 rating_type: generic
 brand: null
 slug: vacuum-cleaners
+header_image: /assets/marketing/ratings/vacuum-cleaner-header-v1.webp
 hip_score: 2.6
 hip_label: Poor
 msi_score: 1.5

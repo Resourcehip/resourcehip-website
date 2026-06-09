@@ -4,6 +4,7 @@ category: outdoor cooking
 rating_type: generic
 brand: null
 slug: bbqs
+header_image: /assets/marketing/ratings/bbq-header-v1.webp
 hip_score: 2.8
 hip_label: Poor
 msi_score: 3.5

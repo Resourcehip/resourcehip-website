@@ -4,6 +4,7 @@ category: Home Appliances
 rating_type: generic
 brand: null
 slug: dishwashers
+header_image: /assets/marketing/ratings/dishwasher-header-v1.webp
 hip_score: 3.2
 hip_label: Caution
 msi_score: 2.0

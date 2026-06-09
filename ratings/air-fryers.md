@@ -4,6 +4,7 @@ category: Kitchen
 rating_type: generic
 brand: null
 slug: air-fryers
+header_image: /assets/marketing/ratings/air-fryer-header-v1.webp
 hip_score: 2.9
 hip_label: Poor
 msi_score: 3.5
