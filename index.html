@@ -137,7 +137,9 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background: url('background.jpg') center center / cover no-repeat;
+      background: url('/assets/marketing/hero/homepage-hero-v2.jpg') center center / cover no-repeat;
+      background: -webkit-image-set(url('/assets/marketing/hero/homepage-hero-v2.webp') type('image/webp'), url('/assets/marketing/hero/homepage-hero-v2.jpg') type('image/jpeg')) center center / cover no-repeat;
+      background: image-set(url('/assets/marketing/hero/homepage-hero-v2.webp') type('image/webp'), url('/assets/marketing/hero/homepage-hero-v2.jpg') type('image/jpeg')) center center / cover no-repeat;
       background-color: var(--hip-blue);
       z-index: 0;
     }
