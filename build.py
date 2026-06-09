@@ -172,6 +172,46 @@ def singularize_title(title: str) -> str:
 jinja_env.filters["singularize"] = singularize_title
 
 
+# ── Hero image config (Phase 1 — RES-1130) ──────────────────────────────────
+
+HERO_CONFIG_FILE = SITE_ROOT / "hero_images.yaml"
+
+def _load_hero_config() -> dict:
+    """Load hero_images.yaml and return lookup structures for the build."""
+    if not HERO_CONFIG_FILE.exists():
+        return {"allowlist": {}, "overrides": {}, "format": "webp"}
+    with open(HERO_CONFIG_FILE) as f:
+        cfg = yaml.safe_load(f) or {}
+    allowlist = {e["slug"]: e for e in cfg.get("allowlist", [])}
+    overrides = cfg.get("overrides") or {}
+    out_format = (cfg.get("output") or {}).get("format", "webp")
+    return {"allowlist": allowlist, "overrides": overrides, "format": out_format}
+
+
+def _resolve_hero_image(slug: str, data: dict, hero_cfg: dict) -> str | None:
+    """Return the hero image path for a slug, respecting overrides and allowlist.
+    Returns None if no hero image applies. Existing header_image in frontmatter
+    takes precedence over the generated path.
+    """
+    if data.get("header_image"):
+        return None  # frontmatter already has a hero image, don't override
+
+    overrides = hero_cfg["overrides"]
+    if slug in overrides:
+        if overrides[slug].get("reject"):
+            return None
+        if overrides[slug].get("pin"):
+            return overrides[slug]["pin"]
+
+    if slug in hero_cfg["allowlist"]:
+        fmt = hero_cfg["format"]
+        candidate = SITE_ROOT / "assets" / "hero" / f"{slug}.{fmt}"
+        if candidate.exists():
+            return f"/assets/hero/{slug}.{fmt}"
+
+    return None
+
+
 # ── Build steps ───────────────────────────────────────────────────────────────
 
 def build_ratings() -> list[dict]:
@@ -180,6 +220,7 @@ def build_ratings() -> list[dict]:
     out_dir = DIST / "ratings"
     out_dir.mkdir(parents=True, exist_ok=True)
 
+    hero_cfg = _load_hero_config()
     index_entries = []
 
     # Walk recursively so verified ratings under manufacturers/<brand>/ are found.
@@ -197,6 +238,10 @@ def build_ratings() -> list[dict]:
         data.setdefault("slug", slug)
         data.setdefault("methodology_version", "1.3")
         data.setdefault("hip_label", hip_label(data.get("hip_score", 0)))
+
+        hero_path = _resolve_hero_image(slug, data, hero_cfg)
+        if hero_path:
+            data["header_image"] = hero_path
 
         html = template.render(
             **data,
@@ -232,14 +277,18 @@ def _classify_rating_type(entry: dict) -> str:
 
 
 def build_ratings_index(entries: list[dict]) -> None:
-    """Build /ratings/index.html — the catalogue page."""
+    """Build /ratings/index.html — the catalogue page.
+    Ceiling ratings are excluded from the consumer catalogue (RES-1112).
+    """
     template = jinja_env.get_template("ratings_index.html.j2")
 
     for e in entries:
         e["display_type"] = _classify_rating_type(e)
 
+    consumer_entries = [e for e in entries if e["display_type"] != "ceiling"]
+
     groups: dict[str, list[dict]] = {}
-    for e in entries:
+    for e in consumer_entries:
         cat = e.get("category", "uncategorised")
         groups.setdefault(cat, []).append(e)
 
@@ -251,14 +300,14 @@ def build_ratings_index(entries: list[dict]) -> None:
 
     html = template.render(
         categories=categories,
-        total_count=len(entries),
+        total_count=len(consumer_entries),
         page_title="Product Ratings",
         page_description="Human Impact Profiles for everyday product categories, organised by type.",
         active_page="ratings",
     )
     out_file = DIST / "ratings" / "index.html"
     out_file.write_text(html, encoding="utf-8")
-    print(f"  [index]  ratings/index.html ({len(categories)} categories, {len(entries)} ratings)")
+    print(f"  [index]  ratings/index.html ({len(categories)} categories, {len(consumer_entries)} ratings)")
 
 
 def parse_page_file(filepath: Path, render_vars: dict | None = None) -> tuple[dict, str]:
@@ -418,6 +467,37 @@ def build_contact() -> None:
     out_file = DIST / "contact.html"
     out_file.write_text(html, encoding="utf-8")
     print("  [page]   contact.html")
+
+
+def build_apply() -> None:
+    """Build /apply.html from the dedicated rating-request form template."""
+    template = jinja_env.get_template("apply.html.j2")
+    html = template.render(
+        page_title="Request a Rating",
+        page_description="Submit your product for an independent HIP Rating. Tell us about your product — we assess it, confirm scope, and deliver a published material resilience rating.",
+        active_page="",
+    )
+    out_file = DIST / "apply.html"
+    out_file.write_text(html, encoding="utf-8")
+    print("  [page]   apply.html")
+
+
+def build_professional(entries: list[dict]) -> None:
+    """Build /professional/index.html with ceiling ratings section (RES-1112)."""
+    template = jinja_env.get_template("professional.html.j2")
+    ceilings = [e for e in entries if _classify_rating_type(e) == "ceiling"]
+    ceilings.sort(key=lambda r: r.get("title", "").lower())
+    html = template.render(
+        ceilings=ceilings,
+        page_title="For Professionals",
+        page_description="HIP methodology documentation, scoring dimensions, Regenerative Index, category ceilings, and technical resources.",
+        active_page="professional",
+    )
+    out_dir = DIST / "professional"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_file = out_dir / "index.html"
+    out_file.write_text(html, encoding="utf-8")
+    print(f"  [page]   professional/index.html ({len(ceilings)} ceiling ratings)")
 
 
 def build_consumer(entries: list[dict]) -> None:
@@ -708,9 +788,11 @@ def build():
     rating_slugs = {e["slug"] for e in index_entries}
     print("→ Building static pages")
     build_pages()
+    build_professional(index_entries)
     build_consumer(index_entries)
     build_consumer_mark()
     build_contact()
+    build_apply()
     build_404()
     print("→ Copying Cloudflare Pages Functions")
     copy_functions()

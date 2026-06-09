@@ -276,6 +276,10 @@
 @media (max-width: 400px) {
   .csu-label { font-size: 0.55rem; letter-spacing: 0.04em; }
 }
+.csu-ceiling-ref {
+  font-size: 0.72rem; color: var(--tier-amber-text); font-weight: 600;
+  margin-top: 0.5rem; text-align: right;
+}
 
 .csu-ri-row {
   display: flex; align-items: center; gap: 0.6rem;
@@ -442,6 +446,9 @@
       <span class="csu-label" style="left: 75%;">Silver</span>
       <span class="csu-label" style="left: 90%;">Gold</span>
     </div>
+    {% if category_ceiling_hip is defined and category_ceiling_hip is not none and brand != 'Category Ceiling' %}
+    <div class="csu-ceiling-ref">Category best achievable: {{ "%.1f"|format(category_ceiling_hip) }}</div>
+    {% endif %}
   </div>
 
   <div class="csu-ri-row">
@@ -646,16 +653,16 @@
   <h2 style="margin-top:0;">Score Breakdown</h2>
 
   {%- set dimensions = [
-    ('How rare are the materials?',        'MSI', msi_score, 20, msi_finding | default('')),
-    ('Where do the materials come from?',  'SCR', scr_score, 18, scr_finding | default('')),
-    ('Can it be recycled?',                'RC',  rc_score,  18, rc_finding  | default('')),
-    ('Can you fix it?',                    'R',   r_score,   13, r_finding   | default('')),
-    ('Is it made fairly?',                 'SEI', sei_score,  8, sei_finding | default('')),
-    ('How long will it last?',             'PL',  pl_score,   8, pl_finding  | default('')),
+    ('How rare are the materials?',        'MSI', msi_score, 20, msi_consumer_finding | default(msi_finding | default(''), true), msi_finding | default('')),
+    ('Where do the materials come from?',  'SCR', scr_score, 18, scr_consumer_finding | default(scr_finding | default(''), true), scr_finding | default('')),
+    ('Can it be recycled?',                'RC',  rc_score,  18, rc_consumer_finding  | default(rc_finding  | default(''), true), rc_finding  | default('')),
+    ('Can you fix it?',                    'R',   r_score,   13, r_consumer_finding   | default(r_finding   | default(''), true), r_finding   | default('')),
+    ('Is it made fairly?',                 'SEI', sei_score,  8, sei_consumer_finding | default(sei_finding | default(''), true), sei_finding | default('')),
+    ('How long will it last?',             'PL',  pl_score,   8, pl_consumer_finding  | default(pl_finding  | default(''), true), pl_finding  | default('')),
   ] -%}
 
   <div class="dimensions-grid">
-    {% for label, code, score, weight, finding in dimensions %}
+    {% for label, code, score, weight, finding, technical_finding in dimensions %}
       {%- if score >= 7.0 -%}{%- set bar_class = 'bar-high' -%}
       {%- elif score >= 4.0 -%}{%- set bar_class = 'bar-medium' -%}
       {%- else -%}{%- set bar_class = 'bar-low' -%}
@@ -673,6 +680,12 @@
           <details class="dim-detail">
             <summary class="dim-finding-toggle">Why this score ▸</summary>
             <div class="dim-finding">{{ finding }}</div>
+            {% if technical_finding and technical_finding != finding %}
+              <details style="margin-top: 0.4rem;">
+                <summary style="font-size: 0.68rem; color: var(--muted); cursor: pointer;">Technical detail ▸</summary>
+                <div class="dim-finding" style="font-size: 0.7rem; color: #888;">{{ technical_finding }}</div>
+              </details>
+            {% endif %}
           </details>
         {% endif %}
       </div>
@@ -696,10 +709,18 @@
       <div class="dim-score-num" style="font-size:0.78rem;">
         {% if ri_score > 0 %}+{% endif %}{{ "%.1f"|format(ri_score) }}
       </div>
-      {% if ri_finding | default('') %}
+      {%- set ri_consumer = ri_consumer_finding | default('', true) -%}
+      {%- set ri_display = ri_consumer if ri_consumer else ri_finding | default('') -%}
+      {% if ri_display %}
         <details class="dim-detail">
           <summary class="dim-finding-toggle">Why this score ▸</summary>
-          <div class="dim-finding">{{ ri_finding }}</div>
+          <div class="dim-finding">{{ ri_display }}</div>
+          {% if ri_consumer and ri_finding | default('') and ri_finding != ri_consumer %}
+            <details style="margin-top: 0.4rem;">
+              <summary style="font-size: 0.68rem; color: var(--muted); cursor: pointer;">Technical detail ▸</summary>
+              <div class="dim-finding" style="font-size: 0.7rem; color: #888;">{{ ri_finding }}</div>
+            </details>
+          {% endif %}
         </details>
       {% endif %}
     </div>
