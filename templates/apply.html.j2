@@ -1,0 +1,358 @@
+{% extends "base.html.j2" %}
+
+{% block extra_styles %}
+.apply-page { max-width: 680px; }
+.apply-page h1 { margin-bottom: 0.5rem; }
+.apply-intro { margin-bottom: 1.5rem; }
+.apply-intro p { color: var(--muted); line-height: 1.8; }
+
+/* ── 4-step workflow ── */
+.workflow-steps {
+  display: flex; gap: 0; align-items: flex-start; justify-content: center;
+  margin: 1.5rem 0 2rem; flex-wrap: wrap;
+}
+.workflow-step {
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center; flex: 1; min-width: 120px; max-width: 160px;
+  position: relative; padding: 0 0.5rem;
+}
+.workflow-step-num {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--hip-blue); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.85rem; margin-bottom: 0.4rem;
+  flex-shrink: 0;
+}
+.workflow-step-label {
+  font-size: 0.78rem; font-weight: 600; color: var(--ink);
+  line-height: 1.35;
+}
+.workflow-step-desc {
+  font-size: 0.72rem; color: var(--muted); line-height: 1.4;
+  margin-top: 0.2rem;
+}
+.workflow-arrow {
+  display: flex; align-items: center; padding-top: 0.5rem;
+  color: var(--rule); font-size: 1.2rem; flex-shrink: 0;
+}
+@media (max-width: 560px) {
+  .workflow-steps { flex-direction: column; align-items: center; gap: 0.75rem; }
+  .workflow-step { max-width: 280px; flex-direction: row; text-align: left; gap: 0.75rem; }
+  .workflow-step-num { margin-bottom: 0; }
+  .workflow-arrow { display: none; }
+}
+
+/* ── Form ── */
+.apply-form { max-width: 520px; }
+.form-group { margin-bottom: 1.25rem; }
+.form-group label {
+  display: block; font-weight: 600; font-size: 0.85rem;
+  margin-bottom: 0.3rem; color: var(--ink);
+}
+.form-group .required { color: var(--negative); }
+.form-group .optional { font-weight: 400; color: var(--muted); }
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%; font-family: 'Montserrat', sans-serif; font-size: 0.88rem;
+  padding: 0.6rem 0.8rem; border: 1px solid var(--rule); border-radius: 6px;
+  background: var(--card-bg); color: var(--ink); transition: border-color 0.2s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--hip-blue); outline: none;
+  box-shadow: 0 0 0 3px rgba(14, 76, 143, 0.1);
+}
+.form-group textarea { min-height: 100px; resize: vertical; }
+.form-group select { appearance: auto; }
+.form-error {
+  color: var(--negative); font-size: 0.78rem; margin-top: 0.25rem; display: none;
+}
+.form-group.has-error input,
+.form-group.has-error select,
+.form-group.has-error textarea { border-color: var(--negative); }
+.form-group.has-error .form-error { display: block; }
+
+.hp-field { position: absolute; left: -9999px; opacity: 0; height: 0; width: 0; overflow: hidden; }
+
+.apply-submit {
+  background: linear-gradient(135deg, var(--hip-blue), var(--hip-blue-deep));
+  color: #fff; border: none; padding: 0.7rem 2rem; border-radius: 6px;
+  font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.88rem;
+  cursor: pointer; transition: opacity 0.2s; min-height: 44px; min-width: 44px;
+}
+.apply-submit:hover { opacity: 0.9; }
+.apply-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.apply-success,
+.apply-error-banner { display: none; }
+.apply-success.visible,
+.apply-error-banner.visible { display: block; }
+.apply-success {
+  background: var(--hip-blue-tint); border: 1px solid var(--hip-blue);
+  border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem;
+}
+.apply-success h2 { color: var(--hip-blue); margin-top: 0; }
+.apply-error-banner {
+  background: #fef2f2; border: 1px solid var(--negative);
+  border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem;
+}
+.apply-error-banner h2 { color: var(--negative); margin-top: 0; }
+
+/* ── Below-fold info ── */
+.apply-details { margin-top: 2.5rem; }
+.apply-details h2 {
+  font-size: 1.1rem; margin: 2rem 0 0.6rem;
+  border-bottom: 1px solid var(--rule); padding-bottom: 0.4rem;
+}
+.apply-details p { line-height: 1.8; margin-bottom: 1rem; }
+.apply-details ul { padding-left: 1.4rem; margin-bottom: 1rem; line-height: 1.8; }
+.apply-details table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.85rem; }
+.apply-details th { background: var(--surface); padding: 0.5rem 0.75rem; text-align: left; border: 1px solid var(--rule); font-weight: 600; }
+.apply-details td { padding: 0.45rem 0.75rem; border: 1px solid var(--rule); vertical-align: top; }
+
+.apply-footnote {
+  font-size: 0.82rem; color: var(--muted); margin-top: 1.5rem; max-width: 520px;
+}
+
+@media (max-width: 640px) {
+  .apply-form { max-width: 100%; }
+  .apply-submit { width: 100%; }
+}
+{% endblock %}
+
+{% block content %}
+<div class="apply-page">
+  <div class="apply-intro">
+    <h1>Request a Rating</h1>
+    <p>Tell us about your product. We assess it against the HIP methodology and deliver an independent material resilience rating.</p>
+  </div>
+
+  <!-- 4-step workflow -->
+  <div class="workflow-steps" aria-label="How it works — 4 steps">
+    <div class="workflow-step">
+      <div class="workflow-step-num" aria-hidden="true">1</div>
+      <div>
+        <div class="workflow-step-label">Submit</div>
+        <div class="workflow-step-desc">Tell us about your product</div>
+      </div>
+    </div>
+    <div class="workflow-arrow" aria-hidden="true">&rarr;</div>
+    <div class="workflow-step">
+      <div class="workflow-step-num" aria-hidden="true">2</div>
+      <div>
+        <div class="workflow-step-label">We confirm scope</div>
+        <div class="workflow-step-desc">Rating type, timeline, fee</div>
+      </div>
+    </div>
+    <div class="workflow-arrow" aria-hidden="true">&rarr;</div>
+    <div class="workflow-step">
+      <div class="workflow-step-num" aria-hidden="true">3</div>
+      <div>
+        <div class="workflow-step-label">Invoice + payment</div>
+        <div class="workflow-step-desc">30-day terms, pay on completion</div>
+      </div>
+    </div>
+    <div class="workflow-arrow" aria-hidden="true">&rarr;</div>
+    <div class="workflow-step">
+      <div class="workflow-step-num" aria-hidden="true">4</div>
+      <div>
+        <div class="workflow-step-label">Rating delivered</div>
+        <div class="workflow-step-desc">Published + HIP Mark (if eligible)</div>
+      </div>
+    </div>
+  </div>
+
+  <hr style="border: none; border-top: 1px solid var(--rule); margin: 1.5rem 0;">
+
+  <!-- Success / error banners -->
+  <div id="apply-success" class="apply-success" role="status">
+    <h2>Thanks &mdash; we've received your request.</h2>
+    <p>We will confirm scope and next steps within 3 working days.</p>
+  </div>
+
+  <div id="apply-error-banner" class="apply-error-banner" role="alert">
+    <h2>Something went wrong</h2>
+    <p id="apply-error-text">Please try again, or email us directly.</p>
+  </div>
+
+  <!-- Rating request form -->
+  <form id="apply-form" class="apply-form" novalidate>
+    <div class="form-group">
+      <label for="rf-name">Your name <span class="required" aria-hidden="true">*</span></label>
+      <input type="text" id="rf-name" name="name" required autocomplete="name" maxlength="100">
+      <div class="form-error" id="rf-name-error" role="alert" aria-live="polite"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="rf-company">Company <span class="required" aria-hidden="true">*</span></label>
+      <input type="text" id="rf-company" name="company" required autocomplete="organization" maxlength="200">
+      <div class="form-error" id="rf-company-error" role="alert" aria-live="polite"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="rf-product">Product name <span class="required" aria-hidden="true">*</span></label>
+      <input type="text" id="rf-product" name="product" required maxlength="200" placeholder="e.g. Acme Pro Drill X200">
+      <div class="form-error" id="rf-product-error" role="alert" aria-live="polite"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="rf-category">Product category <span class="required" aria-hidden="true">*</span></label>
+      <input type="text" id="rf-category" name="category" required maxlength="200" placeholder="e.g. cordless drill, stainless steel water bottle">
+      <div class="form-error" id="rf-category-error" role="alert" aria-live="polite"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="rf-email">Contact email <span class="required" aria-hidden="true">*</span></label>
+      <input type="email" id="rf-email" name="email" required autocomplete="email" maxlength="254" aria-describedby="rf-email-error">
+      <div class="form-error" id="rf-email-error" role="alert" aria-live="polite"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="rf-type">Rating type <span class="optional">(optional)</span></label>
+      <select id="rf-type" name="rating_type">
+        <option value="">Not sure yet</option>
+        <option value="generic">Generic Rating</option>
+        <option value="verified">Verified Rating</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="rf-notes">Anything else? <span class="optional">(optional)</span></label>
+      <textarea id="rf-notes" name="notes" maxlength="3000" placeholder="Any context that helps us scope your assessment."></textarea>
+    </div>
+
+    <!-- Honeypot -->
+    <div class="hp-field" aria-hidden="true">
+      <label for="rf-website">Website</label>
+      <input type="text" id="rf-website" name="website" tabindex="-1" autocomplete="off">
+    </div>
+
+    <button type="submit" class="apply-submit" id="apply-submit">Request a rating</button>
+  </form>
+
+  <p class="apply-footnote">Prefer email? Write to <span id="apply-email-link"></span> with the subject <strong>"HIP Rating Request"</strong>.</p>
+
+  <!-- Below-fold details -->
+  <div class="apply-details">
+    <h2>Fees at a glance</h2>
+    <table>
+      <thead><tr><th>Service</th><th>Fee</th></tr></thead>
+      <tbody>
+        <tr><td>Generic HIP Rating</td><td>&pound;350 per rating</td></tr>
+        <tr><td>Verified HIP Rating</td><td>&pound;500 per rating</td></tr>
+        <tr><td>Annual Base (4 ratings/year)</td><td>&pound;1,500 per year</td></tr>
+        <tr><td>Annual Premium (6 ratings/year)</td><td>&pound;2,000 per year</td></tr>
+      </tbody>
+    </table>
+    <p>The Verified HIP Rating is the only route to the HIP Mark licence. A Generic Rating is suitable for internal benchmarking and ESG reporting but does not licence the Mark. <a href="/pricing">Full pricing details &rarr;</a></p>
+
+    <h2>What happens after you submit</h2>
+    <ul>
+      <li><strong>We confirm scope</strong> &mdash; rating type, fee, and any evidence required (1&ndash;3 working days).</li>
+      <li><strong>Assessment</strong> &mdash; your product is scored against all seven HIP dimensions. You receive a full breakdown with written rationale.</li>
+      <li><strong>Certification</strong> &mdash; on payment confirmation, the rating is published on resourcehip.com and the HIP Mark licence is issued (for Verified Ratings scoring 6.0 or above).</li>
+    </ul>
+    <p>You do not need a complete evidence dossier at this stage. Submit what you have &mdash; we will confirm requirements before you commit.</p>
+
+    <h2>Payment</h2>
+    <p>Fees are confirmed after scoping and invoiced with 30-day payment terms. Payment is accepted by bank transfer (BACS) or card (Stripe). Certification is released on payment confirmation.</p>
+  </div>
+</div>
+
+<script>
+(function() {
+  var form = document.getElementById('apply-form');
+  var btn = document.getElementById('apply-submit');
+  var success = document.getElementById('apply-success');
+  var errorBanner = document.getElementById('apply-error-banner');
+  var errorText = document.getElementById('apply-error-text');
+
+  var u = 'hello', d = ['resourcehip', 'com'].join('.');
+  var addr = u + '@' + d;
+  var el = document.getElementById('apply-email-link');
+  if (el) el.innerHTML = '<a href="mailto:' + addr + '">' + addr + '</a>';
+
+  function validateEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+
+  function showError(id, msg) {
+    var group = document.getElementById(id).closest('.form-group');
+    group.classList.add('has-error');
+    var err = document.getElementById(id + '-error');
+    if (err) err.textContent = msg;
+  }
+
+  function clearErrors() {
+    var groups = form.querySelectorAll('.form-group.has-error');
+    for (var i = 0; i < groups.length; i++) {
+      groups[i].classList.remove('has-error');
+      var err = groups[i].querySelector('.form-error');
+      if (err) err.textContent = '';
+    }
+    errorBanner.classList.remove('visible');
+  }
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    clearErrors();
+
+    var name = form.elements['name'].value.trim();
+    var company = form.elements['company'].value.trim();
+    var product = form.elements['product'].value.trim();
+    var category = form.elements['category'].value.trim();
+    var email = form.elements['email'].value.trim();
+    var hp = form.elements['website'].value;
+
+    if (hp) { success.classList.add('visible'); form.style.display = 'none'; return; }
+
+    var valid = true;
+    if (!name)     { showError('rf-name', 'Please enter your name.'); valid = false; }
+    if (!company)  { showError('rf-company', 'Please enter your company name.'); valid = false; }
+    if (!product)  { showError('rf-product', 'Please enter the product name.'); valid = false; }
+    if (!category) { showError('rf-category', 'Please enter a product category.'); valid = false; }
+    if (!email)    { showError('rf-email', 'Please enter your email address.'); valid = false; }
+    else if (!validateEmail(email)) { showError('rf-email', 'Please enter a valid email address.'); valid = false; }
+    if (!valid) return;
+
+    btn.disabled = true;
+    btn.textContent = 'Submitting…';
+
+    fetch('/api/apply', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: name,
+        company: company,
+        product: product,
+        category: category,
+        email: email,
+        rating_type: form.elements['rating_type'].value,
+        notes: form.elements['notes'].value.trim(),
+        website: ''
+      })
+    })
+    .then(function(res) {
+      return res.json().then(function(body) { return { ok: res.ok, body: body }; });
+    })
+    .then(function(r) {
+      if (r.ok) {
+        form.style.display = 'none';
+        success.classList.add('visible');
+      } else {
+        errorText.textContent = r.body.error || 'Please try again, or email us directly.';
+        errorBanner.classList.add('visible');
+        btn.disabled = false;
+        btn.textContent = 'Request a rating';
+      }
+    })
+    .catch(function() {
+      errorText.textContent = 'Network error — please try again, or email us directly.';
+      errorBanner.classList.add('visible');
+      btn.disabled = false;
+      btn.textContent = 'Request a rating';
+    });
+  });
+})();
+</script>
+{% endblock %}
