@@ -212,6 +212,47 @@ def _resolve_hero_image(slug: str, data: dict, hero_cfg: dict) -> str | None:
     return None
 
 
+# ── Blog checklist extraction (RES-1179) ─────────────────────────────────────
+
+def _extract_blog_checklists() -> dict[str, dict]:
+    """Extract 'What to Check Before You Buy' sections from buyer's guide posts.
+    Returns {category_slug: {"html": checklist_html, "blog_slug": str}}.
+    """
+    if not BLOG_DIR.exists():
+        return {}
+
+    checklists: dict[str, dict] = {}
+    for md_file in sorted(BLOG_DIR.glob("*.md")):
+        raw = md_file.read_text(encoding="utf-8")
+        if not raw.startswith("---"):
+            continue
+        parts = raw.split("---", 2)
+        if len(parts) < 3:
+            continue
+        frontmatter = yaml.safe_load(parts[1]) or {}
+        body_md = parts[2].strip()
+
+        category = frontmatter.get("category")
+        if not category:
+            continue
+
+        match = re.search(r"^## What to Check Before You Buy\s*$", body_md, re.MULTILINE)
+        if not match:
+            continue
+
+        rest = body_md[match.end():]
+        end_match = re.search(r"^## ", rest, re.MULTILINE)
+        section_md = rest[: end_match.start()].strip() if end_match else rest.strip()
+        if not section_md:
+            continue
+
+        section_html = md_lib.markdown(section_md, extensions=MD_EXTENSIONS)
+        blog_slug = frontmatter.get("slug") or slug_from_path(md_file)
+        checklists[category] = {"html": section_html, "blog_slug": blog_slug}
+
+    return checklists
+
+
 # ── Build steps ───────────────────────────────────────────────────────────────
 
 def build_ratings() -> list[dict]:
@@ -221,6 +262,7 @@ def build_ratings() -> list[dict]:
     out_dir.mkdir(parents=True, exist_ok=True)
 
     hero_cfg = _load_hero_config()
+    blog_checklists = _extract_blog_checklists()
     index_entries = []
 
     # Walk recursively so verified ratings under manufacturers/<brand>/ are found.
@@ -243,9 +285,13 @@ def build_ratings() -> list[dict]:
         if hero_path:
             data["header_image"] = hero_path
 
+        checklist = blog_checklists.get(slug)
+
         html = template.render(
             **data,
             body=body_html,
+            buyer_checklist=checklist["html"] if checklist else None,
+            buyer_guide_slug=checklist["blog_slug"] if checklist else None,
             page_title=data.get("title", "Rating"),
             page_description=data.get("consumer_summary", ""),
             active_page="ratings",
@@ -509,17 +555,31 @@ def build_consumer(entries: list[dict]) -> None:
     template = jinja_env.get_template("consumer.html.j2")
     generic = [e for e in entries if e.get("rating_type") != "verified"]
     generic.sort(key=lambda r: r.get("title", ""))
+
+    guides: list[dict] = []
+    if BLOG_DIR.exists():
+        for md_file in sorted(BLOG_DIR.glob("how-to-choose-*.md")):
+            raw = md_file.read_text(encoding="utf-8")
+            if raw.startswith("---"):
+                parts = raw.split("---", 2)
+                if len(parts) >= 3:
+                    fm = yaml.safe_load(parts[1])
+                    if fm:
+                        fm.setdefault("slug", md_file.stem)
+                        guides.append(fm)
+
     html = template.render(
         ratings=generic,
+        guides=guides,
         page_title="For Consumers",
-        page_description="Check before you buy. Free, independent material resilience ratings for everyday products.",
+        page_description="Buyer's guides for everyday products — what to look for, what lasts, and how we rate material resilience. Free and independent.",
         active_page="consumer",
     )
     out_dir = DIST / "consumer"
     out_dir.mkdir(parents=True, exist_ok=True)
     out_file = out_dir / "index.html"
     out_file.write_text(html, encoding="utf-8")
-    print("  [page]   consumer/index.html (landing)")
+    print(f"  [page]   consumer/index.html (landing, {len(guides)} guides)")
 
 
 def build_consumer_mark() -> None:
