@@ -26,6 +26,9 @@ Three HIP dimensions dominate the category:
 
 The broader point: almost every failure that retires a hair dryer involves a non-motor part. Almost every non-motor part could be made replaceable. The only reason they are not is commercial.
 
+
+![Brushless motor cross-section illustration](/assets/blog/how-to-choose-a-sustainable-hair-dryer/supporting.webp)
+
 ## The Gap Between Baseline and Ceiling
 
 The hair-dryer category ceiling is **HIP 6.5 / RI -2.0 (Extractive)**, earning the **Standard** HIP Mark.

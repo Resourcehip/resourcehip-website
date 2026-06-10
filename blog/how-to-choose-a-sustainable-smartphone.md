@@ -26,6 +26,9 @@ The HIP score for smartphones moves on seven dimensions. Three dominate the conv
 
 The other four dimensions — Supply Chain Risk, Social and Environmental Impact, Product Longevity, and the Regenerative Index — all matter. They tend to follow the same fixes: cleaner sourcing, longer warranty and software support, and verified third-party audits.
 
+
+![Methodology illustration — seven dimensions of the HIP score](/assets/blog/how-to-choose-a-sustainable-smartphone/supporting.webp)
+
 ## The Gap Between Baseline and Ceiling
 
 The smartphone category ceiling — what a verified, fully evidenced maker submission can achieve today — is **6.4 out of 10**. The Regenerative Index moves from -7.0 (Depleting) to -2.0 (Extractive). The ceiling earns the **Standard** HIP Mark.

@@ -7,6 +7,7 @@ keywords: [Regenerative Index, RI, regenerative consumer products, depleting vs 
 last_updated: 2026-04-28
 canonical_url: https://resourcehip.com/blog/what-is-the-regenerative-index
 author: Resourcehip Editorial
+hero_image: /assets/blog/what-is-the-regenerative-index/hero.webp
 ---
 
 ## Why a Sustainability Score Needs a Negative Range
@@ -46,6 +47,9 @@ Closed-loop material recovery — the same material is recovered, processed, and
 Restorative practices plus **third-party certified ecosystem restoration evidence**. This is the only band where claims about regenerative effects must be backed by independent audit. Not internal documentation, not a sustainability report — a published third-party certificate that says ecosystem function has measurably improved. Without that evidence, the highest score available is +5 (top of Restorative).
 
 The Regenerative band is intentionally hard to reach. It is reserved for products whose existence makes the underlying biological or material system *demonstrably stronger* over time. A product that scores Regenerative is making a claim that, if true, is worth marketing — and we require the proof.
+
+
+![Regenerative Index spectrum illustration](/assets/blog/what-is-the-regenerative-index/supporting.webp)
 
 ## Why "Words" and "Numbers" Both
 

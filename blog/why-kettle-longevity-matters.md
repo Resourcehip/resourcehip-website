@@ -7,13 +7,14 @@ keywords: [kettle, longevity, sustainability, HIP score, product lifespan, repai
 last_updated: 2026-04-28
 canonical_url: https://resourcehip.com/blog/why-kettle-longevity-matters
 author: Resourcehip Editorial
+hero_image: /assets/blog/why-kettle-longevity-matters/hero.webp
 ---
 
 ## The Scale of the Problem
 
-The average UK household replaces its kettle every **2–3 years**. With around 30 million households, that is roughly 10–15 million kettles heading to landfill each decade — many of them perfectly repairable.
+The average UK household replaces its kettle every **2–3 years**. With around 30 million households, that is roughly 10–15 million kettles heading to landfill each decade. Many of them are perfectly repairable.
 
-Most people replace kettles because of limescale build-up or a cracked lid, not because the heating element has failed. Both are fixable with £3 of descaler or a £5 spare part — if the manufacturer sells one.
+Most people replace kettles because of limescale build-up or a cracked lid. The heating element is usually fine. Both faults are fixable with £3 of descaler or a £5 spare part — if the manufacturer sells one.
 
 ## What the HIP Score Reveals
 
@@ -21,29 +22,32 @@ At Resourcehip we quantify this through three dimensions of the [Human Impact Pr
 
 - **Product Longevity (PL)** — designed lifespan, failure mode data, and warranty commitments
 - **Repairability (R)** — availability of spare parts, standard tool access, and right-to-repair compliance
-- **Material Scarcity Index (MSI)** — stainless steel and borosilicate glass score better than filled polypropylene
+- **Material Scarcity Index (MSI)** — stainless steel and borosilicate glass (heat-resistant glass) score better than filled polypropylene (reinforced plastic)
 
 A kettle scoring 7/10 on longevity is engineered to last 8–10 years. A 3/10 is designed for the skip.
 
 {{ rating_link("kettles") }}
 
+
+![Kettle repairability and longevity concept](/assets/blog/why-kettle-longevity-matters/supporting.webp)
+
 ## How to Choose a Long-Lasting Kettle
 
-1. **Prefer metal or glass bodies** — stainless steel and borosilicate glass outlast polypropylene by years and resist UV yellowing
-2. **Check for replaceable parts** — brands that list heating elements and limescale filters as separate spare parts score higher on Repairability
+1. **Prefer metal or glass bodies** — stainless steel and borosilicate glass outlast polypropylene (a type of plastic) by years and resist UV yellowing
+2. **Check for replaceable parts** — if a brand lists heating elements and limescale filters as separate spare parts, it scores higher on Repairability
 3. **Avoid integrated plastic lids** — these crack and are rarely available as a spare
-4. **Look for a two-year warranty minimum** — the EU standard is one year; a two-year warranty signals manufacturer confidence in durability
+4. **Look for a two-year warranty minimum** — the EU standard is one year. A two-year warranty signals the manufacturer believes in their product's durability
 
 ## The Cost Case
 
 A £120 stainless-steel kettle lasting 8 years costs £15/year.
-A £30 plastic kettle replaced every 2 years also costs £15/year — but generates four times the manufacturing waste and uses four times the raw materials.
+A £30 plastic kettle replaced every 2 years also costs £15/year. But it creates four times the manufacturing waste and uses four times the raw materials.
 
 The maths is identical. The environmental footprint is not.
 
 ## The Bigger Picture
 
-Kettles are a proxy for how we think about all appliances. When purchasing decisions treat longevity as a primary criterion rather than an afterthought, the economics of fast-failure design stop working. HIP scoring makes that trade-off explicit at the point of purchase.
+Kettles are a stand-in for how we think about all appliances. When buyers treat long life as a top priority, the business model behind short-lived design stops working. HIP scoring makes that trade-off clear at the point of purchase.
 
 
 ---

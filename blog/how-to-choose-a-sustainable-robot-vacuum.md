@@ -28,6 +28,9 @@ Three HIP dimensions dominate the robot-vacuum category:
 
 Software lifespan is where this category quietly fails. A robot vacuum with no published software-support promise is a bricked unit waiting to happen.
 
+
+![Offline operation concept illustration](/assets/blog/how-to-choose-a-sustainable-robot-vacuum/supporting.webp)
+
 ## The Gap Between Baseline and Ceiling
 
 The robot-vacuum category ceiling is **HIP 6.6 / RI -2.0 (Extractive)**, earning the **Standard** HIP Mark.

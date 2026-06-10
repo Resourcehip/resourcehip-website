@@ -30,6 +30,9 @@ Three HIP dimensions dominate this category:
 
 The remaining four dimensions — Supply Chain Risk, Social and Environmental Impact, Product Longevity, and the Regenerative Index — all improve with the same fixes. Cleaner sourcing, longer warranties, verified audits, recycled inputs, and end-of-life recovery.
 
+
+![Battery replacement cycle diagram](/assets/blog/how-to-choose-a-sustainable-electric-toothbrush/supporting.webp)
+
 ## The Gap Between Baseline and Ceiling
 
 The electric-toothbrush category ceiling is **HIP 6.5 / RI -2.0 (Extractive)**, earning the **Standard** HIP Mark.

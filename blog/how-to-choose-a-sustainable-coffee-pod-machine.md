@@ -28,6 +28,9 @@ The pod-machine score moves on three dimensions in particular:
 
 These are the three levers most under a manufacturer's direct control. None of them require exotic technology.
 
+
+![Diagram of aluminium pod recovery process](/assets/blog/how-to-choose-a-sustainable-coffee-pod-machine/supporting.webp)
+
 ## The Gap Between Baseline and Ceiling
 
 The pod-machine category ceiling is **HIP 7.2 / RI -3.0 (Extractive)**, earning the **Standard** HIP Mark.

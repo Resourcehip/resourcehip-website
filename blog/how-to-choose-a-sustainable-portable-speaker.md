@@ -28,6 +28,9 @@ Three HIP dimensions sit at the bottom of the category:
 
 The other four dimensions — Supply Chain Risk, Social and Environmental Impact, Product Longevity, and the Regenerative Index — track with the rest of small consumer electronics.
 
+
+![Speaker driver and battery lifespan comparison](/assets/blog/how-to-choose-a-sustainable-portable-speaker/supporting.webp)
+
 ## The Gap Between Baseline and Ceiling
 
 The portable-speaker category ceiling is **HIP 6.4 / RI -2.0 (Extractive)**, earning the **Standard** HIP Mark.

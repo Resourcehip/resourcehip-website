@@ -28,6 +28,9 @@ Three HIP dimensions dominate the kettle category, in a different way to most sm
 
 The remaining four dimensions — Supply Chain Risk, Social and Environmental Impact, Recyclability, the Regenerative Index — track with the rest of the small-appliance category.
 
+
+![Electric kettle component diagram](/assets/blog/how-to-choose-a-sustainable-kettle/supporting.webp)
+
 ## The Gap Between Baseline and Ceiling
 
 The kettle category ceiling is **HIP 7.3 / RI -3.0 (Extractive)**, earning the **Standard** HIP Mark with Silver in clear sight.

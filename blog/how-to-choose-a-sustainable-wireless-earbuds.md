@@ -30,6 +30,9 @@ Three HIP dimensions sit at the bottom of the category:
 
 The remaining four dimensions — Material Scarcity, Supply Chain Risk, Social and Environmental Impact, and the Regenerative Index — all sit in the same low range. The story is the same: lithium and cobalt content, no recycled materials, no take-back, no audited sourcing.
 
+
+![Regenerative Index position illustration](/assets/blog/how-to-choose-a-sustainable-wireless-earbuds/supporting.webp)
+
 ## Why the Ceiling Is Below Standard
 
 Most categories have at least one manufacturer that can hit Standard. Wireless earbuds do not. A ceiling of HIP 5.9 means:

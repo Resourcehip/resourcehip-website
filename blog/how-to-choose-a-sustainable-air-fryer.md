@@ -28,6 +28,9 @@ Three HIP dimensions dominate the air-fryer category:
 
 Energy in use does not appear directly in the HIP score. We score how the product is built, sourced, and recovered. That is where the long-term environmental cost sits, and where consumers have the least visibility.
 
+
+![Cross-section illustration of an air fryer heating element](/assets/blog/how-to-choose-a-sustainable-air-fryer/supporting.webp)
+
 ## The Gap Between Baseline and Ceiling
 
 The air-fryer category ceiling — what a verified, fully evidenced submission can currently achieve — is **HIP 7.1 / RI -2.0 (Extractive)**, earning the **Standard** HIP Mark.

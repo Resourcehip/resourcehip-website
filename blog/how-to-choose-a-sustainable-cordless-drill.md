@@ -32,6 +32,9 @@ The cordless-drill category has one built-in advantage over most consumer electr
 
 The remaining four dimensions — Supply Chain Risk, Social and Environmental Impact, Recyclability, the Regenerative Index — track with the rest of the small-power-tool category.
 
+
+![Illustration of shared battery system across tools](/assets/blog/how-to-choose-a-sustainable-cordless-drill/supporting.webp)
+
 ## The Gap Between Baseline and Ceiling
 
 The cordless-drill category ceiling is **HIP 6.7 / RI -2.0 (Extractive)**, earning the **Standard** HIP Mark.

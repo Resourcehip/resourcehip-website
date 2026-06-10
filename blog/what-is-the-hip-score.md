@@ -7,6 +7,7 @@ keywords: [HIP score, sustainability score, product rating methodology, Resource
 last_updated: 2026-04-28
 canonical_url: https://resourcehip.com/blog/what-is-the-hip-score
 author: Resourcehip Editorial
+hero_image: /assets/blog/what-is-the-hip-score/hero.webp
 ---
 
 ## What the HIP Score Is — And What It Is Not
@@ -70,6 +71,9 @@ This is the only dimension where negative scores are valid. The RI measures whet
 - **Regenerative (+6 to +10)** — third-party-certified ecosystem restoration evidence.
 
 The RI is normalised to 0–10 before weighting, so a Depleting score of −7 contributes 1.5 to the weighted total; a Restorative score of +4 contributes 7.0. We have a [dedicated explainer](/blog/what-is-the-regenerative-index) on the RI specifically.
+
+
+![Seven HIP dimension breakdown illustration](/assets/blog/what-is-the-hip-score/supporting.webp)
 
 ## How the Final Score is Calculated
 

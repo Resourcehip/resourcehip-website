@@ -7,6 +7,7 @@ keywords: [generic vs verified ratings, HIP score baseline ceiling, manufacturer
 last_updated: 2026-04-28
 canonical_url: https://resourcehip.com/blog/generic-vs-verified-ratings
 author: Resourcehip Editorial
+hero_image: /assets/blog/generic-vs-verified-ratings/hero.webp
 ---
 
 ## Two Ratings, Same Methodology
@@ -41,6 +42,9 @@ The verified ceiling is what the same methodology produces when a manufacturer c
 Same methodology. Same dimensions. Same rubric. The score differs by **4.6 HIP points and 5 RI bands** because the inputs differ.
 
 That gap — 1.8 → 6.4 — is the smartphone category headroom. It is also, candidly, the entire commercial argument behind verified ratings: a manufacturer with the evidence can demonstrate a step-change difference from the generic default, and the rating reflects that difference honestly.
+
+
+![Generic versus verified rating gap illustration](/assets/blog/generic-vs-verified-ratings/supporting.webp)
 
 ## Why the Gap Is Always Big
 
