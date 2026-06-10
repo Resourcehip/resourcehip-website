@@ -4,6 +4,7 @@ category: Sports & Fitness
 rating_type: generic
 brand: null
 slug: gym-equipment
+header_image: /assets/hero/gym-equipment/gym-equipment-header-v1.webp
 hip_score: 3.4
 hip_label: Caution
 msi_score: 3.5

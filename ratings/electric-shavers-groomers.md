@@ -4,6 +4,7 @@ category: Personal Care
 rating_type: generic
 brand: null
 slug: electric-shavers-groomers
+header_image: /assets/hero/electric-shavers-groomers/electric-shavers-groomers-header-v1.webp
 hip_score: 2.1
 hip_label: Poor
 msi_score: 1.5

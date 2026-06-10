@@ -4,6 +4,7 @@ category: Home Textiles
 rating_type: generic
 brand: null
 slug: duvets-pillows
+header_image: /assets/hero/duvets-pillows.webp
 hip_score: 2.5
 hip_label: Poor
 msi_score: 3.5

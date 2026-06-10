@@ -4,6 +4,7 @@ category: Kitchen
 rating_type: generic
 brand: null
 slug: bamboo-kitchenware
+header_image: /assets/hero/bamboo-kitchenware.webp
 hip_score: 4.2
 hip_label: Caution
 msi_score: 7.5

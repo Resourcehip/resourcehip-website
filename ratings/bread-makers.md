@@ -4,6 +4,7 @@ category: Small Appliances
 rating_type: generic
 brand: null
 slug: bread-makers
+header_image: /assets/hero/bread-makers/bread-makers-header-v1.webp
 hip_score: 2.9
 hip_label: Poor
 msi_score: 3.5

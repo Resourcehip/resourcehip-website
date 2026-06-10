@@ -4,6 +4,7 @@ category: Kitchen
 rating_type: generic
 brand: null
 slug: cast-iron-cookware
+header_image: /assets/hero/cast-iron-cookware.webp
 hip_score: 3.5
 hip_label: Caution
 msi_score: 3.5

@@ -4,6 +4,7 @@ category: Garden & Outdoor
 rating_type: generic
 brand: null
 slug: domestic-lawnmower
+header_image: /assets/hero/domestic-lawnmower/domestic-lawnmower-header-v1.webp
 hip_score: 3.3
 hip_label: Caution
 msi_score: 3.5

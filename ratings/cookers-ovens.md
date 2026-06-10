@@ -4,6 +4,7 @@ category: Larger Appliances
 rating_type: generic
 brand: null
 slug: cookers-ovens
+header_image: /assets/hero/cookers-ovens/cookers-ovens-header-v2.webp
 hip_score: 3.3
 hip_label: Caution
 msi_score: 3.5

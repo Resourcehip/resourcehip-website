@@ -4,6 +4,7 @@ category: Home & Living
 rating_type: generic
 brand: null
 slug: carpets
+header_image: /assets/hero/carpets.webp
 hip_score: 2.9
 hip_label: Poor
 msi_score: 3.5

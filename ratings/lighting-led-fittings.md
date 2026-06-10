@@ -4,6 +4,7 @@ category: Home Fixtures
 rating_type: generic
 brand: null
 slug: lighting-led-fittings
+header_image: /assets/hero/lighting-led-fittings/lighting-led-fittings-header-v2.webp
 hip_score: 2.1
 hip_label: Poor
 msi_score: 1.0

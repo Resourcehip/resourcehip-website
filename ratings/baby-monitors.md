@@ -4,6 +4,7 @@ category: Baby & Nursery
 rating_type: generic
 brand: null
 slug: baby-monitors
+header_image: /assets/hero/baby-monitors/baby-monitors-header-v1.webp
 hip_score: 1.7
 hip_label: Poor
 msi_score: 1.5

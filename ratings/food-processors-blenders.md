@@ -4,6 +4,7 @@ category: Small Appliances
 rating_type: generic
 brand: null
 slug: food-processors-blenders
+header_image: /assets/hero/food-processors-blenders/food-processors-blenders-header-v1.webp
 hip_score: 2.9
 hip_label: Poor
 msi_score: 3.5

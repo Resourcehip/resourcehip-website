@@ -4,6 +4,7 @@ category: Toys & Games
 rating_type: generic
 brand: null
 slug: electric-ride-on-toys
+header_image: /assets/hero/electric-ride-on-toys/electric-ride-on-toys-header-v2.webp
 hip_score: 2.3
 hip_label: Poor
 msi_score: 3.5

@@ -4,6 +4,7 @@ category: Power Tools
 rating_type: generic
 brand: null
 slug: pressure-washers
+header_image: /assets/hero/pressure-washers/pressure-washers-header-v1.webp
 hip_score: 3.0
 hip_label: Caution
 msi_score: 3.5

@@ -4,7 +4,7 @@ category: Small Appliances
 rating_type: generic
 brand: null
 slug: microwaves
-header_image: /assets/marketing/ratings/microwave-header-v1.webp
+header_image: /assets/hero/microwaves/microwaves-header-v1.webp
 hip_score: 2.6
 hip_label: Poor
 msi_score: 2.0

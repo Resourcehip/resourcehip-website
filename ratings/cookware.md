@@ -4,6 +4,7 @@ category: Kitchen
 rating_type: generic
 brand: null
 slug: cookware
+header_image: /assets/hero/cookware.webp
 hip_score: 2.7
 hip_label: Poor
 msi_score: 4.0

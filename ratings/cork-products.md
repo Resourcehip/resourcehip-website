@@ -4,6 +4,7 @@ category: Home & Living
 rating_type: generic
 brand: null
 slug: cork-products
+header_image: /assets/hero/cork-products.webp
 hip_score: 5.2
 hip_label: Moderate
 msi_score: 9.5

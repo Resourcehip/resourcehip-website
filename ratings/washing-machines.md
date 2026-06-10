@@ -4,7 +4,7 @@ category: Home Appliances
 rating_type: generic
 brand: null
 slug: washing-machines
-header_image: /assets/marketing/ratings/washing-machine-header-v1.webp
+header_image: /assets/hero/washing-machines/washing-machines-header-v1.webp
 hip_score: 3.1
 hip_label: Caution
 msi_score: 2.0

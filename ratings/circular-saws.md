@@ -4,6 +4,7 @@ category: Power Tools
 rating_type: generic
 brand: null
 slug: circular-saws
+header_image: /assets/hero/circular-saws/circular-saws-header-v1.webp
 hip_score: 3.1
 hip_label: Caution
 msi_score: 1.5

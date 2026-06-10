@@ -4,6 +4,7 @@ category: Small Appliances
 rating_type: generic
 brand: null
 slug: dehumidifiers
+header_image: /assets/hero/dehumidifiers/dehumidifiers-header-v4.webp
 hip_score: 2.9
 hip_label: Poor
 msi_score: 3.5

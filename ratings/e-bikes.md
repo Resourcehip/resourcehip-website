@@ -4,6 +4,7 @@ category: Sports & Fitness
 rating_type: generic
 brand: null
 slug: e-bikes
+header_image: /assets/hero/e-bikes/e-bikes-header-v1.webp
 hip_score: 2.6
 hip_label: Poor
 msi_score: 1.5

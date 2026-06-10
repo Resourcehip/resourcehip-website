@@ -4,6 +4,7 @@ category: Small Appliances
 rating_type: generic
 brand: null
 slug: slow-cookers-multi-cookers
+header_image: /assets/hero/slow-cookers-multi-cookers/slow-cookers-multi-cookers-header-v1.webp
 hip_score: 2.9
 hip_label: Poor
 msi_score: 3.5

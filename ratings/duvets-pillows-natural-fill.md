@@ -4,6 +4,7 @@ category: Home Textiles
 rating_type: generic
 brand: null
 slug: duvets-pillows-natural-fill
+header_image: /assets/hero/duvets-pillows-natural-fill.webp
 hip_score: 3.6
 hip_label: Caution
 msi_score: 4.0

@@ -4,6 +4,7 @@ category: Kitchen
 rating_type: generic
 brand: null
 slug: glass-food-storage
+header_image: /assets/hero/glass-food-storage.webp
 hip_score: 3.4
 hip_label: Caution
 msi_score: 5.0

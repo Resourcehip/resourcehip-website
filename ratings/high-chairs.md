@@ -4,6 +4,7 @@ category: Baby & Nursery
 rating_type: generic
 brand: null
 slug: high-chairs
+header_image: /assets/hero/high-chairs/high-chairs-header-v1.webp
 hip_score: 2.6
 hip_label: Poor
 msi_score: 3.5

@@ -4,6 +4,7 @@ category: Sports & Fitness
 rating_type: generic
 brand: null
 slug: electric-scooters
+header_image: /assets/hero/electric-scooters/electric-scooters-header-v1.webp
 hip_score: 2.5
 hip_label: Poor
 msi_score: 1.5

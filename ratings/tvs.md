@@ -4,7 +4,7 @@ category: Consumer Electronics
 rating_type: generic
 brand: null
 slug: tvs
-header_image: /assets/marketing/ratings/tv-header-v1.webp
+header_image: /assets/hero/tvs/tvs-header-v2.webp
 hip_score: 2.1
 hip_label: Poor
 msi_score: 1.5

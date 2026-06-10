@@ -4,6 +4,7 @@ category: Home & Living
 rating_type: generic
 brand: null
 slug: linen-hemp-accessories
+header_image: /assets/hero/linen-hemp-accessories.webp
 hip_score: 3.7
 hip_label: Caution
 msi_score: 6.5

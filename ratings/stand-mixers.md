@@ -4,6 +4,7 @@ category: Small Appliances
 rating_type: generic
 brand: null
 slug: stand-mixers
+header_image: /assets/hero/stand-mixers/stand-mixers-header-v2.webp
 hip_score: 3.5
 hip_label: Caution
 msi_score: 3.5

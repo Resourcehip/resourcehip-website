@@ -4,6 +4,7 @@ category: Toys & Games
 rating_type: generic
 brand: null
 slug: wooden-toys-games
+header_image: /assets/hero/wooden-toys-games.webp
 hip_score: 4.8
 hip_label: Caution
 msi_score: 7.5

@@ -4,6 +4,7 @@ category: Toys & Games
 rating_type: generic
 brand: null
 slug: rc-vehicles-drones
+header_image: /assets/hero/rc-vehicles-drones/rc-vehicles-drones-header-v1.webp
 hip_score: 2.3
 hip_label: Poor
 msi_score: 1.5

@@ -4,6 +4,7 @@ category: Garden & Outdoor
 rating_type: generic
 brand: null
 slug: cordless-lawnmowers
+header_image: /assets/hero/cordless-lawnmowers/cordless-lawnmowers-header-v1.webp
 hip_score: 2.6
 hip_label: Poor
 msi_score: 1.5

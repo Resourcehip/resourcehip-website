@@ -4,6 +4,7 @@ category: Small Appliances
 rating_type: generic
 brand: null
 slug: sewing-machines
+header_image: /assets/hero/sewing-machines/sewing-machines-header-v1.webp
 hip_score: 3.2
 hip_label: Caution
 msi_score: 3.5

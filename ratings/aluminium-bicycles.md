@@ -4,6 +4,7 @@ category: Sports & Fitness
 rating_type: generic
 brand: null
 slug: aluminium-bicycles
+header_image: /assets/hero/aluminium-bicycles/aluminium-bicycles-header-v2.webp
 hip_score: 3.6
 hip_label: Caution
 msi_score: 3.5

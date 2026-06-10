@@ -4,6 +4,7 @@ category: Sleep & Bedroom
 rating_type: generic
 brand: null
 slug: natural-latex-sleep
+header_image: /assets/hero/natural-latex-sleep.webp
 hip_score: 3.8
 hip_label: Caution
 msi_score: 5.5

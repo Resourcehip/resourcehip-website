@@ -4,6 +4,7 @@ category: Garden & Outdoor
 rating_type: generic
 brand: null
 slug: hedge-trimmers
+header_image: /assets/hero/hedge-trimmers/hedge-trimmers-header-v1.webp
 hip_score: 2.7
 hip_label: Poor
 msi_score: 1.5

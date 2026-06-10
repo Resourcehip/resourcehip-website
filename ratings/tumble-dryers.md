@@ -4,6 +4,7 @@ category: Larger Appliances
 rating_type: generic
 brand: null
 slug: tumble-dryers
+header_image: /assets/hero/tumble-dryers/tumble-dryers-header-v2.webp
 hip_score: 3.1
 hip_label: Caution
 msi_score: 3.5

@@ -4,6 +4,7 @@ category: Toys & Games
 rating_type: generic
 brand: null
 slug: electronic-learning-toys
+header_image: /assets/hero/electronic-learning-toys/electronic-learning-toys-header-v1.webp
 hip_score: 1.7
 hip_label: Poor
 msi_score: 1.5

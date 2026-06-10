@@ -4,6 +4,7 @@ category: Sports & Fitness
 rating_type: generic
 brand: null
 slug: basic-fitness-trackers
+header_image: /assets/hero/basic-fitness-trackers/basic-fitness-trackers-header-v1.webp
 hip_score: 1.9
 hip_label: Poor
 msi_score: 1.5

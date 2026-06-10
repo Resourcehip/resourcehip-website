@@ -4,6 +4,7 @@ category: Small Appliances
 rating_type: generic
 brand: null
 slug: electric-fans
+header_image: /assets/hero/electric-fans/electric-fans-header-v1.webp
 hip_score: 2.7
 hip_label: Poor
 msi_score: 3.5

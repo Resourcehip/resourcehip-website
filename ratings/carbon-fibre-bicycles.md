@@ -4,6 +4,7 @@ category: Sports & Fitness
 rating_type: generic
 brand: null
 slug: carbon-fibre-bicycles
+header_image: /assets/hero/carbon-fibre-bicycles/carbon-fibre-bicycles-header-v1.webp
 hip_score: 3.1
 hip_label: Caution
 msi_score: 3.5

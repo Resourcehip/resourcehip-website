@@ -4,6 +4,7 @@ category: Sports & Fitness
 rating_type: generic
 brand: null
 slug: steel-bicycles
+header_image: /assets/hero/steel-bicycles/steel-bicycles-header-v1.webp
 hip_score: 3.7
 hip_label: Caution
 msi_score: 3.5

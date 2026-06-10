@@ -4,6 +4,7 @@ category: Garden & Outdoor
 rating_type: generic
 brand: null
 slug: leaf-blowers
+header_image: /assets/hero/leaf-blowers/leaf-blowers-header-v1.webp
 hip_score: 2.8
 hip_label: Poor
 msi_score: 2.0

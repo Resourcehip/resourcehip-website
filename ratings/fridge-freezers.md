@@ -4,7 +4,7 @@ category: Home Appliances
 rating_type: generic
 brand: null
 slug: fridge-freezers
-header_image: /assets/marketing/ratings/fridge-freezer-header-v1.webp
+header_image: /assets/hero/fridge-freezers/fridge-freezers-header-v2.webp
 hip_score: 3.3
 hip_label: Caution
 msi_score: 3.5
