@@ -4,6 +4,7 @@ category: Home & Living
 rating_type: generic
 brand: null
 slug: reusable-coffee-cups
+header_image: /assets/hero/reusable-coffee-cups/reusable-coffee-cups-header-v2.webp
 hip_score: 2.8
 hip_label: Poor
 msi_score: 3.5

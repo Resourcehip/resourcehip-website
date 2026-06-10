@@ -4,7 +4,7 @@ category: Kitchen
 rating_type: generic
 brand: null
 slug: coffee-pod-machines
-header_image: /assets/marketing/ratings/coffee-pod-machine-header-v1.webp
+header_image: /assets/hero/coffee-pod-machines/coffee-pod-machines-header-v4.webp
 hip_score: 2.6
 hip_label: Poor
 msi_score: 3.5

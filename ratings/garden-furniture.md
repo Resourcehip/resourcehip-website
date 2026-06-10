@@ -4,6 +4,7 @@ category: Garden & Outdoor
 rating_type: generic
 brand: null
 slug: garden-furniture
+header_image: /assets/hero/garden-furniture/garden-furniture-header-v3.webp
 hip_score: 2.9
 hip_label: Poor
 msi_score: 4.0

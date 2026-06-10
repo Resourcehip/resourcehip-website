@@ -4,6 +4,7 @@ category: Consumer Electronics
 rating_type: generic
 brand: null
 slug: wireless-earbuds
+header_image: /assets/hero/wireless-earbuds/wireless-earbuds-header-v3.webp
 hip_score: 1.8
 hip_label: Poor
 msi_score: 1.5

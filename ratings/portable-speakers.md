@@ -4,6 +4,7 @@ category: Consumer Electronics
 rating_type: generic
 brand: null
 slug: portable-speakers
+header_image: /assets/hero/portable-speakers/portable-speakers-header-v1.webp
 hip_score: 2.0
 hip_label: Poor
 msi_score: 1.5

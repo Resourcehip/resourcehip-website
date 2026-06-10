@@ -4,7 +4,7 @@ category: Power Tools
 rating_type: generic
 brand: null
 slug: cordless-drills
-header_image: /assets/marketing/ratings/drill-header-v1.png
+header_image: /assets/hero/cordless-drills/cordless-drills-header-v4.webp
 hip_score: 2.5
 hip_label: Poor
 msi_score: 1.5

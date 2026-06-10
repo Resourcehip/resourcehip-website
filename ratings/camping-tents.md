@@ -4,6 +4,7 @@ category: Garden & Outdoor
 rating_type: generic
 brand: null
 slug: camping-tents
+header_image: /assets/hero/camping-tents/camping-tents-header-v4.webp
 hip_score: 2.5
 hip_label: Poor
 msi_score: 3.5

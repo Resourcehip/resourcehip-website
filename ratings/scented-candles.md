@@ -4,6 +4,7 @@ category: Home & Living
 rating_type: generic
 brand: null
 slug: scented-candles
+header_image: /assets/hero/scented-candles/scented-candles-header-v1.webp
 hip_score: 2.3
 hip_label: Poor
 msi_score: 4.0

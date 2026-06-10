@@ -4,7 +4,7 @@ category: Personal Care
 rating_type: generic
 brand: null
 slug: hair-dryers
-header_image: /assets/marketing/ratings/hairdryer-header-v1.png
+header_image: /assets/hero/hair-dryers/hair-dryers-header-v3.webp
 hip_score: 2.6
 hip_label: Poor
 msi_score: 2.0

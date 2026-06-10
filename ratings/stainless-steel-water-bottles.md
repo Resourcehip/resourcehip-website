@@ -4,6 +4,7 @@ category: Home & Living
 rating_type: generic
 brand: null
 slug: stainless-steel-water-bottles
+header_image: /assets/hero/stainless-steel-water-bottles/stainless-steel-water-bottles-header-v1.webp
 hip_score: 4.0
 hip_label: Caution
 msi_score: 5.0

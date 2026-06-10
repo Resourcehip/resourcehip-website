@@ -4,7 +4,7 @@ category: Consumer Electronics
 rating_type: generic
 brand: null
 slug: bluetooth-headphones
-header_image: /assets/marketing/ratings/headphones-header-v1.png
+header_image: /assets/hero/bluetooth-headphones/bluetooth-headphones-header-v1.webp
 hip_score: 1.9
 hip_label: Poor
 msi_score: 1.5

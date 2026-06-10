@@ -4,6 +4,7 @@ category: Garden & Outdoor
 rating_type: generic
 brand: null
 slug: recycled-hdpe-furniture
+header_image: /assets/hero/recycled-hdpe-furniture/recycled-hdpe-furniture-header-v1.webp
 hip_score: 4.6
 hip_label: Caution
 msi_score: 7.5

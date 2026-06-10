@@ -4,6 +4,7 @@ category: Sleep & Bedroom
 rating_type: generic
 brand: null
 slug: mattresses
+header_image: /assets/hero/mattresses/mattresses-header-v1.webp
 hip_score: 2.7
 hip_label: Poor
 msi_score: 3.5

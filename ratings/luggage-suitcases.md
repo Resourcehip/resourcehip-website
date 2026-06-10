@@ -4,6 +4,7 @@ category: Travel Accessories
 rating_type: generic
 brand: null
 slug: luggage-suitcases
+header_image: /assets/hero/luggage-suitcases/luggage-suitcases-header-v1.webp
 hip_score: 2.6
 hip_label: Poor
 msi_score: 3.5
