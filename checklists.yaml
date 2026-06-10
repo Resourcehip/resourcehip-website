@@ -1,0 +1,383 @@
+# checklists.yaml — Phase 2 buyer's-guide checklists (RES-1179)
+# Format: category-slug -> list of markdown checklist items
+# Items use **bold heading** + plain-text detail.
+# Blog-sourced checklists (Phase 1) take priority in build.py — these are fallbacks only.
+# Covers categories without a corresponding blog buyer's guide post.
+
+bluetooth-headphones:
+  - "**Look for a replaceable battery or a confirmed battery replacement service.** Headphone batteries degrade over two to three years; a battery that cannot be replaced makes an otherwise functional pair into e-waste."
+  - "**Check the ear cushions and headband padding are sold as spare parts.** These are the first components to degrade with use; availability extends the life of expensive drivers significantly."
+  - "**Look for a cable-equipped or detachable-cable design.** Wireless-only headphones with a dead battery are unusable; a detachable cable means the headphones still work while the battery is replaced."
+  - "**Confirm a take-back or WEEE recycling scheme is offered.** Headphones contain lithium cells and small quantities of critical raw materials; a maker-run take-back scheme is the minimum responsible end-of-life option."
+
+air-purifiers:
+  - "**Check that H13 or H14 HEPA filter replacements are stocked at a known part number.** The filter is a consumable; unavailability means you replace the whole machine for a £20 part."
+  - "**Confirm the motor and fan are accessible for service.** Air purifier motors fail after years of continuous use; a machine where the motor can be replaced has a much longer service life."
+  - "**Look for a CADR (Clean Air Delivery Rate) rating appropriate to your room size.** An undersized purifier runs continuously and wears faster; a correctly sized one runs less, lasts longer, and uses less energy."
+  - "**Check the pre-filter is washable.** A washable pre-filter extends HEPA filter life and reduces the running cost significantly."
+
+aluminium-bicycles:
+  - "**Look for a lifetime frame warranty or 10-year structural guarantee.** Aluminium frames develop fatigue cracks at welds; a structural warranty is the maker's statement of confidence in their welding quality."
+  - "**Check that standard components are used — threaded BB shell, headset, derailleur hanger.** Proprietary standards lock you into manufacturer replacement parts; standard parts can be sourced from any bike shop."
+  - "**Confirm the derailleur hanger is sold as a spare part.** It's the sacrificial component that protects the frame on derailleur impact; a £5 hanger should not require a complete drivetrain replacement."
+  - "**Consider a steel frame if longevity is the priority.** Aluminium fatigues faster than steel under equivalent loading; a steel frame, correctly maintained, will outlast an aluminium frame."
+
+angle-grinders:
+  - "**Check the armature and carbon brushes are stocked as spare parts.** Brushes are a consumable in brushed-motor models; a £5 brush pair should not end a £100 tool's life."
+  - "**Confirm the spindle lock and gear assembly are serviceable.** Grinders take heavy loads; stripped gear is a common failure that is repairable if parts are available."
+  - "**Look for a tool with a published service manual.** Professional-grade tools almost always have these; the manual is the difference between a repairable tool and landfill."
+  - "**Check the disc guard and side handle are available as standard replacements.** Safety-critical components should be replaceable; confirm before purchase."
+
+baby-monitors:
+  - "**Look for a monitor with a stated software support duration.** Baby monitors with app connectivity become obsolete when server support ends; the device should outlast your child's use of it."
+  - "**Confirm the battery is replaceable in the parent unit.** Rechargeable batteries degrade; a user-replaceable battery extends the device's life without requiring service."
+  - "**Check the camera is sold separately from the parent unit.** The camera is more likely to be damaged; a camera-only replacement is a more resource-efficient repair path."
+  - "**Look for analogue or FHSS models for the longest hardware life.** These don't rely on cloud servers and will continue working indefinitely."
+
+bamboo-kitchenware:
+  - "**Look for OEKO-TEX or FSC certification.** Bamboo kitchenware is often coated with melamine resins; certification confirms that chemical treatment limits have been met."
+  - "**Check the construction is whole-bamboo or laminated bamboo — not bamboo-fibre composite.** Bamboo-fibre composites use melamine or urea-formaldehyde binders that are not biodegradable."
+  - "**Confirm the finish is food-safe and disclosed.** Mineral oil, beeswax, or linseed oil are appropriate for bamboo cutting surfaces; synthetic varnishes are not."
+  - "**Look for a maker that discloses the bamboo origin.** Sustainably harvested bamboo from certified sources is genuinely lower-impact; undisclosed origins carry the same risks as standard timber."
+
+basic-fitness-trackers:
+  - "**Look for a device with a stated software support window of at least four years.** Fitness trackers become e-waste when app support ends; a four-year window covers most users' upgrade cycle."
+  - "**Confirm the strap is a standard 20 mm or 22 mm quick-release format.** Proprietary strap mounts mean strap replacement requires going back to the manufacturer; standard mounts mean £5 from any accessories shop."
+  - "**Check the battery is not epoxied in place.** A fitness tracker with a battery that cannot be replaced without destroying the device has a built-in obsolescence date."
+  - "**Look for a maker with a declared WEEE take-back programme.** Fitness trackers contain lithium cells and rare earth elements; none of this should go to general waste."
+
+bbqs:
+  - "**Check the burner tubes and igniter are stocked as spare parts.** They are the most common failures in gas BBQs; stainless steel burner tubes last significantly longer than aluminised steel."
+  - "**Confirm the cooking grates are available as replacements.** Porcelain-enamel over cast iron or stainless steel grates outlast chrome-plated grates by years."
+  - "**Look for a BBQ with a lid gasket that can be replaced.** It is a rubber consumable that fails in outdoor conditions; most makers do not stock it, which limits the repair path."
+  - "**Check the warranty on gas regulators and hoses.** These are safety-critical components with defined service lives; a BBQ that outlasts its certified hose without a replacement path is a safety issue."
+
+bread-makers:
+  - "**Check the bread pan and paddle are available as spare parts.** The paddle shaft seal and the non-stick coating are the two things that fail first; unavailability makes an otherwise functional machine unrepairable."
+  - "**Confirm the warranty length.** Two years is standard; three-plus years on the motor and heating element signals confidence in the core mechanism."
+  - "**Look for metal-bodied units over all-plastic.** Metal bodies handle thermal cycling better and survive longer in kitchen conditions."
+  - "**Check the control board is not a proprietary-locked part.** A bread maker is a simple appliance that is repairable; the barrier is usually sourcing the control board."
+
+camping-tents:
+  - "**Look for a maker that sells spare poles, pegs, and guy lines separately.** The pole is the first failure; a tent that cannot be repaired with a £5 pole section is premature waste."
+  - "**Check the seam sealing is documented and maintainable.** Factory seam taping degrades over years; the ability to re-seal at home with standard seam sealer extends life by multiple seasons."
+  - "**Confirm the fly has a hydrostatic head rating of 2000 mm or more.** Lower-rated fabrics delaminate faster, especially with UV exposure."
+  - "**Look for DAC aluminium or fibreglass poles over single-use GRP rods.** Aluminium poles can be spliced with a field repair sleeve; single-use GRP rods cannot."
+
+carbon-fibre-bicycles:
+  - "**Look for a maker with crash replacement and frame inspection policies.** Carbon fibre can develop internal damage from impacts that is not visible; a maker that offers crash replacement takes the structural integrity risk seriously."
+  - "**Confirm standard components are used — threaded BB shell, standard axle standards, standard derailleur interface.** Proprietary standards lock you to the original maker for expensive components."
+  - "**Check the warranty covers impact damage explicitly.** A warranty that covers only manufacturing defects is of limited value for a material that fractures on impact."
+  - "**Look for a frame that can be repainted by a specialist shop.** Damage to the clear coat is purely cosmetic if the laminate is sound; repainting extends the appearance and perceived value of the frame."
+
+carpets:
+  - "**Look for a wool or wool-blend pile.** Wool carpets last 25+ years under heavy use; synthetic-only carpets (nylon, polypropylene) last 10–15 years and shed microplastics throughout their life."
+  - "**Check the pile density rating.** A denser pile compresses less with use; pile weight per square metre is the reliable proxy for durability."
+  - "**Confirm the backing is natural jute or cotton, not synthetic foam.** Synthetic foam backings off-gas, delaminate, and are not recyclable; jute backings are biodegradable and more durable."
+  - "**Look for a CRI or similar indoor air quality certification.** Carpets off-gas VOCs from adhesives and treatments; certification confirms limits have been independently tested."
+
+cast-iron-cookware:
+  - "**Look for a manufacturer with a lifetime warranty.** Cast iron cookware is designed to outlast any other cookware; a lifetime warranty is the minimum signal that the maker expects this."
+  - "**Check the seasoning is pre-applied and the process is documented.** Pre-seasoned cast iron is ready to use; the seasoning process is fully restorable if damaged, and documentation means you can maintain it yourself."
+  - "**Confirm the handle is integral (cast as part of the body), not attached with hardware.** Hardware attachment points are potential failure points; integral handles last indefinitely."
+  - "**Look for pieces compatible with induction hobs.** Cast iron is inherently induction-compatible but confirm, particularly for non-flat bases and enamelled versions."
+
+circular-saws:
+  - "**Check the carbon brushes are listed as spare parts.** They are a consumable in brushed-motor models; unavailability is a planned obsolescence point for a straightforwardly repairable fault."
+  - "**Confirm the blade guard and riving knife are available.** These are safety-critical components that wear or break; the ability to replace them without returning to the manufacturer is important."
+  - "**Look for models with a published service manual.** Professional-tier models carry these; the manual is what separates a 10-year tool from a 3-year one."
+  - "**Check the base plate is stocked as a spare.** It is a common damage point; availability signals the manufacturer expects the tool to outlast individual component failures."
+
+cookers-ovens:
+  - "**Confirm the oven element is stocked as a spare part.** Elements are the most common fault, and they are widely available for older models — but not always for new or unbranded units."
+  - "**Check the oven door seal is available.** It degrades with heat cycling; a £10 seal replacement extending a £600 cooker's life by five years is the right outcome."
+  - "**Look for a stated energy rating.** Induction hobs are significantly more efficient than gas or halogen; for ovens, the energy class applies directly to running cost over a 15-year life."
+  - "**Avoid fully digital touch controls where analogue alternatives exist.** Touch-panel failures are disproportionately expensive to repair; mechanical knobs and switches are simpler and more durable."
+
+cookware:
+  - "**Look for stainless steel or cast iron over non-stick coated aluminium.** PTFE and ceramic non-stick coatings degrade over 3–5 years of normal use; stainless and cast iron do not have coatings to lose."
+  - "**Confirm the handles are oven-safe and secured with stainless hardware, not rivets.** Loose handles are the most common cookware failure; riveted handles cannot be retightened, screwed ones can."
+  - "**Check induction compatibility if relevant to your hob.** Not all stainless steel is induction-compatible; confirm the base specification before purchasing."
+  - "**Look for a lifetime or 25-year warranty on stainless steel construction.** The standard for stainless cookware from established makers is lifetime; 3–5 years on a coated pan is a sign of its expected service life."
+
+cork-products:
+  - "**Look for FSC-certified cork or declared Portuguese origin.** Portuguese cork forests are the world's most sustainably managed cork source; other origins carry higher deforestation risk."
+  - "**Check for OEKO-TEX or similar certification on adhesives and treatments.** Cork that is glued or coated with synthetic finishes carries residue risks; certification confirms the treatments are within safe limits."
+  - "**Confirm the product is natural cork, not composite with EVA or synthetic rubber.** Composite materials degrade at different rates and are harder to recycle; pure cork is biodegradable."
+  - "**Look for undyed or naturally pigmented cork where possible.** Synthetic dyes in cork are difficult to process at end-of-life."
+
+dehumidifiers:
+  - "**Confirm the compressor carries a five-year warranty.** The compressor is the core component and the most expensive failure; a multi-year warranty signals confidence in the unit."
+  - "**Check the water tank and float switch are stocked as spare parts.** These are the most common service parts; unavailability is a common reason otherwise functional units are discarded."
+  - "**Look for a machine with published service documentation.** Dehumidifiers are repairable appliances with a long service life when maintained; documentation makes third-party repair possible."
+  - "**Check the refrigerant type.** Lower-GWP refrigerants (R290, R600a) are preferable to R134a or R410a for units being disposed of at end of life."
+
+dishwashers:
+  - "**Check the pump and spray arms are listed as spare parts.** These are the most common failures; if the manufacturer does not stock them, a dishwasher becomes irreparable after a simple fault."
+  - "**Confirm the control board carries a parts guarantee or has a known third-party supply.** Proprietary control boards are the category's single biggest repairability barrier."
+  - "**Look for an energy and water rating of A or better.** Dishwashers run a cycle per day; over a 10-year life, the difference between rated models adds up significantly."
+  - "**Ask about the door seal.** It is a consumable that degrades with heat and detergent; models that stock standard-dimension seals as named spare parts are more durable than those that do not."
+
+domestic-lawnmower:
+  - "**Confirm the blade is stocked as a named spare part.** It is a consumable; a replacement blade at a known part number extending a mower's life by five seasons is better than buying a new mower."
+  - "**Check the battery is replaceable for cordless models.** Battery degradation is the leading reason functioning cordless mowers are discarded; a user-accessible battery is the most important durability feature."
+  - "**Look for a steel deck over plastic.** Steel decks survive impacts, weathering, and long storage better than plastic; plastic decks crack and fade in outdoor conditions."
+  - "**Check the cable on corded models is detachable at the motor.** A damaged cable should be a £5 part replacement, not a service-centre job."
+
+cordless-lawnmowers:
+  - "**Confirm the blade is stocked as a named spare part.** It is a consumable; a replacement blade at a known part number extending a mower's life by five seasons is better than buying a new mower."
+  - "**Check the battery is replaceable for cordless models.** Battery degradation is the leading reason functioning cordless mowers are discarded; a user-accessible battery is the most important durability feature."
+  - "**Look for a steel deck over plastic.** Steel decks survive impacts, weathering, and long storage better than plastic; plastic decks crack and fade in outdoor conditions."
+  - "**Check the cable on corded models is detachable at the motor.** A damaged cable should be a £5 part replacement, not a service-centre job."
+
+duvets-pillows:
+  - "**Look for a tog rating that matches your heating setup.** An oversized duvet in a heated room is washed more often and degrades faster; right-sizing extends its life."
+  - "**Check the fill is disclosed: down, synthetic, or blended.** Responsible Down Standard (RDS) for down; GRS certification for recycled synthetic fill. Without certification, the fill origin is unknown."
+  - "**Confirm the outer shell is a tight weave of at least 200 thread count.** Loose weaves allow fill migration; fill migration leads to clumping and early disposal."
+  - "**Look for a machine-washable construction.** A duvet that requires dry cleaning will be washed less often and replaced sooner."
+
+duvets-pillows-natural-fill:
+  - "**Look for RDS (Responsible Down Standard) or equivalent certification.** It is the minimum credible welfare and traceability standard for natural fill; uncertified down has no supply chain accountability."
+  - "**Check the fill power rating for down duvets.** Higher fill power means lighter, loftier down that recovers better after washing — a practical durability indicator."
+  - "**Confirm the shell is a cotton or linen fabric with a tight weave.** Natural-fibre shells are biodegradable and longer-lasting with proper care; synthetic shells do not breathe as well."
+  - "**Look for care instructions that include machine washing guidance.** A duvet that must be dry-cleaned will be maintained less often and replaced sooner."
+
+e-bikes:
+  - "**Confirm the battery is available as a spare part from the manufacturer or a licensed third party.** Battery replacement is the most expensive e-bike repair; unavailability makes an otherwise functional bike uneconomic to maintain."
+  - "**Check the motor standard.** Mid-drive motors from established brands have service networks and long parts availability; hub motors vary widely. Confirm parts availability before buying."
+  - "**Look for a minimum five-year spare parts commitment.** E-bikes are expensive; a five-year parts commitment is the minimum credible signal that the manufacturer expects the product to last."
+  - "**Confirm the display and controller are standard replaceable units.** A failed display should not write off a functional drivetrain."
+
+electric-fans:
+  - "**Check the motor and capacitor are accessible for service.** Fan motors and start capacitors are the most common failures; accessibility means a technician can replace them rather than disposing of the whole unit."
+  - "**Confirm blade assemblies and guard fixings are stocked as spare parts.** Broken blades and bent guards are common; stocking them signals the maker expects a long service life."
+  - "**Look for a metal base and housing over all-plastic.** Metal-bodied fans outlast plastic models in long-term use and are significantly more robust in storage."
+  - "**Check the warranty length.** Two years is standard; three-plus years on the motor is a reasonable signal of build quality in this category."
+
+electric-ride-on-toys:
+  - "**Confirm the battery is sold as a named spare part.** Battery degradation is the most common reason functioning ride-on toys are discarded; a replacement battery extending life by two years is the right outcome."
+  - "**Check the charger uses a standard connector.** Most UK ride-on toys use a 6V or 12V sealed lead acid; a proprietary charge connector creates unnecessary disposal risk when the original charger is lost."
+  - "**Look for a steel or reinforced-plastic chassis over all-thin-plastic.** Ride-on toys take significant mechanical stress from young users; structural integrity beyond the first year depends on the chassis material."
+  - "**Look for a maker that offers tyre and wheel replacements.** Punctures and tyre wear are a common failure point; a spare tyre at a known price extends the toy's useful life."
+
+electric-scooters:
+  - "**Confirm the battery is available as a named spare part.** Battery degradation is the leading cause of scooter retirement; a replaceable battery is the single most important durability feature."
+  - "**Check the tyre type and parts availability.** Solid tyres need no replacement; pneumatic tyres need tube and tyre replacement. Confirm replacement tubes and tyres are stocked before buying."
+  - "**Look for IP54 water resistance as a minimum.** Lower-rated scooters corrode the battery management system and motor controller in wet conditions; IP54 extends life meaningfully."
+  - "**Confirm the rear brake disc and pads are stocked as standard spares.** Brake wear is normal and predictable; a scooter without available brake parts is both a safety and a durability risk."
+
+electric-shavers-groomers:
+  - "**Confirm replacement foil and cutter assemblies are available at a known price.** These are consumables that should be replaced every 12–18 months; unavailability is a planned obsolescence point."
+  - "**Check the battery is accessible.** Lithium cells in shavers degrade within two to three years; a user-accessible battery or a confirmed battery replacement service extends life significantly."
+  - "**Look for a maker that offers a cleaning and servicing programme.** Shavers with professional cleaning and lubrication programmes last significantly longer than those maintained at home only."
+  - "**Confirm the shaver head is sold as a replaceable part.** It is the high-wear element; replacement at a known cost extends the handle's life indefinitely."
+
+electronic-learning-toys:
+  - "**Look for a device with a stated software support period.** An electronic learning toy that requires firmware updates or server connectivity will stop working when support ends; a hardware-only device works indefinitely."
+  - "**Confirm the batteries are standard AA, AAA, or a user-replaceable rechargeable.** Soldered-in batteries are the most common reason an otherwise functional children's device is discarded."
+  - "**Check the toy meets EN 71 for chemical safety.** Young children mouth and handle these toys; EN 71 compliance covers the primary chemical exposure risk for plastics, paint, and electronic components."
+  - "**Look for a maker with a stated repair or replacement part service.** A replacement stylus, cover, or screen at a known price is the difference between repair and disposal."
+
+food-processors-blenders:
+  - "**Check the bowl and blade assembly are stocked as spare parts.** The blade bearing and the bowl are the most common failure points; if they are not listed on the manufacturer's site, assume replacement when they fail."
+  - "**Confirm the motor base carries a multi-year warranty.** Two years is the floor; three-plus years, or a commercial-line option, signals a more robust motor design."
+  - "**Look for BPA-free polycarbonate or Tritan bowls over standard plastic.** Higher-grade plastic resists staining, cracking, and odour absorption — extending bowl life."
+  - "**Avoid single-function blenders with built-in proprietary batteries.** A blade unit soldered to a motor soldered to a proprietary charge port is not repairable; it is disposable."
+
+fridge-freezers:
+  - "**Check the door gaskets are stocked as spare parts.** Fridge door seals are the most common household appliance failure and cost under £20 to replace — if they are available."
+  - "**Confirm the compressor carries a five-year warranty.** Most modern compressors are rated for 10+ years; a five-year warranty is a reasonable minimum signal of build confidence."
+  - "**Look for an energy rating of A or better.** A fridge runs 24/7 for 15–20 years; the difference between an A-rated and a D-rated unit adds up significantly over its lifetime."
+  - "**Ask about the refrigerant type.** R600a (isobutane) and R290 (propane) are lower-GWP refrigerants; R134a has a global warming potential 1,400× that of CO₂."
+
+garden-furniture:
+  - "**Look for FSC-certified hardwood, powder-coated steel, or recycled HDPE.** Tropical hardwood without chain-of-custody certification drives deforestation; FSC is the minimum credible standard."
+  - "**Check the joint hardware is replaceable.** Furniture that fails because a bolt corrodes — not because the main material has degraded — should be a £2 fix, not a write-off."
+  - "**Confirm the surface treatment can be maintained.** Teak oil, Danish oil, or equivalent products for wood extend life by decades; untreated cheap hardwood greys and splits within three seasons."
+  - "**Look for welded steel frames over bolted aluminium for longevity under load.** Welded frames do not loosen; bolted joints vibrate loose with seasonal thermal movement."
+
+glass-food-storage:
+  - "**Look for borosilicate glass over standard soda-lime glass.** Borosilicate handles thermal shock (freezer to oven) without fracture; soda-lime glass does not. The difference is what you pay for in Pyrex or equivalent."
+  - "**Confirm the lids are sold as separate spare parts.** Lids are the first component to crack, stain, or lose their seal; a replacement lid at a known part number extends the container's life."
+  - "**Check the lid seal (gasket) material.** Silicone gaskets outlast rubber ones; replaceable silicone gaskets are the minimum standard for a container designed to last."
+  - "**Look for oven-safe certification if you plan to cook in them.** Not all glass food storage is oven-safe; a certified oven-safe rating confirms the glass and lid have been tested for thermal resistance."
+
+gym-equipment:
+  - "**Confirm upholstery is sold as a replacement part for benches and weight machines.** Vinyl upholstery degrades with sweat and use; a replacement cushion at a known price extends the equipment's life."
+  - "**Check the cable system uses standard-dimension cable.** Standard cable can be replaced by any gym servicing technician; proprietary cable formats cannot."
+  - "**Look for a frame that is powder-coated, not painted.** Powder coating resists rust and impact damage better than paint; rust is the primary long-term failure mode for equipment in humid conditions."
+  - "**Confirm weight stack selectors and guide rods are stocked as spare parts.** These are high-wear components; availability means a single failure does not retire the whole machine."
+
+hair-straighteners:
+  - "**Check the heating plates are sold as a replacement assembly.** The plate coating (ceramic, tourmaline, titanium) degrades before the motor or wiring fails; a replaceable plate set extends the tool's life."
+  - "**Confirm the warranty length.** Two years is standard; three-plus years on the heating element signals confidence in the build."
+  - "**Look for stainless steel or titanium plates over pure ceramic.** Pure ceramic is brittle; titanium and stainless are more impact-resistant and maintain heat more evenly over time."
+  - "**Check the cable is detachable or has a clear repair pathway.** Cable flex failures are common; a non-replaceable moulded cable is a planned obsolescence point for an otherwise functional appliance."
+
+hedge-trimmers:
+  - "**Check the blade assembly is sold as a spare part.** Blades dull and chip; a blade set should cost around £20, not require returning the whole tool."
+  - "**Confirm the battery is replaceable for cordless models.** Battery degradation is the most common reason a functioning cordless tool is retired; a replaceable battery extends life by years."
+  - "**Look for models with standard-platform batteries.** Batteries that work across a manufacturer's range mean you are not locked to one tool per battery standard."
+  - "**Check the gear housing is accessible without specialised tools.** Gear wear is a common failure; a tool that cannot be opened for service will be discarded rather than repaired."
+
+high-chairs:
+  - "**Look for a chair that adjusts to grow with the child.** High chairs used from six months to four years need to recline, adjust in height, and convert to a toddler chair; adjustable models extend the useful life significantly."
+  - "**Confirm the harness and straps are sold as spare parts.** They are a safety-critical consumable that degrades with washing and use; a replacement harness at a known price is a basic consumer expectation."
+  - "**Check the tray is dishwasher-safe and sold as a spare.** Trays crack, stain, and degrade; a replacement tray should cost £10–20, not require a whole new chair."
+  - "**Look for a predominantly metal frame over all-plastic.** Metal frames outlast the child's use of the chair by years; all-plastic frames may not."
+
+leaf-blowers:
+  - "**Confirm the battery is replaceable for cordless models.** Battery degradation ends more leaf blowers than motor failure; a user-replaceable battery is the most important durability feature."
+  - "**Check that standard-platform batteries are used.** Multi-tool battery systems mean a leaf blower battery is also compatible with your drill and circular saw — reducing waste across the set."
+  - "**Look for a metal impeller over plastic.** Plastic impellers crack with debris impact; metal impellers last the life of the motor."
+  - "**Check the filter is stocked as a named spare.** Clogged filters reduce performance; a replaceable filter at a known part number is the difference between maintenance and replacement."
+
+lighting-led-fittings:
+  - "**Look for LED fittings with replaceable LED modules, not integrated LED arrays.** An integrated fitting is e-waste when the LED degrades; a replaceable module extends the fitting's life by 15+ years."
+  - "**Confirm the driver (power supply) is external and accessible.** The LED driver typically fails before the LED module itself; an external driver is replaceable without replacing the whole fitting."
+  - "**Look for a fitting with an IP rating appropriate to the environment.** IP65 for bathrooms and outdoor use; lower ratings fail in humid conditions faster than specified."
+  - "**Check the fitting accepts standard LED modules (GU10, E27, or equivalent).** Proprietary modules create parts dependency; standard sockets can be sourced from any electrical supplier."
+
+linen-hemp-accessories:
+  - "**Look for European Flax or Masters of Linen certification for linen, or GOTS for hemp.** These verify the fibre origin, processing chemistry, and working conditions in the supply chain."
+  - "**Check for OEKO-TEX Standard 100 certification on the finished product.** It confirms the item has been tested for harmful chemical residues — important for anything close to the skin."
+  - "**Confirm the construction is stone-washed or enzyme-washed linen.** Stone-washed linen softens immediately and does not need the first 20 washes to become comfortable; untreated linen is returned at higher rates."
+  - "**Look for natural dyes or undyed options.** Natural linen's inherent colour is the most durable and lowest-impact option; synthetic dyes add processing residues."
+
+luggage-suitcases:
+  - "**Confirm the wheels are sold as spare parts.** Wheels are the first failure point and the most common reason functioning luggage is discarded; a wheel set should cost under £20."
+  - "**Check the handle mechanism (telescopic rod) is serviceable.** The handle is the second most common failure; for premium luggage, a confirmed repair pathway is a basic expectation."
+  - "**Look for polycarbonate or aluminium shell over ABS plastic.** Polycarbonate is more impact-resistant and flexible; ABS is lighter but brittle under repeated stress. Aluminium is the most durable."
+  - "**Check the zip is YKK or equivalent rated for a minimum cycle count.** The zip is a cheap component and a common early failure; a rated YKK zip outlasts a cheap alternative by years."
+
+mattresses:
+  - "**Look for a clearly stated comfort guarantee and return policy.** Mattresses degrade in the first 90 days of use; a guarantee that allows return if the mattress is unsuitable reduces the risk of premature replacement."
+  - "**Confirm the materials are fully disclosed.** Memory foam, pocket springs, latex, and hybrid constructions have different durability profiles; a maker that discloses the full construction is more credible than one that does not."
+  - "**Check the cover is removable and washable.** A washable, removable cover protects the mattress and extends its life without requiring a separate mattress protector."
+  - "**Look for a maker with a take-back or recycling programme.** Mattress recycling infrastructure exists; it requires the maker to participate. Those that do make a real difference."
+
+microwaves:
+  - "**Check the magnetron warranty.** The magnetron is the core component and typically the first expensive failure; a five-year magnetron warranty exists in this category and is a meaningful signal."
+  - "**Confirm the control board is not proprietary-locked.** A standard relay or capacitor failure should cost £10 to repair; locked firmware makes this impossible."
+  - "**Look for a removable turntable with a standard coupling, not a proprietary motor assembly.** The turntable motor and coupling are common failures; standard parts are available cheaply, proprietary ones are not."
+  - "**Check the body is steel or aluminium, not plastic-wrapped.** Steel microwave bodies resist discolouration, staining, and degradation for 15+ years of use."
+
+natural-latex-sleep:
+  - "**Look for OEKO-TEX or GOLS (Global Organic Latex Standard) certification.** GOLS verifies the rubber sap is genuinely organic and the processing is clean; OEKO-TEX covers chemical residues in the finished product."
+  - "**Confirm the latex is genuinely natural, not blended with synthetic SBR.** Pure natural latex has a longer service life than SBR blends; the certification is what confirms which it is."
+  - "**Check the cover is removable, washable, and made from organic or certified cotton.** A non-removable cover prevents cleaning and replacement; a removable one extends the whole product's life."
+  - "**Look for a maker that discloses the country of origin for the latex.** Natural latex comes from rubber trees; a supply chain disclosure is a minimum transparency signal."
+
+pressure-washers:
+  - "**Confirm the pump seals and O-rings are available as a spare parts kit.** Pump seals are the most common failure; a £10 seal kit should not end a pressure washer's useful life."
+  - "**Check the lance and trigger gun are stocked as spare parts.** These wear and crack with use; replacement should not require buying a new machine."
+  - "**Look for a brass-headed pump over plastic.** Brass pump heads handle backpressure better and last longer; plastic heads crack over time."
+  - "**Confirm the hose fittings are a standard size.** Proprietary fittings mean replacement hoses must come from the manufacturer at a premium."
+
+pushchairs:
+  - "**Confirm replacement tyres (inner tubes or solid) are stocked.** Punctures are common; an unavailable tyre ends an otherwise functional pushchair."
+  - "**Check the harness and buckle assembly are sold as spare parts.** They are safety-critical consumables that degrade with washing; a replacement harness at a known price is a basic consumer expectation."
+  - "**Look for a model with a steel or aluminium frame with a stated weight capacity significantly above the child's expected weight.** Frame flex with a heavy toddler accelerates joint wear; adequate overhead capacity extends life."
+  - "**Confirm the seat fabric is removable and machine-washable.** Non-removable fabrics degrade faster and cannot be replaced without returning to the manufacturer."
+
+rc-vehicles-drones:
+  - "**Confirm spare batteries are available as named products.** Lithium cell degradation is the most common reason functioning RC vehicles are discarded; a replaceable battery extends life by years."
+  - "**Check that replacement props (for drones) and gear sets (for vehicles) are stocked.** These are the high-wear consumables; a drone without spare props is a single crash away from disposal."
+  - "**Look for an open-protocol receiver standard (ELRS, FrSky D8/D16) for the radio system.** Proprietary radio links mean the vehicle is useless if the transmitter fails or is discontinued."
+  - "**Confirm the ESC and flight controller are socketed, not soldered in place.** Socketed components can be replaced; soldered ones require a complete circuit board replacement when individual components fail."
+
+recycled-hdpe-furniture:
+  - "**Check the recycled content percentage and certification.** Genuine recycled HDPE carries a certified post-consumer content percentage; 'made with recycled content' without a percentage is marketing language."
+  - "**Confirm the fasteners are stainless or coated steel.** The HDPE will outlast the fasteners if you use standard zinc-plated screws in outdoor conditions."
+  - "**Look for a manufacturer that takes back the furniture at end of life.** HDPE can be recycled repeatedly; a take-back scheme closes the loop that the 'recycled' claim implies."
+  - "**Check the warranty length and UV resistance specification.** Outdoor HDPE should carry a 10-year structural warranty minimum and a UV resistance rating."
+
+reusable-coffee-cups:
+  - "**Look for a single-material lid and body, not a multi-layer composite.** Multi-layer lids (silicone + polypropylene + stainless) are difficult to recycle and degrade at different rates."
+  - "**Confirm the lid seal and O-ring are sold as separate spares.** They are silicone consumables that degrade with dishwasher heat; a £2 seal extending the cup's life by two years is the right outcome."
+  - "**Check the cup is dishwasher safe to at least 60°C.** Hand-washing is inconsistent; a cup that is genuinely dishwasher-safe is maintained more often and stays hygienic longer."
+  - "**Look for a maker with a take-back or recycling programme.** Most reusable cups last 3–5 years; take-back ensures the materials are recovered rather than landfilled."
+
+scented-candles:
+  - "**Look for soy wax or beeswax over paraffin.** Paraffin is a petroleum derivative that releases carcinogenic compounds on burning; soy and beeswax are bio-based and cleaner-burning."
+  - "**Confirm the wick is cotton or wood — not metal-core.** Metal-core wicks can release heavy metals on burning; cotton and wood wicks are clean-burning."
+  - "**Check the fragrance is certified phthalate-free or derived from natural essential oils.** Synthetic fragrances often contain phthalate compounds; look for an explicit phthalate-free or essential-oil-only claim."
+  - "**Look for a container that is reusable or recyclable after the wax is spent.** Glass and ceramic containers can be cleaned and repurposed; complex multi-material containers go straight to landfill."
+
+sewing-machines:
+  - "**Look for a mechanical model over a fully computerised one if longevity is the priority.** Mechanical sewing machines are repairable by any competent technician; computerised models with proprietary firmware can become unrepairable when the control board fails."
+  - "**Confirm the hook timing and needle bar are standard.** Standard timing is adjustable by any sewing machine technician; proprietary mechanisms lock you into manufacturer service."
+  - "**Check the machine uses standard 15×1 needles.** All home sewing machines should use these; if a manufacturer claims exclusive needle compatibility, verify it independently."
+  - "**Look for a metal interior mechanism over all-plastic.** Metal timing belt, bobbin case, and hook assembly outlast plastic equivalents by a significant margin under regular use."
+
+slow-cookers-multi-cookers:
+  - "**Check the inner pot is replaceable.** It is the part most likely to chip, crack, or lose its coating — and the one least often stocked. Confirm the manufacturer sells it separately before buying."
+  - "**Look for a stainless or ceramic inner pot over coated aluminium.** Uncoated materials last longer and are easier to recycle at end of life."
+  - "**Confirm the warranty length.** Three years is achievable in this category; two years is the legal minimum."
+  - "**For multi-cookers: check the sealing ring is stocked as a spare.** Pressure cooker seals degrade and are the most common failure point; a £3 seal should not retire a £100 appliance."
+
+sofas:
+  - "**Look for hardwood or steel frame construction with a frame warranty of 10+ years.** MDF and chipboard frames deform with use; solid hardwood and steel do not."
+  - "**Confirm the cushion covers are removable and washable.** Non-removable covers cannot be replaced; removable covers extend life significantly."
+  - "**Check the cushion infill is stocked as a separate component.** Foam degrades before frames; replacement foam extending a sound-framed sofa's life by a decade is the right outcome."
+  - "**Look for a maker that discloses the foam's certification.** CertiPUR-US or similar certified foam confirms the VOC content and durability have been independently tested."
+
+stainless-steel-water-bottles:
+  - "**Look for single-wall stainless or double-wall vacuum-insulated construction — no plastic inner liner.** Plastic inner liners can leach and do not last as long; all-stainless is more durable and cleanable."
+  - "**Confirm the lid is sold as a spare part.** Lids are the first failure point; a £5 replacement lid should extend a £30 bottle's life indefinitely."
+  - "**Check the recycled stainless content, if disclosed.** Some makers specify 18/8 food-grade stainless with high post-consumer recycled content; this is better than virgin stainless."
+  - "**Look for a wide-mouth design.** Narrow-mouth bottles are harder to clean and harder to fill; poor cleanability accelerates replacement."
+
+stand-mixers:
+  - "**Check that the mixing attachments (whisk, dough hook, beater) are sold separately.** A broken attachment should not mean replacing the whole machine."
+  - "**Confirm the gear mechanism is documented and serviceable.** Stand mixer gears wear over years of heavy use; machines with published service documentation or third-party parts available are far more durable."
+  - "**Look for a metal-bodied, die-cast construction.** Plastic-bodied stand mixers flex under load and fail sooner; metal bodies survive decades of use."
+  - "**Check the warranty length.** Three to five years is achievable in this category; a two-year warranty on a machine with a 30-year design life suggests the manufacturer does not expect it to last."
+
+steam-irons:
+  - "**Check the soleplate is stocked as a spare part.** It is the most replaced component; stainless steel soleplates last longer than coated aluminium ones."
+  - "**Confirm a descaling programme is supported.** Limescale is the most common reason for premature disposal; irons that support descaling through a cycle or sacrificial valve outlast those that do not."
+  - "**Look for a separate steam generator station over a tank-iron for heavy use.** Steam generator bases last longer because the heating element is easier to access and replace."
+  - "**Check the cord is replaceable without specialist tools.** Cord failure is a common fault; a non-replaceable moulded cord is an unnecessary planned-obsolescence point."
+
+steel-bicycles:
+  - "**Look for a maker that guarantees frame longevity or has independent long-term use evidence.** Steel frames are repairable and can last 30+ years; buy from a maker with a track record."
+  - "**Check that standard components are used throughout.** Standard threaded BBs, standard headsets, and standard derailleur hangers mean components are available from any bike shop."
+  - "**Confirm the paint finish is powder-coated or properly primed.** Surface rust on steel is cosmetic; rust through the frame wall is structural. A good paint job extends cosmetic life significantly."
+  - "**Look for brazed or lugged steel construction if longevity is the priority.** Brazed joints can be repaired and rebraced; TIG-welded joints cannot be field-repaired as easily."
+
+toasters:
+  - "**Check for screw-fastened construction.** Most toasters are riveted shut with no repair access; a screw-fastened base means a technician or a competent user can replace the element."
+  - "**Confirm a warranty of three or more years.** The category norm is two years (the legal floor); a longer warranty signals the maker expects it to outlast a single cycle of daily use."
+  - "**Look for stainless steel over chrome-on-plastic.** Stainless steel survives a decade of daily use; chrome plating peels and cannot be refinished."
+  - "**Ask about spare parts.** Heating elements, crumb trays, and lever mechanisms fail first; models where these are stocked are a different product to those that are not."
+
+tumble-dryers:
+  - "**Confirm the heating element is stocked as a spare part.** It is the most common fault; a £15 element should not end a dryer's life."
+  - "**Check the felt drum seal is available.** It wears over time and causes noise and inefficiency; standard seals are cheap, proprietary ones are often unavailable after five years."
+  - "**Look for a heat pump model over a condenser or vented type.** Heat pump dryers use roughly half the energy per cycle and last longer; they cost more upfront and pay back over years of use."
+  - "**Avoid fully integrated smart features unless they are serviceable.** WiFi modules and app-dependent controls create redundancy risks as software support expires."
+
+tvs:
+  - "**Look for a model with documented software support commitments.** A TV that loses app support within three years becomes functionally obsolete while the hardware still works; look for five-year software support commitments or longer."
+  - "**Confirm a physical repair pathway exists.** Panel and backlight replacements are the most common TV repairs; a maker that stocks these components or has iFixit documentation extends the viable service life."
+  - "**Check the energy efficiency rating.** Modern TVs vary significantly in power draw; an A-rated large-screen TV uses meaningfully less energy over 10+ years than a D-rated equivalent."
+  - "**Look for a modular stand and wall-mount bracket system.** A TV that can be remounted or re-stood without proprietary hardware is more flexible over a long service life."
+
+vacuum-cleaners:
+  - "**Check the motor is accessible and a spare is stocked.** The motor is the most expensive failure; machines where it is not available become uneconomic to repair."
+  - "**Confirm filters are stocked as named spare parts.** Filters are consumables that degrade; a vacuum that outlives its filter supply is effectively disposable."
+  - "**Look for a full bag model over bagless if longevity is the priority.** Bagged models have fewer parts subject to seal degradation; repair history in the category favours bagged for long-term use."
+  - "**Check the warranty length.** Two years is standard; three-plus years for full-sized upright and cylinder models signals better build confidence."
+
+washing-machines:
+  - "**Check the drum bearing and motor brushes are stocked as spare parts.** These are the most common failures; machines where they are not stocked are unfixable once they fail."
+  - "**Confirm the door seal is available as a spare part.** It is a rubber consumable that degrades with heat and detergent; it should cost under £20 and take 30 minutes to replace."
+  - "**Look for an energy and water rating of A or better.** Washing machines use significant water and energy per cycle; a 15-year machine accumulates thousands of cycles."
+  - "**Check the control module is not sole-sourced from the manufacturer.** A control board failure is fixable if the board is available; it is a write-off if it is not."
+
+wooden-toys-games:
+  - "**Look for FSC-certified timber or PEFC certification.** These are the minimum credible chain-of-custody standards for wood; uncertified wood from unverifiable origins carries deforestation risk."
+  - "**Check the paints and finishes are EN 71 or ASTM-certified non-toxic.** Children mouth wooden toys; non-toxic certification covers the primary chemical exposure risk."
+  - "**Confirm replacement parts (game pieces, puzzle components) are available from the maker.** A board game with a missing piece should be completable for a small cost; it should not require buying a new game."
+  - "**Look for joinery and hardware (hinges, magnets) that are metal, not plastic.** Metal components outlast plastic by a significant margin and are more likely to be accepted in recycling streams."

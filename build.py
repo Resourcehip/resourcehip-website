@@ -212,6 +212,21 @@ def _resolve_hero_image(slug: str, data: dict, hero_cfg: dict) -> str | None:
     return None
 
 
+# ── Phase 2 checklists (RES-1179) ────────────────────────────────────────────
+
+CHECKLISTS_FILE = SITE_ROOT / "checklists.yaml"
+
+
+def _load_phase2_checklists() -> dict[str, list[str]]:
+    """Load checklists.yaml — Phase 2 buyer checklists for categories without blog guides.
+    Returns {category_slug: [markdown item strings]}.
+    """
+    if not CHECKLISTS_FILE.exists():
+        return {}
+    with open(CHECKLISTS_FILE, encoding="utf-8") as f:
+        return yaml.safe_load(f) or {}
+
+
 # ── Blog checklist extraction (RES-1179) ─────────────────────────────────────
 
 def _extract_blog_checklists() -> dict[str, dict]:
@@ -263,6 +278,7 @@ def build_ratings() -> list[dict]:
 
     hero_cfg = _load_hero_config()
     blog_checklists = _extract_blog_checklists()
+    phase2_checklists = _load_phase2_checklists()
     index_entries = []
 
     # Walk recursively so verified ratings under manufacturers/<brand>/ are found.
@@ -286,6 +302,12 @@ def build_ratings() -> list[dict]:
             data["header_image"] = hero_path
 
         checklist = blog_checklists.get(slug)
+        if checklist is None:
+            items = phase2_checklists.get(slug)
+            if items:
+                items_md = "\n".join(f"{i + 1}. {item}" for i, item in enumerate(items))
+                items_html = md_lib.markdown(items_md, extensions=MD_EXTENSIONS)
+                checklist = {"html": items_html, "blog_slug": None}
 
         html = template.render(
             **data,
