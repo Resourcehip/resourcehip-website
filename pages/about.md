@@ -14,7 +14,7 @@ The HIP Score (Human Impact Profile Score) is a number from 0 to 10 that summari
 
 It is **not** a carbon footprint. It does not measure energy consumption in use or transport emissions. Instead it focuses on whether the materials a product depends on are abundant or at risk, whether they are sourced responsibly, whether the product can be repaired, and whether its materials can be recovered at end of life.
 
-Most sustainability ratings either measure only carbon, or claim to measure everything without being clear about what they actually look at. The HIP Score is narrow by design — it measures what it says it measures, and nothing more.
+The HIP Score is designed to sit alongside existing sustainability frameworks, not replace them. Where other certification schemes cover ethical sourcing, forestry standards, and business practices, HIP focuses on a specific gap: long-term material resilience across seven independently assessed dimensions.
 
 ## The seven dimensions
 
