@@ -120,6 +120,27 @@ Where data is missing, the pipeline uses the most conservative reasonable assump
 
 ---
 
+## Independence and conflict of interest { #independence }
+
+Resourcehip charges manufacturers a fee to produce verified ratings. This creates an obvious question: does paying for an assessment buy a better score?
+
+The answer is structural, not aspirational.
+
+**The fee buys an assessment, not an outcome.** The assessment fee covers the cost of reviewing a manufacturer's evidence dossier against the HIP methodology. It does not purchase a minimum score, HIP Mark eligibility, or favourable treatment. The scoring pipeline applies the same rubrics, weights, and conservative defaults regardless of whether a product was submitted by a manufacturer or rated generically from public data.
+
+**Sub-threshold results are published.** If a verified assessment produces a HIP Score below 6.0 — the minimum for a HIP Mark — or below the category baseline, that result is published on resourcehip.com. Manufacturers cannot withdraw from publication after submitting data for assessment. Suppressing unfavourable results would destroy the mark's value for every manufacturer who earns it honestly.
+
+**Structural scoring limits apply regardless of payment.** The methodology enforces caps that no commercial relationship can override:
+
+- **Social and Environmental Impact (SEI):** Self-reported claims cannot score above 5 out of 10. Scores above 5 require submitted evidence of third-party audit or certification — ISO 14001, SA8000, B Corp, or equivalent.
+- **Regenerative Index (RI):** Self-reported claims cap at +4. Scores above +5 require third-party verified evidence — ROC, FSC, PEFC, or equivalent.
+
+These limits are enforced in the scoring pipeline. An assessor cannot override them.
+
+**Public reporting commitment.** Resourcehip will publish, annually, the percentage of verified assessments that do not qualify for a HIP Mark. This figure is a basic test of methodology credibility: if every verified product qualifies, the bar is too low. We expect a meaningful proportion of products to fall below 6.0, and we will report that figure transparently.
+
+---
+
 ## Methodology version history
 
 | Version | Date | Key changes |

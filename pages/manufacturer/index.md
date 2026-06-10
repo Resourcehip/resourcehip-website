@@ -1,42 +1,52 @@
 ---
 title: "For Manufacturers"
-page_description: "Your product is better than the conservative baseline. A Verified HIP Rating proves it — to consumers, procurement teams, and your board. Independent, evidence-based, published."
+page_description: "You make products from better materials. A Verified HIP Rating proves it — independently scored, published, and backed by local AI that never sends your data to the cloud."
 active_page: manufacturer
 ---
 
-# The sustainability question that won't go away
+# You built a better product. Now prove it.
 
-Your board wants ESG evidence. Procurement teams are asking for independent ratings. Consumers want to know if your product is responsibly made. Regulators keep tightening the rules.
+You chose cork over plastic, bamboo over MDF, recycled HDPE over virgin polymer. You know your product outperforms the mass-market alternative on material resilience. But "we use sustainable materials" on your website is not proof — it is a claim, and consumers have heard it before.
 
-You need one answer that satisfies all of them.
-
----
-
-## The problem
-
-Sustainability compliance is getting harder, not easier.
-
-- **Regulations are multiplying.** Ecodesign requirements, extended producer responsibility, corporate sustainability reporting — each demands different evidence, different metrics, different formats. The burden falls on the environmental manager.
-- **Self-declared claims are a liability.** The regulatory direction is clear: unsubstantiated "eco-friendly" labelling is becoming a legal risk. Every claim you cannot back with independent evidence is exposure.
-- **Consumers are sceptical.** "Sustainable materials" and "responsibly sourced" mean nothing without verification. Buyers choosing between two products on a shelf will pick the one with an independent mark.
-- **Retailers are gatekeeping.** Major procurement teams want evidence, not promises. "Do you have an independent sustainability rating?" is becoming a standard intake question.
-
-You already know your product is better than the industry average. You just cannot prove it in a way that works for everyone at once.
+A Verified HIP Rating turns your material choices into a published, independent score. One assessment. One number. One mark that customers recognise.
 
 ---
 
-## One rating. Multiple uses.
+## Your data stays on our hardware
 
-Resourcehip provides a single, independent assessment of your product's material resilience — scored across seven dimensions by an independent assessor, not a self-declaration.
+Resourcehip scores products using AI that runs on local servers in Scotland. Your materials data, supply chain details, and formulations never leave our infrastructure. No cloud AI providers process your submission. No third-party models train on your product information.
 
-A Verified HIP Rating replaces conservative assumptions with your actual product data. The result: a published, citable score that works for ESG reporting, retailer onboarding, and consumer trust.
+For a small brand, that matters. Your formulations and supplier relationships are your competitive edge — we treat them that way.
+
+---
+
+## The problem for small brands
+
+You are already doing the right thing. Proving it is the hard part.
+
+- **Self-declared claims are not enough.** "Eco-friendly" and "sustainably sourced" are marketing language, not evidence. Consumers, retailers, and regulators are learning to ignore them. The UK Green Claims Code is tightening the rules on what you can say without independent backing.
+- **Certification is built for big companies.** Most environmental labels cost thousands, take months, and assume you have a sustainability department. You do not. You have a workshop and a spreadsheet.
+- **Mass-market competitors outspend you.** A large brand can buy shelf presence and marketing reach. You need a trust signal that works harder — something a customer can check before they buy.
+- **Your materials story is invisible.** Cork, bamboo, recycled HDPE, natural fills — these are genuinely better inputs. But without a scored, independent assessment, that story stays on your product page where only existing customers see it.
+
+You need independent proof that is affordable, fast, and designed for a business your size.
+
+---
+
+## One rating that does the work for you
+
+Resourcehip provides a single, independent assessment of your product's material resilience — scored across seven dimensions, not a self-declaration.
+
+Our free category ratings use conservative defaults: worst-reasonable-case assumptions wherever evidence is missing. A Verified HIP Rating replaces those defaults with your actual product data. If your materials are genuinely better, the gap between the baseline and your verified score is real — not inflated.
+
+That gap is your commercial story.
 
 ### What makes the methodology different
 
-- **Transparent.** The full scoring methodology is published under Creative Commons (CC BY-NC 4.0). Every dimension, every rubric, every data source is public. Anyone can see exactly how a score was reached.
-- **Conservative by design.** Generic ratings use worst-reasonable-case defaults wherever evidence is missing. When a verified product beats its category baseline, the gap is real — not inflated.
+- **Transparent.** The full scoring methodology is published under Creative Commons (CC BY-NC 4.0). Every dimension, every rubric, every weighting is public. Anyone — your customers, your competitors, a journalist — can see exactly how a score was reached.
+- **Conservative by design.** Conservative defaults create headroom. When your verified score beats the category baseline, the improvement is earned, not manufactured.
 - **Seven dimensions, one score.** Material Scarcity, Supply Chain Risk, Recyclability, Repairability, Social and Environmental Impact, Product Longevity, and the Regenerative Index. No cherry-picking a single favourable metric.
-- **ISO 14024-informed.** Built toward internationally recognised environmental labelling standards, with independent peer review and third-party audit on the roadmap.
+- **Local AI, no cloud.** Scoring runs on our own hardware. Your product data is never sent to external AI services.
 
 ### The Regenerative Index
 
@@ -44,14 +54,14 @@ Most sustainability metrics stop at "less bad." The Regenerative Index scores fr
 
 Five tiers: **Depleting** / **Extractive** / **Renewable** / **Restorative** / **Regenerative**.
 
-Most manufactured products land in the Extractive range. That is an honest baseline, not a criticism. Products using certified inputs (FSC, PEFC, ROC) can reach the Renewable, Restorative, or Regenerative tiers. Gold HIP Mark eligibility requires a Regenerative Index of +6 or above.
+Most manufactured products land in the Extractive range. That is an honest baseline, not a criticism. Products using certified inputs (FSC, PEFC, ROC) can reach the Renewable, Restorative, or Regenerative tiers — exactly the kind of materials small eco-brands already work with. Gold HIP Mark eligibility requires a Regenerative Index of +6 or above.
 
 ---
 
 ## What you get
 
 - **A published Verified Rating** on resourcehip.com — tied to your brand and product, with written rationale for every dimension score
-- **HIP Mark licence** — products scoring 6.0 or above qualify for the HIP Mark badge, a consumer-facing trust signal at three tiers:
+- **The HIP Mark** — products scoring 6.0 or above qualify for the HIP Mark badge, a consumer-facing trust signal you can use on packaging, your website, and at markets. Three tiers:
 
   | Tier | Threshold |
   |------|-----------|
@@ -59,24 +69,40 @@ Most manufactured products land in the Extractive range. That is an honest basel
   | **Silver** | HIP Score 7.5+ |
   | **Gold** | HIP Score 9.0+ and Regenerative Index 6.0+ |
 
-- **Headroom visibility** — the gap between the conservative generic baseline and your verified score shows where your product outperforms. That gap is your commercial story.
-- **ESG and procurement documentation** — a stable, citable reference for sustainability reporting, tender responses, and retailer onboarding
+- **Headroom visibility** — the gap between the conservative category baseline and your verified score shows exactly where your product outperforms. That is the number you put on your stand, your Etsy listing, your pitch deck.
+- **A citable, stable reference** — one URL that works for retailer onboarding, grant applications, press enquiries, and B Corp evidence
 
 ---
 
 ## How it works
 
-1. **See your category baseline.** Browse our free generic ratings to see where your product category stands. The conservative defaults create headroom that your verified data will fill.
+1. **See your category baseline.** Browse our free category ratings to see where your product type stands under conservative defaults. That baseline is deliberately low — your verified data will fill the gap.
 
-2. **Submit your product data.** Send us your materials composition, supply chain documentation, and end-of-life evidence. We send the submission template on receipt of your enquiry — you do not need everything assembled before making contact.
+2. **Send us what you have.** Materials composition, supplier details, end-of-life information — whatever you can share. We send the submission template when you get in touch. You do not need a complete dossier before making contact.
 
-3. **Get rated and published.** Our assessors review your evidence dossier against the HIP methodology. On confirmation, we publish your Verified Rating and issue the HIP Mark licence where eligible.
+3. **Get rated and published.** We review your evidence against the HIP methodology and publish your Verified Rating. If you score 6.0 or above, we issue the HIP Mark licence.
+
+Simple process, clear pricing, no ongoing consulting fees. See the [pricing schedule](/pricing) for details.
+
+---
+
+## Independence and accountability
+
+The assessment fee buys an assessment, not an outcome. It covers the cost of reviewing your evidence against the methodology. It does not influence the score.
+
+If your product scores below 6.0 — or below the category baseline — we publish that result. We do not suppress unfavourable ratings or allow withdrawal from publication after assessment. The integrity of the mark depends on this: a HIP Mark that only appeared on products that paid for good news would be worthless to the consumers and procurement teams you are trying to reach.
+
+The methodology has structural limits that no commercial relationship can override. Self-reported claims on the Social and Environmental Impact dimension cannot score above 5 out of 10 — third-party audit evidence is required to go higher. The same principle applies to the Regenerative Index, where self-reported claims cap at +4. These limits are enforced in the scoring pipeline, not at editorial discretion.
+
+We will publish, annually, the percentage of verified assessments that do not qualify for a HIP Mark. Transparency about failure rates is how we prove the mark means something.
+
+For the full technical detail, see [Independence and conflict of interest](/methodology/#independence) in the methodology.
 
 ---
 
 ## Ready to close the gap?
 
-Your product is almost certainly better than the conservative baseline. A Verified Rating proves it.
+Your product is almost certainly better than the conservative baseline. A Verified Rating proves it — scored locally, published independently, and designed for brands your size.
 
 <div style="display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; margin:2rem 0;">
   <a href="/ratings/" style="display:inline-block; font-size:0.85rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; color:var(--hip-blue, #0E4C8F); background:transparent; border:2px solid var(--hip-blue, #0E4C8F); padding:0.75rem 1.8rem; border-radius:8px; transition:opacity 0.2s;">Browse Ratings</a>
