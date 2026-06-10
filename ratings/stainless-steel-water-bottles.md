@@ -1,10 +1,9 @@
 ---
 title: Stainless Steel Water Bottles
-category: Home & Living
+category: home lifestyle
 rating_type: generic
 brand: null
 slug: stainless-steel-water-bottles
-header_image: /assets/hero/stainless-steel-water-bottles/stainless-steel-water-bottles-header-v1.webp
 hip_score: 4.0
 hip_label: Caution
 msi_score: 5.0
@@ -51,6 +50,13 @@ ri_finding: The product scores in the Extractive band (-5 to -1) due to the pres
   the 0% threshold, nor does it qualify for the Renewable band (0) as the material origin is not bio-based renewable and no
   certifications are present. The absence of a take-back scheme and the reliance on mined stainless steel confirm the score
   remains within the negative range.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This stainless steel water bottle carries a HIP Score of 4.0 out of 10, which aligns with the current market
   baseline for this category. Its Regenerative Index is -4.0, indicating that while it includes some recycled materials, it
   currently operates within an extractive model rather than a regenerative one. Overall, the product offers a long design
@@ -64,12 +70,12 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Data Transparency
 
-This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and LLM training knowledge:
+This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and the category default assumptions table v0.1 (provisional — sources pending full citation):
 
 - `material_percentages`
 - `country_of_primary_extraction`
@@ -101,7 +107,6 @@ This is a **category rating** based on publicly available data. The following da
 - `end_of_life_programme`
 - `material_origin_certified`
 - `regenerative_practices`
-- `third_party_certification`
 
 A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data and produces a more accurate, product-specific score.
 

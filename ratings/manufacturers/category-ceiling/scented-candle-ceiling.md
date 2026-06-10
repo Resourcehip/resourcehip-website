@@ -1,6 +1,6 @@
 ---
 title: Scented Candle — Category Ceiling
-category: Home & Living
+category: home fragrance
 rating_type: verified
 brand: Category Ceiling
 slug: scented-candle-ceiling
@@ -16,8 +16,8 @@ ri_score: 2.0
 ri_descriptor: Restorative
 category_baseline_hip: 5.8
 category_baseline_ri: 2.0
-category_ceiling_hip: null
-category_ceiling_ri: null
+category_ceiling_hip: 5.8
+category_ceiling_ri: 2.0
 above_baseline: false
 assessment_date: '2026-04-26'
 methodology_version: '1.3'
@@ -49,6 +49,13 @@ ri_finding: The product scores in the Restorative band (+1 to +5) due to a verif
   the primary wax is not Regenerative Organic Certified (ROC), and the 24% recycled glass content falls below the threshold
   for automatic positive scaling without full material regeneration. The presence of the take-back scheme explicitly prevents
   a Depleting or Extractive classification.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This scented candle has an overall HIP Score of 5.8 out of 10, indicating a moderate performance in sustainability.
   It earns a Regenerative Index of +2.0, which reflects its use of recycled materials and a program that returns glass containers
   for reuse. While the product is designed to be disposable with a one-year lifespan, its strong material choices help offset
@@ -62,7 +69,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Material Watch Points

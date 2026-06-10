@@ -1,6 +1,6 @@
 ---
 title: Luggage & Suitcases — Category Ceiling
-category: Travel Accessories
+category: travel accessories
 rating_type: verified
 brand: Category Ceiling
 slug: luggage-ceiling
@@ -47,6 +47,13 @@ ri_finding: The product qualifies for the Extractive band minimum of -3 because 
   a verified take-back programme. It is not Depleting because recycled content is >= 50% with a verified take-back scheme.
   While the closed-loop programme is present, the absence of Regenerative Organic Certified (ROC) inputs prevents scoring
   in the Restorative or Regenerative bands.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This luggage set earns a HIP Score of 7.0 out of 10, matching the current market baseline for travel accessories.
   It achieves a Regenerative Index of -3.0, reflecting its strong use of recycled materials and a verified take-back program
   that supports a circular lifecycle.
@@ -58,7 +65,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Improvement Opportunities

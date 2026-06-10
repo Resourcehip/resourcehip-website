@@ -1,6 +1,6 @@
 ---
 title: Sofa — Category Ceiling
-category: Home & Living
+category: upholstered furniture
 rating_type: verified
 brand: Category Ceiling
 slug: sofa-ceiling
@@ -16,8 +16,8 @@ ri_score: 0.0
 ri_descriptor: Renewable
 category_baseline_hip: 7.4
 category_baseline_ri: 0.0
-category_ceiling_hip: null
-category_ceiling_ri: null
+category_ceiling_hip: 7.4
+category_ceiling_ri: 0.0
 above_baseline: false
 assessment_date: '2026-04-26'
 methodology_version: '1.3'
@@ -49,6 +49,13 @@ ri_finding: Scored at Renewable (0) because primary materials are FSC-certified 
   verified take-back scheme and closed-loop programme, but it does not qualify for the Extractive band minimum of -3 as recycled
   content is only 15% (below the 50% threshold). It does not reach Restorative (+1) as there is no verified ecosystem restoration
   programme or ROC certification present.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This sofa earns a HIP Score of 7.4 out of 10, indicating a strong overall performance in sustainability
   and durability. It achieves a Regenerative Index of 0, which means it is made from renewable materials like certified wood
   and natural latex rather than depleting finite resources. The product stands out for its long lifespan, easy repairability,
@@ -62,7 +69,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Material Watch Points

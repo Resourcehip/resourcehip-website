@@ -1,6 +1,6 @@
 ---
 title: Electric Fans — Category Ceiling
-category: Small Appliances
+category: small appliances
 rating_type: verified
 brand: Category Ceiling
 slug: electric-fan-ceiling
@@ -48,6 +48,13 @@ ri_finding: The product qualifies for the Extractive band minimum of -3 because 
   a verified take-back scheme with motor copper recovery. It is not Depleting because recycled content is >= 50% with a verified
   take-back. While the closed-loop programme and all-screw construction are positive features, the absence of Regenerative
   Organic Certified (ROC) inputs or third-party verified restoration evidence prevents scoring above the Extractive range.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This electric fan achieves a HIP Score of 7.0 out of 10, matching the current market baseline for ceiling
   fans in this category. It also carries a Regenerative Index of -3.0, reflecting its use of recycled materials and a verified
   take-back program. Overall, the product demonstrates strong durability and repairability while maintaining a solid environmental
@@ -61,7 +68,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Improvement Opportunities

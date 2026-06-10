@@ -1,10 +1,9 @@
 ---
 title: Wooden Toys and Games
-category: Toys & Games
+category: children's products
 rating_type: generic
 brand: null
 slug: wooden-toys-games
-header_image: /assets/hero/wooden-toys-games.webp
 hip_score: 4.8
 hip_label: Caution
 msi_score: 7.5
@@ -31,7 +30,7 @@ msi_finding: The product relies on abundant materials including FSC-certified wo
 scr_finding: Wooden toys rely on timber and metal hardware, which are typically sourced from moderate-risk jurisdictions with
   40-60% global supply concentration. The assessment assumes a single primary supplier with no documented alternative and
   no third-party verified due-diligence programme, placing the supply chain at the pre-verification baseline for this category.
-rc_finding: The product is a wooden toy manufactured in China with a take-back scheme, which supports material recovery.
+rc_finding: The product is a wooden toy manufactured in Germany with a take-back scheme, which supports material recovery.
   However, the absence of submitted disassembly data assumes a glued construction, limiting practical separation of materials.
   While wood is recyclable, the conservative estimate of 20% recoverable streams and lack of verified disassembly protocols
   places the score at the lower end of the partially recyclable range.
@@ -48,6 +47,13 @@ ri_finding: The product scores at the Renewable band (0) because it utilizes FSC
   which qualifies as renewable primary material. While an end-of-life programme is present, the absence of Regenerative Organic
   Certified (ROC) inputs or verified closed-loop restoration programmes prevents eligibility for the Restorative or Regenerative
   bands. Not Depleting because the primary material is renewable and certified, despite the lack of recycled content.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This wooden toy set achieves a HIP Score of 4.8 out of 10, matching the current market baseline for children's
   products. It earns a Regenerative Index of 0, indicating it is made from renewable materials like FSC-certified wood. While
   the product is designed for long-term use, its overall environmental impact is currently average compared to similar items
@@ -61,12 +67,12 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Data Transparency
 
-This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and LLM training knowledge:
+This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and the category default assumptions table v0.1 (provisional — sources pending full citation):
 
 - `material_percentages`
 - `recycled_content_pct`

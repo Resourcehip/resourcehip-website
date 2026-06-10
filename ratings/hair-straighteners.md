@@ -1,10 +1,9 @@
 ---
 title: Hair Straighteners
-category: Personal Care
+category: personal care
 rating_type: generic
 brand: null
 slug: hair-straighteners
-header_image: /assets/hero/hair-straighteners/hair-straighteners-header-v2.webp
 hip_score: 2.7
 hip_label: Poor
 msi_score: 3.5
@@ -17,7 +16,7 @@ ri_score: -7.0
 ri_descriptor: Depleting
 category_baseline_hip: 2.7
 category_baseline_ri: -7.0
-category_ceiling_hip: 7.3
+category_ceiling_hip: 7.2
 category_ceiling_ri: -2.0
 above_baseline: false
 assessment_date: '2026-04-18'
@@ -49,6 +48,13 @@ pl_finding: The product receives a below-average score due to a 2-year warranty 
 ri_finding: The product is scored as Depleting (-7) because it is a conventional hair straightener with zero recycled content,
   no take-back scheme, and no regenerative certifications. Not Depleting because recycled content >= 50% with verified take-back
   does not apply; the product relies on virgin mined materials with no pathway toward regeneration.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This hair straightener has a HIP Score of 2.7 out of 10, indicating it performs poorly in terms of sustainability
   and circularity. Its Regenerative Index is -7.0, which means the product is depleting resources rather than supporting a
   regenerative cycle. Overall, it is a conventional item with no recycled materials and no plan for repair or recycling at
@@ -62,12 +68,12 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Data Transparency
 
-This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and LLM training knowledge:
+This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and the category default assumptions table v0.1 (provisional — sources pending full citation):
 
 - `material_percentages`
 - `recycled_content_pct`
@@ -97,14 +103,11 @@ This is a **category rating** based on publicly available data. The following da
 - `modular_design`
 - `software_support_years`
 - `primary_material_origin`
-- `recycled_content_pct`
-- `takeback_scheme`
 - `regenerative_certifications`
 - `closed_loop_programme`
 - `end_of_life_programme`
 - `material_origin_certified`
 - `regenerative_practices`
-- `third_party_certification`
 
 A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data and produces a more accurate, product-specific score.
 

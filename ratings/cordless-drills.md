@@ -1,10 +1,9 @@
 ---
 title: Cordless Drills
-category: Power Tools
+category: power tools
 rating_type: generic
 brand: null
 slug: cordless-drills
-header_image: /assets/hero/cordless-drills/cordless-drills-header-v4.webp
 hip_score: 2.5
 hip_label: Poor
 msi_score: 1.5
@@ -49,6 +48,13 @@ ri_finding: The product is scored in the Depleting band (-7) because it is a con
   content, no take-back scheme, and no regenerative certifications. Not Depleting because recycled content >= 50% with verified
   take-back does not apply; instead, the absence of any circularity measures and reliance on virgin mined materials for a
   device manufactured in China confirms the floor score.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This cordless drill has an overall HIP Score of 2.5 out of 10, indicating significant environmental challenges
   in its production and end-of-life handling. Its Regenerative Index is -7.0, which means the product relies entirely on new
   raw materials rather than recycled content, contributing to resource depletion. While it offers a reasonable lifespan and
@@ -62,12 +68,12 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Data Transparency
 
-This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and LLM training knowledge:
+This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and the category default assumptions table v0.1 (provisional — sources pending full citation):
 
 - `material_percentages`
 - `recycled_content_pct`
@@ -96,14 +102,11 @@ This is a **category rating** based on publicly available data. The following da
 - `modular_design`
 - `software_support_years`
 - `primary_material_origin`
-- `recycled_content_pct`
-- `takeback_scheme`
 - `regenerative_certifications`
 - `closed_loop_programme`
 - `end_of_life_programme`
 - `material_origin_certified`
 - `regenerative_practices`
-- `third_party_certification`
 
 A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data and produces a more accurate, product-specific score.
 

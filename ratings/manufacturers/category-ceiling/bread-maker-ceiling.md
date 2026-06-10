@@ -1,6 +1,6 @@
 ---
 title: Bread Makers — Category Ceiling
-category: Small Appliances
+category: small appliances
 rating_type: verified
 brand: Category Ceiling
 slug: bread-maker-ceiling
@@ -48,6 +48,13 @@ ri_finding: The product scores in the Extractive band (-5 to -1) due to 35% recy
   scheme and closed-loop programme. It does not qualify for the Depleting floor (-7) because the presence of a take-back scheme
   and recycled content exceeding 20% elevates the minimum threshold. It does not reach the Renewable band (0) as primary materials
   are not bio-based renewable and lack FSC/PEFC certification.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This bread maker earns a HIP Score of 6.6 out of 10, matching the current market baseline for small appliances.
   It also achieves a Regenerative Index of -2.0, indicating it uses recycled materials and participates in a verified take-back
   program to support a circular economy. Overall, the product demonstrates strong durability and repairability while maintaining
@@ -61,7 +68,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Improvement Opportunities

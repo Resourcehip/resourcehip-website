@@ -1,6 +1,6 @@
 ---
 title: Electric Ride-On Toy — Category Ceiling
-category: Toys & Games
+category: toys and children's
 rating_type: verified
 brand: Category Ceiling
 slug: electric-ride-on-toy-ceiling
@@ -47,6 +47,13 @@ pl_finding: The product receives a score of 6 due to a 3-year warranty and a sta
 ri_finding: The product qualifies for the Extractive band (-5 to -1) due to 72% recycled content combined with a verified
   take-back scheme, explicitly avoiding the Depleting floor. While the closed-loop programme and FSC-certified rubber are
   positive factors, the reliance on mined lithium, cobalt, and copper prevents a score in the Renewable or Restorative bands.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This electric ride-on toy has an overall HIP Score of 6.2 out of 10, indicating a moderate level of sustainability
   performance. It achieves a Regenerative Index of -2.0, reflecting its use of recycled materials and a take-back program,
   though it still relies on newly extracted raw materials. While the product is designed for easy repair and recycling, its
@@ -59,7 +66,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Material Watch Points

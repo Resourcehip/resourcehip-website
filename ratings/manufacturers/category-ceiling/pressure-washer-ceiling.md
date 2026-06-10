@@ -1,6 +1,6 @@
 ---
 title: Pressure Washer — Category Ceiling
-category: Power Tools
+category: power tools
 rating_type: verified
 brand: Category Ceiling
 slug: pressure-washer-ceiling
@@ -48,6 +48,13 @@ ri_finding: Scored in the Extractive band (-3.0) because the product has 68% rec
   which qualifies it for the minimum of -3 and exempts it from the Depleting floor. It is not Depleting because recycled content
   is >= 50% with a verified take-back. It does not qualify for the Renewable or Restorative bands as it lacks FSC/PEFC certification
   or verified regenerative practices.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This pressure washer earns a HIP Score of 6.9 out of 10, reflecting a solid balance of durability and repairability.
   Its Regenerative Index of -3.0 indicates that while it uses a significant amount of recycled materials, it currently operates
   within an extractive model rather than a fully regenerative one.
@@ -59,7 +66,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Improvement Opportunities

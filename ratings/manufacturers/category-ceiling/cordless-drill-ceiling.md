@@ -1,6 +1,6 @@
 ---
 title: Cordless Drill — Category Ceiling
-category: Power Tools
+category: power tools
 rating_type: verified
 brand: Category Ceiling
 slug: cordless-drill-ceiling
@@ -47,6 +47,13 @@ ri_finding: The product scores in the Extractive band (-5 to -1) due to 62% recy
   take-back scheme. This explicitly qualifies it for the minimum of -3, preventing a Depleting score. However, the absence
   of Regenerative Organic Certified (ROC) materials or verified ecosystem restoration programmes precludes a positive Restorative
   or Regenerative rating.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This cordless drill has an overall HIP Score of 6.7 out of 10, indicating solid performance with a strong
   focus on repairability and long-term design. Its Regenerative Index is -2.0, reflecting that while it uses a high amount
   of recycled materials, it still relies on extracting new resources for its critical components. The product stands out for
@@ -60,7 +67,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Material Watch Points

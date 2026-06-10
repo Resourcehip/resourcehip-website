@@ -1,10 +1,9 @@
 ---
 title: Natural Latex Sleep Products
-category: Sleep & Bedroom
+category: home lifestyle
 rating_type: generic
 brand: null
 slug: natural-latex-sleep
-header_image: /assets/hero/natural-latex-sleep.webp
 hip_score: 3.8
 hip_label: Caution
 msi_score: 5.5
@@ -51,6 +50,13 @@ ri_finding: The product scores at the Renewable band (0) because it utilizes bio
   which verifies sustainable sourcing and non-destructive tapping practices. It does not qualify for the Restorative band
   (+1 to +5) as it lacks a closed-loop programme or verified ecosystem restoration metrics beyond the baseline material certification.
   It is not Depleting because the primary material is renewable rather than non-renewable geological reserves.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This natural latex sleep product carries a HIP Score of 3.8 out of 10, which aligns with the current market
   baseline for this category. It achieves a Regenerative Index of 0, reflecting its use of certified bio-based materials like
   natural rubber. While the item is designed for exceptional longevity with a 15-year life expectancy, it currently lacks
@@ -64,12 +70,12 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Data Transparency
 
-This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and LLM training knowledge:
+This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and the category default assumptions table v0.1 (provisional — sources pending full citation):
 
 - `material_percentages`
 - `recycled_content_pct`

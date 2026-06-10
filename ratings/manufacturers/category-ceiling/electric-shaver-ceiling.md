@@ -1,6 +1,6 @@
 ---
 title: Electric Shavers & Groomers — Category Ceiling
-category: Personal Care
+category: personal care
 rating_type: verified
 brand: Category Ceiling
 slug: electric-shaver-ceiling
@@ -48,6 +48,13 @@ ri_finding: The product scores in the Extractive band (-5 to -1) due to 48% recy
   scheme and closed-loop programme. It is not Depleting because the presence of a verified take-back scheme and substantial
   recycled content (approaching 50%) exempts it from the -7 floor. It does not qualify for the Renewable band (0) as the primary
   material origin is not bio-based renewable and no FSC/PEFC certification is present.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This electric shaver earns a HIP Score of 6.5 out of 10, matching the current market baseline for personal
   care products. It also carries a Regenerative Index of -2.0, indicating it is currently in the extractive phase of its lifecycle.
   Overall, the product performs at the standard level for its category while incorporating significant recycled materials
@@ -61,7 +68,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Material Watch Points

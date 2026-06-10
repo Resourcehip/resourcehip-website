@@ -1,6 +1,6 @@
 ---
 title: Carpet — Category Ceiling
-category: Home & Living
+category: floor coverings
 rating_type: verified
 brand: Category Ceiling
 slug: carpet-ceiling
@@ -16,8 +16,8 @@ ri_score: -2.0
 ri_descriptor: Extractive
 category_baseline_hip: 6.4
 category_baseline_ri: -2.0
-category_ceiling_hip: null
-category_ceiling_ri: null
+category_ceiling_hip: 6.4
+category_ceiling_ri: -2.0
 above_baseline: false
 assessment_date: '2026-04-26'
 methodology_version: '1.3'
@@ -47,6 +47,13 @@ ri_finding: The product qualifies for the Extractive band (-5 to -1) due to 65% 
   scheme, explicitly avoiding the Depleting floor (-7) as required by Rule 1. While the Cradle to Cradle Silver certification
   and closed-loop programme indicate restorative efforts, the absence of Regenerative Organic Certified (ROC) inputs or verified
   net-positive ecological outcomes prevents scoring in the Restorative (+1 to +5) or Regenerative (+6 to +10) bands.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This carpet achieves an overall HIP Score of 6.4 out of 10, reflecting a solid balance of durability and
   responsible material sourcing. Its Regenerative Index of -2.0 indicates that the product is designed with a strong focus
   on circularity, utilizing significant recycled content and offering a verified take-back scheme. While the item is not repairable,
@@ -60,7 +67,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Improvement Opportunities

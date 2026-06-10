@@ -1,6 +1,6 @@
 ---
 title: High Chairs — Category Ceiling
-category: Baby & Nursery
+category: baby and nursery
 rating_type: verified
 brand: Category Ceiling
 slug: high-chair-ceiling
@@ -46,6 +46,13 @@ ri_finding: The product scores at the Renewable band (0) because it utilizes FSC
   score despite the 35% recycled content falling below the 50% threshold required for the Extractive band minimum. The presence
   of a take-back scheme and closed-loop programme supports sustainability but does not elevate the score to Restorative without
   verified regenerative practices.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This high chair achieves a HIP Score of 7.3 out of 10, matching the current market baseline for the baby
   and nursery category. It also carries a Regenerative Index of 0, indicating it is made with renewable materials like FSC-certified
   wood. Overall, the product is designed for long-term use with a 20-year lifespan and a system that allows most materials
@@ -59,7 +66,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Improvement Opportunities

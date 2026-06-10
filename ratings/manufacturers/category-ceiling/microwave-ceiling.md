@@ -1,6 +1,6 @@
 ---
 title: Microwaves — Category Ceiling
-category: Small Appliances
+category: small appliances
 rating_type: verified
 brand: Category Ceiling
 slug: microwave-ceiling
@@ -48,6 +48,13 @@ ri_finding: The product qualifies for the Extractive band (-5 to -1) due to 65% 
   take-back scheme, explicitly avoiding the Depleting floor. While the closed-loop programme and responsible sourcing of copper
   are positive factors, the presence of virgin materials (glass, magnetron ceramics, aluminium) and the absence of regenerative
   certifications prevent a score at the Renewable level or above.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This microwave achieves a HIP Score of 7.0 out of 10, matching the current market baseline for small appliances.
   It also carries a Regenerative Index of -2.0, indicating it uses significant recycled materials and participates in a verified
   take-back program. Overall, the product demonstrates strong durability and repairability while maintaining a positive environmental
@@ -61,7 +68,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Improvement Opportunities

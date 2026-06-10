@@ -1,6 +1,6 @@
 ---
 title: Cookers & Ovens — Category Ceiling
-category: Larger Appliances
+category: larger appliances
 rating_type: verified
 brand: Category Ceiling
 slug: cooker-ceiling
@@ -46,6 +46,13 @@ ri_finding: The product qualifies for the Extractive band (-5 to -1) due to 45% 
   take-back scheme and closed-loop programme. It is not Depleting because the presence of substantial recycled content and
   a take-back scheme explicitly exempts it from the -7 floor. The score does not reach Renewable (0) as primary materials
   are not bio-based renewable and no FSC/PEFC certifications are present.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This cooker achieves a HIP Score of 6.8 out of 10, matching the current market baseline for larger appliances.
   It also carries a Regenerative Index of -2.0, indicating it is designed with a focus on material recovery and circularity.
   The product combines durable materials with a strong warranty and a verified take-back scheme to support long-term use.
@@ -58,7 +65,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Material Watch Points

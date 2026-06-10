@@ -1,6 +1,6 @@
 ---
 title: Washing Machine — Category Ceiling
-category: Home Appliances
+category: larger appliances
 rating_type: verified
 brand: Category Ceiling
 slug: washing-machine-ceiling
@@ -48,6 +48,13 @@ ri_finding: The product scores in the Extractive band (-5 to -1) due to 58% recy
   scheme and closed-loop programme. It is not Depleting because the recycled content exceeds 50% with a verified take-back,
   satisfying the minimum threshold for this band. However, it does not reach the Renewable or Restorative bands as it lacks
   FSC/PEFC certification or verified regenerative practices (ROC).
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This washing machine earns a HIP Score of 6.7 out of 10, reflecting a solid balance of durability and repairability.
   Its Regenerative Index of -2.0 indicates it uses a significant amount of recycled materials and includes a take-back program,
   though it still relies on some new raw materials. Overall, it is a well-built appliance designed to last a long time and

@@ -1,6 +1,6 @@
 ---
 title: Hedge Trimmer — Category Ceiling
-category: Garden & Outdoor
+category: garden and outdoor
 rating_type: verified
 brand: Category Ceiling
 slug: hedge-trimmer-ceiling
@@ -49,6 +49,13 @@ ri_finding: The product qualifies for the Extractive band (-5 to -1) due to 68% 
   take-back and closed-loop programme. It is not Depleting because the high recycled content and recovery scheme meet the
   minimum threshold for exemption from the -7 floor. However, it does not reach the Renewable or Restorative bands as primary
   materials include mined metals and no regenerative certifications (ROC) or ecosystem restoration evidence were submitted.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This hedge trimmer earns a HIP Score of 6.2 out of 10, reflecting a solid balance of durability and repairability.
   Its Regenerative Index of -2.0 indicates that while it relies on some new raw materials, it effectively recycles a high
   portion of its content and supports a take-back program to close the loop.
@@ -60,7 +67,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Material Watch Points

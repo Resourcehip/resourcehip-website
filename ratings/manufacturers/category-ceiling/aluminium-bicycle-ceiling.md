@@ -1,6 +1,6 @@
 ---
 title: Aluminium Bicycle — Category Ceiling
-category: Sports & Fitness
+category: sports and leisure
 rating_type: verified
 brand: Category Ceiling
 slug: aluminium-bicycle-ceiling
@@ -46,6 +46,13 @@ ri_finding: The product qualifies for the Extractive band (-5 to -1) due to 82% 
   scheme, explicitly avoiding the Depleting floor. While the closed-loop aluminium programme and FSC-certified rubber are
   significant mitigating factors, the presence of virgin synthetic fibre and the lack of Regenerative Organic Certified (ROC)
   inputs prevent a score in the Restorative or Regenerative bands.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This aluminium bicycle achieves a HIP Score of 7.5 out of 10, reflecting a well-made product designed for
   long-term use with a 20-year design life. It also holds a Regenerative Index of -2.0, indicating that its high recycled
   content and verified take-back scheme help it move beyond basic sustainability toward a more circular model.
@@ -57,7 +64,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Improvement Opportunities

@@ -1,10 +1,9 @@
 ---
 title: Linen and Hemp Accessories
-category: Home & Living
+category: home lifestyle
 rating_type: generic
 brand: null
 slug: linen-hemp-accessories
-header_image: /assets/hero/linen-hemp-accessories.webp
 hip_score: 3.7
 hip_label: Caution
 msi_score: 6.5
@@ -51,6 +50,13 @@ ri_finding: The product qualifies for the Extractive band (-5 to -1) because the
   because material origin certification is not submitted, meaning the product does not meet the criteria for the Renewable
   band. The absence of a take-back scheme and recycled content further limits the score to the lower end of the Extractive
   range.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This product receives a HIP Score of 3.7 out of 10, which aligns with the current market baseline for home
   lifestyle accessories. Its Regenerative Index is -1.0, indicating that while the materials are renewable, the product does
   not currently contribute to regenerative outcomes. Overall, the item performs at the average level for its category without
@@ -64,12 +70,12 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Data Transparency
 
-This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and LLM training knowledge:
+This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and the category default assumptions table v0.1 (provisional — sources pending full citation):
 
 - `material_percentages`
 - `recycled_content_pct`
@@ -100,7 +106,6 @@ This is a **category rating** based on publicly available data. The following da
 - `closed_loop_programme`
 - `end_of_life_programme`
 - `regenerative_practices`
-- `third_party_certification`
 
 A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data and produces a more accurate, product-specific score.
 

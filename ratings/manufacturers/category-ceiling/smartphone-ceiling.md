@@ -1,6 +1,6 @@
 ---
 title: Smartphone — Category Ceiling
-category: Consumer Electronics
+category: consumer electronics
 rating_type: verified
 brand: Category Ceiling
 slug: smartphone-ceiling
@@ -50,6 +50,13 @@ ri_finding: The product scores in the Extractive band (-5 to -1) due to 55% recy
   scheme, which prevents it from falling into the Depleting floor. While the closed-loop programme and certified smelter recovery
   are positive factors, the absence of Regenerative Organic Certified (ROC) materials or third-party verified ecosystem restoration
   evidence precludes a Restorative or Regenerative score.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This smartphone has an overall HIP Score of 6.4 out of 10, indicating a moderate level of sustainability
   performance. Its Regenerative Index is -2.0, which suggests the product is currently in an extractive phase where it uses
   more new materials than it recovers, though it includes a verified take-back scheme to help improve this over time.

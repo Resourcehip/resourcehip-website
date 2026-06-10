@@ -1,6 +1,6 @@
 ---
 title: Carbon Fibre Bicycle — Category Ceiling
-category: Sports & Fitness
+category: sports and leisure
 rating_type: verified
 brand: Category Ceiling
 slug: carbon-fibre-bicycle-ceiling
@@ -48,6 +48,13 @@ ri_finding: The product scores in the Extractive band (-5 to -1) due to 27% recy
   with FSC-certified natural rubber, which provides meaningful mitigation against depletion. It is not Depleting because the
   presence of substantial recycled content prevents the -7 floor, but it lacks a take-back scheme or regenerative certifications
   required for higher scores.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This carbon fibre bicycle has an overall HIP Score of 5.3 out of 10, indicating a moderate performance in
   sustainability. Its Regenerative Index is -4.0, which means the product currently relies more on extracting new materials
   than it does on regenerating or recycling them. While the frame is built to last for many years, the heavy use of virgin
@@ -61,7 +68,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Material Watch Points

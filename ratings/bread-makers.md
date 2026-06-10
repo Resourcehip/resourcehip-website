@@ -1,10 +1,9 @@
 ---
 title: Bread Makers
-category: Small Appliances
+category: small appliances
 rating_type: generic
 brand: null
 slug: bread-makers
-header_image: /assets/hero/bread-makers/bread-makers-header-v1.webp
 hip_score: 2.9
 hip_label: Poor
 msi_score: 3.5
@@ -48,6 +47,13 @@ pl_finding: The product receives a score of 5.0 based on a 2-year warranty and a
 ri_finding: The product is classified as Depleting because it relies on conventional mined materials with zero recycled content
   and no take-back scheme. It does not meet the Extractive band criteria as it lacks substantial recycled content or a verified
   recovery programme. The absence of bio-based renewable inputs or certifications prevents eligibility for the Renewable band.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This bread maker has a HIP Score of 2.9 out of 10, which matches the current market baseline for small appliances.
   Its Regenerative Index is -7.0, indicating that the product relies on new mined materials with no recycled content and is
   designed in a way that makes repair or recycling difficult. Overall, this item represents a standard approach in the category
@@ -61,12 +67,12 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Data Transparency
 
-This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and LLM training knowledge:
+This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and the category default assumptions table v0.1 (provisional — sources pending full citation):
 
 - `material_percentages`
 - `country_of_primary_extraction`
@@ -98,7 +104,6 @@ This is a **category rating** based on publicly available data. The following da
 - `closed_loop_programme`
 - `end_of_life_programme`
 - `regenerative_practices`
-- `third_party_certification`
 
 A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data and produces a more accurate, product-specific score.
 

@@ -1,10 +1,9 @@
 ---
 title: Steel Bicycles
-category: Sports & Fitness
+category: sports and leisure
 rating_type: generic
 brand: null
 slug: steel-bicycles
-header_image: /assets/hero/steel-bicycles/steel-bicycles-header-v1.webp
 hip_score: 3.7
 hip_label: Caution
 msi_score: 3.5
@@ -51,6 +50,13 @@ pl_finding: The product demonstrates exceptional longevity with a 5-year warrant
 ri_finding: The product is scored in the Depleting band (-7) because it relies on virgin mined steel with zero recycled content
   and no take-back scheme. Not Depleting because recycled content >= 50% with verified take-back does not apply, as the product
   has 0% recycled content and no end-of-life programme.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This steel bicycle has an overall HIP Score of 3.7 out of 10, indicating average performance in sustainability.
   Its Regenerative Index is -7.0, which means the product relies entirely on newly mined materials rather than recycled ones,
   placing it in a depleting category. While the bike is built to last for decades, its current production model does not yet
@@ -64,12 +70,12 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Data Transparency
 
-This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and LLM training knowledge:
+This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and the category default assumptions table v0.1 (provisional — sources pending full citation):
 
 - `material_percentages`
 - `recycled_content_pct`
@@ -98,14 +104,11 @@ This is a **category rating** based on publicly available data. The following da
 - `modular_design`
 - `software_support_years`
 - `primary_material_origin`
-- `recycled_content_pct`
-- `takeback_scheme`
 - `regenerative_certifications`
 - `closed_loop_programme`
 - `end_of_life_programme`
 - `material_origin_certified`
 - `regenerative_practices`
-- `third_party_certification`
 
 A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data and produces a more accurate, product-specific score.
 

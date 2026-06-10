@@ -1,6 +1,6 @@
 ---
 title: Gym Equipment — Category Ceiling
-category: Sports & Fitness
+category: sports and fitness
 rating_type: verified
 brand: Category Ceiling
 slug: gym-equipment-ceiling
@@ -46,6 +46,13 @@ ri_finding: The product qualifies for the Extractive band (-5 to -1) due to 85% 
   scheme, explicitly avoiding the Depleting floor. While the closed-loop programme and ResponsibleSteel certification are
   significant, the presence of virgin chrome and the lack of Regenerative Organic Certified (ROC) inputs prevent a score in
   the Restorative or Regenerative bands.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This gym equipment earns a HIP Score of 7.5 out of 10, reflecting strong performance in durability and material
   recovery. It also achieves a Regenerative Index of -2.0, indicating that its high use of recycled steel and cast iron helps
   actively reduce environmental impact. The product stands out for its long design life and a verified system that ensures
@@ -59,7 +66,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Improvement Opportunities

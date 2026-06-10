@@ -1,6 +1,6 @@
 ---
 title: Steam Irons — Category Ceiling
-category: Small Appliances
+category: small appliances
 rating_type: verified
 brand: Category Ceiling
 slug: steam-iron-ceiling
@@ -48,6 +48,13 @@ ri_finding: The product scores in the Extractive band (-5 to -1) due to 42% recy
   scheme and closed-loop programme. It is not Depleting because the presence of a take-back scheme and significant recycled
   content exempts it from the -7 floor. It does not qualify for the Renewable band (0) as primary materials are not bio-based
   renewable and no FSC/PEFC certification is present.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This steam iron achieves a HIP Score of 6.6 out of 10, matching the current market baseline for small appliances.
   It also carries a Regenerative Index of -2.0, indicating it is currently in the extractive phase of its lifecycle. Overall,
   the product demonstrates strong durability and repairability features that align with the category average.
@@ -60,7 +67,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Improvement Opportunities

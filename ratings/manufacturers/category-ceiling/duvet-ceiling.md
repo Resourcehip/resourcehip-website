@@ -1,6 +1,6 @@
 ---
 title: Duvets & Pillows — Category Ceiling
-category: Home Textiles
+category: home textiles
 rating_type: verified
 brand: Category Ceiling
 slug: duvet-ceiling
@@ -48,6 +48,13 @@ pl_finding: The product demonstrates a strong longevity profile with a 5-year wa
 ri_finding: The product qualifies for the Extractive band (-5 to -1) due to 65% recycled content combined with a verified
   take-back scheme, explicitly avoiding the Depleting floor. While bio-based certified cotton is present, the absence of Regenerative
   Organic Certification (ROC) or verified ecosystem restoration prevents scoring in the Renewable or Restorative bands.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This product achieves a HIP Score of 6.9 out of 10, matching the current market baseline for home textiles.
   It also carries a Regenerative Index of -2.0, indicating it operates within the extractive band due to its high recycled
   content and verified take-back program. Overall, the item performs at the standard level for its category while incorporating
@@ -61,7 +68,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Improvement Opportunities

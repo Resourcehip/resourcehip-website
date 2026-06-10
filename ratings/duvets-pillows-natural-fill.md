@@ -1,10 +1,9 @@
 ---
 title: Natural-Fill Duvets & Pillows (GOTS / RDS Certified)
-category: Home Textiles
+category: home textiles
 rating_type: generic
 brand: null
 slug: duvets-pillows-natural-fill
-header_image: /assets/hero/duvets-pillows-natural-fill.webp
 hip_score: 3.6
 hip_label: Caution
 msi_score: 4.0
@@ -53,6 +52,13 @@ ri_finding: The product qualifies for the Renewable band (0) because the primary
   certification prevents the application of the Depleting floor. The score is not Restorative (+1 to +5) because the product
   lacks Regenerative Organic Certified (ROC) inputs or verified ecosystem restoration programmes required to exceed the Renewable
   baseline.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This Natural-Fill Duvet & Pillow carries a HIP Score of 3.6 out of 10, which aligns with the current market
   baseline for home textiles. It achieves a Regenerative Index of 0, indicating that its primary materials are bio-based and
   renewable. While the product holds certifications for environmental and animal welfare standards, its design limits repairability
@@ -66,12 +72,12 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Data Transparency
 
-This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and LLM training knowledge:
+This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and the category default assumptions table v0.1 (provisional — sources pending full citation):
 
 - `material_percentages`
 - `recycled_content_pct`

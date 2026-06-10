@@ -1,6 +1,6 @@
 ---
 title: Electronic Learning Toy — Category Ceiling
-category: Toys & Games
+category: toys and children's
 rating_type: verified
 brand: Category Ceiling
 slug: electronic-learning-toy-ceiling
@@ -50,6 +50,13 @@ ri_finding: The product scores in the Extractive band (-5 to -1) due to 68% recy
   content and verified recovery scheme prevent the floor score of -7. However, it does not reach the Renewable band (0) as
   primary materials are not renewable, nor the Restorative band (+1) due to the absence of verified regenerative certifications
   or ecosystem restoration programmes.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This electronic learning toy has an overall HIP Score of 6.1 out of 10, indicating a moderate level of sustainability
   performance. Its Regenerative Index is -2.0, which reflects that while it uses a significant amount of recycled materials,
   it still relies on extracting new resources from the earth. The product balances decent repairability and warranty support
@@ -63,7 +70,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Material Watch Points

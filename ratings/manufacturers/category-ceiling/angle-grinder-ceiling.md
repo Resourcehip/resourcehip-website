@@ -1,6 +1,6 @@
 ---
 title: Angle Grinder — Category Ceiling
-category: Power Tools
+category: power tools
 rating_type: verified
 brand: Category Ceiling
 slug: angle-grinder-ceiling
@@ -47,6 +47,13 @@ ri_finding: The product qualifies for the Extractive band (-5 to -1) due to 70% 
   take-back and closed-loop programme, explicitly avoiding the Depleting floor. While the closed-loop system returns metals
   to certified smelters, the absence of Regenerative Organic Certified (ROC) inputs or verified ecosystem restoration prevents
   a score in the Restorative or Regenerative bands.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This angle grinder earns an overall HIP Score of 6.5 out of 10, reflecting a solid balance of durability
   and repairability. Its Regenerative Index of -2.0 indicates that while it uses a high amount of recycled materials, it currently
   operates within an extractive framework rather than a fully regenerative one. The product stands out for its long design
@@ -59,7 +66,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Material Watch Points

@@ -1,10 +1,9 @@
 ---
 title: Bamboo Kitchenware
-category: Kitchen
+category: kitchen equipment
 rating_type: generic
 brand: null
 slug: bamboo-kitchenware
-header_image: /assets/hero/bamboo-kitchenware.webp
 hip_score: 4.2
 hip_label: Caution
 msi_score: 7.5
@@ -50,6 +49,13 @@ ri_finding: The product qualifies for the Renewable band (0) because it utilizes
   Organic Certified (ROC) inputs or verified closed-loop restoration programmes prevents scoring in the Restorative or Regenerative
   bands. It is not Depleting or Extractive because the primary material is renewable rather than non-renewable, and the FSC
   certification confirms sustainable sourcing practices.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This Bamboo Kitchenware set achieves a HIP Score of 4.2 out of 10, which matches the current market baseline
   for this category. It also holds a Regenerative Index of 0, indicating it is made from renewable materials like FSC-certified
   bamboo. While the product uses sustainable sourcing, its overall design limits its ability to be repaired or recycled effectively.
@@ -62,12 +68,12 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Data Transparency
 
-This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and LLM training knowledge:
+This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and the category default assumptions table v0.1 (provisional — sources pending full citation):
 
 - `material_percentages`
 - `recycled_content_pct`

@@ -1,6 +1,6 @@
 ---
 title: Leaf Blower — Category Ceiling
-category: Garden & Outdoor
+category: garden and outdoor
 rating_type: verified
 brand: Category Ceiling
 slug: leaf-blower-ceiling
@@ -51,6 +51,13 @@ ri_finding: The product scores in the Extractive band (-5 to -1) due to 64% recy
   satisfying the minimum threshold for this band. However, it does not reach Renewable or Restorative levels as primary materials
   include mined inputs (lithium, cobalt) and no Regenerative Organic Certified (ROC) or ecosystem restoration evidence was
   submitted.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This leaf blower earns an overall HIP Score of 6.3 out of 10, reflecting a solid balance of durability and
   repairability. Its Regenerative Index of -2.0 indicates that while it uses a significant amount of recycled materials, it
   currently operates within an extractive model rather than a fully regenerative one. The product stands out for its long
@@ -64,7 +71,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Material Watch Points

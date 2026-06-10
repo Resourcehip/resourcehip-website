@@ -2,7 +2,7 @@
 title: "How to Choose a Sustainable Smartphone (UK Buyer's Guide)"
 slug: how-to-choose-a-sustainable-smartphone
 category: smartphones
-description: "The category baseline scores 1.8/10. The verified ceiling scores 6.4. Here is what closes that gap, and what to look for as a UK buyer."
+description: "The category baseline scores 1.9/10. The verified ceiling scores 6.4. Here is what closes that gap, and what to look for as a UK buyer."
 keywords: [smartphone, sustainable smartphone UK, repairable phone, rare earths, HIP score, e-waste, right to repair]
 last_updated: 2026-04-28
 canonical_url: https://resourcehip.com/blog/how-to-choose-a-sustainable-smartphone
@@ -14,7 +14,7 @@ hero_image: /assets/blog/how-to-choose-a-sustainable-smartphone/hero.webp
 
 Roughly 1.4 billion smartphones are made each year. Most are designed for a 2-4 year replacement cycle. Most of what goes into them — lithium, cobalt (a battery material), rare earth elements, tantalum (a rare metal) — sits on the EU Critical Raw Materials list (a list of materials at risk of supply shortage). As a category, smartphones are one of the worst-performing consumer goods we score.
 
-How bad? On the Human Impact Profile (HIP), the smartphone baseline is 1.8 out of 10. That is a cautious score for a typical device with no maker evidence supplied. The full breakdown is on the [smartphones rating page](/ratings/smartphones).
+How bad? On the Human Impact Profile (HIP), the smartphone baseline is 1.9 out of 10. That is a cautious score for a typical device with no maker evidence supplied. The full breakdown is on the [smartphones rating page](/ratings/smartphones).
 
 ## What "Sustainable Smartphone" Actually Means
 

@@ -1,6 +1,6 @@
 ---
 title: Tumble Dryers — Category Ceiling
-category: Larger Appliances
+category: larger appliances
 rating_type: verified
 brand: Category Ceiling
 slug: tumble-dryer-ceiling
@@ -47,6 +47,13 @@ ri_finding: The product scores in the Extractive band (-3) because it contains 5
   recycled content >= 50% and a verified take-back programme explicitly exempts it from the -7 floor. While the closed-loop
   programme and ResponsibleSteel certification indicate strong circularity, the absence of Regenerative Organic Certified
   (ROC) inputs or verified ecosystem restoration prevents a score in the Restorative or Regenerative bands.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This tumble dryer achieves a HIP Score of 7.1 out of 10, matching the current market baseline for larger
   appliances. It also carries a Regenerative Index of -3.0, reflecting its use of recycled materials and a verified take-back
   program. Overall, the product stands out for its exceptional longevity, backed by a 10-year warranty and a design life of

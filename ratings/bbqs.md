@@ -1,10 +1,9 @@
 ---
 title: BBQs
-category: Outdoor Cooking
+category: outdoor cooking
 rating_type: generic
 brand: null
 slug: bbqs
-header_image: /assets/hero/bbqs/bbqs-header-v4.webp
 hip_score: 2.8
 hip_label: Poor
 msi_score: 3.5
@@ -48,6 +47,13 @@ pl_finding: The product has a 2-year warranty and an estimated design life of 5 
 ri_finding: The product is scored in the Depleting band (-7) because primary materials are assumed to be conventionally mined
   with zero recycled content and no take-back scheme. This does not meet the criteria for the Extractive band, which requires
   either substantial recycled content or a verified take-back programme to qualify for a higher score.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This BBQ currently aligns with the category baseline, holding a HIP Score of 2.8 out of 10 and a Regenerative
   Index of -7.0. The product is designed with materials that are currently being depleted rather than replenished, and its
   construction makes it difficult to repair or recycle at the end of its life. While it meets standard durability expectations
@@ -61,12 +67,12 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Data Transparency
 
-This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and LLM training knowledge:
+This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and the category default assumptions table v0.1 (provisional — sources pending full citation):
 
 - `material_percentages`
 - `country_of_primary_extraction`
@@ -99,7 +105,6 @@ This is a **category rating** based on publicly available data. The following da
 - `end_of_life_programme`
 - `material_origin_certified`
 - `regenerative_practices`
-- `third_party_certification`
 
 A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data and produces a more accurate, product-specific score.
 

@@ -1,10 +1,9 @@
 ---
 title: Bluetooth Headphones
-category: Consumer Electronics
+category: consumer electronics
 rating_type: generic
 brand: null
 slug: bluetooth-headphones
-header_image: /assets/hero/bluetooth-headphones/bluetooth-headphones-header-v1.webp
 hip_score: 1.9
 hip_label: Poor
 msi_score: 1.5
@@ -17,7 +16,7 @@ ri_score: -7.0
 ri_descriptor: Depleting
 category_baseline_hip: 1.9
 category_baseline_ri: -7.0
-category_ceiling_hip: 6.5
+category_ceiling_hip: 6.7
 category_ceiling_ri: -2.0
 above_baseline: false
 assessment_date: '2026-04-18'
@@ -48,6 +47,13 @@ ri_finding: The product is classified as Depleting because it relies on virgin m
   and no take-back scheme, fitting the criteria for conventional electronics. It does not qualify for the Extractive band
   minimum of -3 because the required 50% recycled content and verified take-back are absent. Consequently, the score reflects
   the standard depletion of finite geological reserves typical for Bluetooth headphones manufactured without circularity measures.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This product has a HIP Score of 1.9 out of 10, indicating significant challenges in its environmental profile.
   Its Regenerative Index is -7.0, meaning it relies entirely on newly mined materials with no recycled content or plans for
   recovery. Overall, the device is difficult to repair and is made from scarce resources that are being depleted rather than
@@ -61,12 +67,12 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Data Transparency
 
-This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and LLM training knowledge:
+This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and the category default assumptions table v0.1 (provisional — sources pending full citation):
 
 - `material_percentages`
 - `recycled_content_pct`
@@ -96,14 +102,11 @@ This is a **category rating** based on publicly available data. The following da
 - `modular_design`
 - `software_support_years`
 - `primary_material_origin`
-- `recycled_content_pct`
-- `takeback_scheme`
 - `regenerative_certifications`
 - `closed_loop_programme`
 - `end_of_life_programme`
 - `material_origin_certified`
 - `regenerative_practices`
-- `third_party_certification`
 
 A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data and produces a more accurate, product-specific score.
 

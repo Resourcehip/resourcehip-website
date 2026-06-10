@@ -1,6 +1,6 @@
 ---
 title: Air Fryer — Category Ceiling
-category: Kitchen
+category: small appliances
 rating_type: verified
 brand: Category Ceiling
 slug: air-fryer-ceiling
@@ -46,6 +46,13 @@ ri_finding: The product qualifies for the Extractive band (-5 to -1) due to 78% 
   take-back scheme, explicitly avoiding the Depleting floor. While the closed-loop programme returns materials to suppliers,
   the absence of Regenerative Organic Certified (ROC) inputs or third-party verified ecosystem restoration prevents a score
   in the Restorative or Regenerative bands.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This air fryer earns a HIP Score of 7.1 out of 10, reflecting a solid balance of durability and repairability.
   It also carries a Regenerative Index of -2.0, indicating that it uses significant recycled materials and supports a closed-loop
   system for returning old units. Overall, this appliance stands out for its long design life and ease of fixing compared
@@ -59,7 +66,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Improvement Opportunities

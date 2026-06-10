@@ -1,6 +1,6 @@
 ---
 title: Toaster — Category Ceiling
-category: Kitchen
+category: small appliances
 rating_type: verified
 brand: Category Ceiling
 slug: toaster-ceiling
@@ -47,6 +47,13 @@ ri_finding: Scored in the Extractive band (-3.0) because the product has 92% rec
   which qualifies it for the minimum of -3 per Rule 1. It is not Depleting because the high recycled content and closed-loop
   programme mitigate the depletion of finite geological reserves. It does not qualify for the Restorative band (+1 to +5)
   as there is no third-party verified evidence of ecosystem restoration or regenerative certifications like ROC.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This toaster earns a HIP Score of 7.2 out of 10, reflecting a well-built small appliance designed for long-term
   use with a 15-year lifespan. It also achieves a Regenerative Index of -3.0, indicating that it is made from abundant materials
   and contains a high percentage of recycled content. Overall, this product stands out for its durability and its commitment
@@ -60,7 +67,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Improvement Opportunities

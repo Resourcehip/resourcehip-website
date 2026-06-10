@@ -1,10 +1,9 @@
 ---
 title: Wireless Earbuds
-category: Consumer Electronics
+category: consumer electronics
 rating_type: generic
 brand: null
 slug: wireless-earbuds
-header_image: /assets/hero/wireless-earbuds/wireless-earbuds-header-v3.webp
 hip_score: 1.8
 hip_label: Poor
 msi_score: 1.5
@@ -17,7 +16,7 @@ ri_score: -7.0
 ri_descriptor: Depleting
 category_baseline_hip: 1.8
 category_baseline_ri: -7.0
-category_ceiling_hip: 6.1
+category_ceiling_hip: 5.9
 category_ceiling_ri: -2.0
 above_baseline: false
 assessment_date: '2026-04-18'
@@ -47,6 +46,13 @@ ri_finding: The product is classified as Depleting (-7) because it relies on vir
   and lacks any take-back or end-of-life recovery scheme. This aligns with the standard for conventional electronics where
   finite geological reserves are actively depleted without offset. It does not qualify for the Extractive band minimum of
   -3 because the required 50% recycled content and verified take-back scheme are absent.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This product receives a low overall HIP Score of 1.8 out of 10, indicating significant environmental challenges.
   Its Regenerative Index is -7.0, meaning it relies heavily on newly mined materials with no recycled content and is designed
   in a way that makes it difficult to repair or recycle.
@@ -58,12 +64,12 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Data Transparency
 
-This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and LLM training knowledge:
+This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and the category default assumptions table v0.1 (provisional — sources pending full citation):
 
 - `material_percentages`
 - `country_of_primary_extraction`
@@ -93,13 +99,11 @@ This is a **category rating** based on publicly available data. The following da
 - `software_support_years`
 - `primary_material_origin`
 - `recycled_content_pct`
-- `takeback_scheme`
 - `regenerative_certifications`
 - `closed_loop_programme`
 - `end_of_life_programme`
 - `material_origin_certified`
 - `regenerative_practices`
-- `third_party_certification`
 
 A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data and produces a more accurate, product-specific score.
 

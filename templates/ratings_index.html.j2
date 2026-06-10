@@ -110,7 +110,10 @@
   font-size: 0.78rem; font-weight: 600;
   margin-left: auto;
   color: var(--card-ri-colour, #888);
+  text-align: right;
 }
+.rating-card-ri-score { display: block; }
+.rating-card-ri-label { display: block; font-weight: 400; color: #aaa; font-size: 0.72rem; }
 
 .rating-card-date {
   font-size: 0.68rem; color: #bbb; margin-top: 0.75rem;
@@ -200,17 +203,17 @@
             {% if r.display_type == 'verified' and r.brand %}
               <div class="rating-card-brand">{{ r.brand }}</div>
             {% endif %}
-            <div class="rating-card-scores">
-              <div>
-                <div class="rating-card-hip">{{ "%.1f"|format(r.hip_score) }}</div>
+            <div class="rating-card-scores" role="list" aria-label="Scores">
+              <div role="listitem">
+                <div class="rating-card-hip" aria-label="HIP Score {{ "%.1f"|format(r.hip_score) }} out of 10">{{ "%.1f"|format(r.hip_score) }}</div>
                 <div class="rating-card-hip-label">HIP Score</div>
               </div>
-              <div class="rating-card-ri">
-                {% if r.ri_score > 0 %}+{% endif %}{{ "%.1f"|format(r.ri_score) }}<br>
-                <span style="font-weight:400; color:#aaa;">{{ r.ri_descriptor }}</span>
+              <div class="rating-card-ri" role="listitem" aria-label="Regenerative Index {% if r.ri_score > 0 %}+{% endif %}{{ "%.1f"|format(r.ri_score) }} {{ r.ri_descriptor }}">
+                <span class="rating-card-ri-score">{% if r.ri_score > 0 %}+{% endif %}{{ "%.1f"|format(r.ri_score) }}</span>
+                <span class="rating-card-ri-label">{{ r.ri_descriptor }}</span>
               </div>
             </div>
-            <div class="rating-card-date">Assessed {{ r.assessment_date }}</div>
+            <div class="rating-card-date"><time datetime="{{ r.assessment_date }}">Assessed {{ r.assessment_date }}</time></div>
           </a>
         {% endfor %}
       </div>

@@ -1,10 +1,9 @@
 ---
 title: Tumble Dryers
-category: Larger Appliances
+category: larger appliances
 rating_type: generic
 brand: null
 slug: tumble-dryers
-header_image: /assets/hero/tumble-dryers/tumble-dryers-header-v2.webp
 hip_score: 3.1
 hip_label: Caution
 msi_score: 3.5
@@ -49,6 +48,13 @@ ri_finding: The product is scored in the Depleting band (-7) because it is a con
   no take-back scheme, and no bio-based renewable materials. It does not meet the criteria for the Extractive band as it lacks
   the required 50% recycled content with a take-back scheme or any bio-based origin. The absence of FSC/PEFC certifications
   or regenerative practices confirms it does not qualify for the Renewable band.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This tumble dryer has a HIP Score of 3.1 out of 10, which matches the current market baseline for this category.
   Its Regenerative Index is -7.0, indicating that the product is in a depleting state as it relies on virgin materials and
   lacks a design for recycling. Overall, the appliance performs at the standard level for conventional dryers but offers limited
@@ -62,12 +68,12 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Data Transparency
 
-This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and LLM training knowledge:
+This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and the category default assumptions table v0.1 (provisional — sources pending full citation):
 
 - `material_percentages`
 - `recycled_content_pct`
@@ -98,7 +104,6 @@ This is a **category rating** based on publicly available data. The following da
 - `regenerative_certifications`
 - `closed_loop_programme`
 - `regenerative_practices`
-- `third_party_certification`
 
 A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data and produces a more accurate, product-specific score.
 

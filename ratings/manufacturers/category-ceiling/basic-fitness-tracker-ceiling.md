@@ -1,6 +1,6 @@
 ---
 title: Basic Fitness Tracker — Category Ceiling
-category: Sports & Fitness
+category: sports and fitness
 rating_type: verified
 brand: Category Ceiling
 slug: basic-fitness-tracker-ceiling
@@ -47,6 +47,13 @@ ri_finding: The product scores in the Extractive band (-5 to -1) due to 55% recy
   and closed-loop programme. It is not Depleting because the recycled content exceeds 50% with a verified take-back scheme,
   satisfying the minimum threshold for this band. However, it does not reach Renewable or Restorative levels as primary materials
   include mined lithium, cobalt, and copper without Regenerative Organic Certification.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This Basic Fitness Tracker has an overall HIP Score of 5.8 out of 10, indicating average performance in
   sustainability and durability. Its Regenerative Index is -2.0, reflecting that while it uses some recycled materials and
   offers a take-back program, it still relies heavily on scarce raw materials like cobalt and lithium. The device balances

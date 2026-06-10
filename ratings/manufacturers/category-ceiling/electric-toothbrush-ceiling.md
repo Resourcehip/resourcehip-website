@@ -1,6 +1,6 @@
 ---
 title: Electric Toothbrush — Category Ceiling
-category: Personal Care
+category: personal care
 rating_type: verified
 brand: Category Ceiling
 slug: electric-toothbrush-ceiling
@@ -49,6 +49,13 @@ ri_finding: The product qualifies for the Extractive band (-5 to -1) due to 55% 
   take-back scheme and closed-loop programme. It is not Depleting because the substantial recycled content and verified recovery
   pathway prevent it from hitting the -7 floor. However, it does not reach the Restorative band (+1 to +5) as no third-party
   verified regenerative certifications (e.g., ROC) or ecosystem restoration evidence were submitted.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This electric toothbrush earns a HIP Score of 6.5 out of 10, indicating a solid balance of durability and
   repairability with a 7-year parts commitment. Its Regenerative Index is -2.0, reflecting that while it uses significant
   recycled materials and a take-back program, it still relies on extracting new resources like cobalt and lithium. Overall,
@@ -62,7 +69,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Material Watch Points

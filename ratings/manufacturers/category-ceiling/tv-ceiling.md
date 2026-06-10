@@ -1,6 +1,6 @@
 ---
 title: TVs — Category Ceiling
-category: Consumer Electronics
+category: consumer electronics
 rating_type: verified
 brand: Category Ceiling
 slug: tv-ceiling
@@ -48,6 +48,13 @@ ri_finding: The product scores in the Extractive band (-5 to -1) due to 48% recy
   of recycled content and recovery mechanisms prevents the Depleting floor (-7) from applying. The score does not reach Renewable
   (0) because the primary material origin is not bio-based renewable and no FSC/PEFC or Regenerative Organic certifications
   are submitted.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This television achieves a HIP Score of 6.8 out of 10, matching the current market baseline for consumer
   electronics. It also carries a Regenerative Index of -1.0, indicating it is in the extractive band due to its reliance on
   virgin materials despite having a verified take-back scheme. Overall, the product demonstrates strong durability and repairability

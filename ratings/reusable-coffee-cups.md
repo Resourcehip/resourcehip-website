@@ -1,10 +1,9 @@
 ---
 title: Reusable Coffee Cups
-category: Home & Living
+category: home lifestyle
 rating_type: generic
 brand: null
 slug: reusable-coffee-cups
-header_image: /assets/hero/reusable-coffee-cups/reusable-coffee-cups-header-v2.webp
 hip_score: 2.8
 hip_label: Poor
 msi_score: 3.5
@@ -48,6 +47,13 @@ pl_finding: The product has a 2-year warranty and a stated design life of 5 year
 ri_finding: The product is scored as Depleting because it relies on virgin mined materials with zero recycled content and
   no take-back scheme, fitting the criteria for conventional manufactured goods. It does not qualify for the Extractive band
   minimum of -3 because the required condition of >=50% recycled content with a verified take-back program is not met.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This reusable coffee cup has an overall HIP Score of 2.8 out of 10, indicating limited sustainability performance.
   Its Regenerative Index is -7.0, which means the product relies heavily on new materials rather than recycled ones and is
   difficult to recycle or repair at the end of its life.
@@ -59,12 +65,12 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Data Transparency
 
-This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and LLM training knowledge:
+This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and the category default assumptions table v0.1 (provisional — sources pending full citation):
 
 - `material_percentages`
 - `recycled_content_pct`
@@ -93,14 +99,11 @@ This is a **category rating** based on publicly available data. The following da
 - `modular_design`
 - `software_support_years`
 - `primary_material_origin`
-- `recycled_content_pct`
-- `takeback_scheme`
 - `regenerative_certifications`
 - `closed_loop_programme`
 - `end_of_life_programme`
 - `material_origin_certified`
 - `regenerative_practices`
-- `third_party_certification`
 
 A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data and produces a more accurate, product-specific score.
 

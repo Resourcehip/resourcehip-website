@@ -1,10 +1,9 @@
 ---
 title: Smartphones
-category: Consumer Electronics
+category: consumer electronics
 rating_type: generic
 brand: null
 slug: smartphones
-header_image: /assets/hero/smartphones/smartphones-header-v1.webp
 hip_score: 1.9
 hip_label: Poor
 msi_score: 1.5
@@ -47,6 +46,13 @@ ri_finding: The product is classified as Depleting because primary materials are
   content and no verified take-back scheme. This does not meet the criteria for the Extractive band, which requires substantial
   recycled content or a take-back programme. The absence of regenerative certifications or closed-loop programmes confirms
   the score falls within the -7 to -6 range for conventional electronics.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This smartphone has a HIP Score of 1.9 out of 10, which matches the current market baseline for this category.
   Its Regenerative Index is -7.0, indicating that the device relies heavily on newly mined materials with very little recycled
   content. Overall, the product aligns with typical mass-market designs that prioritize new resource extraction over circular
@@ -60,12 +66,12 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Data Transparency
 
-This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and LLM training knowledge:
+This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and the category default assumptions table v0.1 (provisional — sources pending full citation):
 
 - `material_percentages`
 - `country_of_primary_extraction`
@@ -94,12 +100,10 @@ This is a **category rating** based on publicly available data. The following da
 - `modular_design`
 - `software_support_years`
 - `primary_material_origin`
-- `takeback_scheme`
 - `regenerative_certifications`
 - `closed_loop_programme`
 - `material_origin_certified`
 - `regenerative_practices`
-- `third_party_certification`
 
 A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data and produces a more accurate, product-specific score.
 

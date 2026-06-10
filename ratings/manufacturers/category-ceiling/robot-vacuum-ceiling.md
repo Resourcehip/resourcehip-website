@@ -1,6 +1,6 @@
 ---
 title: Robot Vacuum Cleaner — Category Ceiling
-category: Home Appliances
+category: home appliances
 rating_type: verified
 brand: Category Ceiling
 slug: robot-vacuum-ceiling
@@ -49,6 +49,13 @@ ri_finding: The product qualifies for the Extractive band (-5 to -1) due to 60% 
   take-back scheme, explicitly avoiding the Depleting floor (-7). While the closed-loop programme and conflict-free mining
   certifications mitigate depletion, the presence of virgin materials (silicon) and mined inputs without Regenerative Organic
   Certification prevents a score in the Restorative or Regenerative bands.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This robot vacuum cleaner has an overall HIP Score of 6.6 out of 10, indicating a solid balance of durability
   and repairability. Its Regenerative Index is -2.0, reflecting that while it uses significant amounts of critical raw materials,
   it also incorporates a high percentage of recycled content and a take-back program. The product stands out for its long
@@ -62,7 +69,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Material Watch Points

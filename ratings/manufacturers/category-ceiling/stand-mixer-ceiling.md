@@ -1,6 +1,6 @@
 ---
 title: Stand Mixers — Category Ceiling
-category: Small Appliances
+category: small appliances
 rating_type: verified
 brand: Category Ceiling
 slug: stand-mixer-ceiling
@@ -49,6 +49,13 @@ ri_finding: The product scores in the Extractive band (-5 to -1) due to 30% recy
   scheme and closed-loop programme. It does not qualify for the Depleting floor (-7) because the presence of a take-back scheme
   and recycled content meeting the minimum threshold exempts it from the default -7 classification. It does not reach the
   Renewable band (0) as primary materials are not bio-based renewable and no FSC/PEFC certifications are present.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This stand mixer achieves a HIP Score of 7.1 out of 10, matching the current market baseline for small appliances.
   It also carries a Regenerative Index of -2.0, indicating it is designed with a verified take-back scheme and recycled materials
   to support a circular lifecycle. Overall, the product demonstrates strong durability and repairability while actively working
@@ -62,7 +69,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Improvement Opportunities

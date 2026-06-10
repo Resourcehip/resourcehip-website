@@ -1,6 +1,6 @@
 ---
 title: Wireless Earbuds — Category Ceiling
-category: Consumer Electronics
+category: consumer electronics
 rating_type: verified
 brand: Category Ceiling
 slug: wireless-earbuds-ceiling
@@ -49,6 +49,13 @@ ri_finding: The product scores in the Extractive band (-5 to -1) due to 45% recy
   take-back scheme. It is not Depleting because the presence of substantial recycled content and a verified take-back program
   explicitly exempts it from the -7 floor. It does not qualify for Restorative (+1 to +5) as there is no third-party verified
   regenerative certification (ROC) or ecosystem restoration evidence submitted.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This product earns a HIP Score of 5.9 out of 10, indicating a moderate overall performance in sustainability.
   Its Regenerative Index is -2.0, reflecting that while it uses some recycled materials, it still relies heavily on extracting
   new resources. The device stands out for its durable design and ease of repair, which helps extend its useful life.
@@ -61,7 +68,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Material Watch Points

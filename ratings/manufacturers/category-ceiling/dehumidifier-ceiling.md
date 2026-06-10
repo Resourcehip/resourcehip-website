@@ -1,6 +1,6 @@
 ---
 title: Dehumidifiers — Category Ceiling
-category: Small Appliances
+category: small appliances
 rating_type: verified
 brand: Category Ceiling
 slug: dehumidifier-ceiling
@@ -49,6 +49,13 @@ ri_finding: The product qualifies for the Extractive band minimum of -3 because 
   verified take-back scheme. It is not Depleting because recycled content is >= 50% with a verified take-back. While the closed-loop
   programme and copper recovery are positive, the absence of Regenerative Organic Certified (ROC) materials prevents a score
   above the Extractive range.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This dehumidifier earns a HIP Score of 6.7 out of 10, matching the current market baseline for small appliances.
   It achieves a Regenerative Index of -3.0, reflecting its use of recycled materials and a verified take-back program that
   supports circularity. Overall, the product demonstrates strong durability and repairability while maintaining a solid foundation
@@ -62,7 +69,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Material Watch Points

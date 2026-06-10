@@ -1,6 +1,6 @@
 ---
 title: Circular Saw — Category Ceiling
-category: Power Tools
+category: power tools
 rating_type: verified
 brand: Category Ceiling
 slug: circular-saw-ceiling
@@ -48,6 +48,13 @@ ri_finding: The product qualifies for the Extractive band (-5 to -1) due to 65% 
   take-back scheme and closed-loop programme. It is not Depleting because the high recycled content and verified recovery
   pathway prevent it from hitting the -7 floor. However, it does not reach the Restorative band (+1 to +5) as there is no
   third-party verified regenerative certification (ROC) or ecosystem restoration evidence submitted.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This circular saw earns a HIP Score of 6.4 out of 10, reflecting a solid balance of durability and repairability.
   Its Regenerative Index of -2.0 indicates that while it uses a significant amount of recycled materials, it currently operates
   within an extractive model rather than a fully regenerative one.
@@ -59,7 +66,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Material Watch Points

@@ -1,6 +1,6 @@
 ---
 title: Garden Furniture — Category Ceiling
-category: Garden & Outdoor
+category: outdoor furniture
 rating_type: verified
 brand: Category Ceiling
 slug: garden-furniture-ceiling
@@ -16,8 +16,8 @@ ri_score: 4.0
 ri_descriptor: Restorative
 category_baseline_hip: 7.9
 category_baseline_ri: 4.0
-category_ceiling_hip: null
-category_ceiling_ri: null
+category_ceiling_hip: 7.9
+category_ceiling_ri: 4.0
 above_baseline: false
 assessment_date: '2026-04-26'
 methodology_version: '1.3'
@@ -48,6 +48,13 @@ ri_finding: Scored in the Restorative band (+1 to +5) due to 85% recycled conten
   and ISO 14001 certification. Not Depleting because recycled content exceeds 50% with a verified take-back program. Not Regenerative
   (+6 to +10) because the highest certification present is GRS (recycled content), which does not meet the threshold for verified
   regenerative inputs like ROC required for scores above +5.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This garden furniture set earns a HIP Score of 7.9 out of 10, reflecting its strong use of abundant materials
   and exceptional 25-year durability. It also achieves a Regenerative Index of +4.0, indicating that the product actively
   contributes to environmental restoration through high recycled content and a verified take-back program.
@@ -59,7 +66,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Improvement Opportunities

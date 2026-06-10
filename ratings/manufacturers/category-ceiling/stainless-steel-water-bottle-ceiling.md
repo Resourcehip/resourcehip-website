@@ -1,6 +1,6 @@
 ---
 title: Stainless Steel Water Bottle — Category Ceiling
-category: Home & Living
+category: home lifestyle
 rating_type: verified
 brand: Category Ceiling
 slug: stainless-steel-water-bottle-ceiling
@@ -48,6 +48,13 @@ ri_finding: Scored in the Extractive band (-3) because the product contains 95% 
   the combination of recycled content >= 50% and a verified take-back scheme explicitly exempts it from the -7 floor. It does
   not qualify for Restorative or Regenerative bands as no Regenerative Organic Certified (ROC) materials or third-party verified
   ecosystem restoration evidence were submitted.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This stainless steel water bottle earns a HIP Score of 7.8 out of 10, reflecting a well-made product with
   excellent durability and a design that is easy to repair. It also achieves a Regenerative Index of -3.0, indicating that
   it is built from mostly recycled materials and supports a closed-loop system where old bottles are taken back for reuse.
@@ -61,7 +68,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Improvement Opportunities

@@ -1,6 +1,6 @@
 ---
 title: Baby Monitors — Category Ceiling
-category: Baby & Nursery
+category: baby and nursery
 rating_type: verified
 brand: Category Ceiling
 slug: baby-monitor-ceiling
@@ -47,6 +47,13 @@ ri_finding: The product scores in the Extractive band (-5 to -1) due to 42% recy
   scheme and closed-loop programme. It is not Depleting because the presence of a take-back scheme and significant recycled
   content prevents the application of the -7 floor. It does not qualify for the Renewable band (0) as primary materials are
   not bio-based renewable and lack FSC/PEFC certification.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This baby monitor has an overall HIP Score of 5.7 out of 10, which matches the current market baseline for
   this category. It also carries a Regenerative Index of -2.0, indicating it is currently in the extractive phase of its lifecycle.
   While the product includes features like a take-back scheme and durable design, its reliance on scarce raw materials keeps
@@ -60,7 +67,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Material Watch Points

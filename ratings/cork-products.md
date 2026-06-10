@@ -1,10 +1,9 @@
 ---
 title: Cork Products
-category: Home & Living
+category: home & garden
 rating_type: generic
 brand: null
 slug: cork-products
-header_image: /assets/hero/cork-products.webp
 hip_score: 5.2
 hip_label: Moderate
 msi_score: 9.5
@@ -50,6 +49,13 @@ ri_finding: The product qualifies for the Renewable band (0) because it utilizes
   are present, the absence of Regenerative Organic Certified (ROC) inputs or verified closed-loop restoration programmes means
   the score does not reach the Restorative or Regenerative bands. It is not Depleting because the material origin is renewable
   and certified, nor is it Extractive as the primary inputs are not non-renewable.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This cork product achieves a HIP Score of 5.2 out of 10, which aligns with the current market baseline for
   home and garden items. It earns a Regenerative Index of 0, reflecting its use of FSC-certified cork sourced from sustainable
   forests. While the material itself is renewable, the product's overall sustainability is balanced by mixed fasteners and
@@ -62,12 +68,12 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Data Transparency
 
-This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and LLM training knowledge:
+This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and the category default assumptions table v0.1 (provisional — sources pending full citation):
 
 - `material_percentages`
 - `recycled_content_pct`

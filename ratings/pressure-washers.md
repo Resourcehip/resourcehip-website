@@ -1,10 +1,9 @@
 ---
 title: Pressure Washers
-category: Power Tools
+category: power tools
 rating_type: generic
 brand: null
 slug: pressure-washers
-header_image: /assets/hero/pressure-washers/pressure-washers-header-v1.webp
 hip_score: 3.0
 hip_label: Caution
 msi_score: 3.5
@@ -49,6 +48,13 @@ ri_finding: The product is classified as Depleting because it relies on virgin m
   and no take-back scheme, fitting the criteria for conventional manufactured goods. It does not qualify for the Extractive
   band minimum of -3 because the required 50% recycled content and verified take-back program are absent. Consequently, the
   score reflects the active depletion of finite geological reserves without any regenerative offset.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This pressure washer has an overall HIP Score of 3.0 out of 10, indicating limited sustainability performance.
   Its Regenerative Index is -7.0, which means the product relies heavily on new materials rather than recycled ones and is
   currently depleting natural resources. While it offers a decent lifespan, the design makes it difficult to repair or recycle
@@ -62,12 +68,12 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Data Transparency
 
-This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and LLM training knowledge:
+This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and the category default assumptions table v0.1 (provisional — sources pending full citation):
 
 - `material_percentages`
 - `recycled_content_pct`
@@ -96,14 +102,11 @@ This is a **category rating** based on publicly available data. The following da
 - `modular_design`
 - `software_support_years`
 - `primary_material_origin`
-- `recycled_content_pct`
-- `takeback_scheme`
 - `regenerative_certifications`
 - `closed_loop_programme`
 - `end_of_life_programme`
 - `material_origin_certified`
 - `regenerative_practices`
-- `third_party_certification`
 
 A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data and produces a more accurate, product-specific score.
 

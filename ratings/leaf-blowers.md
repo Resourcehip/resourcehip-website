@@ -1,10 +1,9 @@
 ---
 title: Leaf Blowers
-category: Garden & Outdoor
+category: garden and outdoor
 rating_type: generic
 brand: null
 slug: leaf-blowers
-header_image: /assets/hero/leaf-blowers/leaf-blowers-header-v1.webp
 hip_score: 2.8
 hip_label: Poor
 msi_score: 2.0
@@ -47,6 +46,13 @@ pl_finding: The product receives an average lifespan score based on a stated des
 ri_finding: The product is scored in the Depleting band (-7) because it is a conventional leaf blower with 0% recycled content,
   no take-back scheme, and no regenerative certifications. Not Depleting because recycled content >= 50% with verified take-back
   does not apply, as the product lacks both recycled inputs and end-of-life recovery programmes.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This leaf blower has a HIP Score of 2.8 out of 10, indicating significant environmental challenges in its
   production and end-of-life handling. Its Regenerative Index is -7.0, which means the product relies heavily on scarce raw
   materials and contains no recycled content, placing it in a depleting category. Overall, this conventional model is difficult
@@ -60,12 +66,12 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Data Transparency
 
-This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and LLM training knowledge:
+This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and the category default assumptions table v0.1 (provisional — sources pending full citation):
 
 - `material_percentages`
 - `recycled_content_pct`
@@ -94,14 +100,11 @@ This is a **category rating** based on publicly available data. The following da
 - `modular_design`
 - `software_support_years`
 - `primary_material_origin`
-- `recycled_content_pct`
-- `takeback_scheme`
 - `regenerative_certifications`
 - `closed_loop_programme`
 - `end_of_life_programme`
 - `material_origin_certified`
 - `regenerative_practices`
-- `third_party_certification`
 
 A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data and produces a more accurate, product-specific score.
 

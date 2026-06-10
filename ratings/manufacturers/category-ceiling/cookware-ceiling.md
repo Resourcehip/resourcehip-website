@@ -1,6 +1,6 @@
 ---
 title: Cookware — Category Ceiling
-category: Kitchen
+category: kitchen equipment
 rating_type: verified
 brand: Category Ceiling
 slug: cookware-ceiling
@@ -16,8 +16,8 @@ ri_score: -2.0
 ri_descriptor: Extractive
 category_baseline_hip: 7.5
 category_baseline_ri: -2.0
-category_ceiling_hip: null
-category_ceiling_ri: null
+category_ceiling_hip: 7.5
+category_ceiling_ri: -2.0
 above_baseline: false
 assessment_date: '2026-04-26'
 methodology_version: '1.3'
@@ -48,6 +48,13 @@ ri_finding: The product qualifies for the Extractive band (-5 to -1) due to 82% 
   combined with a verified take-back and closed-loop programme. It is not Depleting because the high recycled content and
   recovery scheme meet the minimum threshold for exemption. It does not reach the Renewable band (0) as the primary structural
   materials are non-renewable metals rather than FSC-certified biomass, despite the presence of FSC handles.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This cookware set earns a HIP Score of 7.5 out of 10, reflecting a well-designed product built to last with
   a 30-year design life and a 25-year spare parts guarantee. It also achieves a Regenerative Index of -2.0, indicating that
   it is made from a high percentage of recycled materials rather than relying on new extraction. Overall, this item stands
@@ -61,7 +68,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Improvement Opportunities

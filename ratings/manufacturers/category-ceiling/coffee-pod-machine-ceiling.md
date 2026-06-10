@@ -1,6 +1,6 @@
 ---
 title: Coffee Pod Machine — Category Ceiling
-category: Kitchen
+category: small appliances
 rating_type: verified
 brand: Category Ceiling
 slug: coffee-pod-machine-ceiling
@@ -49,6 +49,13 @@ ri_finding: Scored in the Extractive band (-3.0) because the product has 82% rec
   which qualifies it for the minimum of -3 and exempts it from the Depleting floor. It does not qualify for the Renewable
   band (0) as primary materials are not fully renewable, nor for Restorative (+1 to +5) due to the absence of verified regenerative
   certifications like ROC.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This coffee pod machine earns a HIP Score of 7.2 out of 10, reflecting a solid balance of durability and
   repairability. It also achieves a Regenerative Index of -3.0, indicating that its high use of recycled materials and take-back
   program successfully offset its environmental impact.
@@ -60,7 +67,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Material Watch Points

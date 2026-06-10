@@ -1,6 +1,6 @@
 ---
 title: E-Bike — Category Ceiling
-category: Sports & Fitness
+category: sports and leisure
 rating_type: verified
 brand: Category Ceiling
 slug: e-bike-ceiling
@@ -49,6 +49,13 @@ ri_finding: The product scores in the Extractive band (-5 to -1) due to 72% recy
   satisfying the minimum threshold for the Extractive band. While FSC-certified rubber and certified mining practices are
   present, the absence of Regenerative Organic Certified (ROC) inputs or verified net-positive ecological outcomes prevents
   a score in the Restorative or Regenerative bands.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This e-bike earns an overall HIP Score of 6.4 out of 10, reflecting a balanced mix of durability and environmental
   responsibility. It achieves a Regenerative Index of -2.0, indicating that while it relies on new raw materials, it actively
   supports recycling through a verified take-back scheme and high recycled content.

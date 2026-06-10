@@ -1,6 +1,6 @@
 ---
 title: Dishwasher — Category Ceiling
-category: Home Appliances
+category: larger appliances
 rating_type: verified
 brand: Category Ceiling
 slug: dishwasher-ceiling
@@ -45,6 +45,13 @@ ri_finding: The product scores in the Extractive band (-3.0) because it contains
   take-back scheme, which qualifies it for the minimum of -3 per Rule 1. It is not Depleting because the combination of recycled
   content >= 50% and a verified take-back program explicitly exempts it from the -7 floor. It does not qualify for Restorative
   or Regenerative bands as no ROC certifications or verified ecosystem restoration evidence were submitted.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This dishwasher earns a HIP Score of 6.5 out of 10, indicating solid performance with a Regenerative Index
   of -3.0, which reflects its use of recycled materials and a take-back program. While it contains some critical raw materials,
   the product stands out for its long design life, easy repairability, and high recovery rate at the end of its life. Overall,

@@ -1,6 +1,6 @@
 ---
 title: Steel Bicycle — Category Ceiling
-category: Sports & Fitness
+category: sports and leisure
 rating_type: verified
 brand: Category Ceiling
 slug: steel-bicycle-ceiling
@@ -46,6 +46,13 @@ ri_finding: The product scores in the Extractive band (-5 to -1) due to 82% recy
   scheme, which qualifies it for a minimum of -3. It does not reach the Renewable (0) or Restorative (+1 to +5) bands because
   the primary structural material is steel (non-renewable) and there is no Regenerative Organic Certified (ROC) input or verified
   ecosystem restoration programme to trigger positive scores.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This steel bicycle earns a HIP Score of 7.8 out of 10, reflecting a well-made product designed for long-term
   use with a 50-year lifespan. It also achieves a Regenerative Index of -2.0, indicating that its high recycled content and
   take-back program help reduce its environmental footprint. Overall, this item stands out for its durability and commitment
@@ -59,7 +66,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Material Watch Points

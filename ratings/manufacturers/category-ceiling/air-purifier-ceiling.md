@@ -1,6 +1,6 @@
 ---
 title: Air Purifier — Category Ceiling
-category: Home & Living
+category: home lifestyle
 rating_type: verified
 brand: Category Ceiling
 slug: air-purifier-ceiling
@@ -48,6 +48,13 @@ ri_finding: The product qualifies for the Extractive band (-5 to -1) due to 68% 
   scheme, explicitly avoiding the Depleting floor. While the closed-loop programme and material certifications are positive,
   the absence of Regenerative Organic Certified (ROC) inputs or third-party verified ecosystem restoration prevents a score
   above zero.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This air purifier earns a HIP Score of 7.1 out of 10, reflecting a well-built device made from common materials
   that is designed to last for many years. Its Regenerative Index of -2.0 indicates that it uses a significant amount of recycled
   content and includes a program to take the product back at the end of its life. Overall, this is a durable and responsibly

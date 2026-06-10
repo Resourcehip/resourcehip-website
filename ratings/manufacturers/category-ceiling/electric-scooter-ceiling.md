@@ -1,6 +1,6 @@
 ---
 title: Electric Scooter — Category Ceiling
-category: Sports & Fitness
+category: sports and fitness
 rating_type: verified
 brand: Category Ceiling
 slug: electric-scooter-ceiling
@@ -49,6 +49,13 @@ ri_finding: The product qualifies for the Extractive band (-5 to -1) due to 72% 
   scheme, explicitly avoiding the Depleting floor (-7) as required by Rule 1. While the closed-loop programme and FSC-certified
   rubber are positive factors, the reliance on mined lithium, cobalt, and neodymium prevents a shift to the Renewable or Restorative
   bands.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This electric scooter earns a HIP Score of 6.5 out of 10, reflecting a solid balance of durability and repairability.
   It also carries a Regenerative Index of -2.0, indicating that while it uses significant recycled materials, it remains in
   the extractive phase of its lifecycle rather than fully regenerative.

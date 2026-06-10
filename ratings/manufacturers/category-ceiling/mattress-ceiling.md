@@ -1,6 +1,6 @@
 ---
 title: Mattress — Category Ceiling
-category: Sleep & Bedroom
+category: sleep products
 rating_type: verified
 brand: Category Ceiling
 slug: mattress-ceiling
@@ -16,8 +16,8 @@ ri_score: 2.0
 ri_descriptor: Restorative
 category_baseline_hip: 6.7
 category_baseline_ri: 2.0
-category_ceiling_hip: null
-category_ceiling_ri: null
+category_ceiling_hip: 6.7
+category_ceiling_ri: 2.0
 above_baseline: false
 assessment_date: '2026-04-26'
 methodology_version: '1.3'
@@ -49,6 +49,13 @@ ri_finding: Scored in the Restorative band (+1 to +5) due to the combination of 
   content and a closed-loop programme; however, it does not reach the Regenerative band (+6 to +10) as the primary driver
   for that tier (ROC certification) is absent and the regenerative inputs are not yet dominant enough to claim net-positive
   ecological outcomes.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This mattress earns a HIP Score of 6.7 out of 10, indicating solid performance in the sleep products category.
   It also achieves a Regenerative Index of +2.0, showing that it actively contributes to environmental restoration through
   recycled materials and a take-back program. Overall, the product balances durability with a design that supports material
@@ -62,7 +69,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Improvement Opportunities

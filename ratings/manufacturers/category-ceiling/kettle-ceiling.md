@@ -1,6 +1,6 @@
 ---
 title: Electric Kettle — Category Ceiling
-category: Kitchen
+category: small appliances
 rating_type: verified
 brand: Category Ceiling
 slug: kettle-ceiling
@@ -49,6 +49,13 @@ ri_finding: The product qualifies for the Extractive band minimum of -3 because 
   take-back scheme, explicitly excluding the Depleting floor. While the closed-loop programme and ResponsibleSteel certification
   are strong mitigating factors, the absence of Regenerative Organic Certified (ROC) inputs or verified net-positive ecosystem
   restoration prevents a score in the Restorative or Regenerative bands.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This electric kettle earns a HIP Score of 7.3 out of 10, reflecting a well-designed appliance built to last
   with excellent repairability and a long warranty. It also achieves a Regenerative Index of -3.0, indicating that it is made
   from a high percentage of recycled materials and includes a verified program to recover those materials at the end of its
@@ -61,7 +68,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Improvement Opportunities

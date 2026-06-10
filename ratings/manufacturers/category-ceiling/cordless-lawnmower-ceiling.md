@@ -1,6 +1,6 @@
 ---
 title: Cordless Lawnmower — Category Ceiling
-category: Garden & Outdoor
+category: garden and outdoor
 rating_type: verified
 brand: Category Ceiling
 slug: cordless-lawnmower-ceiling
@@ -48,6 +48,13 @@ ri_finding: The product qualifies for the Extractive band (-5 to -1) due to 60% 
   scheme, explicitly excluding the Depleting floor (-7). While it features responsible mining certifications (IRMA, Copper
   Mark) and a closed-loop programme, the absence of Regenerative Organic Certified (ROC) inputs or verified ecosystem restoration
   prevents a score in the Restorative or Regenerative bands.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This cordless lawnmower earns an overall HIP Score of 6.3 out of 10, reflecting a solid balance of durability
   and repairability. It also achieves a Regenerative Index of -2.0, indicating that while it uses some recycled materials,
   it still relies on extracting new resources. The product stands out for its long design life and ease of repair, though
@@ -61,7 +68,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Material Watch Points

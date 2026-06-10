@@ -1,6 +1,6 @@
 ---
 title: Portable Speaker — Category Ceiling
-category: Consumer Electronics
+category: consumer electronics
 rating_type: verified
 brand: Category Ceiling
 slug: portable-speaker-ceiling
@@ -49,6 +49,13 @@ ri_finding: The product qualifies for the Extractive band (-5 to -1) due to 66% 
   take-back scheme and closed-loop programme. It is not Depleting because the high recycled content and verified recovery
   pathway prevent it from hitting the -7 floor. However, it does not reach the Restorative band (+1 to +5) as no Regenerative
   Organic Certified (ROC) materials or third-party verified ecosystem restoration evidence was submitted.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This portable speaker earns a HIP Score of 6.4 out of 10, reflecting a solid balance of durability and repairability.
   It also carries a Regenerative Index of -2.0, indicating that while it uses significant recycled materials, it currently
   operates within an extractive model rather than a fully regenerative one. Overall, the product stands out for its long design

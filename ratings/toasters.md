@@ -1,10 +1,9 @@
 ---
 title: Toasters
-category: Kitchen
+category: small appliances
 rating_type: generic
 brand: null
 slug: toasters
-header_image: /assets/hero/toasters/toasters-header-v4.webp
 hip_score: 3.0
 hip_label: Caution
 msi_score: 3.5
@@ -17,8 +16,8 @@ ri_score: -7.0
 ri_descriptor: Depleting
 category_baseline_hip: 3.0
 category_baseline_ri: -7.0
-category_ceiling_hip: 7.3
-category_ceiling_ri: -2.0
+category_ceiling_hip: 7.2
+category_ceiling_ri: -3.0
 above_baseline: false
 assessment_date: '2026-04-18'
 methodology_version: '1.3'
@@ -48,6 +47,13 @@ ri_finding: The toaster is scored as Depleting (-7) because it relies on virgin 
   and no take-back scheme, fitting the criteria for conventional manufactured goods. It does not qualify for the Extractive
   band minimum of -3 because the required 50% recycled content and verified take-back are absent. Consequently, the product
   actively depletes finite geological reserves with no credible pathway toward regeneration.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This toaster has an overall HIP Score of 3.0 out of 10, indicating significant challenges in its environmental
   design. Its Regenerative Index is -7.0, which means the product relies heavily on new raw materials rather than recycled
   ones and is difficult to repair or recycle at the end of its life.
@@ -59,12 +65,12 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Data Transparency
 
-This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and LLM training knowledge:
+This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and the category default assumptions table v0.1 (provisional — sources pending full citation):
 
 - `material_percentages`
 - `recycled_content_pct`
@@ -94,13 +100,11 @@ This is a **category rating** based on publicly available data. The following da
 - `modular_design`
 - `software_support_years`
 - `primary_material_origin`
-- `takeback_scheme`
 - `regenerative_certifications`
 - `closed_loop_programme`
 - `end_of_life_programme`
 - `material_origin_certified`
 - `regenerative_practices`
-- `third_party_certification`
 
 A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data and produces a more accurate, product-specific score.
 

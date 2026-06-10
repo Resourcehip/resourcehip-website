@@ -1,6 +1,6 @@
 ---
 title: Reusable Coffee Cup — Category Ceiling
-category: Home & Living
+category: home lifestyle
 rating_type: verified
 brand: Category Ceiling
 slug: reusable-coffee-cup-ceiling
@@ -47,6 +47,13 @@ ri_finding: The product qualifies for the Extractive band (-5 to -1) due to 90% 
   scheme, explicitly avoiding the Depleting floor (-7) as required by Rule 1. While the closed-loop programme and ResponsibleSteel
   routing are significant, the absence of Regenerative Organic Certified (ROC) materials or third-party verified ecosystem
   restoration prevents a score in the Restorative or Regenerative bands.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This reusable coffee cup earns a HIP Score of 7.6 out of 10, reflecting its strong durability and high-quality
   materials. It also achieves a Regenerative Index of -2.0, indicating that it is made from abundant recycled content and
   includes a verified take-back program to support a circular lifecycle.
@@ -58,7 +65,7 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Improvement Opportunities

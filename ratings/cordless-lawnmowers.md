@@ -1,10 +1,9 @@
 ---
 title: Cordless Lawnmowers
-category: Garden & Outdoor
+category: garden and outdoor
 rating_type: generic
 brand: null
 slug: cordless-lawnmowers
-header_image: /assets/hero/cordless-lawnmowers/cordless-lawnmowers-header-v1.webp
 hip_score: 2.6
 hip_label: Poor
 msi_score: 1.5
@@ -48,6 +47,13 @@ pl_finding: The product receives an average lifespan score based on a stated des
 ri_finding: The product is classified as Depleting because it relies on virgin mined materials with zero recycled content
   and lacks any take-back or end-of-life programme. Not Depleting because recycled content >= 50% with verified take-back
   does not apply, as the product has 0% recycled content and no such scheme.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This cordless lawnmower has a low overall performance rating of 2.6 out of 10, indicating significant environmental
   challenges. Its Regenerative Index of -7.0 shows that the product relies heavily on new materials rather than recycled ones,
   making it depleting for the planet. Essentially, the design makes it difficult to repair or recycle at the end of its life.
@@ -60,12 +66,12 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Data Transparency
 
-This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and LLM training knowledge:
+This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and the category default assumptions table v0.1 (provisional — sources pending full citation):
 
 - `material_percentages`
 - `country_of_primary_extraction`
@@ -94,13 +100,11 @@ This is a **category rating** based on publicly available data. The following da
 - `software_support_years`
 - `primary_material_origin`
 - `recycled_content_pct`
-- `takeback_scheme`
 - `regenerative_certifications`
 - `closed_loop_programme`
 - `end_of_life_programme`
 - `material_origin_certified`
 - `regenerative_practices`
-- `third_party_certification`
 
 A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data and produces a more accurate, product-specific score.
 

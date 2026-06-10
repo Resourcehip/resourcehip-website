@@ -1,10 +1,9 @@
 ---
 title: Recycled HDPE Outdoor Furniture
-category: Garden & Outdoor
+category: outdoor furniture
 rating_type: generic
 brand: null
 slug: recycled-hdpe-furniture
-header_image: /assets/hero/recycled-hdpe-furniture/recycled-hdpe-furniture-header-v1.webp
 hip_score: 4.6
 hip_label: Caution
 msi_score: 7.5
@@ -49,6 +48,13 @@ ri_finding: The product qualifies for the Extractive band (-5 to -1) due to 80% 
   exceeds the 50% threshold for meaningful mitigation. It is not Depleting because the high recycled content provides a partial
   offset to virgin material extraction, though the absence of a take-back scheme prevents a higher score. No regenerative
   certifications or closed-loop programmes were submitted to support a Renewable or Restorative rating.
+msi_consumer_finding: ''
+scr_consumer_finding: ''
+rc_consumer_finding: ''
+r_consumer_finding: ''
+sei_consumer_finding: ''
+pl_consumer_finding: ''
+ri_consumer_finding: ''
 consumer_summary: This outdoor furniture set achieves a HIP Score of 4.6 out of 10, matching the current market baseline for
   this category. It earns a Regenerative Index of -2.0, reflecting its strong use of recycled materials which places it in
   the extractive band. While the product is built for exceptional longevity with a 20-year warranty, its assembly methods
@@ -62,12 +68,12 @@ data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
 - World Bank Worldwide Governance Indicators (CC BY 4.0)
-- LLM training knowledge (for assumed fields — no manufacturer submission)
+- Category default assumptions table v0.1 (provisional — sources pending full citation)
 ---
 
 ## Data Transparency
 
-This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and LLM training knowledge:
+This is a **category rating** based on publicly available data. The following data fields were not submitted by a manufacturer and have been estimated conservatively using open reference data and the category default assumptions table v0.1 (provisional — sources pending full citation):
 
 - `country_of_primary_extraction`
 - `primary_sourcing_countries`
@@ -97,7 +103,6 @@ This is a **category rating** based on publicly available data. The following da
 - `end_of_life_programme`
 - `material_origin_certified`
 - `regenerative_practices`
-- `third_party_certification`
 
 A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data and produces a more accurate, product-specific score.
 
