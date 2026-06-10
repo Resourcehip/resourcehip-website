@@ -102,6 +102,8 @@ The Mark must not be modified. The following are explicitly prohibited:
 - Using the Mark in marketing copy that compares the licensed product directly with a named competitor product. Resourcehip does not compare brands; the methodology scores against the category baseline only.
 - Using the Mark, or any reference to the Mark or HIP Score, in a way that overstates the awarded tier — for example calling a Standard or Silver Mark "Gold-equivalent", or using the Gold colour with a Silver Mark.
 
+For detailed guidance on green claims compliance — including what licensees may and may not say under the EU Green Claims Directive and the UK CMA Green Claims Code — see [HIP Mark and Green Claims Compliance](/methodology/licensee-claims).
+
 ---
 
 ## 6. Attribution line (required)
