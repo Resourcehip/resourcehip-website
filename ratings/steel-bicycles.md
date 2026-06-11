@@ -66,6 +66,7 @@ what_this_means: When buying a bicycle, look for models that explicitly state th
   features make the product easier to fix and extend its useful life. Avoid products that offer no information on their material
   sourcing or end-of-life recycling options.
 hip_mark: null
+header_image: /assets/hero/steel-bicycles/steel-bicycles-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

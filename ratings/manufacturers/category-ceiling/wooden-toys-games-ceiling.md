@@ -65,6 +65,7 @@ what_this_means: When shopping for wooden toys, look for items made from wood wi
   those relying on glued components that cannot be separated. Choosing items with these features supports a longer product
   life and reduces waste.
 hip_mark: Silver
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

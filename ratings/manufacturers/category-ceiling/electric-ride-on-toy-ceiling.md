@@ -62,6 +62,7 @@ what_this_means: When buying toys in this category, look for items that are buil
   disassembly for recycling. Prioritize products that offer take-back programs and use recycled content to reduce their environmental
   footprint. Avoid items that are difficult to repair or lack clear information about where their materials come from.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

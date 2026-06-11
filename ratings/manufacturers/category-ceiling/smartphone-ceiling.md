@@ -64,6 +64,7 @@ what_this_means: When buying a smartphone, look for models that are designed to 
   come with long-term warranties for spare parts. Avoid devices that are glued shut or lack a clear plan for recycling old
   units, as choosing products with take-back programs helps shift the industry away from constant extraction.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

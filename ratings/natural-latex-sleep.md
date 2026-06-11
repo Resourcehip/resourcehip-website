@@ -66,6 +66,7 @@ what_this_means: When shopping for sleep products, prioritize items with long wa
   the product's life and reduce waste. Avoid purchasing items that are difficult to repair or have no clear end-of-life plan,
   as these contribute to unnecessary environmental impact.
 hip_mark: null
+header_image: /assets/hero/natural-latex-sleep.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

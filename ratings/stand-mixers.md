@@ -64,6 +64,7 @@ what_this_means: When shopping for a stand mixer, look for models that use easil
   schemes to support a circular economy. Choosing products designed for longevity and repairability helps shift the market
   away from depleting resource models.
 hip_mark: null
+header_image: /assets/hero/stand-mixers/stand-mixers-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

@@ -64,6 +64,7 @@ what_this_means: When shopping for a baby monitor, look for models that offer a 
   the device can be responsibly recycled at the end of its life. Avoid products that are glued shut or lack any information
   about their environmental impact or repairability.
 hip_mark: null
+header_image: /assets/hero/baby-monitors/baby-monitors-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

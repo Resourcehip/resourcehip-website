@@ -64,6 +64,7 @@ what_this_means: When shopping for cork goods, look for items with clear FSC cer
   responsibly. Prioritize products that offer long warranties and spare parts availability to extend their usable life. Be
   aware that even renewable materials may have lower scores if they lack take-back schemes or use non-recyclable components.
 hip_mark: null
+header_image: /assets/hero/cork-products.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

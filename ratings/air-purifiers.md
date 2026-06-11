@@ -65,6 +65,7 @@ what_this_means: When shopping for air purifiers, look for models that explicitl
   these are difficult to recover at the end of their life. Prioritizing brands that publish third-party sustainability audits
   will help you choose appliances that are built to last and support a more sustainable home.
 hip_mark: null
+header_image: /assets/hero/air-purifiers/air-purifiers-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

@@ -62,6 +62,7 @@ what_this_means: When shopping for small appliances like kettles, look for produ
   to fix and end up as waste. Choosing durable, repairable designs helps reduce the demand for new raw materials and supports
   a more circular economy.
 hip_mark: null
+header_image: /assets/hero/kettles/kettles-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

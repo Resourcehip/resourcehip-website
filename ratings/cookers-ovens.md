@@ -61,6 +61,7 @@ what_this_means: When shopping for cookers, look for models that use mechanical 
   repairs and recycling. Prioritize brands that publish service manuals and offer take-back schemes to ensure materials can
   be recovered. Choosing products with higher recycled content helps shift the market toward a more regenerative approach.
 hip_mark: null
+header_image: /assets/hero/cookers-ovens/cookers-ovens-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

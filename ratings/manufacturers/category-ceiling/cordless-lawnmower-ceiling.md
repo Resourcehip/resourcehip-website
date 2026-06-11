@@ -64,6 +64,7 @@ what_this_means: When shopping for garden tools, prioritize items with long warr
   Avoid buying appliances that are difficult to fix or lack clear information about their material sourcing and end-of-life
   recycling options.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

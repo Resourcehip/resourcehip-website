@@ -62,6 +62,7 @@ what_this_means: When shopping for an e-bike, look for models that explicitly st
   for easy repair with standard screws rather than glue, as this extends the product's usable life. Choosing a bike with a
   higher proportion of recycled content helps reduce the demand for new mining and supports a more circular economy.
 hip_mark: null
+header_image: /assets/hero/e-bikes/e-bikes-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

@@ -62,6 +62,7 @@ what_this_means: When shopping for smartphones, look for models that explicitly 
   device's life. Avoid products that are sealed shut or lack a take-back program, as these make recycling difficult and contribute
   to resource depletion.
 hip_mark: null
+header_image: /assets/hero/smartphones/smartphones-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

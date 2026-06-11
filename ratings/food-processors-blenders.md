@@ -64,6 +64,7 @@ what_this_means: When shopping for small appliances like this, look for products
   to extend the product's useful life. Choosing designs that avoid permanent gluing and support local repair services will
   help you move toward more regenerative options.
 hip_mark: null
+header_image: /assets/hero/food-processors-blenders/food-processors-blenders-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

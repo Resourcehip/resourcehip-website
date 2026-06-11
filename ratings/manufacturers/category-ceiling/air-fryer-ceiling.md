@@ -62,6 +62,7 @@ what_this_means: When shopping for small appliances, look for models that offer 
   and have clear take-back programs to ensure resources are reused rather than discarded. Avoid products that are difficult
   to fix or lack any plan for recycling at the end of their life.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

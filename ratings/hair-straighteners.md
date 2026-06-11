@@ -64,6 +64,7 @@ what_this_means: When shopping for hair straighteners, look for products that di
   to extend the product's life. Avoid items that are glued shut, lack warranty support, or are made entirely from virgin materials
   without any end-of-life plan.
 hip_mark: null
+header_image: /assets/hero/hair-straighteners/hair-straighteners-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

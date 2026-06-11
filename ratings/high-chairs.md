@@ -64,6 +64,7 @@ what_this_means: When shopping for a high chair, look for models that offer spar
   of their use. Choosing products with stronger warranties and transparent sourcing can help support a more circular approach
   to baby furniture.
 hip_mark: null
+header_image: /assets/hero/high-chairs/high-chairs-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

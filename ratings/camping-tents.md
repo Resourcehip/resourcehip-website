@@ -63,6 +63,7 @@ what_this_means: When shopping for outdoor gear, look for tents that explicitly 
   path, or are made entirely from virgin plastics and metals without any take-back programs. Choosing items designed for durability
   and easy disassembly helps reduce the demand for new raw materials and supports a more sustainable outdoor lifestyle.
 hip_mark: null
+header_image: /assets/hero/camping-tents/camping-tents-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

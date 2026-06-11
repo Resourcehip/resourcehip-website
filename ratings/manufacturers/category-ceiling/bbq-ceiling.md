@@ -64,6 +64,7 @@ what_this_means: When shopping for outdoor cooking equipment, look for items bui
   to ensure your purchase supports a circular economy. Avoid products that lack spare parts or clear instructions for maintenance,
   as these often end up in landfills sooner.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

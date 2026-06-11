@@ -62,6 +62,7 @@ what_this_means: When shopping for electronic toys, look for items that explicit
   rather than those that are glued shut. Choosing items with these features helps support a more circular economy where materials
   are kept in use for longer.
 hip_mark: null
+header_image: /assets/hero/electronic-learning-toys/electronic-learning-toys-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

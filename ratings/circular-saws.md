@@ -62,6 +62,7 @@ what_this_means: When buying a power tool like this, look for models that explic
   a take-back program for recycling. Prioritize brands that design their tools for easy repair and clearly list spare parts
   availability to extend the product's lifespan.
 hip_mark: null
+header_image: /assets/hero/circular-saws/circular-saws-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

@@ -65,6 +65,7 @@ what_this_means: When shopping for electronics, prioritize devices that are desi
   spare parts availability for at least seven years to ensure the product remains functional for years. Finally, choose items
   that disclose their use of recycled content and have verified take-back programs to support a more circular economy.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

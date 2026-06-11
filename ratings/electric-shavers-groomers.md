@@ -61,6 +61,7 @@ what_this_means: When shopping for personal care electronics, look for products 
   for recycling. Avoid items that are glued shut or lack a warranty, as these features limit your ability to extend the product's
   life. Choosing devices designed for repair and made with recycled content helps reduce the demand for new raw materials.
 hip_mark: null
+header_image: /assets/hero/electric-shavers-groomers/electric-shavers-groomers-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

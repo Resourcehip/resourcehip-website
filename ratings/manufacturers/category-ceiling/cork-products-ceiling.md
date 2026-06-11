@@ -64,6 +64,7 @@ what_this_means: When shopping for similar home goods, look for items made from 
   come with long warranties. Prioritize products sourced from regions with strong labor laws and certified sustainable farming
   practices. Avoid items that rely on mixed materials or lack clear information about their origin and end-of-life disposal.
 hip_mark: Silver
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

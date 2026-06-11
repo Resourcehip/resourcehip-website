@@ -64,6 +64,7 @@ what_this_means: When shopping for ceiling fans, look for models that offer long
   a circular economy. Avoid items that lack clear repair instructions or end-of-life recycling options, as these often have
   shorter lifespans and higher environmental impacts.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

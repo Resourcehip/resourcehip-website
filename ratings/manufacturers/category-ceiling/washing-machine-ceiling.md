@@ -64,6 +64,7 @@ what_this_means: When shopping for large appliances, look for models that offer 
   the item at the end of its life. Avoid machines that are glued together or lack a clear path for recycling, as these are
   harder to fix and dispose of responsibly.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

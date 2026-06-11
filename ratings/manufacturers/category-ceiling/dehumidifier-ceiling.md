@@ -65,6 +65,7 @@ what_this_means: When shopping for small appliances, look for items with long wa
   materials in use rather than in landfills. Avoid buying devices that are difficult to repair or lack a plan for end-of-life
   recycling, as these choices limit their positive environmental impact.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

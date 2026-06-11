@@ -61,6 +61,7 @@ what_this_means: When shopping for personal care electronics, look for products 
   options to ensure they last for years. Prioritize brands that use recycled content and provide clear instructions for returning
   old devices, as these steps significantly reduce environmental impact.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

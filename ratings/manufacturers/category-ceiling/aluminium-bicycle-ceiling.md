@@ -60,6 +60,7 @@ what_this_means: When buying a bicycle, look for models made from abundant mater
   warranty and a clear plan for recycling at the end of their life. Avoid products that lack spare parts availability or take-back
   schemes, as these features are essential for ensuring the item remains useful and recyclable for decades.
 hip_mark: Silver
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

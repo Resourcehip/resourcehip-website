@@ -62,6 +62,7 @@ what_this_means: When shopping for fitness trackers, look for models that offer 
   manuals. Choosing products with higher regeneration potential helps reduce reliance on new mining and supports a more circular
   economy.
 hip_mark: null
+header_image: /assets/hero/basic-fitness-trackers/basic-fitness-trackers-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

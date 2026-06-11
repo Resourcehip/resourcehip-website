@@ -62,6 +62,7 @@ what_this_means: When shopping for a vacuum cleaner, look for models that offer 
   verified labor standards. Choosing products designed for easy disassembly helps reduce reliance on virgin mining and supports
   a more circular economy.
 hip_mark: null
+header_image: /assets/hero/vacuum-cleaners/vacuum-cleaners-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

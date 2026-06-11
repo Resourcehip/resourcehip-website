@@ -65,6 +65,7 @@ what_this_means: When shopping for home lifestyle accessories, look for items ma
   lives, as these indicate a commitment to durability over disposable use. Avoid items that rely on mixed materials or adhesives,
   which often prevent recycling and reduce the product's ability to return to the earth safely.
 hip_mark: Silver
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

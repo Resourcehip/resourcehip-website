@@ -64,6 +64,7 @@ what_this_means: When shopping for a tumble dryer, look for models that explicit
   as these features make it difficult to extend the appliance's lifespan or recover valuable materials later. Choosing a device
   with a clear take-back scheme or higher recycled content can help shift the market toward more regenerative options.
 hip_mark: null
+header_image: /assets/hero/tumble-dryers/tumble-dryers-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

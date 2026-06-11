@@ -62,6 +62,7 @@ what_this_means: When shopping for a high chair, look for items that can be easi
   parts, ensuring the item lasts for years rather than becoming waste quickly. Choosing furniture made from renewable materials
   helps close the loop on resource use, supporting a more sustainable nursery environment.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

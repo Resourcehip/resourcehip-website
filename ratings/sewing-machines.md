@@ -64,6 +64,7 @@ what_this_means: When shopping for a sewing machine, look for models that explic
   extend their usability. Avoid machines that rely heavily on glued components, as these are difficult to separate and recycle
   at the end of their life.
 hip_mark: null
+header_image: /assets/hero/sewing-machines/sewing-machines-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

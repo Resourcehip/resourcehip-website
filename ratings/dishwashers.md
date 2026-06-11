@@ -65,6 +65,7 @@ what_this_means: When shopping for a dishwasher, look for models that explicitly
   with higher recycled content and better repairability will help reduce the demand for new mining and support a more circular
   economy.
 hip_mark: null
+header_image: /assets/hero/dishwashers/dishwashers-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

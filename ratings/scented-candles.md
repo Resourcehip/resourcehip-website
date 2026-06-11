@@ -59,6 +59,7 @@ what_this_means: When buying home fragrance, look for candles made with recycled
   contribute to resource depletion. Choosing items with warranties or repairable designs can help extend their useful life
   and reduce waste.
 hip_mark: null
+header_image: /assets/hero/scented-candles/scented-candles-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

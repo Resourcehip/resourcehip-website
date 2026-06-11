@@ -64,6 +64,7 @@ what_this_means: When shopping for kitchen equipment, look for items that are de
   metals and avoid products that are glued together or lack a clear plan for spare parts, as these are difficult to fix and
   often end up in landfills sooner.
 hip_mark: Silver
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

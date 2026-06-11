@@ -65,6 +65,7 @@ what_this_means: When shopping for upholstered furniture, look for items with lo
   those that offer a take-back program to ensure responsible recycling. Avoid products that lack transparency about their
   supply chain or offer no plan for end-of-life disposal.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

@@ -61,6 +61,7 @@ what_this_means: When shopping for a long-lasting coffee cup, look for products 
   that guarantee spare parts availability for many years. Avoid items that are difficult to disassemble or lack a clear plan
   for recycling or returning the product at the end of its life.
 hip_mark: Silver
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

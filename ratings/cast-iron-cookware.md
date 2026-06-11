@@ -67,6 +67,7 @@ what_this_means: When shopping for durable cookware, prioritize items that clear
   higher recycled content to improve their regenerative impact. Choosing products with verified long-term warranties supports
   a more sustainable cycle of use and reduces the need for frequent replacements.
 hip_mark: null
+header_image: /assets/hero/cast-iron-cookware.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

@@ -61,6 +61,7 @@ what_this_means: When shopping for kitchenware, look for items made from single 
   easy repair or return. Prioritize products with clear warranties and verified take-back schemes to ensure they stay out
   of landfills. Avoid items that rely on mixed materials or lack a plan for end-of-life recycling.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

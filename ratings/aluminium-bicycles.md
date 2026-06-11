@@ -65,6 +65,7 @@ what_this_means: When buying a bicycle, look for models that explicitly state th
   clear plans for recycling or repair, as these contribute to resource depletion. Prioritize brands that offer transparent
   repair guides and use durable designs that can be fixed rather than replaced.
 hip_mark: null
+header_image: /assets/hero/aluminium-bicycles/aluminium-bicycles-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

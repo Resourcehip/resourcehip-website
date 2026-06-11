@@ -65,6 +65,7 @@ what_this_means: When shopping for personal care electronics, look for items tha
   parts, as these features significantly extend the product's life. Avoid products that lack a clear plan for recycling or
   returning old units, as this limits their ability to reduce the need for new raw materials.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

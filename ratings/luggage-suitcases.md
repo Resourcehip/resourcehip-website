@@ -62,6 +62,7 @@ what_this_means: When shopping for luggage, look for brands that offer clear tak
   circular economy. Avoid products that are permanently sealed or lack any information on how to recycle them once they reach
   the end of their useful life.
 hip_mark: null
+header_image: /assets/hero/luggage-suitcases/luggage-suitcases-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

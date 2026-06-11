@@ -66,6 +66,7 @@ what_this_means: When shopping for durable water bottles, look for items that ex
   origins to ensure better labor and environmental standards. Choosing products with higher recycled content and longer guaranteed
   lifespans helps shift the market toward more sustainable practices.
 hip_mark: null
+header_image: /assets/hero/stainless-steel-water-bottles/stainless-steel-water-bottles-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

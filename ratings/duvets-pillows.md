@@ -64,6 +64,7 @@ what_this_means: When shopping for bedding, look for items that explicitly state
   to ensure ethical production standards. Choosing items designed for durability and repairability can also help extend the
   product's useful life beyond standard category norms.
 hip_mark: null
+header_image: /assets/hero/duvets-pillows.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

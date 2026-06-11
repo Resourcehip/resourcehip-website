@@ -62,6 +62,7 @@ what_this_means: When shopping for fitness gear, look for items with long warran
   lower their overall environmental footprint. Avoid equipment that is glued together or made from single-use plastics, as
   these are difficult to recycle and often have shorter lifespans.
 hip_mark: Silver
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

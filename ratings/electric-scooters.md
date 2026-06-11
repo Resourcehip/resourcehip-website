@@ -65,6 +65,7 @@ what_this_means: When shopping for electric scooters, look for models that offer
   as these are designed to be discarded rather than reused. Choosing items with longer warranties and modular designs helps
   extend the product's life and reduces waste.
 hip_mark: null
+header_image: /assets/hero/electric-scooters/electric-scooters-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

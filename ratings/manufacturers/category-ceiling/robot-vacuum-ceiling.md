@@ -65,6 +65,7 @@ what_this_means: When buying a robot vacuum, look for models that are designed t
   waste and resource consumption. Avoid items that rely on glue or have short lifespans, as these are difficult to fix and
   contribute to unnecessary electronic waste.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

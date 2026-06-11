@@ -67,6 +67,7 @@ what_this_means: When shopping for small appliances like fans, look for products
   these designs make it difficult to recover valuable resources at the end of their life. Choosing products designed for disassembly
   and backed by longer warranties can help shift the market toward more regenerative options.
 hip_mark: null
+header_image: /assets/hero/electric-fans/electric-fans-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

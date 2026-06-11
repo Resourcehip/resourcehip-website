@@ -61,6 +61,7 @@ what_this_means: When shopping for outdoor gear, look for products with long war
   apart for repair or recycling. Prioritize items made from common materials like aluminum and plastics that are sourced from
   regions with strong labor laws, and avoid products that rely on permanent adhesives or obscure supply chains.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

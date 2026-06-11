@@ -63,6 +63,7 @@ what_this_means: When shopping for ceiling lighting, look for fixtures that comb
   sourcing to move beyond the current market baseline. Avoid products that lack spare parts commitments or fail to disclose
   how their materials are sourced and recovered at end-of-life.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

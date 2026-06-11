@@ -61,6 +61,7 @@ what_this_means: When shopping for large appliances, look for models that offer 
   materials are recovered and reused rather than discarded. Choosing items with high recycled content and clear disassembly
   instructions supports a more sustainable cycle for your home.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

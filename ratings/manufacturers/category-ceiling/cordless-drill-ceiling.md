@@ -63,6 +63,7 @@ what_this_means: When buying power tools, look for items that can be easily take
   to ensure the tool lasts for many years. Avoid products that lack a clear plan for recycling or that use difficult-to-recycle
   adhesives, as these limit the material's future value.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

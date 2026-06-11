@@ -63,6 +63,7 @@ what_this_means: When shopping for a tumble dryer, look for models that offer lo
   as these features support a circular economy. Avoid products that lack transparency about their repairability or end-of-life
   recycling options.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

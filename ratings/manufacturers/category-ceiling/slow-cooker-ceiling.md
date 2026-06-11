@@ -63,6 +63,7 @@ what_this_means: When shopping for durable small appliances, look for models tha
   a regenerative future where materials are reused rather than discarded. Avoid items that lack clear end-of-life plans, as
   these contribute to ongoing resource extraction without closing the material loop.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

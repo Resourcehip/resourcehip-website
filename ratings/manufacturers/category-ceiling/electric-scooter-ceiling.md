@@ -63,6 +63,7 @@ what_this_means: When shopping for an electric scooter, prioritize models with l
   to ensure the product lasts for years. Look for brands that offer verified take-back schemes and use recycled content, as
   these features help reduce the environmental impact of your purchase.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

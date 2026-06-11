@@ -67,6 +67,7 @@ what_this_means: When shopping for a fridge-freezer, look for models that explic
   disassembly to extend their useful life. Choosing appliances with these features helps shift the market away from relying
   solely on virgin mined resources.
 hip_mark: null
+header_image: /assets/hero/fridge-freezers/fridge-freezers-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

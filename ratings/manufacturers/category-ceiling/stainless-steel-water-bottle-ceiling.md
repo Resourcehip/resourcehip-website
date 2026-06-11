@@ -64,6 +64,7 @@ what_this_means: When shopping for a water bottle, look for items that offer lon
   take responsibility for the item at the end of its life. Avoid bottles that are glued together or made from virgin materials,
   as these are harder to fix and less sustainable.
 hip_mark: Silver
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

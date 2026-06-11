@@ -63,6 +63,7 @@ what_this_means: When shopping for floor coverings, look for products that offer
   reduce the demand for new raw materials. Avoid products that are glued together or sealed, as these are typically impossible
   to recycle at the end of their life.
 hip_mark: null
+header_image: /assets/hero/carpets.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

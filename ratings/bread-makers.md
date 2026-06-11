@@ -63,6 +63,7 @@ what_this_means: When shopping for a bread maker, look for models that offer a c
   to ensure components can be separated at the end of their life. Choosing appliances designed for durability and material
   recovery helps shift the market toward more sustainable options.
 hip_mark: null
+header_image: /assets/hero/bread-makers/bread-makers-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

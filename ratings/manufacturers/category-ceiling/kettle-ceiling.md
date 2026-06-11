@@ -64,6 +64,7 @@ what_this_means: When shopping for small appliances, look for products that offe
   repair to ensure they last for years. You should also prioritize items that use recycled materials and have clear take-back
   schemes, as these features help close the loop on resource use.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

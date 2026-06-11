@@ -62,6 +62,7 @@ what_this_means: When shopping for upholstered furniture, look for items that ex
   as these features make the item easier to fix and recycle later. Avoid sofas that appear permanently glued together or lack
   information about their end-of-life options.
 hip_mark: null
+header_image: /assets/hero/sofas/sofas-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

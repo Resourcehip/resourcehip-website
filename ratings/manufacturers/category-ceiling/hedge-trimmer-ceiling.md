@@ -63,6 +63,7 @@ what_this_means: When shopping for garden tools, prioritize models with long war
   ensure they last for years. Look for products that use standard screws for easy repairs and offer recycling programs, as
   these features significantly extend the item's useful life and reduce waste.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

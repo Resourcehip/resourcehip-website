@@ -62,6 +62,7 @@ what_this_means: When shopping for a dehumidifier, look for models that offer sp
   Avoid products that are glued shut or lack a warranty, as these features limit how long the appliance can last. Choosing
   items designed for repair and made with recycled content helps support a more sustainable market.
 hip_mark: null
+header_image: /assets/hero/dehumidifiers/dehumidifiers-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

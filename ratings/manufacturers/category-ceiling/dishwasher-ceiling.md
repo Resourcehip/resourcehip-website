@@ -61,6 +61,7 @@ what_this_means: When shopping for large appliances, look for models that offer 
   back for recycling when you are done with it. Avoid appliances that are difficult to disassemble or lack spare parts, as
   these often end up in landfills much sooner.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

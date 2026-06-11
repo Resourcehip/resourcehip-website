@@ -61,6 +61,7 @@ what_this_means: When buying portable speakers, look for models that explicitly 
   a repair service or spare parts. Avoid products that are glued shut or lack a clear plan for recycling, as these are designed
   to be discarded rather than reused.
 hip_mark: null
+header_image: /assets/hero/portable-speakers/portable-speakers-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

@@ -60,6 +60,7 @@ what_this_means: When shopping for small appliances like this, look for models t
   and clear repair instructions to extend their usable life. Prioritize products that use recycled materials and have take-back
   programs, as these features help reduce waste and support a more sustainable cycle of use.
 hip_mark: null
+header_image: /assets/hero/air-fryers/air-fryers-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

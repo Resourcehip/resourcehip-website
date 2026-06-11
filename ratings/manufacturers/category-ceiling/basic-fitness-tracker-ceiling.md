@@ -63,6 +63,7 @@ what_this_means: When shopping for fitness trackers, look for models that offer 
   on new raw materials without any take-back schemes. Prioritizing products with higher repairability and recycled content
   helps reduce the demand for scarce resources and supports a more circular economy.
 hip_mark: null
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

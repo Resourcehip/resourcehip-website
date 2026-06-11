@@ -65,6 +65,7 @@ what_this_means: When buying a baby travel system, look for products with long w
   program, as these features help close the loop on waste. Avoid pushchairs that are difficult to fix or lack a plan for what
   happens to the product at the end of its life.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

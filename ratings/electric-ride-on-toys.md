@@ -61,6 +61,7 @@ what_this_means: When shopping for children's toys, look for products that offer
   fix and likely to end up in a landfill. Choosing durable, repairable toys helps reduce the demand for new raw materials
   and supports a more circular economy.
 hip_mark: null
+header_image: /assets/hero/electric-ride-on-toys/electric-ride-on-toys-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

@@ -62,6 +62,7 @@ what_this_means: When buying a pressure washer, look for models with long warran
   the tool lasts for years. You should also prioritize products that use recycled materials and offer take-back programs to
   help close the loop on waste.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

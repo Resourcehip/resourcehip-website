@@ -63,6 +63,7 @@ what_this_means: When shopping for small appliances, look for models with long w
   ensure materials are recovered at the end of their use. Avoid products that rely heavily on adhesives or lack clear plans
   for recycling, as these limit the ability to reuse valuable resources.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

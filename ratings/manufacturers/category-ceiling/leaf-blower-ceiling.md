@@ -67,6 +67,7 @@ what_this_means: When shopping for garden tools, prioritize items with long warr
   Avoid buying tools that are glued together or lack spare parts, as these are difficult to fix and often end up in landfills
   quickly.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

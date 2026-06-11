@@ -65,6 +65,7 @@ what_this_means: When shopping for a mattress, look for items with a high Regene
   ensuring you get value over many years. Avoid mattresses that are permanently glued or welded, as these are difficult to
   recycle at the end of their life.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

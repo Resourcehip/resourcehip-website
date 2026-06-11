@@ -64,6 +64,7 @@ what_this_means: When shopping for wireless earbuds, prioritize models that are 
   and environmental management. Choosing products with higher recycled content and clear repairability ensures you are supporting
   a more circular economy.
 hip_mark: null
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

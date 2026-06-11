@@ -64,6 +64,7 @@ what_this_means: When shopping for outdoor furniture, look for items that combin
   also verify that they avoid permanent gluing so parts can be replaced or separated for recycling. Avoiding designs that
   lock components together with adhesives will help you choose furniture that remains useful and recyclable for longer.
 hip_mark: null
+header_image: /assets/hero/recycled-hdpe-furniture/recycled-hdpe-furniture-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

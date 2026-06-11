@@ -63,6 +63,7 @@ what_this_means: When shopping for an e-bike, look for models with long warranti
   these features significantly extend the product's life. You should also prioritize brands that offer verified take-back
   programs and use recycled materials, as these actions help close the loop on resource use.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

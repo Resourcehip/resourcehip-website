@@ -61,6 +61,7 @@ what_this_means: When shopping for durable luggage, look for items with long war
   they last for years. Prioritize products that use recycled content and offer take-back schemes, as these features help reduce
   waste and support a more sustainable industry.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

@@ -66,6 +66,7 @@ what_this_means: When shopping for linen and hemp accessories, look for items th
   this extends the item's life and reduces waste. Avoid items with permanent glued fasteners or those manufactured without
   transparency regarding their supply chain governance.
 hip_mark: null
+header_image: /assets/hero/linen-hemp-accessories.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

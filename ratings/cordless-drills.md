@@ -64,6 +64,7 @@ what_this_means: When buying a cordless drill, look for models that explicitly s
   scheme, as these are difficult to recycle and waste valuable resources. Prioritize brands that provide spare parts and transparent
   information about their manufacturing processes to support a more circular economy.
 hip_mark: null
+header_image: /assets/hero/cordless-drills/cordless-drills-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

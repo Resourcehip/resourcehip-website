@@ -62,6 +62,7 @@ what_this_means: When shopping for outdoor furniture, look for items with long w
   apart for repair or recycling. Avoid products made from scarce materials or those that cannot be returned to the manufacturer
   at the end of their life, as these miss opportunities to support a circular economy.
 hip_mark: Silver
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

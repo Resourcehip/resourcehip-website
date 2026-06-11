@@ -63,6 +63,7 @@ what_this_means: When shopping for a BBQ, look for models that explicitly offer 
   without permanent adhesives, as these are easier to maintain and recycle. Choosing products with third-party labor audits
   and longer design lives supports a more resilient market for outdoor cooking equipment.
 hip_mark: null
+header_image: /assets/hero/bbqs/bbqs-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

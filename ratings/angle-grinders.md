@@ -60,6 +60,7 @@ what_this_means: When buying power tools like this, look for models that explici
   and offer a clear take-back or recycling program. Prioritize products with long warranties and designs that allow for easy
   repair, as these features help extend the tool's useful life and reduce waste.
 hip_mark: null
+header_image: /assets/hero/angle-grinders/angle-grinders-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

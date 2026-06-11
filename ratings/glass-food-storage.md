@@ -63,6 +63,7 @@ what_this_means: When shopping for kitchen storage, look for items that are desi
   features often prevent the item from being reused or recovered. Choosing durable goods that can be fixed or separated at
   the end of their life helps support a more sustainable cycle for your kitchen equipment.
 hip_mark: null
+header_image: /assets/hero/glass-food-storage.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

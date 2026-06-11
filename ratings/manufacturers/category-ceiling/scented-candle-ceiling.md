@@ -65,6 +65,7 @@ what_this_means: When buying home fragrance products, look for items made from a
   as these contribute more to waste. Prioritizing brands with transparent supply chains and clear end-of-life plans will help
   you make more sustainable choices.
 hip_mark: null
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

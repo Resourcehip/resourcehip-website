@@ -62,6 +62,7 @@ what_this_means: When shopping for garden tools, look for products that explicit
   impossible to fix when they break. Choosing devices built for longevity and circularity helps reduce the demand for scarce
   raw materials and supports a more sustainable outdoor lifestyle.
 hip_mark: null
+header_image: /assets/hero/leaf-blowers/leaf-blowers-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

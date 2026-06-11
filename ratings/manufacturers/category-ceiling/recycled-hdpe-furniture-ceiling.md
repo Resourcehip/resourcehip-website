@@ -63,6 +63,7 @@ what_this_means: When shopping for outdoor furniture, look for items made from r
   and a plan for spare parts. Prioritize products designed for easy repair and disassembly to extend their lifespan. Avoid
   items that lack clear recycling labels or do not offer support for maintenance and replacement over time.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

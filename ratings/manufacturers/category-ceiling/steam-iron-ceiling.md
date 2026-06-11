@@ -63,6 +63,7 @@ what_this_means: When shopping for a steam iron, look for models that offer long
   as these features support a more circular economy. Avoid items that are difficult to repair or lack a plan for end-of-life
   recycling to maximize your purchase's value and environmental impact.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

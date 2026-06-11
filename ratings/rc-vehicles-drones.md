@@ -64,6 +64,7 @@ what_this_means: When shopping for toys like this, look for brands that offer lo
   as these end up in landfills quickly. Choosing products with modular parts and clear recycling instructions helps reduce
   waste and supports more sustainable manufacturing.
 hip_mark: null
+header_image: /assets/hero/rc-vehicles-drones/rc-vehicles-drones-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

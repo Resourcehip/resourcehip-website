@@ -64,6 +64,7 @@ what_this_means: When shopping for kitchen storage, look for items made from dur
   content to support a circular economy. Avoid single-use plastics or items with no clear path for repair or recycling at
   the end of their life.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

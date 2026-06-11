@@ -64,6 +64,7 @@ what_this_means: When shopping for garden tools, look for models that explicitly
   for easy repair or disassembly, as these features extend the item's useful life. Avoid tools that are glued shut or lack
   any information about their material composition, as these are difficult to recycle and contribute to resource depletion.
 hip_mark: null
+header_image: /assets/hero/hedge-trimmers/hedge-trimmers-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

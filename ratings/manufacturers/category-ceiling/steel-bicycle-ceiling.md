@@ -62,6 +62,7 @@ what_this_means: When buying a bicycle, look for models built with standard part
   can be recycled at the end of its life. Avoid items that are glued together or lack a plan for recycling, as these are harder
   to fix and more likely to end up in landfills.
 hip_mark: Silver
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

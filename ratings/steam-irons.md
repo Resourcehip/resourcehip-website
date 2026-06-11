@@ -62,6 +62,7 @@ what_this_means: When shopping for a steam iron, look for models that offer spar
   without a plan for end-of-life recycling. Choosing products with longer warranties and serviceable designs helps shift the
   market toward more regenerative options.
 hip_mark: null
+header_image: /assets/hero/steam-irons/steam-irons-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

@@ -60,6 +60,7 @@ what_this_means: When shopping for large appliances, look for models with long w
   as these features significantly extend a product's useful life. You should also prioritize items made with recycled content
   and those that offer take-back schemes, as these choices actively support a more sustainable manufacturing cycle.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

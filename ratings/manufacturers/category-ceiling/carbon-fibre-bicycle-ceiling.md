@@ -64,6 +64,7 @@ what_this_means: When buying a high-performance bicycle, look for models that co
   clear plans for end-of-life recycling or spare parts availability. Prioritize brands that offer extended warranties and
   use standard components, as these features ensure the product remains useful and repairable for years.
 hip_mark: null
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

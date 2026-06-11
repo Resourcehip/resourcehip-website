@@ -64,6 +64,7 @@ what_this_means: When shopping for small appliances like this, look for items th
   and offer a repair manual or spare parts. Prioritize products with take-back schemes or clear recycling labels to support
   a circular economy. Choosing appliances designed for longevity and easier repair helps reduce the reliance on new raw materials.
 hip_mark: null
+header_image: /assets/hero/slow-cookers-multi-cookers/slow-cookers-multi-cookers-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

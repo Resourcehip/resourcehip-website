@@ -66,6 +66,7 @@ what_this_means: When buying toys like this, look for products that offer long-t
   ethical labor practices. Avoid products that lack clear information on how to repair them or recycle them at the end of
   their life.
 hip_mark: null
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

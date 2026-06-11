@@ -65,6 +65,7 @@ what_this_means: When shopping for a washing machine, look for models that expli
   their life. Choosing appliances built to last longer and made from recovered resources will help shift the industry toward
   a more regenerative future.
 hip_mark: null
+header_image: /assets/hero/washing-machines/washing-machines-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

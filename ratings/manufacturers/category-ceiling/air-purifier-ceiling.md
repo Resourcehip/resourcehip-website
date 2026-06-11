@@ -64,6 +64,7 @@ what_this_means: When shopping for home appliances like this, look for items tha
   and have clear programs for recycling or returning the item when you are done with it. Avoid buying devices that are glued
   together, lack spare parts, or have no plan for what happens to them after you stop using them.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

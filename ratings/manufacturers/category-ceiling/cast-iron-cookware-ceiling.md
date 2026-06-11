@@ -63,6 +63,7 @@ what_this_means: When shopping for kitchen equipment, look for items with high d
   take-back programs. Prioritize products that use recycled content and offer extended warranties, as these features indicate
   a commitment to lasting value. Avoid items that lack transparency about their materials or end-of-life handling.
 hip_mark: Silver
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

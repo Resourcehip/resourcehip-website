@@ -63,6 +63,7 @@ what_this_means: When shopping for small appliances, look for items with long de
   as screw-based designs are easier to repair and recycle. Choosing appliances with verified take-back programs ensures that
   your purchase supports a cycle where old materials are recovered and reused.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

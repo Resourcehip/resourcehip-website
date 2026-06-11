@@ -63,6 +63,7 @@ what_this_means: When shopping for small appliances like sewing machines, look f
   content to support a circular economy. Avoid items that rely heavily on adhesives or lack clear recycling instructions,
   as these are harder to maintain and recycle at the end of their life.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

@@ -62,6 +62,7 @@ what_this_means: When shopping for a cordless lawnmower, look for models that ex
   to be thrown away rather than fixed. Prioritize brands that provide repair manuals and have take-back schemes to ensure
   the device can be responsibly handled when it reaches the end of its life.
 hip_mark: null
+header_image: /assets/hero/cordless-lawnmowers/cordless-lawnmowers-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

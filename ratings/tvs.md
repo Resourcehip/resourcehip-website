@@ -63,6 +63,7 @@ what_this_means: When shopping for a television, look for models that explicitly
   audits to ensure the product supports a circular economy. Avoid devices that are glued shut or lack a take-back program,
   as these designs contribute to resource depletion.
 hip_mark: null
+header_image: /assets/hero/tvs/tvs-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

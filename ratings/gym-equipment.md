@@ -63,6 +63,7 @@ what_this_means: When shopping for durable fitness gear, look for products that 
   can be disassembled for repair or material recovery rather than being glued together. Choosing equipment with these features
   helps reduce the demand for new mining and supports a more circular economy.
 hip_mark: null
+header_image: /assets/hero/gym-equipment/gym-equipment-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

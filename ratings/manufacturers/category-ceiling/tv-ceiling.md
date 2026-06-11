@@ -64,6 +64,7 @@ what_this_means: When shopping for a television, look for models that offer long
   and have active programs to take back old units for proper processing. Avoid products that lack a clear path for repair
   or end-of-life recycling, as these contribute to unnecessary waste.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

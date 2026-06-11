@@ -61,6 +61,7 @@ what_this_means: When shopping for outdoor furniture, look for items made from d
   or disassembled for recycling. Avoid products that are glued together or lack spare parts, as these are difficult to fix
   and often end up in landfills.
 hip_mark: null
+header_image: /assets/hero/garden-furniture/garden-furniture-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

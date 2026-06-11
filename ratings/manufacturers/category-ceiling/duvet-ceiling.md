@@ -64,6 +64,7 @@ what_this_means: When shopping for home textiles, look for products that combine
   last for years rather than seasons. Avoid products that lack transparency about their supply chain or fail to provide instructions
   for repair and disposal.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

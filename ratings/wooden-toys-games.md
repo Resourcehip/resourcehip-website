@@ -63,6 +63,7 @@ what_this_means: When shopping for wooden toys, look for items made from certifi
   maintenance, as these features make recycling difficult. Prioritizing durable designs with renewable materials helps ensure
   the product remains useful for years while supporting responsible forestry.
 hip_mark: null
+header_image: /assets/hero/wooden-toys-games.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

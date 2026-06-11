@@ -64,6 +64,7 @@ what_this_means: When shopping for bamboo kitchenware, look for items that are d
   these are difficult to fix and often end up in landfills. Prioritizing brands that offer service manuals and warranties
   can help extend the useful life of your kitchen tools.
 hip_mark: null
+header_image: /assets/hero/bamboo-kitchenware.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

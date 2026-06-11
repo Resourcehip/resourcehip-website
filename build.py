@@ -291,7 +291,7 @@ def build_ratings() -> list[dict]:
             print(f"  [skip] {md_file.relative_to(RATINGS_DIR)} — no frontmatter")
             continue
 
-        rel_path = md_file.relative_to(RATINGS_DIR)     # e.g. kettles.md OR manufacturers/tester/t-100.md
+        rel_path = md_file.relative_to(RATINGS_DIR)     # e.g. kettles.md OR manufacturers/category-ceiling/kettle-ceiling.md
         slug = data.get("slug") or slug_from_path(md_file)
         data.setdefault("slug", slug)
         data.setdefault("methodology_version", "1.3")

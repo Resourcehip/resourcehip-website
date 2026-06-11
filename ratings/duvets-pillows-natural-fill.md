@@ -68,6 +68,7 @@ what_this_means: When shopping for bedding, look for items with clear certificat
   or recycled at the end of their use. Avoid items that rely on single-use fasteners or lack spare parts, as these features
   significantly reduce the product's longevity and environmental impact.
 hip_mark: null
+header_image: /assets/hero/duvets-pillows-natural-fill.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

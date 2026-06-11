@@ -65,6 +65,7 @@ what_this_means: When shopping for a stand mixer, look for models that offer lon
   help keep materials in use longer. Avoid products that rely on permanent adhesives or lack a plan for end-of-life recycling,
   as these limit the item's potential for regeneration.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

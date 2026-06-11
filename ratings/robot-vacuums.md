@@ -62,6 +62,7 @@ what_this_means: When shopping for a robot vacuum, look for models that explicit
   discarded rather than fixed. Prioritizing brands that publish third-party sustainability audits can help you choose appliances
   that are easier to recycle and less dependent on scarce raw materials.
 hip_mark: null
+header_image: /assets/hero/robot-vacuums/robot-vacuums-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

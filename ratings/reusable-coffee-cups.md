@@ -61,6 +61,7 @@ what_this_means: When shopping for reusable cups, look for options that clearly 
   offer a take-back program for recycling. Prioritize brands that design their products for easy repair and avoid items that
   are glued together or lack clear instructions for maintenance.
 hip_mark: null
+header_image: /assets/hero/reusable-coffee-cups/reusable-coffee-cups-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

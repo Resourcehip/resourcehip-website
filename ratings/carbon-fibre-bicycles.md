@@ -63,6 +63,7 @@ what_this_means: When shopping for a bicycle, look for models that offer clear t
   about their supply chains to ensure better long-term sustainability. Choosing products with longer design lives and robust
   warranties can also help maximize the value and utility of your purchase.
 hip_mark: null
+header_image: /assets/hero/carbon-fibre-bicycles/carbon-fibre-bicycles-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

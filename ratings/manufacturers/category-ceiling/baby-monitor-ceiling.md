@@ -63,6 +63,7 @@ what_this_means: When shopping for a baby monitor, look for products that combin
   support repairability and extend the product's useful life. Avoid choosing devices that lack end-of-life plans, as these
   contribute to resource depletion without returning materials to the supply chain.
 hip_mark: null
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

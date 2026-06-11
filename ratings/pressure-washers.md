@@ -64,6 +64,7 @@ what_this_means: When buying a pressure washer, look for models that use recycle
   to resource depletion. Choosing items with available spare parts and clear take-back schemes will help extend the product's
   life and reduce environmental impact.
 hip_mark: null
+header_image: /assets/hero/pressure-washers/pressure-washers-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

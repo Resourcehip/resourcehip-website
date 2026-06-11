@@ -65,6 +65,7 @@ what_this_means: When shopping for a lawnmower, look for models that use recycle
   prevent the item from being maintained or recycled effectively. Choosing items with a higher Regenerative Index supports
   a more sustainable cycle for garden equipment.
 hip_mark: null
+header_image: /assets/hero/domestic-lawnmower/domestic-lawnmower-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

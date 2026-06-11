@@ -63,6 +63,7 @@ what_this_means: When buying electronics like these, look for brands that offer 
   support a circular economy. Avoid sealed devices that cannot be opened or repaired, as these contribute to waste and resource
   depletion.
 hip_mark: null
+header_image: /assets/hero/bluetooth-headphones/bluetooth-headphones-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

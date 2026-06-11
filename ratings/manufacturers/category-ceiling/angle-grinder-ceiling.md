@@ -62,6 +62,7 @@ what_this_means: When buying power tools, look for items with long warranties an
   for years. Prioritize products that use recycled materials and offer take-back schemes to support a circular economy. Avoid
   tools that are glued together or lack spare parts, as these are difficult to fix and often end up in landfills sooner.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

@@ -62,6 +62,7 @@ what_this_means: When buying power tools, look for products with long warranties
   these features significantly extend the item's useful life. You should also prioritize tools that include take-back programs
   and high recycled content to support a more circular economy.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

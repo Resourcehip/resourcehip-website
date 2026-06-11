@@ -63,6 +63,7 @@ what_this_means: When shopping for small appliances like this, look for products
   rather than being glued shut. Choosing appliances with longer warranties and modular designs helps reduce waste and supports
   a more circular economy.
 hip_mark: null
+header_image: /assets/hero/coffee-pod-machines/coffee-pod-machines-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

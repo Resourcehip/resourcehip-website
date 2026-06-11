@@ -68,6 +68,7 @@ what_this_means: When shopping for sleep products, look for items that offer lon
   as these features significantly extend the product's life. Avoid products that lack transparency about their material origins
   or end-of-life recovery options.
 hip_mark: Silver
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

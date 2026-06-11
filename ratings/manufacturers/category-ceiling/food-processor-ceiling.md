@@ -62,6 +62,7 @@ what_this_means: When shopping for small appliances, look for items with long wa
   they last for years. Prioritize products that offer take-back schemes or use recycled content, as these features support
   a more circular economy. Avoid buying items that are difficult to disassemble or lack a plan for end-of-life recycling.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

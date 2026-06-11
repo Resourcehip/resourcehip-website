@@ -64,6 +64,7 @@ what_this_means: When shopping for headphones, prioritize models with a long war
   are glued together or lack a clear recycling plan. Choosing products with these traits helps reduce waste and supports a
   more sustainable electronics market.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

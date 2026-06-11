@@ -64,6 +64,7 @@ what_this_means: When shopping for cookware, look for items that explicitly stat
   to be discarded rather than maintained. Prioritizing brands that publish third-party environmental audits can help you choose
   equipment that supports a more circular economy.
 hip_mark: null
+header_image: /assets/hero/cookware.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

@@ -64,6 +64,7 @@ what_this_means: When shopping for a baby travel system, look for products that 
   parts, as these are often impossible to fix or recycle at the end of their use. Choosing a stroller designed for durability
   and disassembly helps ensure it can be reused or recycled rather than ending up in a landfill.
 hip_mark: null
+header_image: /assets/hero/pushchairs/pushchairs-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

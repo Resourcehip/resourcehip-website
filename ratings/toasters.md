@@ -61,6 +61,7 @@ what_this_means: When shopping for small appliances like toasters, look for mode
   for repair and built with recycled materials. Avoid products that are glued shut or lack available spare parts, as these
   are likely to end up in landfills sooner than necessary.
 hip_mark: null
+header_image: /assets/hero/toasters/toasters-header-v1.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

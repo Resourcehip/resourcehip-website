@@ -64,6 +64,7 @@ what_this_means: When shopping for electric shavers, look for models that offer 
   help close the loop on materials. Avoid products that lack repairability or end-of-life programs, as these contribute to
   a more extractive lifecycle.
 hip_mark: Standard
+header_image: null
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
