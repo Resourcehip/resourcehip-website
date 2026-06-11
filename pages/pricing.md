@@ -8,7 +8,7 @@ active_page: pricing
 
 Resourcehip provides independent material resilience assessments for manufactured consumer products, scored under the HIP methodology across seven dimensions including the Regenerative Index. An assessment is commissioned by the manufacturer; the resulting rating is published on resourcehip.com and, where eligible, licences the HIP Mark for use in product and procurement documentation.
 
-This page sets out the fee structure. Fees are confirmed on submission with 30-day payment terms. Certification and the HIP Mark licence are released upon confirmed payment.
+This page sets out the fee structure. Assessment begins on receipt of payment. Certification and the HIP Mark licence are released upon confirmed payment receipt.
 
 ---
 
@@ -87,7 +87,7 @@ The licence is issued on certification and covers use on product packaging, prod
 
 ## Payment terms
 
-Fees are confirmed at point of submission and are due within 30 days. Payment is accepted by:
+Assessment begins on receipt of payment. Invoices are issued on scope confirmation with standard 30-day payment terms; alternative terms are available by agreement. Payment is accepted by:
 
 - **Bank transfer / BACS** — bank details provided on each invoice (primary)
 - **Card payment** — a Stripe payment link is included on each invoice for convenience
