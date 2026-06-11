@@ -25,8 +25,8 @@ methodology_version: '1.3'
 next_review: '2027-04-18'
 scoring_model: qwen3.5:35b
 prose_model: qwen3.5:35b
-msi_finding: The product contains nickel and copper, which are designated as Critical Raw Materials by the EU and carry high
-  supply-risk designations from the USGS. The absence of submitted recycled content data and the likelihood of single-country
+msi_finding: The product contains nickel, which is designated as a Critical Raw Material by the EU, and copper, which carries
+  a high supply-risk designation from the USGS. The absence of submitted recycled content data and the likelihood of single-country
   extraction concentration for these metals in China drive a conservative score in the Scarce range.
 scr_finding: The kettle's primary materials (copper, steel, and plastics) are likely sourced from China, which presents moderate
   concentration risk for certain components and falls into OECD category 3-4 for governance. The lack of a submitted due-diligence

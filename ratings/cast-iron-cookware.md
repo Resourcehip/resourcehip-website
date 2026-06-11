@@ -19,6 +19,7 @@ category_baseline_ri: -5.0
 category_ceiling_hip: 7.9
 category_ceiling_ri: -3.0
 above_baseline: false
+methodology_review: true
 assessment_date: '2026-04-29'
 methodology_version: '1.3'
 next_review: '2027-04-29'
