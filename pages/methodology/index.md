@@ -42,6 +42,8 @@ The result is rounded to one decimal place.
 
 ## Dimension weights
 
+> **Provisional weights** — The fixed dimensional weights below are scheduled for replacement by category-specific weight profiles after the Fable 5 analysis completes (target: post 18 June 2026). Current ratings use these weights; they may change. See the methodology changelog for updates.
+
 | Code | Dimension | Weight | Scale |
 |------|-----------|--------|-------|
 | MSI | Material Scarcity Index | 20% | 0–10 |
