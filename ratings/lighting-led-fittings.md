@@ -61,7 +61,7 @@ what_this_means: When shopping for lighting fixtures, look for products that exp
   and offer a take-back program for end-of-life recycling. Prioritize brands that provide spare parts and repair manuals to
   extend the product's lifespan, rather than choosing sealed units that are difficult to disassemble.
 hip_mark: null
-header_image: /assets/hero/lighting-led-fittings/lighting-led-fittings-header-v1.webp
+header_image: /assets/hero/lighting-led-fittings/lighting-led-fittings-header-v2.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

@@ -60,7 +60,7 @@ what_this_means: When shopping for wireless earbuds, look for models that explic
   and offer a longer warranty period. Avoid products that are glued shut or lack a clear plan for recycling, as these are
   designed to be discarded quickly rather than repaired or reused.
 hip_mark: null
-header_image: /assets/hero/wireless-earbuds/wireless-earbuds-header-v1.webp
+header_image: /assets/hero/wireless-earbuds/wireless-earbuds-header-v4.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

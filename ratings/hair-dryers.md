@@ -60,7 +60,7 @@ what_this_means: When shopping for a hair dryer, look for models that explicitly
   a warranty longer than two years. Prioritize brands that provide repair manuals and spare parts, as these features signal
   a design built to last rather than one that is glued shut and discarded quickly.
 hip_mark: null
-header_image: /assets/hero/hair-dryers/hair-dryers-header-v1.webp
+header_image: /assets/hero/hair-dryers/hair-dryers-header-v2.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)

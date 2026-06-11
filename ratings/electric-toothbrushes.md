@@ -62,7 +62,7 @@ what_this_means: When shopping for an electric toothbrush, look for models that 
   longer lifespan to reduce waste. Avoid devices that are glued shut or lack clear instructions for maintenance and end-of-life
   disposal.
 hip_mark: null
-header_image: /assets/hero/electric-toothbrushes/electric-toothbrushes-header-v1.webp
+header_image: /assets/hero/electric-toothbrushes/electric-toothbrushes-header-v2.webp
 data_sources:
 - USGS Mineral Resources Program (public domain)
 - EU Critical Raw Materials List 2023 (CC BY 4.0)
