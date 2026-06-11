@@ -1,0 +1,261 @@
+# Hero Image Manifest — Canonical image selection per product category
+#
+# This file is the source of truth for which hero image variant is canonical.
+# The branding audit (scripts/brand-audit.py) enforces consistency with this manifest.
+#
+# source values:
+#   comfyui  — AI-generated via ComfyUI pipeline (single file, no variants)
+#   variant  — selected from directory of variants (v1–v4)
+#   manual   — manually chosen or provided image
+#
+# To change the canonical image for a category:
+#   1. Update the 'image' path here
+#   2. Update the rating frontmatter header_image to match
+#   3. Commit both changes together
+
+categories:
+  air-fryers:
+    image: assets/hero/air-fryers/air-fryers-header-v1.webp
+    source: variant
+  air-purifiers:
+    image: assets/hero/air-purifiers/air-purifiers-header-v1.webp
+    source: variant
+  aluminium-bicycles:
+    image: assets/hero/aluminium-bicycles/aluminium-bicycles-header-v1.webp
+    source: variant
+  angle-grinders:
+    image: assets/hero/angle-grinders/angle-grinders-header-v1.webp
+    source: variant
+  baby-monitors:
+    image: assets/hero/baby-monitors/baby-monitors-header-v1.webp
+    source: variant
+  bamboo-kitchenware:
+    image: assets/hero/bamboo-kitchenware.webp
+    source: comfyui
+  basic-fitness-trackers:
+    image: assets/hero/basic-fitness-trackers/basic-fitness-trackers-header-v1.webp
+    source: variant
+  bbqs:
+    image: assets/hero/bbqs/bbqs-header-v1.webp
+    source: variant
+  bluetooth-headphones:
+    image: assets/hero/bluetooth-headphones/bluetooth-headphones-header-v1.webp
+    source: variant
+  bread-makers:
+    image: assets/hero/bread-makers/bread-makers-header-v1.webp
+    source: variant
+  camping-tents:
+    image: assets/hero/camping-tents/camping-tents-header-v1.webp
+    source: variant
+  carbon-fibre-bicycles:
+    image: assets/hero/carbon-fibre-bicycles/carbon-fibre-bicycles-header-v1.webp
+    source: variant
+  carpets:
+    image: assets/hero/carpets.webp
+    source: comfyui
+  cast-iron-cookware:
+    image: assets/hero/cast-iron-cookware.webp
+    source: comfyui
+  circular-saws:
+    image: assets/hero/circular-saws/circular-saws-header-v1.webp
+    source: variant
+  coffee-pod-machines:
+    image: assets/hero/coffee-pod-machines/coffee-pod-machines-header-v1.webp
+    source: variant
+  cookers-ovens:
+    image: assets/hero/cookers-ovens/cookers-ovens-header-v1.webp
+    source: variant
+  cookware:
+    image: assets/hero/cookware.webp
+    source: comfyui
+  cordless-drills:
+    image: assets/hero/cordless-drills/cordless-drills-header-v1.webp
+    source: variant
+  cordless-lawnmowers:
+    image: assets/hero/cordless-lawnmowers/cordless-lawnmowers-header-v1.webp
+    source: variant
+  cork-products:
+    image: assets/hero/cork-products.webp
+    source: comfyui
+  dehumidifiers:
+    image: assets/hero/dehumidifiers/dehumidifiers-header-v1.webp
+    source: variant
+  dishwashers:
+    image: assets/hero/dishwashers/dishwashers-header-v1.webp
+    source: variant
+  domestic-lawnmower:
+    image: assets/hero/domestic-lawnmower/domestic-lawnmower-header-v1.webp
+    source: variant
+  duvets-pillows:
+    image: assets/hero/duvets-pillows.webp
+    source: comfyui
+  duvets-pillows-natural-fill:
+    image: assets/hero/duvets-pillows-natural-fill.webp
+    source: comfyui
+  e-bikes:
+    image: assets/hero/e-bikes/e-bikes-header-v1.webp
+    source: variant
+  electric-fans:
+    image: assets/hero/electric-fans/electric-fans-header-v1.webp
+    source: variant
+  electric-ride-on-toys:
+    image: assets/hero/electric-ride-on-toys/electric-ride-on-toys-header-v1.webp
+    source: variant
+  electric-scooters:
+    image: assets/hero/electric-scooters/electric-scooters-header-v1.webp
+    source: variant
+  electric-shavers-groomers:
+    image: assets/hero/electric-shavers-groomers/electric-shavers-groomers-header-v1.webp
+    source: variant
+  electric-toothbrushes:
+    image: assets/hero/electric-toothbrushes/electric-toothbrushes-header-v1.webp
+    source: variant
+  electronic-learning-toys:
+    image: assets/hero/electronic-learning-toys/electronic-learning-toys-header-v1.webp
+    source: variant
+  food-processors-blenders:
+    image: assets/hero/food-processors-blenders/food-processors-blenders-header-v1.webp
+    source: variant
+  fridge-freezers:
+    image: assets/hero/fridge-freezers/fridge-freezers-header-v1.webp
+    source: variant
+  garden-furniture:
+    image: assets/hero/garden-furniture/garden-furniture-header-v1.webp
+    source: variant
+  glass-food-storage:
+    image: assets/hero/glass-food-storage.webp
+    source: comfyui
+  gym-equipment:
+    image: assets/hero/gym-equipment/gym-equipment-header-v1.webp
+    source: variant
+  hair-dryers:
+    image: assets/hero/hair-dryers/hair-dryers-header-v1.webp
+    source: variant
+  hair-straighteners:
+    image: assets/hero/hair-straighteners/hair-straighteners-header-v1.webp
+    source: variant
+  hedge-trimmers:
+    image: assets/hero/hedge-trimmers/hedge-trimmers-header-v1.webp
+    source: variant
+  high-chairs:
+    image: assets/hero/high-chairs/high-chairs-header-v1.webp
+    source: variant
+  kettles:
+    image: assets/hero/kettles/kettles-header-v1.webp
+    source: variant
+  leaf-blowers:
+    image: assets/hero/leaf-blowers/leaf-blowers-header-v1.webp
+    source: variant
+  lighting-led-fittings:
+    image: assets/hero/lighting-led-fittings/lighting-led-fittings-header-v1.webp
+    source: variant
+  linen-hemp-accessories:
+    image: assets/hero/linen-hemp-accessories.webp
+    source: comfyui
+  luggage-suitcases:
+    image: assets/hero/luggage-suitcases/luggage-suitcases-header-v1.webp
+    source: variant
+  mattresses:
+    image: assets/hero/mattresses/mattresses-header-v1.webp
+    source: variant
+  microwaves:
+    image: assets/hero/microwaves/microwaves-header-v1.webp
+    source: variant
+  natural-latex-sleep:
+    image: assets/hero/natural-latex-sleep.webp
+    source: comfyui
+  portable-speakers:
+    image: assets/hero/portable-speakers/portable-speakers-header-v1.webp
+    source: variant
+  pressure-washers:
+    image: assets/hero/pressure-washers/pressure-washers-header-v1.webp
+    source: variant
+  pushchairs:
+    image: assets/hero/pushchairs/pushchairs-header-v1.webp
+    source: variant
+  rc-vehicles-drones:
+    image: assets/hero/rc-vehicles-drones/rc-vehicles-drones-header-v1.webp
+    source: variant
+  recycled-hdpe-furniture:
+    image: assets/hero/recycled-hdpe-furniture/recycled-hdpe-furniture-header-v1.webp
+    source: variant
+  reusable-coffee-cups:
+    image: assets/hero/reusable-coffee-cups/reusable-coffee-cups-header-v1.webp
+    source: variant
+  robot-vacuums:
+    image: assets/hero/robot-vacuums/robot-vacuums-header-v1.webp
+    source: variant
+  scented-candles:
+    image: assets/hero/scented-candles/scented-candles-header-v1.webp
+    source: variant
+  sewing-machines:
+    image: assets/hero/sewing-machines/sewing-machines-header-v1.webp
+    source: variant
+  slow-cookers-multi-cookers:
+    image: assets/hero/slow-cookers-multi-cookers/slow-cookers-multi-cookers-header-v1.webp
+    source: variant
+  smartphones:
+    image: assets/hero/smartphones/smartphones-header-v1.webp
+    source: variant
+  sofas:
+    image: assets/hero/sofas/sofas-header-v1.webp
+    source: variant
+  stainless-steel-water-bottles:
+    image: assets/hero/stainless-steel-water-bottles/stainless-steel-water-bottles-header-v1.webp
+    source: variant
+  stand-mixers:
+    image: assets/hero/stand-mixers/stand-mixers-header-v1.webp
+    source: variant
+  steam-irons:
+    image: assets/hero/steam-irons/steam-irons-header-v1.webp
+    source: variant
+  steel-bicycles:
+    image: assets/hero/steel-bicycles/steel-bicycles-header-v1.webp
+    source: variant
+  toasters:
+    image: assets/hero/toasters/toasters-header-v1.webp
+    source: variant
+  tumble-dryers:
+    image: assets/hero/tumble-dryers/tumble-dryers-header-v1.webp
+    source: variant
+  tvs:
+    image: assets/hero/tvs/tvs-header-v1.webp
+    source: variant
+  vacuum-cleaners:
+    image: assets/hero/vacuum-cleaners/vacuum-cleaners-header-v1.webp
+    source: variant
+  washing-machines:
+    image: assets/hero/washing-machines/washing-machines-header-v1.webp
+    source: variant
+  wireless-earbuds:
+    image: assets/hero/wireless-earbuds/wireless-earbuds-header-v1.webp
+    source: variant
+  wooden-toys-games:
+    image: assets/hero/wooden-toys-games.webp
+    source: comfyui
+
+# Brand blocklist — filenames containing these patterns (case-insensitive) fail the audit.
+# Add patterns as they surface. Keep lowercase.
+brand_blocklist:
+  - dyson
+  - samsung
+  - apple
+  - bosch
+  - tefal
+  - le-creuset
+  - lecreuset
+  - kitchenaid
+  - kenwood
+  - breville
+  - ninja
+  - philips
+  - delonghi
+  - nespresso
+  - miele
+  - shark
+  - hoover
+  - lg
+  - sony
+  - panasonic
+  - bose
+  - jbl

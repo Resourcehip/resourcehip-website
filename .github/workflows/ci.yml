@@ -1,0 +1,59 @@
+name: CI — build + brand audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'ratings/**'
+      - 'templates/**'
+      - 'assets/**'
+      - 'pages/**'
+      - 'blog/**'
+      - 'build.py'
+      - 'manifest.yaml'
+      - 'hero_images.yaml'
+      - 'requirements.txt'
+      - 'scripts/brand-audit.py'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'ratings/**'
+      - 'templates/**'
+      - 'assets/**'
+      - 'pages/**'
+      - 'blog/**'
+      - 'build.py'
+      - 'manifest.yaml'
+      - 'hero_images.yaml'
+      - 'requirements.txt'
+      - 'scripts/brand-audit.py'
+  workflow_dispatch:
+
+jobs:
+  build-and-audit:
+    name: Build site + brand audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build site
+        run: python build.py
+
+      - name: Verify dist/ output exists
+        run: |
+          if [ ! -f dist/index.html ]; then
+            echo "Build failed — dist/index.html not found"
+            exit 1
+          fi
+          echo "Build OK — $(find dist -name '*.html' | wc -l) HTML files generated"
+
+      - name: Brand audit
+        run: python scripts/brand-audit.py
