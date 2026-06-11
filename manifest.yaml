@@ -108,7 +108,7 @@ categories:
     image: assets/hero/electric-shavers-groomers/electric-shavers-groomers-header-v1.webp
     source: variant
   electric-toothbrushes:
-    image: assets/hero/electric-toothbrushes/electric-toothbrushes-header-v1.webp
+    image: assets/hero/electric-toothbrushes/electric-toothbrushes-header-v2.webp
     source: variant
   electronic-learning-toys:
     image: assets/hero/electronic-learning-toys/electronic-learning-toys-header-v1.webp
@@ -129,7 +129,7 @@ categories:
     image: assets/hero/gym-equipment/gym-equipment-header-v1.webp
     source: variant
   hair-dryers:
-    image: assets/hero/hair-dryers/hair-dryers-header-v1.webp
+    image: assets/hero/hair-dryers/hair-dryers-header-v2.webp
     source: variant
   hair-straighteners:
     image: assets/hero/hair-straighteners/hair-straighteners-header-v1.webp
@@ -144,10 +144,10 @@ categories:
     image: assets/hero/kettles/kettles-header-v1.webp
     source: variant
   leaf-blowers:
-    image: assets/hero/leaf-blowers/leaf-blowers-header-v1.webp
+    image: assets/hero/leaf-blowers/leaf-blowers-header-v2.webp
     source: variant
   lighting-led-fittings:
-    image: assets/hero/lighting-led-fittings/lighting-led-fittings-header-v1.webp
+    image: assets/hero/lighting-led-fittings/lighting-led-fittings-header-v2.webp
     source: variant
   linen-hemp-accessories:
     image: assets/hero/linen-hemp-accessories.webp
@@ -159,7 +159,7 @@ categories:
     image: assets/hero/mattresses/mattresses-header-v1.webp
     source: variant
   microwaves:
-    image: assets/hero/microwaves/microwaves-header-v1.webp
+    image: assets/hero/microwaves/microwaves-header-v2.webp
     source: variant
   natural-latex-sleep:
     image: assets/hero/natural-latex-sleep.webp
@@ -168,7 +168,7 @@ categories:
     image: assets/hero/portable-speakers/portable-speakers-header-v1.webp
     source: variant
   pressure-washers:
-    image: assets/hero/pressure-washers/pressure-washers-header-v1.webp
+    image: assets/hero/pressure-washers/pressure-washers-header-v2.webp
     source: variant
   pushchairs:
     image: assets/hero/pushchairs/pushchairs-header-v1.webp
@@ -192,7 +192,7 @@ categories:
     image: assets/hero/sewing-machines/sewing-machines-header-v1.webp
     source: variant
   slow-cookers-multi-cookers:
-    image: assets/hero/slow-cookers-multi-cookers/slow-cookers-multi-cookers-header-v1.webp
+    image: assets/hero/slow-cookers-multi-cookers/slow-cookers-multi-cookers-header-v2.webp
     source: variant
   smartphones:
     image: assets/hero/smartphones/smartphones-header-v1.webp
@@ -228,7 +228,7 @@ categories:
     image: assets/hero/washing-machines/washing-machines-header-v1.webp
     source: variant
   wireless-earbuds:
-    image: assets/hero/wireless-earbuds/wireless-earbuds-header-v1.webp
+    image: assets/hero/wireless-earbuds/wireless-earbuds-header-v4.webp
     source: variant
   wooden-toys-games:
     image: assets/hero/wooden-toys-games.webp
