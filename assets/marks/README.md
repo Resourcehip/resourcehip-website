@@ -66,7 +66,7 @@ a `--score` / `--tier` CLI argument for one-off issuance.
 ## Regenerating
 
 ```bash
-cd <project-root>
+# From the Resourcehip project root:
 python3 pipeline/tools/generate_marks.py
 ```
 
