@@ -1,37 +1,5 @@
 # Resourcehip Website — Build & Deploy Guide
 
-<!--
-=============================================================================
-RUNNING THE PIPELINE LOCALLY (XPS → 5820)
-=============================================================================
-Network:
-  5820 (brains — Ollama/inference):  10.0.0.1
-  XPS  (hands — scripts/pipeline):   10.0.0.2
-
-Full pipeline command (run from the Resourcehip/ folder on the XPS):
-
-  # Score, rate, and rebuild in one step (recommended)
-  python3 pipeline/resourcehip.py run <slug>
-
-  # Or step by step:
-  python3 pipeline/resourcehip.py score <slug>   # Score all 7 dimensions
-  python3 pipeline/resourcehip.py rate  <slug>   # Generate rating .md
-  python3 pipeline/resourcehip.py build          # Rebuild static site
-
-  # Then push to deploy:
-  cd resourcehip_website
-  git add -A
-  git commit -m "Add <slug> rating"
-  git push
-
-Notes:
-  - Ollama must be running on the 5820 (check: http://10.0.0.1:11434 in browser)
-  - Models: qwen3.5:35b (scoring and prose — single model)
-  - Default Ollama port is 11434 — confirm: curl http://10.0.0.1:11434/api/tags
-  - Checkpoints survive restarts — safe to kill mid-run and resume
-=============================================================================
--->
-
 ## Overview
 
 The website is a static site hosted on **Cloudflare Pages**, auto-deployed from the
@@ -417,7 +385,7 @@ Already-downloaded files are skipped.
 
 ## Brand Reference
 
-CSS variables defined in `templates/base.html.j2` (v1.0 palette, approved 2026-05-06 — see `~/Resourcehip/Business/colour-spec.md`):
+CSS variables defined in `templates/base.html.j2` (v1.0 palette, approved 2026-05-06):
 
 | Variable          | Value     | Usage                                                   |
 |-------------------|-----------|---------------------------------------------------------|
