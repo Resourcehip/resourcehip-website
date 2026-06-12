@@ -109,7 +109,7 @@ A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data
 
 ## Material Watch Points
 
-- Copper — EU Critical Raw Materials list
+- Copper — EU Strategic Raw Material (CRM Act 2024/1252)
 - Aluminium — EU Critical Raw Materials list
 - Recycled content at 0% falls below the 20% threshold for moderate scoring
 - No due-diligence programme documented

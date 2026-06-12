@@ -28,7 +28,7 @@ msi_finding: The product relies heavily on critical raw materials including lith
   on the EU Critical Raw Materials list and face high supply risks. The absence of recycled content (0%) and the high likelihood
   of single-country concentration for rare earths and battery metals in the supply chain further exacerbate the scarcity profile.
 scr_finding: The product is an RC vehicle/drone assembled in China, implying high reliance on rare earth elements (e.g., neodymium,
-  dysprosium) which are critically concentrated in China (OECD risk category 6) and listed as EU Critical Raw Materials. With
+  dysprosium) which are critically concentrated in China (OECD risk category 2) and listed as EU Critical Raw Materials. With
   no submitted due diligence, no alternative suppliers, and no audit verification, the supply chain faces critical concentration
   and geopolitical risks.
 rc_finding: The product is assumed to be glued with no take-back scheme, rendering material separation impractical without
@@ -116,9 +116,9 @@ A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data
 - Lithium — EU Critical Raw Materials list
 - Cobalt — EU Critical Raw Materials list
 - Neodymium — EU Critical Raw Materials list
-- China >80% of global rare earth supply
+- China ~70% of global rare earth mine production, ~85% of processing — high supply concentration
 - 0% Recycled Content
-- Rare earth elements — China >90% global supply, OECD risk category 6
+- Rare earth elements — China ~70% of global rare earth mine production, OECD risk category 2
 - EU Critical Raw Materials concentration without diversification
 - No due-diligence programme documented
 - No alternative supplier documented

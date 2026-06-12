@@ -110,7 +110,6 @@ A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data
 
 ## Material Watch Points
 
-- Zinc alloy — EU Critical Raw Materials list
 - Recycled content 0% — below 20% threshold
 - Single primary supplier with no documented alternative
 - No due-diligence programme documented

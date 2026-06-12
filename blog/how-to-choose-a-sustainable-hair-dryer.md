@@ -21,7 +21,7 @@ That mismatch is the story for this category. The parts that cost the planet to 
 Three HIP dimensions dominate the category:
 
 - **Repairability (R).** Baseline **2/10** — glued housings, no spare switches, no replaceable cable, no repair manual. Ceiling **8/10** with screw-fastened access, stocked spare parts, and a published repair manual. The motor itself is rarely the issue.
-- **Material Scarcity (MSI).** Baseline **2/10** — copper-wound motors and rare-earth magnets in the brushless variants, all on the EU Critical Raw Materials list (a list of materials at risk of supply shortage). Ceiling **5.5/10** with less critical-material content and partial recycled inputs.
+- **Material Scarcity (MSI).** Baseline **2/10** — copper-wound motors (copper is an EU Strategic Raw Material under CRM Act 2024/1252) and rare-earth magnets in the brushless variants (rare earths are EU Critical Raw Materials with high supply risk). Ceiling **5.5/10** with less critical-material content and partial recycled inputs.
 - **Recyclability and Circularity (RC).** Baseline **3/10** — glued ABS (a rigid plastic) housings prevent real-world disassembly. Ceiling **8/10** with screw-based disassembly and a manufacturer take-back scheme.
 
 The broader point: almost every failure that retires a hair dryer involves a non-motor part. Almost every non-motor part could be made replaceable. The only reason they are not is commercial.

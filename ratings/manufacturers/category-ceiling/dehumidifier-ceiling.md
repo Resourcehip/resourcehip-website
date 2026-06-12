@@ -75,7 +75,7 @@ data_sources:
 
 ## Material Watch Points
 
-- Copper — EU Critical Raw Materials list
+- Copper — EU Strategic Raw Material (CRM Act 2024/1252)
 - Due diligence programme not third-party verified
 - Specific material origins not disclosed
 

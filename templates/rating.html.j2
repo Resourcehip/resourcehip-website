@@ -843,6 +843,21 @@
 </div>
 {% endif %}
 
+<!-- ── Version + Changelog ─────────────────────────────────────────────────── -->
+{% if version is defined and version is not none %}
+<div class="card" style="font-size: 0.82rem;">
+  <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.75rem;">
+    <h2 style="margin: 0; font-size: 0.95rem;">Rating Version</h2>
+    <span class="pill" style="font-size: 0.7rem;">{{ version_id | default('v' ~ version) }}</span>
+  </div>
+  <p style="color: var(--muted); font-size: 0.78rem; margin-bottom: 0;">
+    Published {{ published_at | default(assessment_date) | truncate(10, True, '') }}.
+    {% if version > 1 %}This rating has been updated {{ version - 1 }} time{{ 's' if version > 2 else '' }} since first publication.{% endif %}
+    Previous versions remain available for reference.
+  </p>
+</div>
+{% endif %}
+
 <!-- ── Disclaimer ─────────────────────────────────────────────────────────── -->
 <div class="disclaimer-box">
   <p><strong>About this rating:</strong>
@@ -869,7 +884,7 @@
   <a href="/dispute">Dispute this rating</a> · <a href="/methodology">Our methodology</a> · <a href="/ratings/">All ratings</a>
   {% if rating_type == 'verified' %} · <a href="/submit">Submit updated data</a>{% endif %}</p>
   <p style="margin-bottom:0; color:var(--muted);">
-    Assessed: {{ assessment_date }} · Next review: {{ next_review | default('Annual') }} · Methodology {{ methodology_version }}
+    Assessed: {{ assessment_date }} · Next review: {{ next_review | default('Annual') }} · Methodology {{ methodology_version }}{% if version_id is defined and version_id %} · {{ version_id }}{% endif %}
   </p>
 </div>
 

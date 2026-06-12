@@ -114,7 +114,7 @@ A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data
 ## Material Watch Points
 
 - Lithium — EU Critical Raw Materials list
-- Silicon — USGS high-supply-risk designation
+- Silicon metal — USGS Critical Mineral
 - China — primary extraction concentration risk
 - Recycled content 0% — below 20% threshold
 - Rare earth elements and electronic components sourced predominantly from China with no diversification

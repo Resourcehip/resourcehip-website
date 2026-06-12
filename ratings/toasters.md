@@ -111,8 +111,7 @@ A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data
 
 ## Material Watch Points
 
-- Nichrome — EU Critical Raw Materials list
-- Copper — USGS High Supply Risk
+- Nichrome — contains nickel and chromium (both EU Critical Raw Materials)
 - Recycled content assumed at 0% due to missing data
 - Copper and steel concentration risk (China >60% global supply)
 - No due-diligence programme documented

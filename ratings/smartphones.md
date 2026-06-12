@@ -25,7 +25,7 @@ next_review: '2027-04-28'
 scoring_model: qwen3.5:35b
 prose_model: qwen3.5:35b
 msi_finding: The product relies heavily on lithium, cobalt, rare earth elements, gold, tantalum, and tin, all designated as
-  EU Critical Raw Materials or USGS high-supply-risk materials. With only 5% recycled content and an assumed high concentration
+  EU Critical Raw Materials or USGS Critical Minerals. With only 5% recycled content and an assumed high concentration
   of extraction in China, the supply chain faces significant scarcity risks typical of conventional consumer electronics.
 scr_finding: The smartphone relies on rare earth elements and cobalt, which are predominantly sourced from China and the DRC
   respectively, both presenting high geopolitical and governance risks. No due-diligence programme or alternative suppliers

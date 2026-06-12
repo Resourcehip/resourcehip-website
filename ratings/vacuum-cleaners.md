@@ -114,7 +114,7 @@ A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data
 - Cobalt — EU Critical Raw Materials list
 - Lithium — EU Critical Raw Materials list
 - Neodymium — EU Critical Raw Materials list
-- China >80% of global rare earth supply
+- China ~70% of global rare earth mine production, ~85% of processing — high supply concentration
 - Copper and rare earth magnets — >60% global supply from China
 - No due-diligence programme documented
 - No alternative supplier verified

@@ -110,7 +110,7 @@ A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data
 
 ## Material Watch Points
 
-- PTFE — EU Critical Raw Materials list
+- Fluorspar (PTFE precursor) — EU Critical Raw Materials list
 - Nichrome — Supply risk for nickel/chromium
 - Recycled content assumed at 0%
 - Copper and steel concentration risk (China >60% global supply)

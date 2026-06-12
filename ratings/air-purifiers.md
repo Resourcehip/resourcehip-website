@@ -114,8 +114,7 @@ A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data
 
 ## Material Watch Points
 
-- Copper — EU Critical Raw Materials list
-- Copper — USGS High Supply Risk
+- Copper — EU Strategic Raw Material (CRM Act 2024/1252)
 - Recycled content assumed at 0% due to missing data
 - Primary extraction country unknown
 - Rare earths — China >60% global supply, high concentration risk

@@ -115,7 +115,7 @@ A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data
 
 - Zero recycled content
 - China assembly — potential single-country concentration risk for steel and ceramic components
-- Copper — EU Critical Raw Materials list
+- Copper — EU Strategic Raw Material (CRM Act 2024/1252)
 - Primary materials sourced predominantly from China (OECD category 3-4)
 - No due-diligence programme documented
 - No alternative supplier documented

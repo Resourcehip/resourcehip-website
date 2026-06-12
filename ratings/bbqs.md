@@ -111,7 +111,7 @@ A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data
 
 ## Material Watch Points
 
-- China >80% of global steel and aluminium supply concentration
+- China ~54% of global steel production, ~57% of global aluminium production — high supply concentration
 - 0% recycled content
 - Steel and copper sourced predominantly from China with no diversification
 - No due-diligence programme documented

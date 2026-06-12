@@ -104,7 +104,7 @@ The following public data sources are used across ratings. Each rating page list
 
 | Source | Used for |
 |--------|----------|
-| [USGS Mineral Resources Program](https://www.usgs.gov/programs/mineral-resources-program) | Global reserve estimates and supply-risk designations |
+| [USGS Mineral Resources Program](https://www.usgs.gov/programs/mineral-resources-program) | Global reserve estimates and critical mineral designations |
 | [EU Critical Raw Materials List (2023)](https://single-market-economy.ec.europa.eu/sectors/raw-materials/areas-specific-interest/critical-raw-materials_en) | EU high-importance, high-risk material designations |
 | [World Bank Worldwide Governance Indicators](https://www.worldbank.org/en/publication/worldwide-governance-indicators) | Country political stability scores for supply chain risk |
 | [iFixit Repairability Database](https://www.ifixit.com/repairability) | Standardised repairability scores for consumer products |

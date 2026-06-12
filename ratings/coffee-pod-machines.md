@@ -113,8 +113,7 @@ A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data
 
 ## Material Watch Points
 
-- Copper — EU Critical Raw Materials list
-- Copper — USGS High Supply Risk
+- Copper — EU Strategic Raw Material (CRM Act 2024/1252)
 - No due-diligence programme documented
 - Single primary supplier assumed (no diversification)
 - No third-party audit verification (RBA/OECD)

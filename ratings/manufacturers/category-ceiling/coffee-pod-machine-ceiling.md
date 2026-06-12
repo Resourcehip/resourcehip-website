@@ -26,7 +26,7 @@ scoring_model: qwen3.5:35b
 prose_model: qwen3.5:35b
 msi_finding: The product scores highly due to 82% recycled content and the use of abundant materials like recycled aluminium,
   steel, and ABS plastic. Supply chains show strong diversity with extraction from the EU, Chile, Germany, Sri Lanka, and
-  Italy, avoiding single-country concentration risks. No critical raw materials from the EU CRM list or USGS high-supply-risk
+  Italy, avoiding single-country concentration risks. No critical raw materials from the EU CRM list or USGS Critical Minerals list
   designations are present in significant quantities.
 scr_finding: The supply chain demonstrates moderate risk due to sourcing from four countries including Italy and the EU, which
   generally have stable governance. While an OECD due-diligence framework is referenced and an alternative supplier exists,

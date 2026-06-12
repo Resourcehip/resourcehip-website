@@ -112,9 +112,9 @@ A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data
 ## Material Watch Points
 
 - Lead-acid battery — EU Critical Raw Materials list
-- Copper — EU Critical Raw Materials list
+- Copper — EU Strategic Raw Material (CRM Act 2024/1252)
 - China — High supply concentration risk for primary extraction
-- Rare earth magnets — China >60% global supply, OECD risk category 6
+- Rare earth magnets — China >60% global supply, OECD risk category 2
 - No due-diligence programme documented
 - No alternative supplier documented
 

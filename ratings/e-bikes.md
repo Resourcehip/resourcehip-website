@@ -116,7 +116,7 @@ A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data
 - Neodymium — EU Critical Raw Materials list
 - China — High concentration of global rare earth supply
 - Rare earths and lithium-ion batteries — high concentration in China
-- Cobalt — potential DRC sourcing, OECD risk category 6
+- Cobalt — potential DRC sourcing, OECD risk category 7
 - No due-diligence programme documented
 - No alternative supplier documented
 

@@ -113,8 +113,8 @@ A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data
 
 ## Material Watch Points
 
-- Copper — EU Critical Raw Materials list
-- Brass (Copper alloy) — EU Critical Raw Materials list
+- Copper — EU Strategic Raw Material (CRM Act 2024/1252)
+- Brass (Copper alloy) — EU Strategic Raw Material (CRM Act 2024/1252)
 - Recycled content assumed at 0% due to missing data
 - Copper and steel concentration risk (China >60% global supply)
 - No due-diligence programme documented

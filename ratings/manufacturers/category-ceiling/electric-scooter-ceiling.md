@@ -75,7 +75,7 @@ data_sources:
 - Lithium — EU Critical Raw Materials list
 - Cobalt — EU Critical Raw Materials list
 - Neodymium — EU Critical Raw Materials list
-- Cobalt sourcing from DRC (OECD risk category 6) identified in primary materials
+- Cobalt sourcing from DRC (OECD risk category 7) identified in primary materials
 - Due diligence programme referenced (OECD) but not independently audited
 
 ## Improvement Opportunities

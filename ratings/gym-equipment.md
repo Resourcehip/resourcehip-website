@@ -112,7 +112,7 @@ A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data
 
 ## Material Watch Points
 
-- Chrome — EU Critical Raw Materials list
+- Chromium — EU Critical Raw Materials list
 - ABS plastic — supply concentration risk
 - China — assumed primary extraction hub
 - Assembly in China (high concentration risk for steel/copper)

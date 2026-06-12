@@ -116,7 +116,7 @@ A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data
 - 0% recycled content
 - Missing material percentage data
 - Missing extraction country data
-- Copper and rare earth magnets — China >60% global supply, OECD risk category 4
+- Copper and rare earth magnets — China >60% global supply, OECD risk category 2
 - No due-diligence programme documented
 - No alternative supplier documented
 

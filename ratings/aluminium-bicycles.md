@@ -115,7 +115,7 @@ A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data
 ## Material Watch Points
 
 - Aluminium — EU Critical Raw Materials list
-- Copper (in brass) — EU Critical Raw Materials list
+- Copper (in brass) — EU Strategic Raw Material (CRM Act 2024/1252)
 - Recycled content 0% — Below 20% threshold
 - Aluminium — High global supply concentration in China (OECD Category 4/5)
 - No due-diligence programme documented

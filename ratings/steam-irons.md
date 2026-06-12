@@ -111,8 +111,8 @@ A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data
 
 ## Material Watch Points
 
-- Copper — EU Critical Raw Materials list
-- PTFE — EU Critical Raw Materials list
+- Copper — EU Strategic Raw Material (CRM Act 2024/1252)
+- Fluorspar (PTFE precursor) — EU Critical Raw Materials list
 - Recycled content not submitted
 - Copper and steel sourcing concentrated in China
 - No due-diligence programme documented

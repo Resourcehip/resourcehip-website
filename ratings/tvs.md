@@ -25,7 +25,7 @@ next_review: '2027-06-02'
 scoring_model: qwen3.5:35b
 prose_model: qwen3.5:35b
 msi_finding: The product relies heavily on critical raw materials including indium, gallium, and neodymium, which are designated
-  on the EU Critical Raw Materials list and USGS high-supply-risk designations. Supply chains for these rare earth elements
+  on the EU Critical Raw Materials list and USGS Critical Minerals list. Supply chains for these rare earth elements
   and metals face high concentration risks, with over 70% of global supply originating from single nations. The absence of
   recycled content and missing data on extraction origins further constrains the score to the critically scarce range.
 scr_finding: The television relies on rare earth elements and copper, with China as the primary assembly and likely dominant
@@ -115,7 +115,7 @@ A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data
 - Indium — EU Critical Raw Materials list
 - Gallium — EU Critical Raw Materials list
 - Neodymium — EU Critical Raw Materials list
-- China >80% of global rare earth supply
+- China ~70% of global rare earth mine production, ~85% of processing — high supply concentration
 - Rare earth elements — high global supply concentration in China
 - No due-diligence programme documented
 - No alternative supplier documented

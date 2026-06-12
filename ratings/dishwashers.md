@@ -115,7 +115,7 @@ A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data
 ## Material Watch Points
 
 - Neodymium — EU Critical Raw Materials list
-- China >80% of global rare earth supply
+- China ~70% of global rare earth mine production, ~85% of processing — high supply concentration
 - No due-diligence programme documented
 - Single primary supplier assumed with no alternative
 - Sourcing countries not submitted, relying on typical production geography

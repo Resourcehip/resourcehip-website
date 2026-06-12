@@ -112,7 +112,7 @@ A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data
 
 ## Material Watch Points
 
-- Copper — EU Critical Raw Materials list
+- Copper — EU Strategic Raw Material (CRM Act 2024/1252)
 - Copper and steel — China >60% global supply, concentration risk
 - No due-diligence programme documented
 - No alternative supplier documented

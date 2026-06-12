@@ -79,8 +79,8 @@ data_sources:
 - Lithium — EU Critical Raw Materials list
 - Neodymium — EU Critical Raw Materials list
 - Cobalt — DRC supply concentration risk
-- Neodymium — China >80% of global rare earth supply
-- Cobalt/Rare Earths — DRC sourcing (OECD risk category 6)
+- Neodymium — China ~70% of global rare earth mine production, ~85% of processing — high supply concentration
+- Cobalt/Rare Earths — DRC sourcing (OECD risk category 7)
 - Due diligence claimed but not third-party verified
 
 ## Improvement Opportunities

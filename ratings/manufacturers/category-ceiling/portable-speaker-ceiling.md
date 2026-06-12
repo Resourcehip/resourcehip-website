@@ -77,7 +77,7 @@ data_sources:
 - Neodymium — EU Critical Raw Materials list
 - Lithium — EU Critical Raw Materials list
 - Cobalt — EU Critical Raw Materials list
-- Cobalt — DRC >70% global supply, OECD risk category 6
+- Cobalt — DRC >70% global supply, OECD risk category 7
 - Due-diligence claimed but not third-party verified
 
 ## Improvement Opportunities

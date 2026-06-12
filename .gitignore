@@ -5,7 +5,8 @@ dist/
 brand/
 editorial/
 
-# Python bytecode
+# Python virtual environment and bytecode
+.venv/
 __pycache__/
 *.pyc
 
@@ -22,6 +23,9 @@ __pycache__/
 *.key
 *.pem
 *.pkcs12
+
+# Build caches
+.hero-cache.json
 
 # Temporary files
 *.tmp

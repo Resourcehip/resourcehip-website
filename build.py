@@ -17,6 +17,7 @@ Output directory:  dist/
 import email.utils
 import html as html_lib
 import json
+import os
 import re
 import shutil
 import sys
@@ -31,6 +32,8 @@ from markupsafe import Markup
 
 from sitemap import html_files_to_urls, generate_sitemap, generate_robots
 
+# Version history support is initialized after SITE_ROOT below.
+
 # ── Config ────────────────────────────────────────────────────────────────────
 
 SITE_ROOT   = Path(__file__).parent
@@ -39,6 +42,39 @@ SITE_ROOT   = Path(__file__).parent
 # `today` and `discount_expires` so the build is date-aware. A scheduled
 # rebuild on or after this date automatically removes the offer block.
 DISCOUNT_EXPIRES = date(2026, 9, 30)
+# Version history — read version files directly from results/versions/.
+_VERSIONS_DIR = Path(os.environ.get(
+    "RESOURCEHIP_VERSIONS_DIR",
+    str(SITE_ROOT.parent / "results" / "versions"),
+))
+
+
+def list_versions(slug: str) -> list[int]:
+    vdir = _VERSIONS_DIR / slug
+    if not vdir.exists():
+        return []
+    versions = []
+    for p in vdir.glob("v*.json"):
+        stem = p.stem
+        if stem.startswith("v") and stem[1:].isdigit():
+            versions.append(int(stem[1:]))
+    return sorted(versions)
+
+
+def load_version(slug: str, v: int) -> dict | None:
+    path = _VERSIONS_DIR / slug / f"v{v}.json"
+    if not path.exists():
+        return None
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def load_changelog(slug: str) -> list[dict]:
+    path = _VERSIONS_DIR / slug / "changelog.json"
+    if not path.exists():
+        return []
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
 RATINGS_DIR = SITE_ROOT / "ratings"
 PAGES_DIR   = SITE_ROOT / "pages"
 BLOG_DIR    = SITE_ROOT / "blog"
@@ -331,6 +367,54 @@ def build_ratings() -> list[dict]:
         index_entries.append(data)
 
     return index_entries
+
+
+def build_version_pages(entries: list[dict]) -> int:
+    """Build historical version pages at /ratings/{slug}/v{n}.html.
+    Returns count of version pages built.
+    """
+    template = jinja_env.get_template("rating.html.j2")
+    out_dir = DIST / "ratings"
+    count = 0
+
+    for entry in entries:
+        slug = entry.get("slug", "")
+        if not slug:
+            continue
+
+        versions = list_versions(slug)
+        if len(versions) <= 1:
+            continue
+
+        for v in versions[:-1]:
+            ver_data = load_version(slug, v)
+            if not ver_data:
+                continue
+
+            ver_data.setdefault("slug", slug)
+            ver_data.setdefault("methodology_version", "1.3")
+            ver_data.setdefault("hip_label", hip_label(ver_data.get("hip_score", 0)))
+
+            html = template.render(
+                **ver_data,
+                body="<p><em>This is an archived version of this rating. "
+                     f'<a href="/ratings/{slug}">View the current version &rarr;</a></em></p>',
+                buyer_checklist=None,
+                buyer_guide_slug=None,
+                page_title=f"{ver_data.get('title', slug)} (v{v})",
+                page_description=f"Archived version {v} of the {ver_data.get('title', slug)} HIP rating.",
+                active_page="ratings",
+            )
+
+            ver_dir = out_dir / slug
+            ver_dir.mkdir(parents=True, exist_ok=True)
+            ver_file = ver_dir / f"v{v}.html"
+            ver_file.write_text(html, encoding="utf-8")
+            count += 1
+
+    if count:
+        print(f"  [versions] {count} historical version page(s) built")
+    return count
 
 
 def _classify_rating_type(entry: dict) -> str:
@@ -870,6 +954,7 @@ def build():
     print("→ Building rating pages")
     index_entries = build_ratings()
     build_ratings_index(index_entries)
+    build_version_pages(index_entries)
     build_search_index(index_entries)
     rating_slugs = {e["slug"] for e in index_entries}
     print("→ Building static pages")

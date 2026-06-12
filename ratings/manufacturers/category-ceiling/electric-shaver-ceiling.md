@@ -74,7 +74,7 @@ data_sources:
 
 ## Material Watch Points
 
-- Lithium iron phosphate — EU Critical Raw Materials list
+- Lithium — EU Critical Raw Materials list
 
 ## Improvement Opportunities
 

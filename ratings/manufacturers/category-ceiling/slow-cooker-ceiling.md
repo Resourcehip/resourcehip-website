@@ -24,7 +24,7 @@ methodology_version: '1.3'
 next_review: '2027-06-02'
 scoring_model: qwen3.5:35b
 prose_model: qwen3.5:35b
-msi_finding: The product contains copper, a material on the EU Critical Raw Materials list, sourced from Chile, which introduces
+msi_finding: The product contains copper, an EU Strategic Raw Material (CRM Act 2024/1252), sourced from Chile, which introduces
   supply concentration risk. However, the presence of abundant materials like stainless steel, aluminium, and ceramic, combined
   with 35% recycled content and diverse supply origins across the EU and Chile, results in a moderate scarcity profile.
 scr_finding: The supply chain sources key materials from Chile and the European Union, regions with stable governance scores
@@ -73,7 +73,7 @@ data_sources:
 
 ## Material Watch Points
 
-- Copper — EU Critical Raw Materials list
+- Copper — EU Strategic Raw Material (CRM Act 2024/1252)
 - Chile — Single-country supply concentration for copper
 
 ## Improvement Opportunities

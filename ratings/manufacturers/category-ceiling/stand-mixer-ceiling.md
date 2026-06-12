@@ -26,8 +26,8 @@ scoring_model: qwen3.5:35b
 prose_model: qwen3.5:35b
 msi_finding: The product relies primarily on abundant materials including steel, aluminium, and zinc alloy with no critical
   raw materials dominating the composition. The 30% recycled content and diversified supply chain within the USA support a
-  low scarcity rating, though the absence of copper on the EU Critical Raw Materials list and the recycled content falling
-  below the 40% threshold for the highest tier prevent a perfect score.
+  low scarcity rating, though copper's status as an EU Strategic Raw Material (CRM Act 2024/1252) still introduces some supply-chain sensitivity, and the recycled content falling
+  below the 40% threshold for the highest tier prevents a perfect score.
 scr_finding: The stand mixer is assembled in the USA with sourcing from the USA, a jurisdiction with stable governance. The
   supplier cites the OECD Due Diligence Guidance, and an alternative supplier is documented, placing the product in the moderate
   risk category. However, the lack of third-party verification for the due diligence programme limits the score to the upper

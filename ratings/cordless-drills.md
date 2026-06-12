@@ -27,8 +27,8 @@ prose_model: qwen3.5:35b
 msi_finding: The product relies heavily on critical raw materials including lithium, cobalt, and neodymium, all listed on
   the EU Critical Raw Materials list with high supply risk. The absence of recycled content and the likely concentration of
   extraction in single countries (e.g., China for rare earths) further exacerbate scarcity concerns.
-scr_finding: The cordless drill contains rare earth magnets and copper, which are EU Critical Raw Materials with high supply
-  concentration risks (rare earths >90% from China, copper from limited high-risk jurisdictions). Due to the lack of submitted
+scr_finding: The cordless drill contains rare earth magnets (EU Critical Raw Materials) and copper (EU Strategic Raw Material,
+  CRM Act 2024/1252), both with high supply concentration risks (rare earths >90% from China, copper from limited high-risk jurisdictions). Due to the lack of submitted
   due diligence standards, audit verification, or alternative suppliers, the product falls into the Critical Risk category
   with no mitigating factors.
 rc_finding: The cordless drill is assumed to be glued with no take-back scheme, making material separation impractical without
@@ -116,10 +116,10 @@ A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data
 - Lithium — EU Critical Raw Materials list
 - Cobalt — EU Critical Raw Materials list
 - Neodymium — EU Critical Raw Materials list
-- China >80% of global rare earth supply
+- China ~70% of global rare earth mine production, ~85% of processing — high supply concentration
 - 0% Recycled Content
 - Rare earths — >90% global supply from China (OECD Category 5), no diversification
-- Copper — EU Critical Raw Material with supply risk score >2
+- Copper — EU Strategic Raw Material (CRM Act 2024/1252)
 - No due-diligence programme documented
 - No alternative supplier documented
 

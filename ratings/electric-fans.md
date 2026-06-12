@@ -114,7 +114,7 @@ A [verified rating](/about#two-types-of-rating) uses manufacturer-submitted data
 
 ## Material Watch Points
 
-- Copper — EU Critical Raw Materials list
+- Copper — EU Strategic Raw Material (CRM Act 2024/1252)
 - China — High concentration risk for copper and rare earth processing
 - Recycled content — Assumed 0% due to missing data
 - Copper and rare earth magnets — >60% global supply from China

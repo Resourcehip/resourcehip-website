@@ -24,7 +24,7 @@ The pod-machine score moves on three dimensions in particular:
 
 - **Repairability (R).** The category baseline is **1/10**. Typical mass-market machines are glued shut. They ship with no spare parts, no public repair manual, and fall outside EU Ecodesign scope. The verified ceiling reaches **9/10**: screw-fastened, multi-year spare-parts commitment, and a published repair manual.
 - **Recyclability and Circularity (RC).** Glued construction holds the baseline at **2/10**. Only about 20% of the device by weight enters real-world recycling. The ceiling moves to **7.5/10** with screw-based disassembly, a 92% material-recoverable design, and a manufacturer take-back scheme.
-- **Material Scarcity (MSI).** Copper appears on the EU Critical Raw Materials list (a list of materials at risk of supply shortage) and the USGS high-supply-risk list. The baseline scores **3.5/10** under cautious assumptions about recycled content. The ceiling scores **9.0/10** with 82% recycled content, sourced from multiple countries.
+- **Material Scarcity (MSI).** Copper is an EU Strategic Raw Material (CRM Act 2024/1252), meaning the EU considers its supply chain strategically important. The baseline scores **3.5/10** under cautious assumptions about recycled content. The ceiling scores **9.0/10** with 82% recycled content, sourced from multiple countries.
 
 These are the three levers most under a manufacturer's direct control. None of them require exotic technology.
 
